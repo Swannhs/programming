@@ -1,0 +1,112 @@
+---
+title: Write a C/C++/Java program to search an element in an array.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 21. Write a C program to search an element in an array.
+```c
+//Write a C program to search an element in an array.
+#include<stdio.h>
+int main()
+{
+    int arr[10],i,key;
+    printf("Enter 10 elements in array : \n");
+    for(i=0; i<10; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+     printf("Enter the key : ");
+    scanf("%d", &key);
+    for(i=0; i<10; i++)
+    {
+        if(arr[i]==key)
+        {
+            printf("element found ");
+            return 0;
+        }
+    }
+    printf("element  not  found");
+}
+```
+### Output
+```
+Enter 10 elements in array :
+4 3 2 5 6 7 8 9 4 2
+Enter the key : 4
+element found
+```
+## C++ Implementation
+### 21. Write a C++ program to search an element in an array.
+```c
+//Write a C++ program to search an element in an array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr[10],i,key;
+    cout<<"Enter 10 elements in array : \n";
+    for(i=0; i<10; i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<"Enter the key : ";
+    cin>>key;
+    for(i=0; i<10; i++)
+    {
+        if(arr[i]==key)
+        {
+            cout<<"element found ";
+            return 0;
+        }
+    }
+    cout<<"element not found";
+}
+```
+### Output
+```
+Enter 10 elements in array :
+4 3 2 5 6 7 8 9 4 2
+Enter the key : 4
+element found
+```
+
+## Java Implementation
+### 21. Write a Java program to search an element in an array.
+```js
+//Write a Java program to search an element in an array.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr[]=new int[10],i,key;
+        System.out.println("Enter 10 elements in array : \n");
+        for(i=0; i<10; i++)
+        {
+            arr[i]=z.nextInt();
+        }
+        System.out.println("Enter the key : ");
+        key=z.nextInt();
+        for(i=0; i<10; i++)
+        {
+            if(arr[i]==key)
+            {
+                System.out.println("element found ");
+            }
+        }
+        System.out.println("element  not  found");
+    }
+}
+```
+### Output
+```
+Enter 10 elements in array :
+4 3 2 5 6 7 8 9 4 2
+Enter the key : 4
+element found
+```

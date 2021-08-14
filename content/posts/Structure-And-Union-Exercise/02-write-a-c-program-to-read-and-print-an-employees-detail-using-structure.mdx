@@ -1,0 +1,83 @@
+---
+title: Write a C/C++/Java read and print an employee’s detail using structure.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 2. Write a C read and print an employee’s detail using structure.
+```c
+//Write a C++ read and print an employee’s detail using structure.
+#include<stdio.h>
+struct employee{
+    char name[20];
+    int empId;
+    char role[10];
+};
+
+int main(){
+    struct employee emp1;
+
+    printf("enter emp name : ");
+    fgets(emp1.name,sizeof(emp1.name),stdin);
+    printf("enter emp id : ");
+    scanf("%d",&emp1.empId);
+    getchar();
+    printf("enter emp role : ");
+    fgets(emp1.role,sizeof(emp1.role),stdin);
+
+    printf("\nName : %s",emp1.name);
+    printf("Id   : %d \n",emp1.empId);
+    printf("Role : %s",emp1.role);
+}
+```
+### Output
+```
+enter emp name : Ahosanul Hasan
+enter emp id : 101
+enter emp role : Manager
+
+Name : Ahosanul Hasan
+Id   : 101
+Role : Manager
+```
+
+## C++ Implementation
+### 2. Write a C++ read and print an employee’s detail using structure.
+```c
+//Write a C++ program to read and print an employee’s detail using structure.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct employee{
+    char name[20];
+    int empId;
+    char role[10];
+};
+int main(){
+    struct employee emp1;
+    cout << "enter emp name : ";
+    fgets(emp1.name,sizeof(emp1.name),stdin);
+    cout << "enter emp id : ";
+    cin >> emp1.empId;
+    getchar();
+    cout << "enter emp role : ";
+    fgets(emp1.role,sizeof(emp1.role),stdin);
+    cout << "Name : " << emp1.name << endl;
+    cout << "Id   : " << emp1.empId << endl;
+    cout << "Role : " << emp1.role;
+}
+```
+### Output
+```
+enter emp name : Ahosanul Hasan
+enter emp id : 101
+enter emp role : Manager
+
+Name : Ahosanul Hasan
+Id   : 101
+Role : Manager
+```

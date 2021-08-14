@@ -1,0 +1,109 @@
+---
+title: Write a C/C++/Java program to find maximum occurring character in a string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 17. Write a C program to find maximum occurring character in a string.
+```c
+//Write a C program to find maximum occurring character in a string.
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char a[100];
+    int i,j,count=0,maxcount=0;
+    char maxcharacter;
+    gets(a);
+    for(i=0;i<strlen(a);i++)
+    {
+        count=0;
+        for(j=0;j<strlen(a);j++)
+    {
+        if(a[i]==a[j])
+          count++;
+    }
+    if(maxcount<count)
+    {
+        maxcount=count;
+        maxcharacter=a[i];
+    }
+    }
+
+    printf("the maximum character is:%c",maxcharacter);
+
+}
+```
+### Output
+```
+Enter  the string : Hello from funycode
+string has  3 words
+```
+## C++ Implementation
+### 17. Write a C++ program to find maximum occurring character in a string.
+```c
+//Write a C++ program to find maximum occurring character in a string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int  main()
+{
+    char a[100];
+    int i,j,count=0,maxcount=0;
+    char maxcharacter;
+    gets(a);
+    for(i=0;i<strlen(a);i++)
+    {
+          count=0;
+          for(j=0;j<strlen(a);j++)
+          {
+              if(a[i]==a[j])
+                count++;
+          }
+          if(maxcount<count)
+          {
+              maxcount=count;
+              maxcharacter=a[i];
+          }
+    }
+
+    cout << "the maximum character is: " << maxcharacter;
+}
+```
+### Output
+```
+Enter  the string : Hello from funycode
+string has  3 words
+```
+
+## Java Implementation
+### 17. Write a Java program to find maximum occurring character in a string.
+```js
+//Write a Java program to find maximum occurring character in a string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String str, word = "";
+        int i,w=0;
+        str = z.nextLine();
+        for(i = str.length()-1; i >= 0; i --){
+            if(str.charAt(i)==32)
+            w++;
+        }
+        if(i>0)
+          w++;
+        System.out.println("string has " + w + " words");
+    }
+}
+```
+### Output
+```
+Enter  the string : Hello from funycode
+string has  3 words
+```

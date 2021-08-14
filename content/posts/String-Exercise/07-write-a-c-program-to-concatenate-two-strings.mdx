@@ -1,0 +1,82 @@
+---
+title: Write a C/C++/Java program to concatenate two strings.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 7. Write a C program to concatenate two strings.
+```c
+//Write a C program to concatenate two strings.
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str1[50], str2[50];
+    printf("Enter first string: ");
+    gets(str1);
+    printf("Enter second string: ");
+    gets(str2);
+    strcat(str1, str2);
+      printf("sum of string is string = %s", str1);
+
+    return 0;
+}
+```
+### Output
+```
+Enter first string: hello
+Enter second string:  funycode
+sum of string is string = hello funycode
+```
+## C++ Implementation
+### 7. Write a C++ program to concatenate two strings.
+```c
+//Write a C++ program to concatenate two strings.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    char str1[50], str2[50];
+    cout << "Enter first string: ";
+    gets(str1);
+    cout << "Enter second string: ";
+    gets(str2);
+    strcat(str1, str2);
+      cout << "sum of string is string = " << str1;
+}
+```
+### Output
+```
+Enter first string: hello
+Enter second string:  funycode
+sum of string is string = hello funycode
+```
+
+## Java Implementation
+### 7. Write a Java program to concatenate two strings.
+```js
+//Write a Java program to concatenate two strings.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          String str1, str2;
+          System.out.println("Enter first string: ")
+          str1 = z.nextLine();
+          System.out.println("Enter second string: ");
+          str2 = z.nextLine();
+          str1 = str1 + str2;
+          System.out.println("sum of string is string = " + str1);
+      }
+}
+```
+### Output
+```
+Enter first string: hello
+Enter second string:  funycode
+sum of string is string = hello funycode
+```

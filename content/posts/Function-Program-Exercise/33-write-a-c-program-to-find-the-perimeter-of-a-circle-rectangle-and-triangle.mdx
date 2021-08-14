@@ -1,0 +1,165 @@
+---
+title: Write a C/C++/Java program to Find the Perimeter of a Circle, Rectangle and Triangle
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 34. Write a C program to Find the Perimeter of a Circle, Rectangle and Triangle
+```c
+//Write a C program to Find the Perimeter of a Circle, Rectangle and Triangle
+#include<stdio.h>
+
+void perimeterOfCircle()
+{
+    float pi=3.14159,r;
+    printf("Enter radius: ");
+    scanf("%f",&r);
+    float perimeter=2*pi*r;
+    printf("Permeter of circle is %.2f: \n",perimeter);
+}
+
+void perimeterOfRectangle()
+{
+    int a,b;
+    printf("Enter base & height: ");
+    scanf("%d%d",&a,&b);
+    float perimeter=2*(a+b);
+    printf("Permeter of Rectangle is %.2f: \n",perimeter);
+}
+
+void perimeterOfTriangle()
+{
+    float a,b,c;
+    printf("Enter 3 sides of triangle: ");
+    scanf("%f%f%f",&a,&b,&c);
+    float perimeter=a+b+c;
+    printf("Permeter of circle is %.2f: \n",perimeter);
+}
+
+int main()
+{
+    perimeterOfCircle();
+    perimeterOfRectangle();
+    perimeterOfTriangle();
+}
+```
+### Output
+```
+Enter radius: 3
+Permeter of circle is 18.85:
+Enter base & height: 4 5
+Permeter of Rectangle is 18.00:
+Enter 3 sides of triangle: 5 5 5
+Permeter of circle is 15.00:
+```
+
+## C++ Implementation
+### 34. Write a C++ program to Find the Perimeter of a Circle, Rectangle and Triangle
+```c
+//Write a C++ program to Find the Perimeter of a Circle, Rectangle and Triangle
+
+#include<iostream>
+using namespace std;
+
+void perimeterOfCircle()
+{
+    float pi=3.14159,r;
+    cout << "Enter radius: ";
+    cin >> r;
+    float perimeter=2*pi*r;
+    cout << "Permeter of circle is " << perimeter << endl;
+}
+
+void perimeterOfRectangle()
+{
+    int a,b;
+    cout << "Enter base & height: ";
+    cin >> a >> b;
+    float perimeter=2*(a+b);
+    cout << "Permeter of Rectangle is "perimeter << endl;
+}
+
+void perimeterOfTriangle()
+{
+    float a,b,c;
+    cout << "Enter 3 sides of triangle: ";
+    cin >> a >> b >> c;
+    float perimeter=a+b+c;
+    cout << "Permeter of circle is " << perimeter << endl;
+}
+
+int main()
+{
+    perimeterOfCircle();
+    perimeterOfRectangle();
+    perimeterOfTriangle();
+}
+```
+### Output
+```
+Enter radius: 3
+Permeter of circle is 18.85:
+Enter base & height: 4 5
+Permeter of Rectangle is 18.00:
+Enter 3 sides of triangle: 5 5 5
+Permeter of circle is 15.00:
+```
+
+## Java Implementation
+### 34. Write a Java program to Find the Perimeter of a Circle, Rectangle and Triangle
+```js
+//Write a Java program to Find the Perimeter of a Circle, Rectangle and Triangle
+import java.util.Scanner;
+public class Funycode {
+    private Scanner z = new Scanner(System.in);
+
+    static void perimeterOfCircle()
+    {
+        float pi=3.14159,r;
+        System.out.println("Enter radius: ");
+        r = z.nextFloat();
+        float perimeter=2*pi*r;
+        System.out.println("Permeter of circle is "+perimeter);
+    }
+
+    static void perimeterOfRectangle()
+    {
+        float a,b,c;
+        System.out.println("Enter 3 sides of triangle: ");
+        a = z.nextFloat();
+        b = z.nextFloat();
+        c = z.nextFloat();
+        float perimeter=a+b+c;
+        System.out.println("Permeter of circle is "+perimeter);
+    }
+
+    static void perimeterOfTriangle()
+    {
+        float a,b,c;
+        System.out.println("Enter 3 sides of triangle: ");
+        a = z.nextFloat();
+        b = z.nextFloat();
+        c = z.nextFloat();
+        float perimeter=a+b+c;
+        System.out.println("Permeter of circle is "+perimeter);
+    }
+
+    public static void main(String[] args) {
+        perimeterOfCircle();
+        perimeterOfRectangle();
+        perimeterOfTriangle();
+    }
+}
+```
+### Output
+```
+Enter radius: 3
+Permeter of circle is 18.85:
+Enter base & height: 4 5
+Permeter of Rectangle is 18.00:
+Enter 3 sides of triangle: 5 5 5
+Permeter of circle is 15.00:
+```

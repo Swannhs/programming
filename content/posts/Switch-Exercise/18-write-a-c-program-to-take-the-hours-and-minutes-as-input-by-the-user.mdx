@@ -1,0 +1,124 @@
+---
+title: Write a C/C++/Java program to take the hours and minutes as input by the user and the show that whether it is AM or PM by using the switch.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 18. Write a C program to take the hours and minutes as input by the user and the show that whether it is AM or PM by using the switch.
+```c
+//Write a C program to find all the roots of a quadratic equation using switch.
+#include<stdio.h>
+int main()
+{
+    int h,m;
+    printf("input Hours : ");
+    scanf("%d",&h);
+    printf("Input Minutes : ");
+    scanf("%d",&m);
+    switch(h>=12 && h<=24)
+    {
+    case 1:
+        printf("The time is in PM ");
+        break;
+    case 0:
+        switch (h>=0 && h<=11)
+        {
+        case 1:
+            printf("Time is in AM ");
+            break;
+        case 0:
+            printf("Wrong");
+            break;
+        }
+        break;
+    }
+}
+```
+### Output
+```
+input Hours : 12
+Input Minutes : 32
+The time is in PM
+```
+
+## C++ Implementation
+### 18. Write a C++ program to take the hours and minutes as input by the user and the show that whether it is AM or PM by using the switch.
+```c
+//Write a C++ program to take the hours and minutes as input by the user and the show that whether it is AM or PM by using the switch.
+#include<iostream>
+using namespace std;
+int main()
+{
+    int h,m;
+    cout << "input Hours : ";
+    cin >> h;
+    cout << "Input Minutes : ";
+    cin >> m;
+    switch(h>=12 && h<=24)
+    {
+    case 1:
+        cout << "The time is in PM ";
+        break;
+    case 0:
+        switch (h>=0 && h<=11)
+        {
+        case 1:
+            cout << "Time is in AM ";
+            break;
+        case 0:
+            cout << "Wrong";
+            break;
+        }
+        break;
+    }
+}
+```
+### Output
+```
+input Hours : 12
+Input Minutes : 32
+The time is in PM
+```
+
+## Java Implementation
+### 18. Write a Java program to take the hours and minutes as input by the user and the show that whether it is AM or PM by using the switch.
+```js
+////Write a C++ program to take the hours and minutes as input by the user and the show that whether it is AM or PM by using the switch.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+      int h,m;
+      System.out.println("input Hours : ");
+      Scanner z = new Scanner(System.in);
+      h = z.nextInt();
+      System.out.println("Input Minutes : ");
+      m = z.nextInt();
+      switch(h>=12 && h<=24)
+      {
+      case 1:
+          System.out.println("The time is in PM ");
+          break;
+      case 0:
+          switch (h>=0 && h<=11)
+          {
+          case 1:
+              System.out.println("Time is in AM ");
+              break;
+          case 0:
+              System.out.println("Wrong");
+              break;
+          }
+          break;
+      }
+    }
+}
+```
+### Output
+```
+input Hours : 12
+Input Minutes : 32
+The time is in PM
+```

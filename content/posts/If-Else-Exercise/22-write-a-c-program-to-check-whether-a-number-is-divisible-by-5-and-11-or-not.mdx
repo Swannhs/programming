@@ -1,0 +1,82 @@
+---
+title: Write a C/C++/Java program to check whether a number is divisible by 5 and 11 or not.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-22: Write a C program to check whether a number is divisible by 5 and 11 or not.
+```c
+/*Write a C program to check whether a number is divisible by 5 and 11 or not.*/
+#include<stdio.h>
+void main()
+{
+    int a;
+    printf("Enter a Number:");
+    scanf("%d",&a);
+    if(a%5==0 && a%11==0)
+        printf("number is visible");
+    else
+        printf("number is not divisible");
+}
+```
+### Output
+```
+Enter a Number:
+55
+number is visible by 5 and 11
+```
+
+## C++ Implementation
+### Program-22: Write a C++ program to check whether a number is divisible by 5 and 11 or not.
+```c
+/*Write a C++ program to check whether a number is divisible by 5 and 11 or not.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a;
+    cout<<"enter a number-\n";
+    cin>>a;
+    if(a%5==0 && a%11==0)
+        cout<<"number is visible by 5 and 11";
+    else
+        cout<<"number is not divisible";
+}
+
+```
+### Output
+```
+Enter a Number:
+55
+number is visible by 5 and 11
+```
+
+## Java Implementation
+### Program-22: Write a java program to check whether a number is divisible by 5 and 11 or not.
+```js
+/*Write a java program to check whether a number is divisible by 5 and 11 or not.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a;
+        System.out.print("Enter a Number:\n");
+        a=z.nextInt();
+
+        if(a%5==0 && a%11==0)
+            System.out.print("number is visible by 5 and 11");
+        else
+            System.out.print("number is not divisible");
+    }
+}
+```
+### Output
+```
+Enter a Number:
+55
+number is visible by 5 and 11
+```

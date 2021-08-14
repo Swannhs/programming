@@ -1,0 +1,117 @@
+---
+title: Write a C/C++/Java program to check whether a number is positive, negative or zero using switch
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 17. Write a C program to check whether a number is positive, negative or zero using switch
+```c
+//Write a C program to check whether a number is positive, negative or zero using switch
+#include <stdio.h>
+int main()
+{
+    int num;
+    printf("Enter any number: ");
+    scanf("%d", &num);
+    switch (num > 0)
+    {
+    case 1:
+        printf("%d is positive", num);
+        break;
+    case 0:
+        switch (num < 0)
+        {
+        case 1:
+            printf("%d is negative", num);
+            break;
+        case 0:
+            printf("%d is zero", num);
+            break;
+        }
+        break;
+    }
+    return 0;
+}
+```
+### Output
+```
+input: Enter any number: 6
+output: 6 is negative
+```
+
+## C++ Implementation
+### 17. Write a C++ program to check whether a number is positive, negative or zero using switch
+```c
+//Write a C++ program to check whether a number is positive, negative or zero using switch
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout << "Enter any number: ";
+    cin >> num;
+    switch (num > 0)
+    {
+    case 1:
+        cout << num <<" is positive";
+        break;
+    case 0:
+        switch (num < 0)
+        {
+        case 1:
+            cout << num << " is negative";
+            break;
+        case 0:
+            cout << " is zero";
+            break;
+        }
+        break;
+    }
+    return 0;
+}
+```
+### Output
+```
+input: Enter any number: 6
+output: 6 is negative
+```
+
+## Java Implementation
+### 17. Write a Java program to check whether a number is positive, negative or zero using switch
+```js
+////Write a C++ program to check whether a number is positive, negative or zero using switch
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        int num;
+        System.out.println("Enter any number: ");
+        Scanner z=new Scanner(System.in);
+        num = z.nextInt();
+        switch (num > 0)
+        {
+        case 1:
+            System.out.println("%d is positive"+ num);
+            break;
+        case 0:
+            switch (num < 0)
+            {
+            case 1:
+                System.out.println("%d is negative"+ num);
+                break;
+            case 0:
+                System.out.println("%d is zero"+ num);
+                break;
+            }
+            break;
+        }
+    }
+}
+```
+### Output
+```
+input: Enter any number: 6
+output: 6 is negative
+```

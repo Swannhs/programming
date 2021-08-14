@@ -1,0 +1,299 @@
+---
+title: Write a C/C++/Java program to check whether two matrices are equal or not.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 30. Write a C program to check whether two matrices are equal or not.
+```c
+//Write a C program to check whether two matrices are equal or not.
+#include <stdio.h>
+int main()
+{
+   int arr1[50][50], brr1[50][50],i, j, r1, c1, r2, c2, a =1;
+   printf("Input Rows and Columns of the 1st matrix :\n");
+   scanf("%d %d", &r1, &c1);
+
+   printf("Input Rows and Columns of the 2nd matrix :\n");
+   scanf("%d %d", &r2,&c2);
+     printf("Input elements in the first matrix :\n");
+       for(i=0;i<r1;i++)
+        {
+            for(j=0;j<c1;j++)
+            {
+               printf("element - [%d],[%d] : ",i,j);
+               scanf("%d",&arr1[i][j]);
+            }
+        }
+       printf("Input elements in the second matrix :\n");
+       for(i=0;i<r2;i++)
+        {
+            for(j=0;j<c2;j++)
+            {
+               printf("element - [%d],[%d] : ",i,j);
+               scanf("%d",&brr1[i][j]);
+            }
+        }
+      printf("The first matrix is :\n");
+     for(i=0;i<r1;i++)
+     {
+       for(j=0;j<c1 ;j++)
+         printf(" %d ",arr1[i][j]);
+        printf("\n");
+     }
+     printf("The second matrix is :\n");
+     for(i=0;i<r2;i++)
+     {
+       for(j=0;j<c2 ;j++)
+         printf(" %d ",brr1[i][j]);
+        printf("\n");
+     }
+   if(r1 == r2 && c1 == c2)
+   {
+        printf("The Matrices can be compared. \n");
+        for(i=0; i<r1; i++)
+        {
+             for(j=0; j<c2; j++)
+             {
+            if(arr1[i][j] != brr1[i][j])
+            {
+                   a = 0;
+                   break;
+            }
+             }
+          }
+    }
+    else
+    {  printf("The Matrices Cannot be compared :\n");
+       exit(1);
+    }
+    if(a == 1 )
+    printf("Two matrices are equal.");
+    else
+    printf("But,two matrices are not equal.");
+}
+```
+### Output
+```
+Input Rows and Columns of the 1st matrix :
+2 2
+Input Rows and Columns of the 2nd matrix :
+2 2
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Input elements in the second matrix :
+element - [0],[0] : 5
+element - [0],[1] : 6
+element - [1],[0] : 7
+element - [1],[1] : 8
+The first matrix is :
+ 1  2
+ 3  4
+The second matrix is :
+ 5  6
+ 7  8
+The Matrices can be compared.
+But,two matrices are not equal.
+```
+## C++ Implementation
+### 30. Write a C++ program to check whether two matrices are equal or not.
+```c
+//Write a C++ program to check whether two matrices are equal or not.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+   int arr1[50][50], brr1[50][50],i, j, r1, c1, r2, c2, a =1;
+   cout << "Input Rows and Columns of the 1st matrix :\n";
+   scanf("%d %d", &r1, &c1);
+   cout << "Input Rows and Columns of the 2nd matrix :\n";
+   cin >> r2 >> c2;
+     cout << "Input elements in the first matrix :\n";
+       for(i=0;i<r1;i++)
+        {
+            for(j=0;j<c1;j++)
+            {
+               cout << "element -  : [" << i << "][" << j <<"]";
+               cin >> arr1[i][j];
+            }
+        }
+       cout << "Input elements in the second matrix :\n";
+       for(i=0;i<r2;i++)
+        {
+            for(j=0;j<c2;j++)
+            {
+               cout << "element -  : [" << i << "][" << j <<"]";
+               cin >> brr1[i][j];
+            }
+        }
+     cout << "The first matrix is :\n";
+     for(i=0;i<r1;i++)
+     {
+       for(j=0;j<c1 ;j++)
+         cout << " " << arr1[i][j] << " ";
+       cout << "\n";
+     }
+     cout << "The second matrix is :\n";
+     for(i=0;i<r2;i++)
+     {
+       for(j=0;j<c2 ;j++)
+         cout << " " << brr1[i][j] << " ";
+        cout << "\n";
+     }
+    if(r1 == r2 && c1 == c2)
+    {
+        cout << "The Matrices can be compared. \n";
+        for(i=0; i<r1; i++)
+        {
+            for(j=0; j<c2; j++)
+            {
+            if(arr1[i][j] != brr1[i][j])
+            {
+                   a = 0;
+                   break;
+            }
+            }
+          }
+    }
+    else
+    {  cout << "The Matrices Cannot be compared :\n";
+       exit(1);
+    }
+    if(a == 1 )
+    cout << "Two matrices are equal.";
+    else
+    cout << "But,two matrices are not equal.";
+}
+```
+### Output
+```
+Input Rows and Columns of the 1st matrix :
+2 2
+Input Rows and Columns of the 2nd matrix :
+2 2
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Input elements in the second matrix :
+element - [0],[0] : 5
+element - [0],[1] : 6
+element - [1],[0] : 7
+element - [1],[1] : 8
+The first matrix is :
+ 1  2
+ 3  4
+The second matrix is :
+ 5  6
+ 7  8
+The Matrices can be compared.
+But,two matrices are not equal.
+```
+
+## Java Implementation
+### 30. Write a Java program to check whether two matrices are equal or not.
+```js
+//Write a Java program to check whether two matrices are equal or not.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+           Scanner z=new Scanner(System.in);
+           int arr1[][]= new int[3][3],brr1[][] = new int[3][3],i, j, r1, c1, r2, c2, a =1;
+           System.out.println("Input Rows and Columns of the 1st matrix :\n");
+           r1 = z.nextInt();
+           c1 = z.nextInt();
+           System.out.println("Input Rows and Columns of the 2nd matrix :\n");
+           r2 = z.nextInt();
+           c2 = z.nextInt();
+             System.out.println("Input elements in the first matrix :\n");
+               for(i=0;i<r1;i++)
+                {
+                    for(j=0;j<c1;j++)
+                    {
+                       System.out.println("element - : "+"["+i+"]"+"["+j+"]");
+                       arr1[i][j] = z.nextInt();
+                    }
+                }
+               System.out.println("Input elements in the second matrix :\n");
+               for(i=0;i<r2;i++)
+                {
+                    for(j=0;j<c2;j++)
+                    {
+                       System.out.println("element - : "+"["+i+"]"+"["+j+"]");
+                       brr1[i][j] = z.nextInt();
+                    }
+                }
+              System.out.println("The first matrix is :\n");
+             for(i=0;i<r1;i++)
+             {
+               for(j=0;j<c1 ;j++)
+                 System.out.printf(" "+arr1[i][j]+" ");
+                System.out.printf("\n");
+             }
+             System.out.println("The second matrix is :\n");
+             for(i=0;i<r2;i++)
+             {
+               for(j=0;j<c2 ;j++)
+                 System.out.printf(" "+brr1[i][j]+" ");
+                System.out.printf("\n");
+             }
+           if(r1 == r2 && c1 == c2)
+           {
+                System.out.println("The Matrices can be compared. \n");
+                for(i=0; i<r1; i++)
+                {
+                     for(j=0; j<c2; j++)
+                     {
+                        if(arr1[i][j] != brr1[i][j])
+                        {
+                               a = 0;
+                               break;
+                        }
+                     }
+                  }
+            }
+            else
+            {
+               System.out.println("The Matrices Cannot be compared :\n");
+               System.exit(1);
+            }
+            if(a == 1 )
+              System.out.println("Two matrices are equal.");
+            else
+              System.out.println("But,two matrices are not equal.");
+      }
+}
+```
+### Output
+```
+Input Rows and Columns of the 1st matrix :
+2 2
+Input Rows and Columns of the 2nd matrix :
+2 2
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Input elements in the second matrix :
+element - [0],[0] : 5
+element - [0],[1] : 6
+element - [1],[0] : 7
+element - [1],[1] : 8
+The first matrix is :
+ 1  2
+ 3  4
+The second matrix is :
+ 5  6
+ 7  8
+The Matrices can be compared.
+But,two matrices are not equal.
+```

@@ -1,0 +1,96 @@
+---
+title: Write a C/C++/Java program to sort a string array in ascending order.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 18. Write a C program to sort a string array in ascending order.
+```c
+//Write a C program to sort a string array in ascending order.
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+  char a[100];
+  char temp;
+  int i,j;
+  gets(a);
+  for(i=0;i<strlen(a);i++)
+  {
+      for(j=i+1;j<strlen(a);j++)
+  {
+      if(a[i]>a[j]){
+        temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+  }
+  }}
+  printf("ascending order string is:%s",a);
+  }
+```
+### Output
+```
+Enter a string:hello
+ascending order string ehllo
+```
+## C++ Implementation
+### 18. Write a C++ program to sort a string array in ascending order.
+```c
+//Write a C++ program to sort a string array in ascending order.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int  main()
+{
+  char a[100];
+  char temp;
+  int i,j;
+  cin >> a;
+  for(i=0;i<strlen(a);i++)
+  {
+      for(j=i+1;j<strlen(a);j++)
+      {
+        if(a[i]>a[j]){
+          temp=a[i];
+          a[i]=a[j];
+          a[j]=temp;
+        }
+      }
+  }
+  cin >> "ascending order string is:" << a;
+}
+```
+### Output
+```
+Enter a string:hello
+ascending order string ehllo
+```
+
+## Java Implementation
+### 18. Write a Java program to sort a string array in ascending order.
+```js
+//Write a Java program to sort a string array in ascending order.
+import java.util.Scanner;
+import java.util.Arrays;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String str;
+        int i,w=0;
+        str = z.nextLine();
+        char charArray[] = str.toCharArray();
+        Arrays.sort(charArray);
+        System.out.println("ascending order string " + new String(charArray));
+    }
+}
+```
+### Output
+```
+Enter a string:hello
+ascending order string ehllo
+```

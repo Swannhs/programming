@@ -1,0 +1,143 @@
+---
+title: Write a C/C++/Java program to find all the roots of a quadratic equation using switch.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 16. Write a C program to find all the roots of a quadratic equation using switch.
+```c
+//Write a C program to find all the roots of a quadratic equation using switch.
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float a, b, c;
+    float r1,r2,i;
+    float d;
+    printf("Enter values of a, b, c :");
+    scanf("%f%f%f", &a, &b, &c);
+    d = (b*b)-(4*a*c);
+    switch(d>0)
+    {
+    case 1:
+        r1 = (-b+sqrt(d))/(2*a);
+        r2 = (-b-sqrt(d))/(2*a);
+        printf("real roots:%.2f and %.2f",r1, r2);
+        break;
+    case 0:
+        switch(d<0)
+        {
+        case 1:
+            r1=r2=-b/(2*a);
+            i=sqrt(-d)/(2*a);
+            printf("complex roots: %.2f + i%.2f and %.2f - i%.2f",r1,i,r2,i);
+            break;
+        case 0:
+            r1=r2=-b/(2*a);
+            printf("Two equal and real roots: %.2f and %.2f",r1,r2);
+            break;
+        }
+    }
+    return 0;
+}
+```
+### Output
+```
+Enter values of a, b, c :1 2 3
+complex roots: -1.00 + i1.41 and -1.00 - i1.41
+```
+
+## C++ Implementation
+### 16. Write a C++ program to find all the roots of a quadratic equation using switch.
+```c
+//Write a C++ program to print Hello World.
+#include<iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    float a, b, c;
+    float r1,r2,i;
+    float d;
+    cout << "Enter values of a, b, c :";
+    cin >> a >> b >> c;
+    d = (b*b)-(4*a*c);
+    switch(d>0)
+    {
+    case 1:
+        r1 = (-b+sqrt(d))/(2*a);
+        r2 = (-b-sqrt(d))/(2*a);
+        cout << "real roots:" << r1 << " and "<< r2;
+        break;
+    case 0:
+        switch(d<0)
+        {
+        case 1:
+            r1=r2=-b/(2*a);
+            i=sqrt(-d)/(2*a);
+            cout << "complex roots" << r1 << " and "<< r2;
+            cout << "complex roots: " << " + " << i << r2 << " and " << i;
+            break;
+        case 0:
+            r1=r2=-b/(2*a);
+            cout << "Two equal and real roots: " << r1 << " and " << r2;
+            break;
+        }
+    }
+    return 0;
+}
+```
+### Output
+```
+Enter values of a, b, c :1 2 3
+complex roots: -1.00 + i1.41 and -1.00 - i1.41
+```
+
+## Java Implementation
+### 16. Write a Java program to find all the roots of a quadratic equation using switch.
+```js
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        float a, b, c;
+        float r1,r2,i;
+        float d;
+        System.out.println("Enter values of a, b, c :");
+        Scanner z=new Scanner(System.in);
+        a = z.nextFloat();
+        b = z.nextFloat();
+        c = z.nextFloat();
+        d = (b*b)-(4*a*c);
+        switch(d>0)
+        {
+        case 1:
+
+            r1 = (-b+Math.sqrt(d))/(2*a);
+            r2 = (-b-Math.sqrt(d))/(2*a);
+            System.out.println("real roots:%.2f and %.2f"+ r1 + r2);
+            break;
+        case 0:
+            switch(d<0)
+            {
+            case 1:
+                r1=r2=-b/(2*a);
+                i=Math.sqrt(-d)/(2*a);
+                System.out.println("complex roots: %.2f + i%.2f and %.2f - i%.2f"+r1+i+r2+i);
+                break;
+            case 0:
+                r1=r2=-b/(2*a);
+                System.out.println("Two equal and real roots: %.2f and %.2f"+r1+r2);
+                break;
+            }
+        }
+    }
+}
+```
+### Output
+```
+Enter values of a, b, c :1 2 3
+complex roots: -1.00 + i1.41 and -1.00 - i1.41
+```

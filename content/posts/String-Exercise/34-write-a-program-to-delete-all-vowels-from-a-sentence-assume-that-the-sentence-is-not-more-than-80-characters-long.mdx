@@ -1,0 +1,111 @@
+---
+title: Write a C/C++/Java program to delete all vowels from a sentence. Assume that the sentence is not more than 80 characters long.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 34. Write a C program to delete all vowels from a sentence. Assume that the sentence is not more than 80 characters long.
+```c
+//Write a C program to delete all vowels from a sentence. Assume that the sentence is not more than 80 characters long.
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    char vowel[15] = {'a','e','i','o','u','A','E','I','O','U'};
+    int p=0,i,j;
+    printf("Enter the string: ");
+    gets(str);
+    int len = strlen(str);
+    for(i=0;i<len;i++)
+    {
+       str[i]=str[i+p];
+       for(j=0;j<9;j++)
+       {
+           if(str[i]==vowel[j]){
+             p++;
+             len--;
+             i--;
+          break;
+           }
+       }
+    }
+    str[len]='\0';
+    printf("the string will be '%s' \n",str);
+}
+```
+### Output
+```
+Enter the string: hello there
+the string will be 'hll thr'
+```
+## C++ Implementation
+### 34. Write a C++ program to delete all vowels from a sentence. Assume that the sentence is not more than 80 characters long.
+```c
+//Write a C++ program to delete all vowels from a sentence. Assume that the sentence is not more than 80 characters long.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char str[100];
+    char vowel[15] = {'a','e','i','o','u','A','E','I','O','U'};
+    int p=0,i,j;
+    cout << "Enter the string: ";
+    cin >> str;
+    int len = strlen(str);
+    for(i=0;i<len;i++)
+    {
+       str[i]=str[i+p];
+       for(j=0;j<9;j++)
+       {
+           if(str[i]==vowel[j]){
+             p++;
+             len--;
+             i--;
+             break;
+           }
+       }
+    }
+    str[len]='\0';
+    cout << "the string will be " << str;
+}
+```
+### Output
+```
+Enter the string: hello there
+the string will be 'hll thr'
+```
+
+## Java Implementation
+### 34. Write a Java program to delete all vowels from a sentence. Assume that the sentence is not more than 80 characters long.
+```js
+//Write a Java program to delete all vowels from a sentence. Assume that the sentence is not more than 80 characters long.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter  the string : ");
+        String str = z.nextLine();
+        String str_new = "";
+        char[] letter = {'a','e','i','o','u','A','E','I','O','U'};
+        for (int i = 0; i < str.length(); i++ ){
+            for (int j = 0; j < letter.length ; j ++){
+                if (str.charAt(i) == letter[j]){
+                    str.replace(str.charAt(i), ' ');
+                }
+            }
+        }
+        System.out.println(str);
+    }
+}
+```
+### Output
+```
+Enter the string: hello there
+the string will be 'hll thr'
+```

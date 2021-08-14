@@ -1,0 +1,96 @@
+---
+title: Write a C/C++/Java program to input a string and print it.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 8. Write a C program to input a string and print it.
+```c
+//Write a C program to input a string and print it.
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+   char str1[20];
+   char str2[20];
+   int i;
+   printf("Enter first string : ");
+   scanf("%s",str1);
+   printf("Enter second string : ");
+   scanf("%s",str2);
+   i=strcmp(str1,str2);
+   if(i==0)
+      printf("strings are equal");
+   else
+      printf("strings are not equal");
+   return 0;
+}
+```
+### Output
+```
+Enter first string : hi
+Enter second string : hello
+strings are not equal
+```
+## C++ Implementation
+### 8. Write a C++ program to input a string and print it.
+```c
+//Write a C++ program to input a string and print it.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+   char str1[20];
+   char str2[20];
+   int i;
+   cout << "Enter first string : ";
+   cin >> str1;
+   cout << "Enter second string : ";
+   cin >> str2;
+   i=strcmp(str1,str2);
+   if(i==0)
+      cout << "strings are equal";
+   else
+      cout << "strings are not equal";
+   return 0;
+}
+```
+### Output
+```
+Enter first string : hi
+Enter second string : hello
+strings are not equal
+```
+
+## Java Implementation
+### 8. Write a Java program to input a string and print it.
+```js
+//Write a Java program to input a string and print it.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          String str1, str2;
+          System.out.println("Enter first string : ");
+          str1 = z.nextLine();
+          System.out.println("Enter seconed string : ");
+          str2 = z.nextLine();
+          if(str1.equals(str1)){
+            System.out.println("strings are equal");
+          }
+          else{
+            System.out.println("strings are not equal");
+          }
+      }
+}
+```
+### Output
+```
+Enter first string : hi
+Enter second string : hello
+strings are not equal
+```

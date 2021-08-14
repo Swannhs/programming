@@ -1,0 +1,87 @@
+---
+title: Write a C/C++/Java program to find maximum between three numbers using conditional operator.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 21. Write a C program to find maximum between three numbers using conditional operator.
+```c
+//Write a C program to find maximum between three numbers using conditional operator.
+#include <stdio.h>
+int main()
+{
+    int a,b,c,max;
+    printf("Enter three numbers: ");
+    scanf("%d%d%d", &a,&b,&c);
+    if(a=b=c)
+    {
+        printf("equal");
+        return 0;
+    }
+    max = (a>b && a>c) ?a:(b>c) ?b:c;
+    printf("\nMaximum number is %d", a,b,c, max);
+}
+```
+### Output
+```
+Enter three numbers: 1 2 3
+equal
+```
+
+## C++ Implementation
+### 21. Write a C++ program to find maximum between three numbers using conditional operator.
+```c
+//Write a C++ program to print Hello World.
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,max;
+    cout << "Enter three numbers: ";
+    cin >> a >> b >> c;
+    if(a=b=c)
+    {
+        cout << "equal";
+        return 0;
+    }
+    max = (a>b && a>c) ?a:(b>c) ?b:c;
+    cout << "\nMaximum number is " << max;
+}
+```
+### Output
+```
+Enter three numbers: 1 2 3
+equal
+```
+
+## Java Implementation
+### 21. Write a Java program to find maximum between three numbers using conditional operator.
+```js
+//Write a C++ program to find maximum between three numbers using conditional operator.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int a,b,c,max;
+        System.out.println("Enter three numbers: ");
+        a = z.nextInt();
+        b = z.nextInt();
+        c = z.nextInt();
+        if(a=b=c)
+        {
+            System.out.println("equal");
+            return 0;
+        }
+        max = (a>b && a>c) ?a:(b>c) ?b:c;
+        System.out.println("\nMaximum number is "+ max);
+    }
+}
+```
+### Output
+```
+Enter three numbers: 1 2 3
+equal
+```

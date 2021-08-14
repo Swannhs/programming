@@ -1,0 +1,81 @@
+---
+title: Write a C/C++/Java program to find reverse of a string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 14. Write a C program to find reverse of a string.
+```c
+//Write a C program to find reverse of a string.
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+   char str[100];
+
+   printf("Enter string to reverse\n");
+   gets(str);
+
+   strrev(str);
+
+   printf("Reverse of the string is : %s\n", str);
+
+   return 0;
+}
+```
+### Output
+```
+Enter string to reverse
+hello
+Reverse of the string is olleh
+```
+## C++ Implementation
+### 14. Write a C++ program to find reverse of a string.
+```c
+//Write a C++ program to find reverse of a string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int  main()
+{
+   char str[100];
+   cout << "Enter string to reverse\n";
+   gets(str);
+   strrev(str);
+   cout << "Reverse of the string is : " << str;
+}
+```
+### Output
+```
+Enter string to reverse
+hello
+Reverse of the string is olleh
+```
+
+## Java Implementation
+### 14. Write a Java program to find reverse of a string.
+```js
+//Write a Java program to find reverse of a string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter string to reverse ");
+        String str, word = "";
+        str = z.nextLine();
+        for (int i = str.length() - 1; i >= 0; i--)
+            word += str.charAt(i);
+        System.out.println("Reverse of the string is " + word);
+    }
+}
+```
+### Output
+```
+Enter string to reverse
+hello
+Reverse of the string is olleh
+```

@@ -1,0 +1,162 @@
+---
+title: Write a C/C++/Java program to demonstrate example of structure of array.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 7. Write a C program to demonstrate example of structure of array.
+```c
+//Write a C++ program to demonstrate example of structure of array.
+#include<stdio.h>
+struct Book{
+    char booName[100];
+    char authorName[100];
+};
+struct Book book[100];
+int count=0;
+void input(struct Book *book){
+    getchar();
+    printf("Book Details \n");
+    printf("Book Name : ");
+    fgets(book->booName,sizeof(book->booName),stdin);
+    printf("author Name : ");
+    fgets(book->authorName,sizeof(book->authorName),stdin);
+}
+void details(struct Book *book){
+    printf("Book Details \n\n");
+    printf("Book Name   : %s",book->booName);
+    printf("author Name : %s",book->authorName);
+}
+int main(){
+        printf("\n\n\nselect from menu: \n");
+        printf("1) Add book details.\n2) Display book details.\n3) Exit.\n");
+        int k=0;
+        scanf("%d",&k);
+        system("cls");
+        switch(k){
+            case 1:{
+                if(count>100){
+                    printf("memory full");
+                    main();
+                }
+                input(&book[count]);
+                count++;
+                main();
+            }
+            case 2:{
+                for(int i=0;i<count;i++)
+                {
+                    details(&book[i]);
+                }
+                 main();
+            }
+            case 3:{
+             exit(0);
+            }
+            default: {main();}
+        }
+}
+```
+### Output
+```
+select from menu:
+1) Add book details.
+2) Display book details.
+3) Exit.
+1
+Book Details
+Book Name : Funcycode
+author Name : funycode
+
+select from menu:
+1) Add book details.
+2) Display book details.
+3) Exit.
+2
+Book Details
+
+Book Name   : Funcycode
+author Name : funycode
+```
+
+## C++ Implementation
+### 7. Write a C++ program to demonstrate example of structure of array.
+```c
+//Write a C++ program to find the demonstrate example of structure of array.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct Book{
+    char booName[100];
+    char authorName[100];
+};
+struct Book book[100];
+int count=0;
+void input(struct Book *book){
+    getchar();
+    cout << "Book Details \n";
+    cout << "Book Name : ";
+    fgets(book->booName,sizeof(book->booName),stdin);
+    cout << "author Name : ";
+    fgets(book->authorName,sizeof(book->authorName),stdin);
+}
+void details(struct Book *book){
+    cout << "Book Details \n\n";
+    cout << "Book Name   : " << book->booName;
+    cout << "author Name : " << book->authorName;
+}
+int main(){
+        cout << "\n\n\nselect from menu: \n";
+        cout << "1) Add book details.\n2) Display book details.\n3) Exit.\n";
+        int k=0;
+        cin >> k;
+        system("cls");
+        switch(k){
+            case 1:{
+                if(count>100){
+                    cout << "memory full";
+                    main();
+                }
+                input(&book[count]);
+                count++;
+                main();
+            }
+            case 2:{
+                for(int i=0;i<count;i++)
+                {
+                    details(&book[i]);
+                }
+                 main();
+            }
+            case 3:{
+             exit(0);
+            }
+            default: {main();}
+        }
+}
+```
+### Output
+```
+select from menu:
+1) Add book details.
+2) Display book details.
+3) Exit.
+1
+Book Details
+Book Name : Funcycode
+author Name : funycode
+
+select from menu:
+1) Add book details.
+2) Display book details.
+3) Exit.
+2
+Book Details
+
+Book Name   : Funcycode
+author Name : funycode
+```

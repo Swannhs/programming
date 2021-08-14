@@ -1,0 +1,72 @@
+---
+title: Write a C/C++/Java program that calculates the volume of a sphere.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+## C Implementation
+### 15. Write a C program that calculates the volume of a sphere.
+```c
+/*Write a C program that calculates the volume of a sphere.*/
+#include<stdio.h>
+void main()
+{
+    int a;
+    double b,c;
+    scanf("%d",&a);
+    c=4/3;
+    b=c*3.1416*a*a*a;
+    printf("volume=%f",b);
+}
+```
+### Output
+```
+10
+volume=3141.6000000000004
+```
+## C++ Implementation
+### 15. Write a C++ program that calculates the volume of a sphere.
+```c
+/*Write a C program that calculates the volume of a sphere.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a;
+    double b,c;
+    cin>>a;
+    c=4/3;
+    b=c*3.1416*a*a*a;
+    cout<<"volume:"<<b;
+    return 0;
+}
+```
+### Output
+```
+10
+volume=3141.6000000000004
+```
+## Java Implementation
+### 15. Write a program that calculates the volume of a sphere.
+```js
+/*Write a java program that calculates the volume of a sphere.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        int a;
+        double b,c;
+        Scanner z=new Scanner(System.in);
+        a=z.nextInt();
+        c=4/3;
+        b=c*3.1416*a*a*a;
+        System.out.println("Perimeter="+b);
+    }
+}
+```
+### Output
+```
+10
+volume=3141.6000000000004
+```

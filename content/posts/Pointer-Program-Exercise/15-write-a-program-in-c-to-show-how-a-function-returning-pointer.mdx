@@ -1,0 +1,68 @@
+---
+title: Write a C/C++/Java program to show how a function returning pointer.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 15. Write a C program to show how a function returning pointer.
+```c
+//Write a C program to show how a function returning pointer.
+#include <stdio.h>
+void main()
+{
+ int a,b;
+ int *result;
+   printf(" Enter the two number : ");
+   scanf("%d %d", &a,&b);
+   int* findLarger(int*, int*);
+   result=findLarger(&a, &b);
+   printf(" The larger number is=%d",*result);
+
+}
+
+int* findLarger(int *n1, int *n2)
+{
+ if(*n1 > *n2)
+  return n1;
+ else
+  return n2;
+}
+```
+### Output
+```
+Address of variable 'a' is: 0x7ffcdc9c3f64
+```
+## C++ Implementation
+### 15. Write a C++ program to show how a function returning pointer.
+```c
+//Write a C++ program to show how a function returning pointer.
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    int a,b;
+    int *result;
+    cout<<(" Enter the two number : ");
+    cin>>a>>b;
+    int* findLarger(int*, int*);
+    result=findLarger(&a, &b);
+    cout<<" The larger number is="<<*result;
+
+}
+
+int* findLarger(int *n1, int *n2)
+{
+    if(*n1 > *n2)
+        return n1;
+    else
+        return n2;
+}
+```
+### Output
+```
+Address of variable 'a' is: 0x7ffcdc9c3f64
+```

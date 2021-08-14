@@ -1,0 +1,97 @@
+---
+title: Write a C/C++/Java program to count total number of words in a string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 14. Write a C program to count total number of words in a string.
+```c
+//Write a C program to count total number of words in a string.
+#include<stdio.h>
+#include <string.h>
+int main()
+{
+    char str[100];
+    int i,w=0;
+
+    printf("Enter  the string : ");
+    gets(str);
+
+    for(i=0; str[i]; i++)
+    {
+        if(str[i]==32)
+            w++;
+    }
+    if(i>0)
+        w++;
+
+    printf("string has  %d words",w);
+    return 0;
+}
+```
+### Output
+```
+Enter  the string : Hello from funycode
+string has  3 words
+```
+## C++ Implementation
+### 14. Write a C++ program to count total number of words in a string.
+```c
+//Write a C++ program to count total number of words in a string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int  main()
+{
+    char str[100];
+    int i,w=0;
+    cout << "Enter  the string : ";
+    gets(str);
+    for(i=0; str[i]; i++)
+    {
+        if(str[i]==32)
+            w++;
+    }
+    if(i>0)
+        w++;
+    printf("string has  %d words",w);
+    return 0;
+}
+```
+### Output
+```
+Enter  the string : Hello from funycode
+string has  3 words
+```
+
+## Java Implementation
+### 14. Write a Java program to count total number of words in a string.
+```js
+//Write a Java program to count total number of words in a string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String str, word = "";
+        int i,w=0;
+        str = z.nextLine();
+        for(i = str.length()-1; i >= 0; i --){
+            if(str.charAt(i)==32)
+            w++;
+        }
+        if(i>0)
+          w++;
+        System.out.println("string has " + w + " words");
+    }
+}
+```
+### Output
+```
+Enter  the string : Hello from funycode
+string has  3 words
+```

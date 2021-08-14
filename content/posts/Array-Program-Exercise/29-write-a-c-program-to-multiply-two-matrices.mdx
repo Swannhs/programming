@@ -1,0 +1,289 @@
+---
+title: Write a C/C++/Java program to multiply two matrices.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 29. Write a C program to multiply two matrices.
+```c
+//Write a C program to multiply two matrices.
+#include <stdio.h>
+void main()
+{
+    int arr1[3][3],brr1[3][3],crr1[3][3],i,j;
+    printf("Input elements in the first matrix :\n");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            printf("element - [%d],[%d] : ",i,j);
+            scanf("%d",&arr1[i][j]);
+        }
+    }
+
+    printf("Input elements in the second matrix :\n");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            printf("element - [%d],[%d] : ",i,j);
+            scanf("%d",&brr1[i][j]);
+        }
+    }
+    printf("\nThe First matrix is :\n");
+    for(i=0; i<3; i++)
+    {
+        printf("\n");
+        for(j=0; j<3; j++)
+            printf("%d\t",arr1[i][j]);
+    }
+
+    printf("\nThe Second matrix is :\n");
+    for(i=0; i<3; i++)
+    {
+        printf("\n");
+        for(j=0; j<3; j++)
+            printf("%d\t",brr1[i][j]);
+    }
+    for(i=0; i<3; i++)
+        for(j=0; j<3; j++)
+            crr1[i][j]=arr1[i][j]*brr1[i][j];
+    printf("\nThe subtraction of two matrix is : \n");
+    for(i=0; i<3; i++)
+    {
+        printf("\n");
+        for(j=0; j<3; j++)
+            printf("%d\t",crr1[i][j]);
+    }
+}
+```
+### Output
+```
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 1
+element - [1],[2] : 2
+element - [2],[0] : 3
+element - [2],[1] : 4
+element - [2],[2] : 1
+Input elements in the second matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 1
+element - [1],[2] : 2
+element - [2],[0] : 3
+element - [2],[1] : 4
+element - [2],[2] : 1
+
+The First matrix is :
+
+1       2       3
+4       1       2
+3       4       1
+The Second matrix is :
+
+1       2       3
+4       1       2
+3       4       1
+The subtraction of two matrix is :
+
+1       4       9
+16      1       4
+9       16      1
+```
+## C++ Implementation
+### 29. Write a C++ program to multiply two matrices.
+```c
+//Write a C++ program to multiply two matrices.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    int arr1[3][3],brr1[3][3],crr1[3][3],i,j;
+    cout << "Input elements in the first matrix :\n";
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            cout << "element -  : [" << i << "][" << j << "]";
+            cin >> arr1[i][j];
+        }
+    }
+    printf("Input elements in the second matrix :\n");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            cout << "Input elements in the second matrix :\n";
+            cin >> brr1[i][j];
+        }
+    }
+    cout << "\nThe First matrix is :\n";
+    for(i=0; i<3; i++)
+    {
+        printf("\n");
+        for(j=0; j<3; j++)
+            printf("%d\t",arr1[i][j]);
+    }
+    cout << "\nThe Second matrix is :\n";
+    for(i=0; i<3; i++)
+    {
+        cout << "\n";
+        for(j=0; j<3; j++)
+            cout << "\t" << brr1[i][j];
+    }
+    for(i=0; i<3; i++)
+        for(j=0; j<3; j++)
+            crr1[i][j]=arr1[i][j]*brr1[i][j];
+    cout << "\nThe muliplication of two matrix is : \n";
+    for(i=0; i<3; i++)
+    {
+        cout << "\n";
+        for(j=0; j<3; j++)
+            cout << "\t" << crr1[i][j];
+    }
+}
+```
+### Output
+```
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 1
+element - [1],[2] : 2
+element - [2],[0] : 3
+element - [2],[1] : 4
+element - [2],[2] : 1
+Input elements in the second matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 1
+element - [1],[2] : 2
+element - [2],[0] : 3
+element - [2],[1] : 4
+element - [2],[2] : 1
+
+The First matrix is :
+
+1       2       3
+4       1       2
+3       4       1
+The Second matrix is :
+
+1       2       3
+4       1       2
+3       4       1
+The subtraction of two matrix is :
+
+1       4       9
+16      1       4
+9       16      1
+```
+
+## Java Implementation
+### 29. Write a Java program to multiply two matrices.
+```js
+//Write a Java program to multiply two matrices.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+          Scanner z=new Scanner(System.in);
+          int arr1[][]= new int[3][3],brr1[][] = new int[3][3],crr1[][]= new int[3][3],i,j;
+          System.out.println("Input elements in the first matrix :\n");
+          for(i=0; i<3; i++)
+          {
+              for(j=0; j<3; j++)
+              {
+                  System.out.println("Input elements in the first matrix :\n");
+                  arr1[i][j] = z.nextInt();
+              }
+          }
+          System.out.println("Input elements in the second matrix :\n");
+          for(i=0; i<3; i++)
+          {
+              for(j=0; j<3; j++)
+              {
+                  System.out.println("element - : "+"["+i+"]"+"["+j+"]");
+                  brr1[i][j] = z.nextInt();
+              }
+          }
+          System.out.println("\nThe First matrix is :\n");
+          for(i=0; i<3; i++)
+          {
+              System.out.println("\n");
+              for(j=0; j<3; j++)
+                  System.out.println("\t"+arr1[i][j]);
+          }
+          System.out.println("\nThe Second matrix is :\n");
+          for(i=0; i<3; i++)
+          {
+              System.out.println("\n");
+              for(j=0; j<3; j++)
+                  System.out.println("\t"+brr1[i][j]);
+          }
+          for(i=0; i<3; i++)
+              for(j=0; j<3; j++)
+                  crr1[i][j]=arr1[i][j]-brr1[i][j];
+          System.out.println("\nThe subtraction of two matrix is : \n");
+          for(i=0; i<3; i++)
+          {
+              System.out.printf("\n");
+              for(j=0; j<3; j++)
+                  System.out.printf("\t"+crr1[i][j]);
+          }
+      }
+}
+```
+### Output
+```
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 1
+element - [1],[2] : 2
+element - [2],[0] : 3
+element - [2],[1] : 4
+element - [2],[2] : 1
+Input elements in the second matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 1
+element - [1],[2] : 2
+element - [2],[0] : 3
+element - [2],[1] : 4
+element - [2],[2] : 1
+
+The First matrix is :
+
+1       2       3
+4       1       2
+3       4       1
+The Second matrix is :
+
+1       2       3
+4       1       2
+3       4       1
+The subtraction of two matrix is :
+
+1       4       9
+16      1       4
+9       16      1
+```

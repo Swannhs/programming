@@ -1,0 +1,89 @@
+---
+title: Write a C/C++/Java program to enter three angle of triangle and check whether the right triangle or not.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-14: Write a C program to enter three angle of triangle and check whether the right triangle or not.
+```c
+/*Write a C program to enter three angle of triangle and check whether the right triangle or not.*/
+#include<stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("enter three angles of a triangle-");
+    scanf("%d %d %d",&a,&b,&c);
+    if((a==90&&(b>0&&c>0&&b+c==90))||(b==90&&(a>0&&c>0&&a+c==90))||(c==90&&(a>0&&b>0&&a+b==90)))
+        printf("right triangle");
+    else
+        printf("not right triangle");
+}
+```
+### Output
+```
+enter three angles of a triangle-
+90
+45
+45
+triangle is Right
+```
+
+## C++ Implementation
+### Program-14: Write a C++ program to enter three angle of triangle and check whether the right triangle or not.
+```c
+/*Write a C program to enter three angle of triangle and check whether the right triangle or not.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    cout<<"enter three angle of triangle-\n";
+    cin>>a>>b>>c;
+    if((a==90&&(b>0&&c>0&&b+c==90))||(b==90&&(a>0&&c>0&&a+c==90))||(c==90&&(a>0&&b>0&&a+b==90)))
+        cout<<"right triangle";
+    else
+        cout<<"not right triangle";
+}
+```
+### Output
+```
+enter three angles of a triangle-
+90
+45
+45
+triangle is Right
+```
+
+## Java Implementation
+### Program-14: Write a Java program to enter three angle of triangle and check whether the right triangle or not.
+```js
+/*Write a java program to enter three angle of triangle and check whether the right triangle or not.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b,c;
+        System.out.print("enter three angles of a triangle-\n");
+        a=z.nextInt();
+        b=z.nextInt();
+        c=z.nextInt();
+
+        if((a==90&&(b>0&&c>0&&b+c==90))||(b==90&&(a>0&&c>0&&a+c==90))||(c==90&&(a>0&&b>0&&a+b==90)))
+            System.out.print(" triangle is Right");
+        else
+            System.out.print("triangle is n0t Right");
+    }
+}
+```
+### Output
+```
+enter three angles of a triangle-
+90
+45
+45
+triangle is Right
+```

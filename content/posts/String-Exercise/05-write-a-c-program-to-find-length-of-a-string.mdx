@@ -1,0 +1,77 @@
+---
+title: Write a C/C++/Java program to find length of a string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 5. Write a C program to find length of a string.
+```c
+//Write a C program to find length of a string.
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char word[50];
+    int i, a = 0;
+    printf("Enter a string : ");
+    scanf("%s", word);
+    for (i = 0; word[i] != '\0'; i++)
+    {
+        a++;
+    }
+    printf("The length is %s : %d\n\n", word, a);
+}
+```
+### Output
+```
+Enter a string : hello
+The length is hello : 5
+```
+## C++ Implementation
+### 5. Write a C++ program to find length of a string.
+```c
+//Write a C++ program to find length of a string.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    char word[50];
+    int i, a = 0;
+    cout << "Enter a string : ";
+    cin >> word;
+    for (i = 0; word[i] != '\0'; i++)
+    {
+        a++;
+    }
+    cout << "The length is " << word << " : " << a;
+}
+```
+### Output
+```
+Enter a string : hello
+The length is hello : 5
+```
+
+## Java Implementation
+### 5. Write a Java program to find length of a string.
+```js
+//Write a Java program to find length of a string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          String word;
+          word = z.nextLine();
+          System.out.println("The length is " + word.length());
+      }
+}
+```
+### Output
+```
+Enter a string : hello
+The length is hello : 5
+```

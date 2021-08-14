@@ -1,0 +1,71 @@
+---
+title: Write a C/C++/Java program to swap elements using call by reference.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 11. Write a C program to swap elements using call by reference.
+```c
+//Write a C program to swap elements using call by reference.
+#include<stdio.h>
+int swap(int *p1, int *p2);
+void main()
+{
+  int a, b;
+    printf("Enter two integers\n");
+    scanf("%d%d", &a, &b);
+    swap(&a, &b); //call function
+    printf("\nThe Swapped Values are:\n");
+    printf(" %d %d", a, b);
+}
+int swap(int *p1, int *p2)
+{
+        int temp;
+        temp = *p1;
+        *p1 = *p2;
+        *p2 = temp;
+}
+```
+### Output
+```
+Enter two integers
+1 2
+
+The Swapped Values are:
+ 2 1
+```
+## C++ Implementation
+### 11. Write a C++ program to swap elements using call by reference.
+```c
+//Write a C++ program to swap elements using call by reference.
+#include <iostream>
+using namespace std;
+int swap(int *p1, int *p2);
+int main()
+{
+    int a, b;
+    cout<<("Enter two integers\n");
+    cin>>a>>b;
+    swap(&a, &b); //call function
+    cout<<("\nThe Swapped Values are:\n");
+    cout<<a <<" and "<<b;
+}
+int swap(int *p1, int *p2)
+{
+    int temp;
+    temp = *p1;
+    *p1 = *p2;
+    *p2 = temp;
+}
+```
+### Output
+```
+Enter two integers
+1 2
+
+The Swapped Values are:
+ 2 1
+```

@@ -1,0 +1,123 @@
+---
+title: The marks obtained by a student in 5 different subjects are input through the keyboard. The student gets a division as per the following rules: −Percentage above or equal to 60 – First division −Percentage between 50 and 59 – Second division −Percentage between 40 and 49 – Third division −Percentage less than 40 – Fail
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-33: The marks obtained by a student in 5 different subjects are input through the keyboard. The student gets a division as per the following rules: −Percentage above or equal to 60 – First division
+### Percentage between 50 and 59 – Second division
+### Percentage between 40 and 49
+### Third division −Percentage less than 40 – Fail
+```c
+#include<stdio.h>
+void main()
+{
+    int a,b,c,d,e,s;
+    printf("Enter the number of 5 different subjects of a student-");
+    scanf("%d%d%d%d%d",&a,&b,&c,&d,&e);
+    s=((a+b+c+d+e)*100)/500;
+    if(s>=60)
+        printf("1st division");
+    else if(s>=50&&s<=59)
+        printf("2nd division");
+    else if(s>=40&&s<=49)
+        printf("3rd division");
+    else if(s<40)
+        printf("fail");
+    else
+        printf("not related");
+}
+```
+### Output
+```
+Enter the number of 5 different subjects of a student-
+80
+65
+34
+44
+78
+1st division
+```
+
+## C++ Implementation
+### Program-33: The marks obtained by a student in 5 different subjects are input through the keyboard. The student gets a division as per the following rules: −Percentage above or equal to 60 – First division
+### Percentage between 50 and 59 – Second division
+### Percentage between 40 and 49
+### Third division −Percentage less than 40 – Fail
+```c
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d,e,s;
+    cout<<"enter the number of 5 different subjects of a student-\n";
+    cin>>a>>b>>c>>d>>e;
+    s=((a+b+c+d+e)*100)/500;
+    if(s>=60)
+        cout<<"1st division";
+    else if(s>=50&&s<=59)
+        cout<<"2nd division";
+    else if(s>=40&&s<=49)
+        cout<<"3rd division";
+    else if(s<40)
+        cout<<"fail";
+    else
+        cout<<"not related";
+}
+```
+### Output
+```
+Enter the number of 5 different subjects of a student-
+80
+65
+34
+44
+78
+1st division
+```
+
+## Java Implementation
+### Program-33: The marks obtained by a student in 5 different subjects are input through the keyboard. The student gets a division as per the following rules: −Percentage above or equal to 60 – First division
+### Percentage between 50 and 59 – Second division
+### Percentage between 40 and 49
+### Third division −Percentage less than 40 – Fail
+```js
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b,c,d,e,s;
+        System.out.println("enter the number of 5 different subjects of a student-\n");
+        a=z.nextInt();
+        b=z.nextInt();
+        c=z.nextInt();
+        d=z.nextInt();
+        e=z.nextInt();
+        s=((a+b+c+d+e)*100)/500;
+        if(s>=60)
+             System.out.println("1st division");
+        else if(s>=50&&s<=59)
+             System.out.println("2nd division");
+        else if(s>=40&&s<=49)
+             System.out.println("3rd division");
+        else if(s<40)
+             System.out.println("fail");
+        else
+             System.out.println("not related");
+    }
+}
+```
+### Output
+```
+Enter the number of 5 different subjects of a student-
+80
+65
+34
+44
+78
+1st division
+```

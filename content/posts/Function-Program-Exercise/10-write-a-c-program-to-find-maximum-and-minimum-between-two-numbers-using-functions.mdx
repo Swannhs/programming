@@ -1,0 +1,103 @@
+---
+title: Write a C/C++/Java program to find maximum and minimum between two numbers using functions.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 10. Write a C program to find maximum and minimum between two numbers using functions.
+```c
+//Write a C program to find maximum and minimum between two numbers using functions.
+#include<stdio.h>
+
+int maximum(int a, int b)
+{
+    if(a > b)
+      printf("Maximum number is %d", a);
+    else
+      printf("Maximum number is %d", b);
+}
+
+int main()
+{
+    int n1, n2;
+    printf("Enter two number: ");
+    scanf("%d",&n1);
+    scanf("%d",&n2);
+    if(n1==n2)
+      printf("You have entered same number");
+    else
+      maximum(n1,n2);
+}
+```
+### Output
+```
+Enter two number: 3 4
+Maximum number is 4
+```
+
+## C++ Implementation
+### 10. Write a C++ program to find maximum and minimum between two numbers using functions.
+```c
+//Write a C++ program to find maximum and minimum between two numbers using functions.
+
+#include<iostream>
+using namespace std;
+int maximum(int a, int b)
+{
+    if(a > b)
+      cout << "Maximum number is " << a;
+    else
+      cout << "Maximum number is " << b;
+}
+int main()
+{
+    int n1, n2;
+    printf("Enter two number: ");
+    cin >> n1 >> n2;
+    if(n1==n2)
+      cout << "You have entered same number";
+    else
+      maximum(n1,n2);
+}
+```
+### Output
+```
+Enter two number: 3 4
+Maximum number is 4
+```
+
+## Java Implementation
+### 2. Write a Java program to find the square of any number using the function.
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    static int maximum(int a, int b)
+    {
+        if(a > b)
+          System.out.println("Maximum number is "+ a);
+        else
+          System.out.println("Maximum number is "+ b);
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n1, n2;
+        System.out.println("Enter two number: ");
+        n1 = z.nextInt();
+        n2 = z.nextInt();
+        if(n1==n2)
+          System.out.println("You have entered same number");
+        else
+          maximum(n1,n2);
+    }
+}
+```
+### Output
+```
+Enter two number: 3 4
+Maximum number is 4
+```

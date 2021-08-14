@@ -1,0 +1,234 @@
+---
+title: Write a C/C++/Java program to Create c structure to specify data of customers in a bank. The data to be stored is: Account number, Name, Balance in account. Assume maximum of 200 customers in the bank. -Write a function to print the Account number and name of each customer with balance below Rs. 100. -If a customer request for withdrawal or deposit, it is given in the form: Acct. no, amount, code (1 for deposit, 0 for withdrawal) -Write a program to give a message, “The balance is insufficient for the specified withdrawal”.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 21. Write a C program to create a structure to specify data of customers in a bank. The data to be stored is: Account number, Name, Balance in account. Assume maximum of 200 customers in the bank. -Write a function to print the Account number and name of each customer with balance below Rs. 100. -If a customer request for withdrawal or deposit, it is given in the form: Acct. no, amount, code (1 for deposit, 0 for withdrawal) -Write a program to give a message, “The balance is insufficient for the specified withdrawal”.
+```c
+//Write a C program to create a structure to specify data of customers in a bank. The data to be stored is: Account number, Name, Balance in account. Assume maximum of 200 customers in the bank. -Write a function to print the Account number and name of each customer with balance below Rs. 100. -If a customer request for withdrawal or deposit, it is given in the form: Acct. no, amount, code (1 for deposit, 0 for withdrawal) -Write a program to give a message, “The balance is insufficient for the specified withdrawal”.
+#include<stdio.h>
+struct account{
+    char name[100];
+    int accNo;
+    double Balance;
+};
+void lowBalance(struct account acc[]){
+    printf("Account balance<100 Rs. \n");
+    for(int i=0;i<200;i++)
+    {
+        if(!acc[i].accNo)
+        {
+            break;
+        }
+        if(acc[i].Balance<=100)
+        {
+            printf("Name      : %s\n",acc[i].name);
+            printf("Balance   : %lf\n",acc[i].Balance);
+            printf("Account No: %d\n\n",acc[i].accNo);
+        }
+    }
+}
+void withdrawal(struct account acc[])
+{
+    printf("1 for deposit, 0 for withdrawal");
+    int t=0;
+    scanf("%d",&t);
+    if(t==1)
+    {
+        printf("\nEnter account No: ");
+        int accno;
+        scanf("%d",&accno);
+        double balance;
+        printf("Enter amount : ");
+        scanf("%lf",&balance);
+        for(int i=0;i<200;i++)
+        {
+        if(!acc[i].accNo)
+        {
+            break;
+        }
+        if(acc[i].accNo==accno)
+        {
+            acc[i].Balance+=balance;
+            printf("Name          : %s\n",acc[i].name);
+            printf("new Balance   : %lf\n",acc[i].Balance);
+            printf("Account No    : %d\n\n",acc[i].accNo);
+        }
+        }
+    }
+    else if(t==0)
+    {
+        printf("\nEnter account No: ");
+        int accno;
+        scanf("%d",&accno);
+        double balance;
+        printf("Enter amount : ");
+        scanf("%lf",&balance);
+        for(int i=0;i<200;i++)
+        {
+        if(!acc[i].accNo)
+        {
+            break;
+        }
+        if(acc[i].accNo==accno)
+        {
+            if(acc[i].Balance>balance)
+            {
+                acc[i].Balance-=balance;
+            printf("Name          : %s\n",acc[i].name);
+            printf("new Balance   : %lf\n",acc[i].Balance);
+            printf("Account No    : %d\n\n",acc[i].accNo);
+            }
+            else{
+                printf("\nThe balance is insufficient for the specified withdrawal\n");
+            }
+        }
+        }
+    }
+}
+int main(){
+    struct account acc[200]={
+    "Rakib",1,1200.0,
+    "Sakib",2,10.9,
+    "Imran",3,1000.0,
+    "Afafat",4,50.0};
+    lowBalance(acc);
+    withdrawal(acc);
+}
+```
+### Output
+```
+Account balance<100 Rs.
+Name      : Sakib
+Balance   : 10.900000
+Account No: 2
+
+Name      : Afafat
+Balance   : 50.000000
+Account No: 4
+
+1 for deposit, 0 for withdrawal0
+
+Enter account No: 2
+Enter amount : 6
+Name          : Sakibnew Balance   : 4.9Account No    : 2
+```
+
+## C++ Implementation
+### 21. Write a C++ program to create a structure to specify data of customers in a bank. The data to be stored is: Account number, Name, Balance in account. Assume maximum of 200 customers in the bank. -Write a function to print the Account number and name of each customer with balance below Rs. 100. -If a customer request for withdrawal or deposit, it is given in the form: Acct. no, amount, code (1 for deposit, 0 for withdrawal) -Write a program to give a message, “The balance is insufficient for the specified withdrawal”.
+```c
+//Write a C++ program to create a structure to specify data of customers in a bank. The data to be stored is: Account number, Name, Balance in account. Assume maximum of 200 customers in the bank. -Write a function to print the Account number and name of each customer with balance below Rs. 100. -If a customer request for withdrawal or deposit, it is given in the form: Acct. no, amount, code (1 for deposit, 0 for withdrawal) -Write a program to give a message, “The balance is insufficient for the specified withdrawal”.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct account{
+    char name[100];
+    int accNo;
+    double Balance;
+};
+void lowBalance(struct account acc[]){
+    printf("Account balance<100 Rs. \n");
+    for(int i=0;i<200;i++)
+    {
+        if(!acc[i].accNo)
+        {
+            break;
+        }
+        if(acc[i].Balance<=100)
+        {
+            printf("Name      : %s\n",acc[i].name);
+            printf("Balance   : %lf\n",acc[i].Balance);
+            printf("Account No: %d\n\n",acc[i].accNo);
+        }
+    }
+}
+void withdrawal(struct account acc[])
+{
+    cout << "1 for deposit, 0 for withdrawal";
+    int t=0;
+    cin >> t;
+    if(t==1)
+    {
+        cout << "\nEnter account No: ";
+        int accno;
+        cin >> accno;
+        double balance;
+        cout << "Enter amount : ";
+        cin >> balance;
+        for(int i=0;i<200;i++)
+        {
+        if(!acc[i].accNo)
+        {
+            break;
+        }
+        if(acc[i].accNo==accno)
+        {
+            acc[i].Balance+=balance;
+            cout << "Name          : " << acc[i].name;
+            cout << "new Balance   : " << acc[i].Balance;
+            cout << "Account No    : " << acc[i].accNo;
+        }
+        }
+    }
+    else if(t==0)
+    {
+        cout << "\nEnter account No: ";
+        int accno;
+        cin >> accno;
+        double balance;
+        cout << "Enter amount : ";
+        cin >> balance;
+        for(int i=0;i<200;i++)
+        {
+        if(!acc[i].accNo)
+        {
+            break;
+        }
+        if(acc[i].accNo==accno)
+        {
+            if(acc[i].Balance>balance)
+            {
+                acc[i].Balance-=balance;
+                cout << "Name          : "<<acc[i].name;
+                cout << "new Balance   : "<<acc[i].Balance;
+                cout << "Account No    : "<<acc[i].accNo;
+            }
+            else{
+                cout << "\nThe balance is insufficient for the specified withdrawal\n";
+            }
+        }
+        }
+    }
+}
+int main(){
+    struct account acc[200]={
+    "Rakib",1,1200.0,
+    "Sakib",2,10.9,
+    "Imran",3,1000.0,
+    "Afafat",4,50.0};
+    lowBalance(acc);
+    withdrawal(acc);
+}
+```
+### Output
+```
+Account balance<100 Rs.
+Name      : Sakib
+Balance   : 10.900000
+Account No: 2
+
+Name      : Afafat
+Balance   : 50.000000
+Account No: 4
+
+1 for deposit, 0 for withdrawal0
+
+Enter account No: 2
+Enter amount : 6
+Name          : Sakibnew Balance   : 4.9Account No    : 2
+```

@@ -1,0 +1,100 @@
+---
+title: Write a C/C++/Java program to take the value from the user as input all sides of a triangle and check whether the triangle is valid or not using switch.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 12. Write a C program to take the value from the user as input all sides of a triangle and check whether the triangle is valid or not using switch.
+
+```c
+//Write a C program to take the value from the user as input all sides of a triangle and check whether the triangle is valid or not using switch.
+#include<stdio.h>
+int main()
+{
+    int side1,side2,side3;
+    printf("Enter three sides:");
+    scanf("%d %d %d",&side1,&side2,&side3);
+    switch((side1+side2>side3)||(side2+side3>side1)||(side3+side1>side2))
+    {
+    case 1:
+        printf("valid");
+        break;
+    case 0:
+        printf("invalid");
+        break;
+    default:
+        printf("not triangle");
+    }
+}
+```
+### Output
+```
+input: 90 45 45
+output: valid
+```
+
+## C++ Implementation
+### 12. Write a C++ program to take the value from the user as input all sides of a triangle and check whether the triangle is valid or not using switch.
+```c
+//Write a C++ program to take the value from the user as input all sides of a triangle and check whether the triangle is valid or not using switch.
+#include<iostream>
+using namespace std;
+int main()
+{
+    int side1,side2,side3;
+    cout << "Enter three sides:";
+    cin >> side1 >> side2 >> side3;
+    switch((side1+side2>side3)||(side2+side3>side1)||(side3+side1>side2))
+    {
+    case 1:
+        cout << "valid";
+        break;
+    case 0:
+        cout << "invalid";
+        break;
+    default:
+        cout << "not triangle";
+    }
+}
+```
+### Output
+```
+input: 90 45 45
+output: valid
+```
+
+## Java Implementation
+### 12. Write a Java program to take the value from the user as input all sides of a triangle and check whether the triangle is valid or not using switch.
+```js
+import java.util.Scanner;
+public class Funycode {
+    //Write a Java program to take the value from the user as input all sides of a triangle and check whether the triangle is valid or not using switch.
+    public static void main(String[] args) {
+        int side1,side2,side3;
+        System.out.println("Enter three sides:");
+        Scanner z=new Scanner(System.in);
+        side1 = z.nextInt();
+        side2 = z.nextInt();
+        side3 = z.nextInt();
+        switch((side1+side2>side3)||(side2+side3>side1)||(side3+side1>side2))
+        {
+        case 1:
+            System.out.println("valid");
+            break;
+        case 0:
+            System.out.println("invalid");
+            break;
+        default:
+            System.out.println("not triangle");
+        }
+    }
+}
+```
+### Output
+```
+input: 90 45 45
+output: valid
+```

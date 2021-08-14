@@ -1,0 +1,96 @@
+---
+title: The distance between two cities (in km.) is input through the keyboard. Write a program to convert and print this distance in meters, feet, inches and centimeters.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-18: The distance between two cities (in km.) is input through the keyboard. Write a program to convert and print this distance in meters, feet, inches and centimeters.
+```c
+/*The distance between two cities (in km.) is input through the keyboard. Write a C program to convert and print this distance in meters, feet, inches and centimeters.*/
+#include<stdio.h>
+void main()
+{
+    int a;
+    float b,c,d,e;
+    scanf("%d",&a);
+    b=a*1000;
+    c=b*100;
+    d=c*0.032;
+    e=d*12;
+    printf("meter=%f Centimeter=%f Feet=%f Inches=%f",b,c,d,e);
+}
+```
+### Output
+```
+1000
+Meter:=1000000.0
+Centimeter=1.0E8
+Feet=3200000.0
+Inches=3.84E7
+```
+
+## C++ Implementation
+### Program-18: The distance between two cities (in km.) is input through the keyboard. Write a C++ program to convert and print this distance in meters, feet, inches and centimeters.
+```c
+/*The distance between two cities (in km.) is input through the keyboard. Write a C++ program to convert and print this distance in meters, feet, inches and centimeters.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a;
+    double b,c,d,e;
+    cin>>a;
+    b=a*1000;
+    c=b*100;
+    d=c*0.032;
+    e=d*12;
+    cout<<"Meter:"<<b<<endl;
+    cout<<"Centimeter:"<<c<<endl;
+    cout<<"Feet:"<<d<<endl;
+    cout<<"Inches:"<<e;
+    return 0;
+}
+```
+### Output
+```
+1000
+Meter:=1000000.0
+Centimeter=1.0E8
+Feet=3200000.0
+Inches=3.84E7
+```
+
+## Java Implementation
+### Program-18: The distance between two cities (in km.) is input through the keyboard. Write a Java program to convert and print this distance in meters, feet, inches and centimeters.
+```js
+/*The distance between two cities (in km.) is input through the keyboard. Write a Java program to convert and print this distance in meters, feet, inches and centimeters.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        int a;
+        double b,c,d,e;
+        Scanner z=new Scanner(System.in);
+        a=z.nextInt();
+        b=a*1000;
+        c=b*100;
+        d=c*0.032;
+        e=d*12;
+        System.out.println("Meter:="+b);
+        System.out.println("Centimeter="+c);
+        System.out.println("Feet="+d);
+        System.out.println("Inches"+e);
+    }
+}
+```
+### Output
+```
+1000
+Meter:=1000000.0
+Centimeter=1.0E8
+Feet=3200000.0
+Inches3.84E7
+```

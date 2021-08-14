@@ -1,0 +1,518 @@
+---
+title: Write a C/C++/Java program to enter a number and print it in words.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 24. Write a C program to accept 3 numbers from user one by one and displays their sum on screen.
+```c
+//Write a C program to accept 3 numbers from user one by one and displays their sum on screen.
+//Using for loop
+#include <stdio.h>
+int main()
+{
+    int i,j, n, num = 0;
+
+    printf("Enter any number to print in words: ");
+    scanf("%d", &n);
+
+    for(i=n;n!=0; n /= 10)
+    {
+        num = (num * 10) + (n % 10);
+    }
+
+    for(j=num;num!= 0;num = num/10)
+    {
+        switch(num % 10)
+        {
+            case 0:
+                printf("Zero ");
+                break;
+            case 1:
+                printf("One ");
+                break;
+            case 2:
+                printf("Two ");
+                break;
+            case 3:
+                printf("Three ");
+                break;
+            case 4:
+                printf("Four ");
+                break;
+            case 5:
+                printf("Five ");
+                break;
+            case 6:
+                printf("Six ");
+                break;
+            case 7:
+                printf("Seven ");
+                break;
+            case 8:
+                printf("Eight ");
+                break;
+            case 9:
+                printf("Nine ");
+                break;
+        }
+
+    }
+
+    return 0;
+}
+//Using while loop
+#include <stdio.h>
+int main()
+{
+    int n, num = 0;
+
+    printf("Enter any number to print in words: ");
+    scanf("%d", &n);
+
+    while(n != 0)
+    {
+        num = (num * 10) + (n % 10);
+        n /= 10;
+    }
+
+    while(num != 0)
+    {
+        switch(num % 10)
+        {
+            case 0:
+                printf("Zero ");
+                break;
+            case 1:
+                printf("One ");
+                break;
+            case 2:
+                printf("Two ");
+                break;
+            case 3:
+                printf("Three ");
+                break;
+            case 4:
+                printf("Four ");
+                break;
+            case 5:
+                printf("Five ");
+                break;
+            case 6:
+                printf("Six ");
+                break;
+            case 7:
+                printf("Seven ");
+                break;
+            case 8:
+                printf("Eight ");
+                break;
+            case 9:
+                printf("Nine ");
+                break;
+        }
+
+        num = num / 10;
+    }
+
+    return 0;
+}
+//Using do while loop
+#include <stdio.h>
+int main()
+{
+    int n, num = 0;
+
+    printf("Enter any number to print in words: ");
+    scanf("%d", &n);
+
+    do
+    {
+        num = (num * 10) + (n % 10);
+        n /= 10;
+    }
+    while(n != 0);
+
+    do
+    {
+        switch(num % 10)
+        {
+            case 0:
+                printf("Zero ");
+                break;
+            case 1:
+                printf("One ");
+                break;
+            case 2:
+                printf("Two ");
+                break;
+            case 3:
+                printf("Three ");
+                break;
+            case 4:
+                printf("Four ");
+                break;
+            case 5:
+                printf("Five ");
+                break;
+            case 6:
+                printf("Six ");
+                break;
+            case 7:
+                printf("Seven ");
+                break;
+            case 8:
+                printf("Eight ");
+                break;
+            case 9:
+                printf("Nine ");
+                break;
+        }
+
+        num = num / 10;
+    }
+    while(num != 0);
+
+    return 0;
+}
+```
+### Output
+```
+Enter any number to print in words: 5
+Five
+```
+
+## C++ Implementation
+### 24. Write a C++ program to enter a number and print it in words.
+```c
+//Write a C++ program to enter a number and print it in words.
+
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,j, n, num = 0;
+    cout << "Enter any number to print in words: ";
+    cin >> n;
+    for(i=n;n!=0; n /= 10)
+    {
+        num = (num * 10) + (n % 10);
+    }
+    for(j=num;num!= 0;num = num/10)
+    {
+        switch(num % 10)
+        {
+            case 0:
+                cout << "Zero ";
+                break;
+            case 1:
+                cout << "One ";
+                break;
+            case 2:
+                cout << "Two ";
+                break;
+            case 3:
+                cout << "Three ";
+                break;
+            case 4:
+                cout << "Four ";
+                break;
+            case 5:
+                cout << "Five ";
+                break;
+            case 6:
+                cout << "Six ")
+                break;
+            case 7:
+                cout << "Seven ";
+                break;
+            case 8:
+                cout << "Eight ";
+                break;
+            case 9:
+                cout << "Nine ";
+                break;
+        }
+    }
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n, num = 0;
+    cout << "Enter any number to print in words: ";
+    cin >> n;
+    while(n != 0)
+    {
+        num = (num * 10) + (n % 10);
+        n /= 10;
+    }
+    while(num != 0)
+    {
+        switch(num % 10)
+        {
+            case 0:
+                cout << "Zero ";
+                break;
+            case 1:
+                cout << "One ";
+                break;
+            case 2:
+                cout << "Two ";
+                break;
+            case 3:
+                cout << "Three ";
+                break;
+            case 4:
+                cout << "Four ";
+                break;
+            case 5:
+                cout << "Five ";
+                break;
+            case 6:
+                cout << "Six ")
+                break;
+            case 7:
+                cout << "Seven ";
+                break;
+            case 8:
+                cout << "Eight ";
+                break;
+            case 9:
+                cout << "Nine ";
+                break;
+        }
+        num = num / 10;
+    }
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n, num = 0;
+    cout << "Enter any number to print in words: ";
+    cin >> n;
+    do
+    {
+        num = (num * 10) + (n % 10);
+        n /= 10;
+    }
+    while(n != 0);
+    do
+    {
+        switch(num % 10)
+        {
+            case 0:
+                cout << "Zero ";
+                break;
+            case 1:
+                cout << "One ";
+                break;
+            case 2:
+                cout << "Two ";
+                break;
+            case 3:
+                cout << "Three ";
+                break;
+            case 4:
+                cout << "Four ";
+                break;
+            case 5:
+                cout << "Five ";
+                break;
+            case 6:
+                cout << "Six ")
+                break;
+            case 7:
+                cout << "Seven ";
+                break;
+            case 8:
+                cout << "Eight ";
+                break;
+            case 9:
+                cout << "Nine ";
+                break;
+        }
+        num = num / 10;
+    }
+    while(num != 0);
+}
+```
+### Output
+```
+Enter any number to print in words: 5
+Five
+```
+
+## Java Implementation
+### 24. Write a Java program to enter a number and print it in words.
+```js
+//Write a Java program to accept 3 numbers from user one by one and displays their sum on screen.
+//Using for loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int i,j, n, num = 0;
+        System.out.println("Enter any number to print in words: ");
+        n = z.nextInt();
+        for(i=n;n!=0; n /= 10)
+        {
+            num = (num * 10) + (n % 10);
+        }
+        for(j=num;num!= 0;num = num/10)
+        {
+            switch(num % 10)
+            {
+                case 0:
+                    System.out.println("Zero ");
+                    break;
+                case 1:
+                    System.out.println("One ");
+                    break;
+                case 2:
+                    System.out.println("Two ");
+                    break;
+                case 3:
+                    System.out.println("Three ");
+                    break;
+                case 4:
+                    System.out.println("Four ");
+                    break;
+                case 5:
+                    System.out.println("Five ");
+                    break;
+                case 6:
+                    System.out.println("Six ");
+                    break;
+                case 7:
+                    System.out.println("Seven ");
+                    break;
+                case 8:
+                    System.out.println("Eight ");
+                    break;
+                case 9:
+                    System.out.println("Nine ");
+                    break;
+            }
+        }
+    }
+}
+//Using while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n, num = 0;
+        System.out.println("Enter any number to print in words: ");
+        n = z.nextInt();
+        while(n != 0)
+        {
+            num = (num * 10) + (n % 10);
+            n /= 10;
+        }
+        while(num != 0)
+        {
+            switch(num % 10)
+            {
+                case 0:
+                    System.out.println("Zero ");
+                    break;
+                case 1:
+                    System.out.println("One ");
+                    break;
+                case 2:
+                    System.out.println("Two ");
+                    break;
+                case 3:
+                    System.out.println("Three ");
+                    break;
+                case 4:
+                    System.out.println("Four ");
+                    break;
+                case 5:
+                    System.out.println("Five ");
+                    break;
+                case 6:
+                    System.out.println("Six ");
+                    break;
+                case 7:
+                    System.out.println("Seven ");
+                    break;
+                case 8:
+                    System.out.println("Eight ");
+                    break;
+                case 9:
+                    System.out.println("Nine ");
+                    break;
+            }
+            num = num / 10;
+        }
+    }
+}
+//Using do while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n, num = 0;
+        System.out.println("Enter any number to print in words: ");
+        n = z.nextInt();
+        do
+        {
+            num = (num * 10) + (n % 10);
+            n /= 10;
+        }
+        while(n != 0);
+        do
+        {
+            switch(num % 10)
+            {
+                case 0:
+                    System.out.println("Zero ");
+                    break;
+                case 1:
+                    System.out.println("One ");
+                    break;
+                case 2:
+                    System.out.println("Two ");
+                    break;
+                case 3:
+                    System.out.println("Three ");
+                    break;
+                case 4:
+                    System.out.println("Four ");
+                    break;
+                case 5:
+                    System.out.println("Five ");
+                    break;
+                case 6:
+                    System.out.println("Six ");
+                    break;
+                case 7:
+                    System.out.println("Seven ");
+                    break;
+                case 8:
+                    System.out.println("Eight ");
+                    break;
+                case 9:
+                    System.out.println("Nine ");
+                    break;
+            }
+            num = num / 10;
+        }
+        while(num != 0);
+    }
+}
+```
+### Output
+```
+Enter any number to print in words: 5
+Five
+```

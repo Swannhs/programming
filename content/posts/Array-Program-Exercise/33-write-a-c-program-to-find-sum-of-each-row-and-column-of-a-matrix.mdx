@@ -1,0 +1,210 @@
+---
+title: Write a C/C++/Java program to find sum of each row and column of a matrix.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 33. Write a C program to find sum of each row and column of a matrix.
+```c
+//Write a C program to find sum of each row and column of a matrix.
+#include <stdio.h>
+void main ()
+{
+    int array[3][3],i,j,sum=0;
+    printf("Enter 9 co-efficients of the matrix-\n");
+    for (i = 0; i < 3; ++i)
+    {
+        for (j = 0; j < 3; ++j)
+        {
+            scanf("%d", &array[i][j]);
+        }
+    }
+    printf("The given matrix is \n");
+    for (i = 0; i < 3; ++i)
+    {
+        for (j = 0; j < 3; ++j)
+        {
+            printf(" %d", array[i][j]);
+        }
+        printf("\n");
+    }
+
+    for (i = 0; i < 3; ++i)
+    {
+        for (j = 0; j < 3; ++j)
+        {
+            sum = sum + array[i][j] ;
+        }
+
+        printf("Sum of the %d row is = %d\n", i, sum);
+        sum = 0;
+
+    }
+    sum = 0;
+    for (j = 0; j < 3; ++j)
+    {
+        for (i = 0; i < 3; ++i)
+        {
+            sum = sum + array[i][j];
+        }
+
+        printf("Sum of the %d column is = %d\n", j, sum);
+        sum = 0;
+
+    }
+
+}
+```
+### Output
+```
+Enter 9 co-efficients of the matrix-
+1 2 3 4 5 4 3 2 1
+The given matrix is
+ 1 2 3
+ 4 5 4
+ 3 2 1
+Sum of the 0 row is = 6
+Sum of the 1 row is = 13
+Sum of the 2 row is = 6
+Sum of the 0 column is = 8
+Sum of the 1 column is = 9
+Sum of the 2 column is = 8
+```
+## C++ Implementation
+### 33. Write a C++ program to find sum of each row and column of a matrix.
+```c
+//Write a C++ program to find sum of each row and column of a matrix.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    int array[3][3],i,j,sum=0;
+    cout << "Enter 9 co-efficients of the matrix-\n";
+    for (i = 0; i < 3; ++i)
+    {
+        for (j = 0; j < 3; ++j)
+        {
+            cin >> array[i][j];
+        }
+    }
+    cout << "The given matrix is \n";
+    for (i = 0; i < 3; ++i)
+    {
+        for (j = 0; j < 3; ++j)
+        {
+            cout << "\t" << arr1[i][j];
+        }
+        cout << "\n";
+    }
+
+    for (i = 0; i < 3; ++i)
+    {
+        for (j = 0; j < 3; ++j)
+        {
+            sum = sum + array[i][j] ;
+        }
+
+        cout << "Sum of the " << i << " row is = " << sum << endl);
+        sum = 0;
+
+    }
+    sum = 0;
+    for (j = 0; j < 3; ++j)
+    {
+        for (i = 0; i < 3; ++i)
+        {
+            sum = sum + array[i][j];
+        }
+
+        cout << "Sum of the " << j << " row is = " << sum << endl);
+        sum = 0;
+
+    }
+}
+```
+### Output
+```
+Enter 9 co-efficients of the matrix-
+1 2 3 4 5 4 3 2 1
+The given matrix is
+ 1 2 3
+ 4 5 4
+ 3 2 1
+Sum of the 0 row is = 6
+Sum of the 1 row is = 13
+Sum of the 2 row is = 6
+Sum of the 0 column is = 8
+Sum of the 1 column is = 9
+Sum of the 2 column is = 8
+```
+
+## Java Implementation
+### 33. Write a Java program to find sum of each row and column of a matrix.
+```js
+//Write a Java program to find sum of each row and column of a matrix.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          int array[][]= new int[3][3],i,j,sum=0;
+          System.out.printf("Enter 9 co-efficients of the matrix-\n");
+          for (i = 0; i < 3; ++i)
+          {
+              for (j = 0; j < 3; ++j)
+              {
+                  array[i][j] = z.nextInt();
+              }
+          }
+          System.out.printf("The given matrix is \n");
+          for (i = 0; i < 3; ++i)
+          {
+              for (j = 0; j < 3; ++j)
+              {
+                  System.out.printf("\t"+array[i][j]);
+              }
+              System.out.printf("\n");
+          }
+
+          for (i = 0; i < 3; ++i)
+          {
+              for (j = 0; j < 3; ++j)
+              {
+                  sum = sum + array[i][j] ;
+              }
+
+              System.out.println("Sum of the " + i + " row is = "+ sum);
+              sum = 0;
+          }
+          sum = 0;
+          for (j = 0; j < 3; ++j)
+          {
+              for (i = 0; i < 3; ++i)
+              {
+                  sum = sum + array[i][j];
+              }
+
+              System.out.println("Sum of the " + j + " column is = "+sum);
+              sum = 0;
+          }
+      }
+}
+```
+### Output
+```
+Enter 9 co-efficients of the matrix-
+1 2 3 4 5 4 3 2 1
+The given matrix is
+ 1 2 3
+ 4 5 4
+ 3 2 1
+Sum of the 0 row is = 6
+Sum of the 1 row is = 13
+Sum of the 2 row is = 6
+Sum of the 0 column is = 8
+Sum of the 1 column is = 9
+Sum of the 2 column is = 8
+```

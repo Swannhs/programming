@@ -1,0 +1,215 @@
+---
+title: Write a C/C++/Java program to convert Octal to Binary number system.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 21. Write a C program to convert Octal to Binary number system.
+```c
+//Write a C program to convert Octal to Binary number system.
+//Using for loop
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main()
+{
+    long int b= 0, octal, place = 1, r,n;
+    int OCT[] = {0, 1, 10, 11, 100, 101, 110, 111};
+    printf("Enter the octal Value:\n");
+    scanf("%ld",&octal);
+    n=octal;
+    for(n=octal;octal > 0;octal = octal/10)
+    {
+        r = octal % 10;
+        b += (OCT[r]*place);
+        place *= 1000;
+    }
+    printf("Binary Value is %ld", b);
+}
+//Using while loop
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main()
+{
+    long int b= 0, octal, place = 1, r;
+    int OCT[] = {0, 1, 10, 11, 100, 101, 110, 111};
+    printf("Enter the octal Value:\n");
+    scanf("%ld",&octal);
+    while(octal > 0)
+    {
+        r = octal % 10;
+        b += (OCT[r]*place);
+        octal = octal / 10;
+        place *= 1000;
+    }
+    printf("Binary Value is %ld", b);
+}
+//Using do while loop
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main()
+{
+    long int b= 0, octal, place = 1, r;
+    int OCT[] = {0, 1, 10, 11, 100, 101, 110, 111};
+    printf("Enter the octal Value:\n");
+    scanf("%ld",&octal);
+    do
+    {
+        r = octal % 10;
+        b += (OCT[r]*place);
+        octal = octal / 10;
+        place *= 1000;
+    }
+    while(octal > 0);
+    printf("Binary Value is %ld", b);
+}
+```
+### Output
+```
+Enter the octal Value:
+10
+Binary Value is 1000
+```
+
+## C++ Implementation
+### 21. Write a C++ program to convert Octal to Binary number system.
+```c
+//Write a C++ program to convert Octal to Binary number system.
+
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    long int b= 0, octal, place = 1, r,n;
+    int OCT[] = {0, 1, 10, 11, 100, 101, 110, 111};
+    cout << "Enter the octal Value:\n";
+    cin >> octal;
+    n=octal;
+    for(n=octal;octal > 0;octal = octal/10)
+    {
+        r = octal % 10;
+        b += (OCT[r]*place);
+        place *= 1000;
+    }
+    cout << "Binary Value is " << b;
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    long int b= 0, octal, place = 1, r;
+    int OCT[] = {0, 1, 10, 11, 100, 101, 110, 111};
+    cout << "Enter the octal Value:\n";
+    cin >> octal;
+    while(octal > 0)
+    {
+        r = octal % 10;
+        b += (OCT[r]*place);
+        octal = octal / 10;
+        place *= 1000;
+    }
+    cout << "Binary Value is " << b;
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    long int b= 0, octal, place = 1, r;
+    int OCT[] = {0, 1, 10, 11, 100, 101, 110, 111};
+    printf("Enter the octal Value:\n");
+    scanf("%ld",&octal);
+    do
+    {
+        r = octal % 10;
+        b += (OCT[r]*place);
+        octal = octal / 10;
+        place *= 1000;
+    }
+    while(octal > 0);
+    printf("Binary Value is %ld", b);
+}
+```
+### Output
+```
+Enter the octal Value:
+10
+Binary Value is 1000
+```
+
+## Java Implementation
+### 21. Write a Java program to convert Octal to Binary number system.
+```js
+//Write a Java program to convert Octal to Binary number system.
+//Using for loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        long int b= 0, octal, place = 1, r,n;
+        int OCT[] = {0, 1, 10, 11, 100, 101, 110, 111};
+        System.out.println("Enter the octal Value: ");
+        octal = z.nextInt();
+        n=octal;
+        for(n=octal;octal > 0;octal = octal/10)
+        {
+            r = octal % 10;
+            b += (OCT[r]*place);
+            place *= 1000;
+        }
+        System.out.println("Binary Value is "+ b);
+    }
+}
+//Using while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        long int b= 0, octal, place = 1, r;
+        int OCT[] = {0, 1, 10, 11, 100, 101, 110, 111};
+        System.out.println("Enter the octal Value:\n");
+        octal = z.nextInt();
+        while(octal > 0)
+        {
+            r = octal % 10;
+            b += (OCT[r]*place);
+            octal = octal / 10;
+            place *= 1000;
+        }
+        System.out.println("Binary Value is "+ b);
+    }
+}
+//Using do while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        long int b= 0, octal, place = 1, r;
+        int OCT[] = {0, 1, 10, 11, 100, 101, 110, 111};
+        System.out.println("Enter the octal Value:\n");
+        octal = z.nextInt();
+        do
+        {
+            r = octal % 10;
+            b += (OCT[r]*place);
+            octal = octal / 10;
+            place *= 1000;
+        }
+        while(octal > 0);
+        System.out.println("Binary Value is "+ b);
+    }
+}
+```
+### Output
+```
+Enter the octal Value:
+10
+Binary Value is 1000
+```

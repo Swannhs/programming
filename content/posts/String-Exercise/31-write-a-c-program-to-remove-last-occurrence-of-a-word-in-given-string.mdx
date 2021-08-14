@@ -1,0 +1,141 @@
+---
+title: Write a C/C++/Java program to remove last occurrence of a word in given string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 31. Write a C program to remove last occurrence of a word in given string.
+```c
+//Write a C program to remove last occurrence of a word in given string.
+#include <string.h>
+
+int main()
+{
+    char s[1000],c,temp=1;
+    int  i,j,k,count=0,n;
+
+    printf("Enter  the string : ");
+    gets(s);
+
+    printf("Enter character: ");
+    c=getchar();
+
+    for(i=0;s[i];i++);
+     n=i;
+
+
+     while(i)
+    {
+       if(temp)
+        {
+            i--;
+               if(c==s[i])
+                {
+                temp=0;
+                s[i]=s[i+1];
+                    i++;
+             }
+
+
+        }
+        else
+         {
+             if(i==n)
+            break;
+
+           s[i]=s[i+1];
+           i++;
+
+         }
+
+    }
+
+      printf("%s",s);
+
+
+    return 0;
+}
+```
+### Output
+```
+Enter  the string : hello world
+Enter character: o
+hell wrld
+```
+## C++ Implementation
+### 31. Write a C++ program to remove last occurrence of a word in given string.
+```c
+//Write a C++ program to remove last occurrence of a word in given string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char s[1000],c,temp=1;
+    int  i,j,k,count=0,n;
+
+    cout << "Enter  the string : ";
+    cin >> s;
+    cout << "Enter word to be remove: ";
+    cin >> c;
+
+    for(i=0;s[i];i++);
+    n=i;
+    while(i)
+    {
+       if(temp)
+        {
+            i--;
+               if(c==s[i])
+                {
+                temp=0;
+                s[i]=s[i+1];
+                    i++;
+             }
+        }
+        else
+        {
+           if(i==n)
+           break;
+
+           s[i]=s[i+1];
+           i++;
+        }
+    }
+    cout << s;
+}
+```
+### Output
+```
+Enter  the string : hello world
+Enter character: o
+hell wrld
+```
+
+## Java Implementation
+### 31. Write a Java program to remove last occurrence of a word in given string.
+```js
+//Write a Java program to remove last occurrence of a word in given string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter  the string : ");
+        String str = z.nextLine();
+        System.out.println("Enter a character: ");
+        char letter = z.next().charAt(0);
+        String str_new = str.replace(letter, ' ');
+        System.out.println(str_new);
+    }
+}
+```
+### Output
+```
+Enter  the string : hello world
+Enter character: o
+hell wrld
+```

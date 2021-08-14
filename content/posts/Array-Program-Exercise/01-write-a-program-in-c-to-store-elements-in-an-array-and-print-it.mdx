@@ -1,0 +1,94 @@
+---
+title: Write a C/C++/Java program to store elements in an array and print it.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Exercise
+---
+
+## C Implementation
+### 1. Write a C program to store elements in an array and print it.
+```c
+//Write a C program to store elements in an array and print it.
+#include <stdio.h>
+void  main()
+{
+    int i,arr[10];
+
+    printf("Input 10 elements in the array :\n");
+    for(i=0; i<10; i++)
+    {
+       scanf("%d", &arr[i]);
+    }
+
+    printf("\nElements in array are: ");
+    for(i=0; i<10; i++)
+    {
+        printf("%d  ", arr[i]);
+    }
+
+}
+```
+### Output
+```
+Input 10 elements in the array : 1 2 3 4 5 6 7 8 9 10
+1 2 3 4 5 6 7 8 9 10
+```
+## C++ Implementation
+### 1. Write a C++ program to store elements in an array and print it.
+```c
+//Write a C++ program to store elements in an array and print it.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    int i,arr[10];
+    cout<<"Input 10 elements in the array :\n";
+    for(i=0; i<10; i++)
+    {
+       cin>>arr[i];
+    }
+    cout<<"\nElements in array are: ";
+    for(i=0; i<10; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array : 1 2 3 4 5 6 7 8 9 10
+1 2 3 4 5 6 7 8 9 10
+```
+
+## Java Implementation
+### 1. Write a Java program to store elements in an array and print it.
+```js
+//Write a Java program to store elements in an array and print it.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr[]=new int [10];
+        int i;
+
+        System.out.println("Input 10 elements in the array :\n");
+        for(i=0; i<10; i++)
+        {
+           arr[i]=z.nextInt();
+        }
+        System.out.println("\nElements in array are: ");
+        for(i=0; i<10; i++)
+        {
+            System.out.println(arr[i]+" ");
+        }
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array : 1 2 3 4 5 6 7 8 9 10
+1 2 3 4 5 6 7 8 9 10
+```

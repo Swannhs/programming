@@ -1,0 +1,73 @@
+---
+title: Write a C/C++/Java program to convert this temperature into Centigrade degrees.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-22: Write a C program to convert this temperature into Centigrade degrees.
+```c
+/*Write a C program to convert this temperature into Centigrade degrees.*/
+#include<stdio.h>
+void main()
+{
+    float f,c,d;
+    scanf("%f",&f);
+    d=f-32;
+    c=(d/9)*5;
+    printf("Celsius=%f",c);
+}
+```
+### Output
+```
+20
+Celsius:=-6.666667
+```
+
+## C++ Implementation
+### Program-22: Write a C++ program to convert this temperature into Centigrade degrees.
+```c
+/*Write a C++ program to convert this temperature into Centigrade degrees.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    float f,c,d;
+    cin>>f;
+    d=f-32;
+    c=(d/9)*5;
+    cout<<"Celsius="<<c;
+    return 0;
+}
+```
+### Output
+```
+20
+Celsius:=-6.666667
+```
+
+## Java Implementation
+### Program-22: Write a Java program to convert this temperature into Centigrade degrees.
+```js
+/*Write a java program to convert this temperature into Centigrade degrees.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        float f,c,d;
+        f=z.nextFloat();
+        d=f-32;
+        c=(d/9)*5;
+        System.out.println("Celsius:="+c);
+
+    }
+}
+```
+### Output
+```
+20
+Celsius:=-6.666667
+```

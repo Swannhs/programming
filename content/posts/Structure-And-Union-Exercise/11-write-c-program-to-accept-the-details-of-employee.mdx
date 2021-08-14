@@ -1,0 +1,120 @@
+---
+title: Write a C/C++/Java program accept the details of employee and display them using structure. Details consist of Employee ID, Name, Designation, Department, Salary.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 11. Write a C program accept the details of employee and display them using structure. Details consist of Employee ID, Name, Designation, Department, Salary.
+```c
+//Write a C++ program accept the details of employee and display them using structure. Details consist of Employee ID, Name, Designation, Department, Salary.
+#include<stdio.h>
+struct employee{
+    char name[100];
+    int id;
+    char Designation[20];
+    char Department[50];
+    float Salary;
+};
+int main(){
+    struct employee emp1;
+    printf("input employee details\n");
+    printf("Enter employee Name: ");
+    fgets(emp1.name,sizeof(emp1.name),stdin);
+    printf("Enter employee ID: ");
+    scanf("%d",&emp1.id);
+    getchar();
+    printf("Enter employee Designation: ");
+    fgets(emp1.Designation,sizeof(emp1.Designation),stdin);
+    printf("Enter employee Department: ");
+    fgets(emp1.Department,sizeof(emp1.Department),stdin);
+    printf("Enter employee Salary: ");
+    scanf("%f",&emp1.Salary);
+    printf("\n\nEmployee Details:\n");
+    printf("Name        : %s",emp1.name);
+    printf("ID          : %d\n",emp1.id);
+    printf("Designation : %s",emp1.Designation);
+    printf("Department  : %s",emp1.Department);
+    printf("Salary      : %f\n",emp1.Salary);
+}
+```
+### Output
+```
+input employee details
+Enter employee Name: Ahosanul Hasan
+Enter employee ID: 16105001
+Enter employee Designation: Funycode
+Enter employee Department: Programming
+Enter employee Salary: 110000
+
+
+Employee Details:
+Name        : Ahosanul Hasan
+
+ID          : 16105001
+Designation : Funycode
+
+Department  : Programming
+
+Salary      : 110000
+```
+
+## C++ Implementation
+### 11. Write a C++ program accept the details of employee and display them using structure. Details consist of Employee ID, Name, Designation, Department, Salary.
+```c
+//Write a C++ program to find accept the details of employee and display them using structure. Details consist of Employee ID, Name, Designation, Department, Salary.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct employee{
+    char name[100];
+    int id;
+    char Designation[20];
+    char Department[50];
+    float Salary;
+};
+int main(){
+    struct employee emp1;
+    cout << "input employee details\n";
+    cout << "Enter employee Name: ";
+    fgets(emp1.name,sizeof(emp1.name),stdin);
+    cout << "Enter employee ID: ";
+    cin >> emp1.id;
+    getchar();
+    cout << "Enter employee Designation: ";
+    fgets(emp1.Designation,sizeof(emp1.Designation),stdin);
+    cout << "Enter employee Department: ";
+    fgets(emp1.Department,sizeof(emp1.Department),stdin);
+    cout << "Enter employee Salary: ";
+    cin >> emp1.Salary;
+    cout << "\n\nEmployee Details:\n";
+    cout << "Name        : "<< emp1.name << endl;
+    cout << "ID          : "<< emp1.id << endl;
+    cout << "Designation : "<< emp1.Designation << endl;
+    cout << "Department  : "<< emp1.Department << endl;
+    cout << "Salary      : "<< emp1.Salary << endl;
+}
+```
+### Output
+```
+input employee details
+Enter employee Name: Ahosanul Hasan
+Enter employee ID: 16105001
+Enter employee Designation: Funycode
+Enter employee Department: Programming
+Enter employee Salary: 110000
+
+
+Employee Details:
+Name        : Ahosanul Hasan
+
+ID          : 16105001
+Designation : Funycode
+
+Department  : Programming
+
+Salary      : 110000
+```

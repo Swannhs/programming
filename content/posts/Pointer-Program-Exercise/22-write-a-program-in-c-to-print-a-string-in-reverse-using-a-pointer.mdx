@@ -1,0 +1,94 @@
+---
+title: Write a C/C++/Java program to print a string in reverse using a pointer.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 22. Write a C program to print a string in reverse using a pointer.
+```c
+//Write a C program to print a string in reverse using a pointer.
+#include <stdio.h>
+void main()
+{
+    char s[1000];
+    char r[1000];
+    char *p1 = s;
+    char *p2 = r;
+    int i = -1;
+    printf("Enter any string= ");
+    scanf("%s", s);
+    while(*p1)
+    {
+        p1++;
+        i++;
+    }
+    while(i >= 0)
+    {
+        p1--;
+        *p2 = *p1;
+        p2++;
+        i--;
+    }
+    *p2 = '\0';
+    p2 = r;
+    while(*p2)
+    {
+        *p1 = *p2;
+        p1++;
+        p2++;
+    }
+    printf("Reverse of the string is= %s ", s);
+}
+```
+### Output
+```
+Enter any string= hello
+Reverse of the string is= olleh
+```
+## C++ Implementation
+### 22. Write a C++ program to print a string in reverse using a pointer.
+```c
+//Write a C++ program to print a string in reverse using a pointer.
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    char s[1000];
+    char r[1000];
+    char *p1 = s;
+    char *p2 = r;
+    int i = -1;
+    cout<<("Enter any string= ");
+    cin>>s;
+    while(*p1)
+    {
+        p1++;
+        i++;
+    }
+    while(i >= 0)
+    {
+        p1--;
+        *p2 = *p1;
+        p2++;
+        i--;
+    }
+    *p2 = '\0';
+    p2 = r;
+    while(*p2)
+    {
+        *p1 = *p2;
+        p1++;
+        p2++;
+    }
+    cout<<"Reverse of the string is= "<<s;
+}
+```
+### Output
+```
+Enter any string= hello
+Reverse of the string is= olleh
+```

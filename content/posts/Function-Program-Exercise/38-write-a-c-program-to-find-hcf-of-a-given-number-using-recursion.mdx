@@ -1,0 +1,97 @@
+---
+title: Write a C/C++/Java program to find HCF of a given Number using Recursion
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 38. Write a C program to find HCF of a given Number using Recursion
+```c
+//Write a C program to find HCF of a given Number using Recursion
+#include<stdio.h>
+
+int findHCF(int a,int b)
+{
+    if(b==0)
+        return a;
+    return findHCF(b,a%b);
+}
+
+int main()
+{
+    int a,b;
+    printf("Enter two number: ");
+    scanf("%d%d",&a,&b);
+    int hcf=findHCF(a,b);
+    printf("HCF is %d\n",hcf);
+    return 0;
+}
+```
+### Output
+```
+Enter two number: 1 2
+HCF is 1
+```
+
+## C++ Implementation
+### 38. Write a C++ program to find HCF of a given Number using Recursion
+```c
+//Write a C++ program to find HCF of a given Number using Recursion
+
+#include<iostream>
+using namespace std;
+
+int findHCF(int a,int b)
+{
+    if(b==0)
+        return a;
+    return findHCF(b,a%b);
+}
+
+int main()
+{
+    int a,b;
+    cout << "Enter two number: ";
+    cin >> a >> b;
+    int hcf=findHCF(a,b);
+    cout << "HCF is " << hcf;
+    return 0;
+}
+```
+### Output
+```
+Enter two number: 1 2
+HCF is 1
+```
+
+## Java Implementation
+### 38. Write a Java program to find HCF of a given Number using Recursion
+```js
+//Write a Java program to find HCF of a given Number using Recursion
+import java.util.Scanner;
+public class Funycode {
+    static int findHCF(int a,int b)
+    {
+        if(b==0)
+            return a;
+        return findHCF(b,a%b);
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int a,b;
+        System.out.println("Enter two number: ");
+        a = z.nextInt();
+        b = z.nextInt();
+        int hcf=findHCF(a,b);
+        System.out.println("HCF is "+hcf);
+    }
+}
+```
+### Output
+```
+Enter two number: 1 2
+HCF is 1
+```

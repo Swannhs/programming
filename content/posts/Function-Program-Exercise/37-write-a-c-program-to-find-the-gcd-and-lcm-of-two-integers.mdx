@@ -1,0 +1,142 @@
+---
+title: Write a C/C++/Java program to Find the GCD and LCM of Two Integers
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 37. Write a C program to Find the GCD and LCM of Two Integers
+```c
+//Write a C program to Find the GCD and LCM of Two Integers
+#include<stdio.h>
+
+int findGCD(int a,int b)
+{
+    int gcd=1;
+    for(int i=1;i<=a && i<=b;i++)
+    {
+        if(a%i==0 && b%i==0)
+            gcd=i;
+    }
+    return gcd;
+}
+
+int findLCM(int a,int b)
+{
+    int gcd=findGCD(a,b);
+    int lcm=(a*b)/gcd;
+    return lcm;
+}
+
+int main()
+{
+    int a,b;
+    printf("Enter Two numbers: ");
+    scanf("%d%d",&a,&b);
+    int gcd=findGCD(a,b);
+    int lcm=findLCM(a,b);
+
+    printf("GCD is %d\n",gcd);
+    printf("LCM is %d\n",lcm);
+
+    return 0;
+}
+```
+### Output
+```
+Enter Two numbers: 5 10
+GCD is 5
+LCM is 10
+```
+
+## C++ Implementation
+### 37. Write a C++ program to Find the GCD and LCM of Two Integers
+```c
+//Write a C++ program to Find the GCD and LCM of Two Integers
+
+#include<iostream>
+using namespace std;
+
+int findGCD(int a,int b)
+{
+    int gcd=1;
+    for(int i=1;i<=a && i<=b;i++)
+    {
+        if(a%i==0 && b%i==0)
+            gcd=i;
+    }
+    return gcd;
+}
+
+int findLCM(int a,int b)
+{
+    int gcd=findGCD(a,b);
+    int lcm=(a*b)/gcd;
+    return lcm;
+}
+
+int main()
+{
+    int a,b;
+    cout << "Enter Two numbers: ";
+    cin >> a >> b;
+    int gcd=findGCD(a,b);
+    int lcm=findLCM(a,b);
+
+    cout << "GCD is " << gcd << endl;
+    cout << "LCM is " << lcm << endl;
+
+    return 0;
+}
+```
+### Output
+```
+Enter Two numbers: 5 10
+GCD is 5
+LCM is 10
+```
+
+## Java Implementation
+### 37. Write a Java program to Find the GCD and LCM of Two Integers
+```js
+//Write a Java program to Find the GCD and LCM of Two Integers
+import java.util.Scanner;
+public class Funycode {
+    static int findGCD(int a,int b)
+    {
+        int gcd=1;
+        for(int i=1;i<=a && i<=b;i++)
+        {
+            if(a%i==0 && b%i==0)
+                gcd=i;
+        }
+        return gcd;
+    }
+    static int findLCM(int a,int b)
+    {
+        int gcd=findGCD(a,b);
+        int lcm=(a*b)/gcd;
+        return lcm;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int a,b;
+        System.out.println("Enter Two numbers: ");
+        a = z.nextInt();
+        b = z.nextInt();
+        int gcd=findGCD(a,b);
+        int lcm=findLCM(a,b);
+        System.out.println("GCD is "+gcd);
+        System.out.println("LCM is "+lcm);
+    }
+}
+```
+### Output
+```
+Enter Two numbers: 5 10
+GCD is 5
+LCM is 10
+```

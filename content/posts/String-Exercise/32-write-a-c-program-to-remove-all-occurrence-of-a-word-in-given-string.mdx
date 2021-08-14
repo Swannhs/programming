@@ -1,0 +1,159 @@
+---
+title: Write a C/C++/Java program to remove all occurrence of a word in given string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 32. Write a C program to remove all occurrence of a word in given string.
+```c
+//Write a C program to remove all occurrence of a word in given string.
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str[100];
+    char word[100];
+    int i, j, found, ind[10],stringlen, wordlen,p=0;
+    printf("Enter any string: ");
+    gets(str);
+    printf("Enter word to remove: ");
+    gets(word);
+    stringlen = strlen(str);
+    wordlen   = strlen(word);
+    ind[p] = -1;
+    for(i=0; i<=stringlen - wordlen; i++)
+    {
+        found = 1;
+        for(j=0; j<wordlen; j++)
+        {
+            if(str[i+j] != word[j])
+            {
+                found = 0;
+                break;
+            }
+        }
+        if(found == 1)
+        {
+            ind[p++] = i;
+        }}
+    if(ind[0] == -1)
+    {
+        printf("'%s' not found.",word);
+    }
+    else
+    {
+        for(j=0;j<p;j++){
+                ind[j]= ind[j]-j*(wordlen);
+        for(i=ind[j]; i <= stringlen - wordlen; i++)
+        {
+            str[i] = str[i + wordlen];
+        }
+stringlen= stringlen - wordlen;
+
+        }
+
+        printf("String after removing last '%s': \n%s", word, str);
+    }
+
+    return 0;
+}
+```
+### Output
+```
+Enter any string: hello from funycode
+Enter word to remove: from
+String after removing last 'from':
+hello  funycode
+```
+## C++ Implementation
+### 32. Write a C++ program to remove all occurrence of a word in given string.
+```c
+//Write a C++ program to remove all occurrence of a word in given string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char str[100];
+    char word[100];
+    int i, j, found, ind[10],stringlen, wordlen,p=0;
+    cout << "Enter any string: ";
+    cin >> str;
+    cout << "Enter word to remove: ";
+    cin >> word;
+    stringlen = strlen(str);
+    wordlen   = strlen(word);
+    ind[p] = -1;
+    for(i=0; i<=stringlen - wordlen; i++)
+    {
+        found = 1;
+        for(j=0; j<wordlen; j++)
+        {
+            if(str[i+j] != word[j])
+            {
+                found = 0;
+                break;
+            }
+        }
+        if(found == 1)
+        {
+            ind[p++] = i;
+        }}
+    if(ind[0] == -1)
+    {
+        cout << word << " not found.";
+    }
+    else
+    {
+        for(j=0;j<p;j++){
+            ind[j]= ind[j]-j*(wordlen);
+        for(i=ind[j]; i <= stringlen - wordlen; i++)
+        {
+            str[i] = str[i + wordlen];
+        }
+    stringlen= stringlen - wordlen;
+
+        }
+
+        cout << "String after removing last " << word << " : \n" << str;
+    }
+
+    return 0;
+}
+```
+### Output
+```
+Enter any string: hello from funycode
+Enter word to remove: from
+String after removing last 'from':
+hello  funycode
+```
+
+## Java Implementation
+### 32. Write a Java program to remove all occurrence of a word in given string.
+```js
+//Write a Java program to remove all occurrence of a word in given string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter  the string : ");
+        String str = z.nextLine();
+        System.out.println("Enter word to remove: ");
+        String word = z.nextLine();
+        String str_new = str.replaceAll(word, "");
+        System.out.println(str_new);
+    }
+}
+```
+### Output
+```
+Enter any string: hello from funycode
+Enter word to remove: from
+String after removing last 'from':
+hello  funycode
+```

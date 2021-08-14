@@ -1,0 +1,81 @@
+---
+title: Write a C/C++/Java program to input a number and check whether it is even or odd.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-2: Write a C program to input a number and check whether it is even or odd.
+```c
+/*Write a C program to input a number and check whether it is even or odd.*/
+#include<stdio.h>
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    if(a%2==0)
+        printf("even number");
+    else
+        printf("odd number");
+}
+```
+### Output
+```
+Enter a number
+20
+Even Number
+```
+
+## C++ Implementation
+### Program-2: Write a C++ program to input a number and check whether it is even or odd.
+```c
+/*Write a C++ program to input a number and check whether it is even or odd.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+     int a;
+     cout<<"Enter a number-\n";
+     cin>>a;
+    if(a%2==0)
+        cout<<"even number";
+    else
+        cout<<"odd number";
+}
+```
+### Output
+```
+Enter a number
+20
+Even Number
+```
+
+## Java Implementation
+### Program-2: Write a java program to input a number and check whether it is even or odd.
+```js
+/*Write a java program to input a number and check whether it is even or odd.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b;
+        System.out.println("Enter a number");
+        a=z.nextInt();
+        if(a%2==0)
+            System.out.println("Even Number");
+        else
+            System.out.println("Odd Number");
+
+    }
+}
+```
+### Output
+```
+Enter a number
+20
+Even Number
+```

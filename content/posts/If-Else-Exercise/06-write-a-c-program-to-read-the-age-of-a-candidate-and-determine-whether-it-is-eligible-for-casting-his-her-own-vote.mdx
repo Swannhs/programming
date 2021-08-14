@@ -1,0 +1,80 @@
+---
+title: Write a C/C++/Java program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-6: Write a C program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.
+```c
+/*Write a C program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.*/
+#include<stdio.h>
+int main()
+{
+    int a;
+    printf("Enter a Age:");
+    scanf("%d",&a);
+    if(a>=18)
+        printf("eligible for casting his/her vote");
+    else
+        printf("not eligible for casting his/her vote ");
+}
+```
+### Output
+```
+Enter a Age:
+25
+eligible for casting his/her vote
+```
+
+## C++ Implementation
+### Program-6: Write a C++ program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.
+```c
+/*Write a C++ program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a;
+    cout<<"Enter a Age-\n";
+    cin>>a;
+    if(a>=18)
+        cout<<"eligible for casting his/her vote";
+    else
+        cout<<"not eligible for casting his/her vote ";
+}
+```
+### Output
+```
+Enter a Age:
+25
+eligible for casting his/her vote
+```
+
+## Java Implementation
+### Program-6: Write a java program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.
+```js
+/*Write a java program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b;
+        System.out.println("Enter a Age:");
+        a=z.nextInt();
+        if(a>=18)
+            System.out.println("eligible for casting his/her vote");
+        else
+            System.out.println("not eligible for casting his/her vote ");
+    }
+}
+```
+### Output
+```
+Enter a Age:
+25
+eligible for casting his/her vote
+```

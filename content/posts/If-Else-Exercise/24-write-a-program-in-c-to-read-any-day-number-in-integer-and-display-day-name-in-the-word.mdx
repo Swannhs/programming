@@ -1,0 +1,116 @@
+---
+title: Write a C/C++/Java program to read any day number in integer and display day name in the word.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-24: Write a program in C to read any day number in integer and display day name in the word.
+```c
+/*Write a program in C to read any day number in integer and display day name in the word.*/
+#include<stdio.h>
+void main()
+{
+    int n;
+    printf("Enter a Day:");
+    scanf("%d",&n);
+    if(n==1)
+        printf("Monday");
+    else if(n==2)
+        printf("Tuesday");
+    else if(n==3)
+        printf("Wednesday");
+    else if(n==4)
+        printf("Thursday");
+    else if(n==5)
+        printf("Friday");
+    else if(n==6)
+        printf("Saturday");
+    else if(n==7)
+        printf("Sunday");
+    else
+        printf("not");
+}
+```
+### Output
+```
+Enter a Day:
+5
+Friday
+```
+
+## C++ Implementation
+### Program-24: Write a program in C to read any day number in integer and display day name in the word.
+```c
+/*Write a program in C++ to read any day number in integer and display day name in the word.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"enter day number in integer-\n";
+    cin>>n;
+    if(n==1)
+        cout<<"Monday";
+    else if(n==2)
+        cout<<"Tuesday";
+    else if(n==3)
+        cout<<"Wednesday";
+    else if(n==4)
+        cout<<"Thursday";
+    else if(n==5)
+        cout<<"Friday";
+    else if(n==6)
+        cout<<"Saturday";
+    else if(n==7)
+        cout<<"Sunday";
+    else
+        cout<<"not";
+}
+```
+### Output
+```
+Enter a Day:
+5
+Friday
+```
+
+## Java Implementation
+### Program-24: Write a program in C to read any day number in integer and display day name in the word.
+```js
+/*Write a program in java to read any day number in integer and display day name in the word.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int n;
+        System.out.print("Enter a Day:\n");
+        n=z.nextInt();
+        if(n==1)
+            System.out.println("Monday");
+        else if(n==2)
+            System.out.println("Tuesday");
+        else if(n==3)
+            System.out.println("Wednesday");
+        else if(n==4)
+            System.out.println("Thursday");
+        else if(n==5)
+            System.out.println("Friday");
+        else if(n==6)
+            System.out.println("Saturday");
+        else if(n==7)
+            System.out.println("Sunday");
+        else
+            System.out.println("Invalid Day");
+    }
+}
+```
+### Output
+```
+Enter a Day:
+5
+Friday
+```

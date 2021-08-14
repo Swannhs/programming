@@ -1,0 +1,115 @@
+---
+title: Write a C/C++/Java program to check whether a character is an uppercase or lowercase alphabet. using the switch.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 10. Write a C program to check whether a character is an uppercase or lowercase alphabet. using the switch.
+```c
+//Write a C program to check whether a character is an uppercase or lowercase alphabet. using the switch.
+#include<stdio.h>
+int main()
+{
+    char ch;
+    printf("Enter a character:");
+    scanf("%c",&ch);
+    switch(ch>='a'&& ch<='z')
+    {
+    case 1:
+        printf("lowercase");
+        break;
+    case 0:
+        switch(ch>='A' && ch<='Z')
+        {
+        case 1:
+            printf("Uppercase");
+            break;
+        case 0:
+            printf("Not Alphabet");
+            break;
+        }
+        break;
+    }
+}
+```
+### Output
+```
+input: Enter a character:d
+output: lowercase
+```
+
+## C++ Implementation
+### 10. Write a C program to check whether a character is an uppercase or lowercase alphabet. using the switch.
+```c
+//Write a C++ program to print Hello World.
+#include<iostream>
+using namespace std;
+int main()
+{
+    char ch;
+    cout << "Enter a character:";
+    cin >> ch;
+    switch(ch>='a'&& ch<='z')
+    {
+    case 1:
+        cout << "lowercase";
+        break;
+    case 0:
+        switch(ch>='A' && ch<='Z')
+        {
+        case 1:
+            cout << "Uppercase";
+            break;
+        case 0:
+            cout << "Not Alphabet";
+            break;
+        }
+        break;
+    }
+}
+```
+### Output
+```
+input: Enter a character:d
+output: lowercase
+```
+
+## Java Implementation
+### 10. Write a Java program to check whether a character is an uppercase or lowercase alphabet. using the switch.
+```js
+//Write a Java program to check whether a character is an uppercase or lowercase alphabet. using the switch.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        char ch;
+        Scanner z = new Scanner(System.in);
+        System.out.println("Enter a character:");
+        char ch = z.nextChar();
+        switch(ch>='a'&& ch<='z')
+        {
+        case 1:
+            System.out.println("lowercase");
+            break;
+        case 0:
+            switch(ch>='A' && ch<='Z')
+            {
+            case 1:
+                System.out.println("Uppercase");
+                break;
+            case 0:
+                System.out.println("Not Alphabet");
+                break;
+            }
+            break;
+        }
+    }
+}
+```
+### Output
+```
+input: Enter a character:d
+output: lowercase
+```

@@ -1,0 +1,62 @@
+---
+title: Write a C/C++/Java Write a C Program to accept any character from user and display its ASCII number on screen.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-14: Write a C Program to accept any character from user and display its ASCII number on screen.
+```c
+/*Write a C Program to accept any character from user and display its ASCII number on screen.*/
+#include<stdio.h>
+void main()
+{
+    char a;
+    scanf("%c", &a);
+    printf("Ascii value %c = %d",a,a);
+}
+```
+### Output
+```
+A
+Ascii value 65
+```
+## C++ Implementation
+### 14. Write a C++ program to print Hello World.
+```c
+/*Write a C++ Program to accept any character from user and display its ASCII number on screen.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    char c;
+    cin>>c;
+    cout<<int(c);
+    return 0;
+}
+```
+### Output
+```
+A
+65
+```
+## Java Implementation
+### 14. Write a Java program to print Hello World.
+```js
+public class Funycode {
+    public static void main(String[] args) {
+        char c;
+        Scanner sc = new Scanner();
+        c = sc.nextChar();
+        int castAscii = (int) c;
+        System.out.println(castAscii);
+    }
+}
+```
+### Output
+```
+A
+65
+```

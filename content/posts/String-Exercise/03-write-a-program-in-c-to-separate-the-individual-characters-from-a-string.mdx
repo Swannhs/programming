@@ -1,0 +1,91 @@
+---
+title: Write a C/C++/Java program to separate the individual characters from a string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 3. Write a C program to separate the individual characters from a string.
+```c
+//Write a C program to separate the individual characters from a string.
+#include <stdio.h>
+int main()
+{
+  char str[50];
+  int i;
+  printf("enter string ");
+  gets(str);
+  for(i=0 ;str[i] !='\0'; i++)
+  {
+      printf("%c",str[i]);
+      printf("\n");
+  }
+  return 0;
+}
+```
+### Output
+```
+enter string hello
+h
+e
+l
+l
+o
+```
+## C++ Implementation
+### 3. Write a C++ program to separate the individual characters from a string.
+```c
+//Write a C++ program to separate the individual characters from a string.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    char str[50];
+    int i;
+    cout << "enter string ";
+    gets(str);
+    for(i=0; str[i] !='\0'; i++){
+        cout << str[i] << endl;
+    }
+}
+```
+### Output
+```
+enter string hello
+h
+e
+l
+l
+o
+```
+
+## Java Implementation
+### 3. Write a Java program to separate the individual characters from a string.
+```js
+//Write a Java program to separate the individual characters from a string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          String str;
+          int i;
+          System.out.println("Enter a string");
+          str = z.nextLine();
+          for (i=0; i < str.length(); i++ ){
+              System.out.println(str.charAt(i));
+          }
+      }
+}
+```
+### Output
+```
+enter string hello
+h
+e
+l
+l
+o
+```

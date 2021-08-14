@@ -1,0 +1,103 @@
+---
+title: Write a C/C++/Java program to Find the Volume and Surface Area of Sphere
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 33. Write a C program to Find the Volume and Surface Area of Sphere
+```c
+//Write a C program to Find the Volume and Surface Area of Sphere
+#include<stdio.h>
+#include<math.h>
+
+float surfaceAreaSphere(float r)
+{
+    float pi=3.14159;
+    return 4*pi*r*r;
+}
+float volumeSphere(float r)
+{
+    float pi=3.14159;
+    return (4/3.0)*pi*r*r*r;
+}
+
+int main()
+{
+    float radius;
+    printf("Enter the radius: ");
+    scanf("%f",&radius);
+
+    float surface=surfaceAreaSphere(radius);
+    float volume=volumeSphere(radius);
+
+    printf("Surface Area of this cuboid is %.2f\n",surface);
+    printf("Surface Area of this cuboid is %.2f\n",volume);
+    return 0;
+}
+```
+### Output
+```
+Enter the radius: 5
+Surface Area of this cuboid is 314.16
+Surface Area of this cuboid is 523.60
+```
+
+## C++ Implementation
+### 33. Write a C++ program to Find the Volume and Surface Area of Sphere
+```c
+//Write a C++ program to Find the Volume and Surface Area of Sphere
+
+#include<iostream>
+using namespace std;
+int square(int num)
+{
+    return num*num;
+}
+int main()
+{
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+    int ans=square(n);
+
+    cout << ans;
+}
+```
+### Output
+```
+Enter the radius: 5
+Surface Area of this cuboid is 314.16
+Surface Area of this cuboid is 523.60
+```
+
+## Java Implementation
+### 33. Write a Java program to find the square of any number using the function.
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    static int square(int num)
+    {
+        return num*num;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        n = z.nextInt();
+
+        int ans=square(n);
+
+        System.out.println(ans);
+    }
+}
+```
+### Output
+```
+Enter the radius: 5
+Surface Area of this cuboid is 314.16
+Surface Area of this cuboid is 523.60
+```

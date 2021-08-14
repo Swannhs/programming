@@ -1,0 +1,219 @@
+---
+title: Write a C/C++/Java program to print number between 1 to 10 in character format using switch-case.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-3: Write a C program to print number between 1 to 10 in character format using switch-case.
+```c
+/*Write a C program to print number between 1 to 10 in character format using switch-case.*/
+#include<stdio.h>
+int main()
+{
+   int n,sum=0,r;
+   printf("enter the number=");
+   scanf("%d",&n);
+   while(n>0)
+   {
+       r=n%10;
+       sum=sum*10+r;
+       n=n/10;
+   }
+   n=sum;
+   while(n>0)
+   {
+       r=n%10;
+   switch(r)
+   {
+   case 0:
+         printf("zero ");
+         break;
+   case 1:
+         printf("one ");
+         break;
+   case 2:
+         printf("two ");
+         break;
+   case 3:
+         printf("three ");
+         break;
+   case 4:
+         printf("four ");
+         break;
+   case 5:
+         printf("five ");
+         break;
+   case 6:
+         printf("six ");
+         break;
+   case 7:
+         printf("seven");
+         break;
+   case 8:
+         printf("eight");
+         break;
+   case 9:
+         printf("nine");
+         break;
+   case 10:
+         printf("ten");
+         break;
+   default:
+         printf("Nothing");
+         break;
+     }
+   n=n/10;
+   }
+   return 0;
+}
+```
+### Output
+```
+Input: 4
+Output: four
+```
+
+## C++ Implementation
+### Program-3: Write a C++ program to print number between 1 to 10 in character format using switch-case.
+```c
+/*Write a C++ program to find the maximum between three numbers using switch-case.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,sum=0,r;
+    cout << "enter the number=";
+    cin >> n;
+    while(n>0)
+    {
+       r=n%10;
+       sum=sum*10+r;
+       n=n/10;
+    }
+    n=sum;
+    while(n>0)
+    {
+       r=n%10;
+       switch(r)
+       {
+           case 0:
+               cout << "zero ";
+               break;
+           case 1:
+               cout << "one ";
+               break;
+           case 2:
+               cout << "two ";
+               break;
+           case 3:
+               cout << "three ";
+               break;
+           case 4:
+               cout << "four ";
+               break;
+           case 5:
+               cout << "five ";
+               break;
+           case 6:
+               cout << "six ";
+               break;
+           case 7:
+               cout << "seven";
+               break;
+           case 8:
+               cout << "eight";
+               break;
+           case 9:
+               cout << "nine";
+               break;
+           case 10:
+               cout << "ten";
+               break;
+           default:
+               cout << "Nothing";
+               break;
+           }
+        n=n/10;
+     }
+   return 0;
+}
+```
+### Output
+```
+Input: 4
+Output: four
+```
+
+## Java Implementation
+### Program-3: Write a Java program to print number between 1 to 10 in character format using switch-case.
+```js
+/*Write a Java program to print number between 1 to 10 in character format using switch-case.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int n;
+        System.out.println("Enter a number");
+        n=z.nextInt();
+        while(n>0){
+          r=n%10;
+          sum=sum*10+r;
+          n=n/10;
+        }
+        n=sum;
+        while(n>0)
+        {
+        r=n%10;
+        switch(r)
+        {
+            case 0:
+               System.out.println("zero ");
+               break;
+            case 1:
+               System.out.println("one ");
+               break;
+            case 2:
+               System.out.println("two ");
+               break;
+            case 3:
+               System.out.println("three ");
+               break;
+            case 4:
+               System.out.println("four ");
+               break;
+            case 5:
+               System.out.println("five ");
+               break;
+            case 6:
+               System.out.println("six ");
+               break;
+            case 7:
+               System.out.println("seven ");
+               break;
+            case 8:
+               System.out.println("eight ");
+               break;
+            case 9:
+               System.out.println("nine ");
+               break;
+            case 10:
+               System.out.println("zero ");
+               break;
+           default:
+               System.out.println("Nothing ");
+               break;
+          }
+          n=n/10;
+
+    }
+}
+```
+### Output
+```
+Input: 4
+Output: four
+```

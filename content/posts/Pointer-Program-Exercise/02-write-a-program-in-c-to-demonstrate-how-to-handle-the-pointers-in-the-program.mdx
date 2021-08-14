@@ -1,0 +1,96 @@
+---
+title: Write a C/C++/Java program to demonstrate how to handle the pointers in the program.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 2. Write a C program to demonstrate how to handle the pointers in the program.
+```c
+//Write a C program to demonstrate how to handle the pointers in the program.
+#include <stdio.h>
+void main()
+{
+   int *p;
+   int m;
+   m=2;
+   printf(" Value of m = %d\n",m);
+   printf("Memory Address of m = %p\n\n",&m); //printing Memory Address of m using variable
+
+   p=&m;
+   printf(" Content of pointer p : %d\n",*p); //printing the value of m using pointer
+   printf("Memory Address of pointer p : %p\n\n",p); //printing Memory Address of m using pointer
+
+
+   m=4; //change the value of m
+   printf(" Content of pointer p : %d\n",*p);  //printing the value of m using pointer
+   printf("Memory Address of pointer p : %p\n\n",p); //printing Memory Address of m using pointer
+
+   *p=9; //change the value of m by pointer
+   printf(" Value of m : %d\n",m); //printing the changed value
+   printf("Memory Address of m : %p\n\n",&m); //printing Memory Address of m using variable
+
+}
+```
+### Output
+```
+ Value of m = 2
+Memory Address of m = 0x7ffcf715f614
+
+ Content of pointer p : 2
+Memory Address of pointer p : 0x7ffcf715f614
+
+ Content of pointer p : 4
+Memory Address of pointer p : 0x7ffcf715f614
+
+ Value of m : 9
+Memory Address of m : 0x7ffcf715f614
+```
+## C++ Implementation
+### 2. Write a C++ program to demonstrate how to handle the pointers in the program.
+```c
+//Write a C++ program to demonstrate how to handle the pointers in the program.
+#include <iostream>
+using namespace std;
+int main()
+{
+    int *p;
+    int m;
+    m=2;
+    cout<<" Value of m = "<<m<<endl;
+    cout<<"Memory Address of m ="<<&m<<endl; //printing Memory Address of m using variable
+
+    p=&m;
+    cout<<" Content of pointer p : "<<*p<<endl; //printing the value of m using pointer
+    cout<<"Memory Address of pointer p : "<<p<<endl; //printing Memory Address of m using pointer
+
+
+    m=4; //change the value of m
+    cout<<" Content of pointer p :"<<*p<<endl;  //printing the value of m using pointer
+    cout<<"Memory Address of pointer p : "<<p<<endl; //printing Memory Address of m using pointer
+
+    *p=9; //change the value of m by pointer
+    cout<<" Value of m : "<<m<<endl; //printing the changed value
+    cout<<"Memory Address of m : "<<&m<<endl; //printing Memory Address of m using variable
+
+}
+
+
+
+```
+### Output
+```
+ Value of m = 2
+Memory Address of m = 0x7ffcf715f614
+
+ Content of pointer p : 2
+Memory Address of pointer p : 0x7ffcf715f614
+
+ Content of pointer p : 4
+Memory Address of pointer p : 0x7ffcf715f614
+
+ Value of m : 9
+Memory Address of m : 0x7ffcf715f614
+```

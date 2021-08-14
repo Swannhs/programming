@@ -1,0 +1,81 @@
+---
+title: Write a C/C++/Java program to input a number. If the number is even, print its square otherwise print its cube.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-3: Write a C program to input a number. If the number is even, print its square otherwise print its cube.
+```c
+/*Write a C program to input a number. If the number is even, print its square otherwise print its cube.*/
+#include<stdio.h>
+int main()
+{
+    int a;
+    printf("Enter a number");
+    scanf("%d",&a);
+    if(a%2==0)
+        printf("square of the number=%d",(a*a));
+    else
+        printf("Cube of the number=%d",(a*a*a));
+}
+```
+### Output
+```
+Enter a number
+10
+square of the number=100
+```
+
+## C++ Implementation
+### Program-3: Write a C++ program to input a number. If the number is even, print its square otherwise print its cube.
+```c
+/*Write a C++ program to input a number. If the number is even, print its square otherwise print its cube.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a;
+    cout<<"enter a number-\n";
+    cin>>a;
+    if(a%2==0)
+        cout<<"square of the number="<<(a*a);
+    else
+        cout<<"Cube of the number="<<(a*a*a);
+}
+```
+### Output
+```
+Enter a number
+10
+square of the number=100
+```
+
+## Java Implementation
+### Program-3: Write a java program to input a number. If the number is even, print its square otherwise print its cube.
+```js
+//Write a java program to input a number. If the number is even, print its square otherwise print its cube.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b;
+        System.out.println("Enter a number");
+        a=z.nextInt();
+        if(a%2==0)
+            System.out.println("square of the number="+a*a);
+        else
+            System.out.println("square of the number="+a*a*a);
+
+    }
+}
+```
+### Output
+```
+Enter a number
+10
+square of the number=100
+```

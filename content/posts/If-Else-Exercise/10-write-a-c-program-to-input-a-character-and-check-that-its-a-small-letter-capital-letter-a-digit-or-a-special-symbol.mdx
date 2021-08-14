@@ -1,0 +1,85 @@
+---
+title: Write a C/C++/Java program to input a character and check that it’s a small letter, capital letter, a digit or a special symbol.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-10: Write a C program to input a character and check that it’s a small letter, capital letter, a digit or a special symbol.
+```c
+/*Write a C program to input a character and check that it’s a small letter, capital letter, a digit or a special symbol.*/
+#include<stdio.h>
+void main()
+{
+    char a,z,A,Z;
+    scanf("%c",&a);
+    if(a>='A'&&a<='Z')
+        printf("it is capital letter");
+    else if(a>='a'&&a<='z')
+        printf("it is small letter");
+    else if(a>='0'&&a<='9')
+        printf("it is a digit");
+    else
+        printf("it is a special symbol");
+}
+```
+### Output
+```
+a
+it is small letter
+```
+
+## C++ Implementation
+### Program-10: Write a C program to input a character and check that it’s a small letter, capital letter, a digit or a special symbol.
+```c
+//Write a C++ program to input a character and check that it’s a small letter, capital letter, a digit or a special symbol.
+#include<iostream>
+using namespace std;
+int main()
+{
+    char a,z,A,Z;
+    cin>>a;
+    if(a>='A'&&a<='Z')
+        cout<<"it is capital letter";
+    else if(a>='a'&&a<='z')
+        cout<<"it is small letter";
+    else if(a>='0'&&a<='9')
+        cout<<"it is a digit";
+    else
+        cout<<"it is a special symbol";
+}
+```
+### Output
+```
+a
+it is small letter
+```
+
+## Java Implementation
+### 1. Write a Java program to print Hello World.
+```js
+//Write a Java program to input a character and check that it’s a small letter, capital letter, a digit or a special symbol.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        char a,z,A,Z;
+        Scanner z=new Scanner(System.in);
+        a = z.nextChar();
+        if(a>='A'&&a<='Z')
+            System.out.println("it is capital letter");
+        else if(a>='a'&&a<='z')
+            System.out.println("it is small letter");
+        else if(a>='0'&&a<='9')
+            System.out.println("it is a digit");
+        else
+            System.out.println("it is a special symbol");
+    }
+}
+```
+### Output
+```
+a
+it is small letter
+```

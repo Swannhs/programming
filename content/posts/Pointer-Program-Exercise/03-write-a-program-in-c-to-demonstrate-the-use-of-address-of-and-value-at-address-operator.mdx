@@ -1,0 +1,62 @@
+---
+title: Write a C/C++/Java program to demonstrate the use of &(address of) and *(value at address) operator.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 3. Write a C program to demonstrate the use of &(address of) and *(value at address) operator.
+```c
+//Write a C program to demonstrate the use of &(address of) and *(value at address) operator.
+#include <stdio.h>
+void main()
+{
+    int *p;
+    int a= 10;
+    p= &a;
+
+    printf("Value of variable 'a' is: %d", a);
+    printf("\nValue of variable 'a' is: %d", *p); //printing the value using pointer
+    printf("\nMemory Address of variable 'a' is: %p", &a); //printing the memory address using variable
+    printf("\nMemory Address of variable 'a' is: %p", p); //printing the memory address using pointer
+    printf("\nMemory Address of pointer 'p' is: %p", &p); //printing the memory address of pointer
+}
+```
+### Output
+```
+Value of variable 'a' is: 10
+Value of variable 'a' is: 10
+Memory Address of variable 'a' is: 0x7ffc31d9dfd4
+Memory Address of variable 'a' is: 0x7ffc31d9dfd4
+Memory Address of pointer 'p' is: 0x7ffc31d9dfd8
+```
+## C++ Implementation
+### 3. Write a C++ program to demonstrate the use of &(address of) and *(value at address) operator.
+```c
+//Write a C++ program to demonstrate the use of &(address of) and *(value at address) operator.
+#include <iostream>
+using namespace std;
+int main()
+{
+    int *p;
+    int a= 10;
+    p= &a;
+
+    cout<<"Value of variable 'a' is:"<< a;
+    cout<<"\nValue of variable 'a' is:"<<*p; //printing the value using pointer
+    cout<<"\nMemory Address of variable 'a' is:"<< &a; //printing the memory address using variable
+    cout<<"\nMemory Address of variable 'a' is: "<< p; //printing the memory address using pointer
+    cout<<"\nMemory Address of pointer 'p' is: "<<&p; //printing the memory address of pointer
+
+}
+```
+### Output
+```
+Value of variable 'a' is: 10
+Value of variable 'a' is: 10
+Memory Address of variable 'a' is: 0x7ffc31d9dfd4
+Memory Address of variable 'a' is: 0x7ffc31d9dfd4
+Memory Address of pointer 'p' is: 0x7ffc31d9dfd8
+```

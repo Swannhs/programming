@@ -1,0 +1,120 @@
+---
+title: Write a C/C++/Java program to Print Fibonacci Series using recursion.
+category: Recursion Function Index
+tags: ['recursion']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 3. Write a C program to Print Fibonacci Series using recursion.
+```c
+//Write a C program to Print Fibonacci Series using recursion.
+#include<stdio.h>
+int main(){
+    int n;
+    printf("Enter n Number : ");
+    scanf("%d", &n);
+    for(int i=0;i<=n;i++)
+    {
+      int k=febo(i);
+      printf(" %d",k);
+    }
+}
+febo(int n){
+    if(n==0)
+    {
+        return 0;
+    }
+    else if(n==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return febo(n-1)+febo(n-2);
+    }
+}
+```
+### Output
+```
+Enter n Number : 10
+ 0 1 1 2 3 5 8 13 21 34 55
+```
+## C++ Implementation
+### 3. Write a C++ program to Print Fibonacci Series using recursion.
+```c
+//Write a C++ program to Print Fibonacci Series using recursion.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout << "Enter n Number : ";
+    cin >> n;
+    for(int i=0;i<=n;i++)
+    {
+      int k=febo(i);
+      cout << " " << k;
+    }
+}
+febo(int n){
+    if(n==0)
+    {
+        return 0;
+    }
+    else if(n==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return febo(n-1)+febo(n-2);
+    }
+}
+```
+### Output
+```
+Enter n Number : 10
+ 0 1 1 2 3 5 8 13 21 34 55
+```
+
+## Java Implementation
+### 3. Write a Java program to Print Fibonacci Series using recursion.
+```js
+//Write a Java program to Print Fibonacci Series using recursion.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z = new Scanner(System.in);
+          int n;
+          System.out.println("Enter n Number : ");
+          n = z.nextInt();
+          for(int i=0;i<=n;i++)
+          {
+              int k=febo(i);
+              System.out.println(" "+k);
+          }
+    }
+    static int febo(int n){
+          if(n==0)
+          {
+              return 0;
+          }
+          else if(n==1)
+          {
+              return 1;
+          }
+          else
+          {
+              return febo(n-1)+febo(n-2);
+          }
+    }
+
+}
+```
+### Output
+```
+Enter n Number : 10
+ 0 1 1 2 3 5 8 13 21 34 55
+```

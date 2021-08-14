@@ -1,0 +1,121 @@
+---
+title: Write a C/C++/Java program to read information of student. It contains Name, Roll number, Birthday, admission date. Calculate age of student at the time of admission.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 14. Write a C program to read information of student. It contains Name, Roll number, Birthday, admission date. Calculate age of student at the time of admission.
+```c
+//Write a C++ program to read information of student. It contains Name, Roll number, Birthday, admission date. Calculate age of student at the time of admission.
+#include<stdio.h>
+struct student{
+    char name[100];
+    int roll;
+    struct date{
+    int day;
+    int month;
+    int year;
+    }addmissionDate,birthDate;
+};
+void findAge(int current_date, int current_month,
+             int current_year, int birth_date,
+             int birth_month, int birth_year)
+{
+    int month[] = { 31, 28, 31, 30, 31, 30, 31,
+                          31, 30, 31, 30, 31 };
+    if (birth_date > current_date) {
+        current_date = current_date + month[birth_month - 1];
+        current_month = current_month - 1;
+    }
+    if (birth_month > current_month) {
+        current_year = current_year - 1;
+        current_month = current_month + 12;
+    }
+    int calculated_date = current_date - birth_date;
+    int calculated_month = current_month - birth_month;
+    int calculated_year = current_year - birth_year;
+    printf("Present Age\nYears: %d  Months: %d  Days:"
+           " %d\n", calculated_year, calculated_month,
+                                      calculated_date);
+}
+int main(){
+    struct student a;
+    printf("Enter students information");
+    printf("Name : ");
+    fgets(a.name,sizeof(a.name),stdin);
+    printf("Birth Date");
+    scanf("%d-%d-%d",&a.birthDate.day,&a.birthDate.month,&a.birthDate.year);
+    printf("admission date : ");
+    scanf("%d-%d-%d",&a.addmissionDate.day,&a.addmissionDate.month,&a.addmissionDate.year);
+    findAge(a.addmissionDate.day,a.addmissionDate.month,a.addmissionDate.year,a.birthDate.day,a.birthDate.month,a.birthDate.year);
+}
+```
+### Output
+```
+Enter students informationName : Ahosanul Hasan
+Birth Date: 2 2 1998
+admission date : 3 4 2018
+Present Age
+Years: 20  Months: 2  Days:1
+```
+
+## C++ Implementation
+### 14. Write a C++ program to read information of student. It contains Name, Roll number, Birthday, admission date. Calculate age of student at the time of admission.
+```c
+//Write a C++ program to read information of student. It contains Name, Roll number, Birthday, admission date. Calculate age of student at the time of admission.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct student{
+    char name[100];
+    int roll;
+    struct date{
+    int day;
+    int month;
+    int year;
+    }addmissionDate,birthDate;
+};
+void findAge(int current_date, int current_month,
+             int current_year, int birth_date,
+             int birth_month, int birth_year)
+{
+    int month[] = { 31, 28, 31, 30, 31, 30, 31,
+                          31, 30, 31, 30, 31 };
+    if (birth_date > current_date) {
+        current_date = current_date + month[birth_month - 1];
+        current_month = current_month - 1;
+    }
+    if (birth_month > current_month) {
+        current_year = current_year - 1;
+        current_month = current_month + 12;
+    }
+    int calculated_date = current_date - birth_date;
+    int calculated_month = current_month - birth_month;
+    int calculated_year = current_year - birth_year;
+    cout << "Present Age\nYears: " << calculated_year <<"  Months: " << calculated_month << "  Days:"
+           <<calculated_date;
+}
+int main(){
+    struct student a;
+    cout << "Enter students information";
+    cout << "Name : ";
+    fgets(a.name,sizeof(a.name),stdin);
+    cout << "Birth Date: ";
+    cin >> a.birthDate.day << a.birthDate.month << a.birthDate.year;
+    cout << "admission date : ";
+    cin >> a.addmissionDate.day >> a.addmissionDate.month >> a.addmissionDate.year;
+    findAge(a.addmissionDate.day,a.addmissionDate.month,a.addmissionDate.year,a.birthDate.day,a.birthDate.month,a.birthDate.year);
+}
+```
+### Output
+```
+Enter students informationName : Ahosanul Hasan
+Birth Date: 2 2 1998
+admission date : 3 4 2018
+Present Age
+Years: 20  Months: 2  Days:1
+```

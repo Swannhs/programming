@@ -1,0 +1,89 @@
+---
+title: Write a C/C++/Java program to enter three angles of triangle and check whether the triangle is Obtuse or not.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-18: Write a C program to enter three angles of triangle and check whether the triangle is Obtuse or not.
+```c
+/*Write a C program to enter three angles of triangle and check whether the triangle is Obtuse or not.*/
+#include<stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("Enter three angles of a triangle-");
+    scanf("%d %d %d",&a,&b,&c);
+    if((a>90||b>90||c>90)&&(a+b+c==180))
+        printf("triangle is obtuse triangle");
+    else
+        printf("triangle is not obtuse triangle");
+}
+```
+### Output
+```
+Enter three angles of a triangle-
+120
+30
+30
+triangle is obtuse triangle
+```
+
+## C++ Implementation
+### Program-18: Write a C++ program to enter three angles of triangle and check whether the triangle is Obtuse or not.
+```c
+/*Write a C++ program to enter three angles of triangle and check whether the triangle is Obtuse or not.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    cout<<"enter three angles of triangle-\n";
+    cin>>a>>b>>c;
+    if((a>90||b>90||c>90)&&(a+b+c==180))
+        cout<<"triangle is obtuse triangle";
+    else
+        cout<<"triangle is not obtuse triangle";
+}
+```
+### Output
+```
+Enter three angles of a triangle-
+120
+30
+30
+triangle is obtuse triangle
+```
+
+## Java Implementation
+### Program-18: Write a java program to enter three angles of triangle and check whether the triangle is Obtuse or not.
+```js
+/*Write a java program to enter three angles of triangle and check whether the triangle is Obtuse or not.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b,c;
+        System.out.print("Enter three angles of a triangle-\n");
+        a=z.nextInt();
+        b=z.nextInt();
+        c=z.nextInt();
+
+        if((a>90||b>90||c>90)&&(a+b+c==180))
+            System.out.print(" triangle is obtuse triangle");
+        else
+            System.out.print("triangle is not obtuse triangle");
+    }
+}
+```
+### Output
+```
+Enter three angles of a triangle-
+120
+30
+30
+triangle is obtuse triangle
+```

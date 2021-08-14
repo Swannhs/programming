@@ -1,0 +1,93 @@
+---
+title: Write a C/C++/Java program to enter two numbers and perform all arithmetic operations.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 10. Write a C program to enter two numbers and perform all arithmetic operations.
+```c
+//Write a C program to enter two numbers and perform all arithmetic operations.
+#include<stdio.h>
+void main()
+{
+    int a,b,c,d,x,y;
+    scanf("%d%d",&x,&y);
+    a=x+y;
+    b=x-y;
+    c=x*y;
+    d=x/y;
+    printf("add=%d\n",a);
+    printf("sub=%d\n",b);
+    printf("multi=%d\n",c);
+    printf("divi=%d\n",d);
+}
+```
+### Output
+```
+input : 2 2
+output:
+add=4
+sub=0
+multi=4
+divi=1
+```
+## C++ Implementation
+### 10. Write a C program to enter two numbers and perform all arithmetic operations.
+```c
+//Write a C++ program to print Hello World.
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d,x,y;
+    cin >> x >> y;
+    a=x+y;
+    b=x-y;
+    c=x*y;
+    d=x/y;
+
+    cout << add= a << endl;
+    cout << sub= b << endl;
+    cout << multi=c << endl;
+    cout << divi=d << endl;
+    return 0;
+}
+```
+### Output
+```
+input : 2 2
+output:
+add=4
+sub=0
+multi=4
+divi=1
+```
+
+## Java Implementation
+### 10. Write a Java program to enter two numbers and perform all arithmetic operations.
+```js
+//Write a Java program to print Hello World.
+public class Funycode {
+    public static void main(String[] args) {
+        int a,b,c,d,x,y;
+        Scanner sc=new Scanner(System.in);
+        x = sc.nextInt();
+        y = sc.nextInt();
+        a=x+y;
+        b=x-y;
+        c=x*y;
+        d=x/y;
+        System.out.println("add=" + a);
+        System.out.println("sub=" + b);
+        System.out.println("multi=" + c);
+        System.out.println("divi=" +d);
+    }
+}
+```
+### Output
+```
+Hello, World!
+```

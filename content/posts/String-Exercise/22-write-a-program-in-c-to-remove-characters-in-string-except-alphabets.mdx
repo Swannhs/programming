@@ -1,0 +1,110 @@
+---
+title: Write a C/C++/Java program to remove characters in String Except Alphabets.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 22. Write a C program to remove characters in String Except Alphabets.
+```c
+//Write a C program to remove characters in String Except Alphabets.
+#include<stdio.h>
+int main()
+{
+    char str[150];
+    int i, j;
+    printf("\nEnter a string : ");
+    gets(str);
+    for(i = 0; str[i] != '\0'; ++i)
+    {
+        while (!( (str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z') || str[i] == '\0') )
+        {
+            for(j = i; str[j] != '\0'; ++j)
+            {
+                str[j] = str[j+1];
+            }
+        str[j] = '\0';
+        }
+    }
+    printf("\nResultant String : %s ",str);
+
+    return 0;
+}
+```
+### Output
+```
+Enter a string : hello
+
+Resultant String : hello
+```
+## C++ Implementation
+### 22. Write a C++ program to remove characters in String Except Alphabets.
+```c
+//Write a C++ program to remove characters in String Except Alphabets.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char str[150];
+    int i, j;
+    cout << "\nEnter a string : ";
+    cin >> str;
+    for(i = 0; str[i] != '\0'; ++i)
+    {
+        while (!( (str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z') || str[i] == '\0') )
+        {
+            for(j = i; str[j] != '\0'; ++j)
+            {
+                str[j] = str[j+1];
+            }
+        str[j] = '\0';
+        }
+    }
+    cout << "\nResultant String : " << str;
+
+    return 0;
+}
+```
+### Output
+```
+Enter a string : hello
+
+Resultant String : hello
+```
+
+## Java Implementation
+### 22. Write a Java program to remove characters in String Except Alphabets.
+```js
+//Write a Java program to remove characters in String Except Alphabets.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String str;
+        int i, j;
+        str = z.nextLine();
+        for(i = 0; charAt(i) != '\0'; ++i)
+        {
+            while (!( (charAt(i) >= 'a' && charAt(i) <= 'z') || (charAt(i) >= 'A' && charAt(i) <= 'Z') || charAt(i) == '\0') )
+            {
+                for(j = i; charAt(j) != '\0'; ++j)
+                {
+                    charAt(j) = charAt(j+1);
+                }
+            charAt(j) = '\0';
+            }
+        }
+    }
+}
+```
+### Output
+```
+Enter a string : hello
+
+Resultant String : hello
+```

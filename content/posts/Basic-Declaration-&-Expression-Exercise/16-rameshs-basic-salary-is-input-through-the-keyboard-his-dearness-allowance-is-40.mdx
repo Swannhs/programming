@@ -1,0 +1,66 @@
+---
+title: Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a program to calculate his gross salary.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+## C Implementation
+### Program-17: Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a program to calculate his gross salary.
+```c
+/*Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a program to calculate his gross salary.*/
+#include<stdio.h>
+void main()
+{
+    int s,r;
+    scanf("%d",&s);
+    r=(s+(s*20)/100+(s*40)/100);
+    printf("Gross Salary=%d",r);
+}
+```
+### Output
+```
+2000
+Gross Salary=3200
+```
+## C++ Implementation
+### Program-17: Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a C++ program to calculate his gross salary.
+```c
+/*Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a C++ program to calculate his gross salary.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int s,r;
+    cin>>s;
+    r=(s+(s*20)/100+(s*40)/100);
+    cout<<"Gross Salary:"<<r;
+    return 0;
+}
+```
+### Output
+```
+2000
+Gross Salary=3200
+```
+## Java Implementation
+### Program-17: Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a java program to calculate his gross salary.
+```js
+/*Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a java program to calculate his gross salary.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        int s,r;
+        Scanner z=new Scanner(System.in);
+        s=z.nextInt();
+        r=(s+(s*20)/100+(s*40)/100);
+        System.out.println("Gross Salary="+r);
+    }
+}
+```
+### Output
+```
+2000
+Gross Salary=3200
+```

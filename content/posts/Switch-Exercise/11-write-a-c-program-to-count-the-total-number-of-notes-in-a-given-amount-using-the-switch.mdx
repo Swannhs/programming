@@ -1,0 +1,201 @@
+---
+title: Write a C/C++/Java program to count the total number of notes in a given amount using the switch.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-11: Write a C program to count the total number of notes in a given amount using the switch.
+```c
+/*Write a C program to count the total number of notes in a given amount using the switch.*/
+
+#include<stdio.h>
+int main()
+{
+   int amount;
+   int n1,n2,n5,n10,n20,n50,n100,n500;
+   n1 = n2 = n5 = n10 = n20 = n50 = n100 = n500 =0;
+   printf("Enter Amount : ");
+   scanf("%d",&amount);
+   switch(amount>=500)
+   {
+      case 1:
+         n500 = amount/500;
+         amount -= n500 * 500;
+         break;
+   }
+   switch(amount >=100)
+   {
+      case 1:
+         n100 = amount/100;
+         amount -= n100 * 100;
+         break;
+   }
+   switch(amount >=50)
+   {
+      case 1:
+        n50 = amount/50;
+        amount -= n50 * 50;
+   }
+   switch(amount >=20)
+   {
+      case 1:
+        n20 = amount/20;
+        amount -= n20 * 20;
+        break;
+   }
+   switch(amount >=10)
+   {
+      case 1:
+        n10 = amount/10;
+        amount -= n10 * 10;
+        break;
+   }
+   printf("500=%d\n",n500);
+   printf("100=%d\n",n100);
+   printf("50 =%d\n",n50 );
+   printf("20 =%d\n",n20) ;
+   printf("10 =%d\n",n10) ;
+}
+```
+### Output
+```
+Input: 990
+Output: 500= 1
+        100= 4
+        50= 1
+        20= 2
+        10= 0
+```
+
+## C++ Implementation
+### Program-11: Write a C++ program to count the total number of notes in a given amount using the switch.
+```c
+/*Write a C program to count the total number of notes in a given amount using the switch.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int amount;
+    int n1,n2,n5,n10,n20,n50,n100,n500;
+    n1 = n2 = n5 = n10 = n20 = n50 = n100 = n500 =0;
+    cout << "Enter Amount : ";
+    cin >> amount;
+    switch(amount>=500)
+    {
+       case 1:
+          n500 = amount/500;
+          amount -= n500 * 500;
+          break;
+    }
+    switch(amount >=100)
+    {
+       case 1:
+          n100 = amount/100;
+          amount -= n100 * 100;
+          break;
+    }
+    switch(amount >=50)
+    {
+       case 1:
+          n50 = amount/50;
+          amount -= n50 * 50;
+    }
+    switch(amount >=20)
+    {
+       case 1:
+          n20 = amount/20;
+          amount -= n20 * 20;
+          break;
+    }
+    switch(amount >=10)
+    {
+       case 1:
+          n10 = amount/10;
+          amount -= n10 * 10;
+          break;
+    }
+    cout << "500= " << n500 << endl;
+    cout << "100= " << n100 << endl;
+    cout << "50= " << n50 << endl;
+    cout << "20= " << n20 << endl;
+    cout << "10= " << n10 << endl;
+}
+```
+### Output
+```
+Input: 990
+Output: 500= 1
+100= 4
+50= 1
+20= 2
+10= 0
+```
+
+## Java Implementation
+### Program-12: Write a C program to count the total number of notes in a given amount using the switch.
+```js
+/*Write a C program to count the total number of notes in a given amount using the switch.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int amount;
+        int n1,n2,n5,n10,n20,n50,n100,n500;
+        n1 = n2 = n5 = n10 = n20 = n50 = n100 = n500 =0;
+        System.out.println("Enter a amount :");
+        amount = z.nextInt();
+        switch(amount>=500)
+        {
+           case 1:
+             n500 = amount/500;
+             amount -= n500 * 500;
+             break;
+        }
+        switch(amount >=100)
+        {
+           case 1:
+             n100 = amount/100;
+             amount -= n100 * 100;
+             break;
+        }
+        switch(amount >=50)
+        {
+           case 1:
+              n50 = amount/50;
+              amount -= n50 * 50;
+        }
+        switch(amount >=20)
+        {
+           case 1:
+              n20 = amount/20;
+              amount -= n20 * 20;
+              break;
+        }
+        switch(amount >=10)
+        {
+           case 1:
+              n10 = amount/10;
+              amount -= n10 * 10;
+              break;
+        }
+        System.out.println("500= " + n500);
+        System.out.println("100= " + n100);
+        System.out.println("50= " + n50);
+        System.out.println("20= " + n20);
+        System.out.println("10= " + n10);
+    }
+}
+```
+### Output
+```
+Input: 990
+Output: 500= 1
+100= 4
+50= 1
+20= 2
+10= 0
+```

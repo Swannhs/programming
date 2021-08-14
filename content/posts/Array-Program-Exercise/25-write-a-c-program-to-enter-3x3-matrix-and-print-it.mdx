@@ -1,0 +1,271 @@
+---
+title: Write a C/C++/Java program to enter 3×3 matrix and print it.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 25. Write a C program to enter 3×3 matrix and print it.
+```c
+//Write a C program to enter 3×3 matrix and print it.
+#include <stdio.h>
+void main()
+{
+  int arr[3][3],i,j;
+  printf("Input elements in the matrix :\n");
+  for(i=0;i<3;i++)
+  {
+      for(j=0;j<3;j++)
+      {
+          printf("element - [%d],[%d] : ",i,j);
+          scanf("%d",&arr[i][j]);
+      }
+  }
+ printf("\nThe matrix is : \n");
+  for(i=0;i<3;i++)
+  {
+      printf("\n");
+      for(j=0;j<3;j++)
+           printf("%d\t",arr[i][j]);
+  }
+}
+```
+### Output
+```
+Input Rows and Columns of the matrix :
+3 3
+Input elements in the matrix :
+element -0 0 : 1
+element -0 1 : 2
+element -0 2 : 3
+element -1 0 : 4
+element -1 1 : 5
+element -1 2 : 6
+element -2 0 : 7
+element -2 1 : 8
+element -2 2 : 9
+
+The matrix is :
+1 2 3
+4 5 6
+7 8 9
+Enter the numbers of two rows to be exchanged
+2
+2
+The matrix after interchanging the two rows(in the original matrix)
+1 2 3
+4 5 6
+7 8 9
+Enter the numbers of two columns to be exchanged
+3
+3
+The matrix after interchanging the two columns(in the original matrix)
+1 2 3
+4 5 6
+7 8 9
+```
+## C++ Implementation
+### 25. Write a C++ program to enter 3×3 matrix and print it.
+```c
+//Write a C++ program to enter 3×3 matrix and print it.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr1[50][50], arr2[50][50],i,j,a,b,c,p,q,t,r1,c1,r;
+    cout<<"Input Rows and Columns of the  matrix :\n";
+    cin>>r1>>c1;
+    cout<<"\nInput elements in the  matrix :\n";
+    for(i=0; i<r1; i++)
+    {
+        for(j=0; j<c1; j++)
+        {
+            cout<<"element -"<<i<<" "<<j<<" : ";
+            cin>>arr1[i][j];
+            arr2[i][j] = arr1[i][j];
+        }
+    }
+    cout<<"\nThe  matrix is :\n";
+    for(i=0; i<r1; i++)
+    {
+        for(j=0; j<c1 ; j++)
+            cout<<arr1[i][j]<<"\t";
+        cout<<"\n";
+    }
+    cout<<"Enter the numbers of two rows to be exchanged \n";
+    cin>>a>>b;
+    for (i = 0; i < r1; ++i)
+    {
+        c = arr1[a - 1][i];
+        arr1[a - 1][i] = arr1[b - 1][i];
+        arr1[b - 1][i] = c;
+    }
+    cout<<"The matrix after interchanging the two rows(in the original matrix) \n";
+    for (i = 0; i < r1; ++i)
+    {
+        for (j = 0; j < r1; ++j)
+        {
+            cout<<" "<< arr1[i][j]<<"\t";
+        }
+        cout<<"\n";
+    }
+    cout<<"Enter the numbers of two columns to be exchanged \n";
+    cin>>p>>q;
+    for (i = 0; i < c1; ++i)
+    {
+        r = arr2[i][p - 1];
+        arr2[i][p - 1] = arr2[i][q - 1];
+        arr2[i][q - 1] = r;
+    }
+    cout<<"The matrix after interchanging the two columns(in the original matrix)\n ";
+    for (i = 0; i < c1; ++i)
+    {
+        for (j = 0; j < c1; ++j)
+        {
+            cout<<"  "<< arr2[i][j]<<"\t";
+        }
+        cout<<"\n";
+    }
+}
+```
+### Output
+```
+Input Rows and Columns of the matrix :
+3 3
+Input elements in the matrix :
+element -0 0 : 1
+element -0 1 : 2
+element -0 2 : 3
+element -1 0 : 4
+element -1 1 : 5
+element -1 2 : 6
+element -2 0 : 7
+element -2 1 : 8
+element -2 2 : 9
+
+The matrix is :
+1 2 3
+4 5 6
+7 8 9
+Enter the numbers of two rows to be exchanged
+2
+2
+The matrix after interchanging the two rows(in the original matrix)
+1 2 3
+4 5 6
+7 8 9
+Enter the numbers of two columns to be exchanged
+3
+3
+The matrix after interchanging the two columns(in the original matrix)
+1 2 3
+4 5 6
+7 8 9
+```
+
+## Java Implementation
+### 25. Write a Java program to enter 3×3 matrix and print it.
+```js
+//Write a Java program to enter 3×3 matrix and print it.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr1[][]=new int [50][50], arr2[][]=new int [50][50],i,j,a,b,c,p,q,t,r1,c1,r;
+        System.out.println("Input Rows and Columns of the  matrix :\n");
+        r1=z.nextInt();
+        c1=z.nextInt();
+        System.out.println("\nInput elements in the  matrix :\n");
+        for(i=0; i<r1; i++)
+        {
+            for(j=0; j<c1; j++)
+            {
+                System.out.println("element -"+i+" "+j+" : ");
+                arr1[i][j]=z.nextInt();
+                arr2[i][j] = arr1[i][j];
+            }
+        }
+        System.out.println("\nThe  matrix is :\n");
+        for(i=0; i<r1; i++)
+        {
+            for(j=0; j<c1 ; j++)
+                System.out.println(arr1[i][j]+"\t");
+                System.out.println("\n");
+        }
+        System.out.println("Enter the numbers of two rows to be exchanged \n");
+        a=z.nextInt();
+        b=z.nextInt();
+        for (i = 0; i < r1; ++i)
+        {
+            c = arr1[a - 1][i];
+            arr1[a - 1][i] = arr1[b - 1][i];
+            arr1[b - 1][i] = c;
+        }
+        System.out.println("The matrix after interchanging the two rows(in the original matrix) \n");
+        for (i = 0; i < r1; ++i)
+        {
+            for (j = 0; j < r1; ++j)
+            {
+                System.out.println(" "+ arr1[i][j]+"\t");
+            }
+            System.out.println("\n");
+        }
+        System.out.println("Enter the numbers of two columns to be exchanged \n");
+        p=z.nextInt();
+        q=z.nextInt();
+        for (i = 0; i < c1; ++i)
+        {
+            r = arr2[i][p - 1];
+            arr2[i][p - 1] = arr2[i][q - 1];
+            arr2[i][q - 1] = r;
+        }
+        System.out.println("The matrix after interchanging the two columns(in the original matrix)\n ");
+        for (i = 0; i < c1; ++i)
+        {
+            for (j = 0; j < c1; ++j)
+            {
+                System.out.println("  "+ arr2[i][j]+"\t");
+            }
+            System.out.println("\n");
+        }
+    }
+}
+```
+### Output
+```
+Input Rows and Columns of the matrix :
+3 3
+Input elements in the matrix :
+element -0 0 : 1
+element -0 1 : 2
+element -0 2 : 3
+element -1 0 : 4
+element -1 1 : 5
+element -1 2 : 6
+element -2 0 : 7
+element -2 1 : 8
+element -2 2 : 9
+
+The matrix is :
+1 2 3
+4 5 6
+7 8 9
+Enter the numbers of two rows to be exchanged
+2
+2
+The matrix after interchanging the two rows(in the original matrix)
+1 2 3
+4 5 6
+7 8 9
+Enter the numbers of two columns to be exchanged
+3
+3
+The matrix after interchanging the two columns(in the original matrix)
+1 2 3
+4 5 6
+7 8 9
+```

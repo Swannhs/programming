@@ -1,0 +1,182 @@
+---
+title: Write a C/C++/Java program to sort array elements in descending order.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 23. Write a C program to sort array elements in descending order.
+```c
+//Write a C program to store elements in an array and print it.
+#include <stdio.h>
+int main()
+{
+ int i, j, a, arr[10];
+ printf("Enter 10 elements- \n");
+ for (i = 0; i < 10; i++)
+ {
+   scanf("%d", &arr[i]);
+ }
+ for (i = 0; i < 10; ++i)
+ {
+   for (j = i + 1; j < 10; ++j)
+   {
+      if (arr[i] < arr[j])
+      {
+         a =  arr[i];
+         arr[i] = arr[j];
+         arr[j] = a;
+      }
+    }
+ }
+ printf("The numbers arranged in descending order are given below: \n");
+ for (i = 0; i < 10; ++i)
+        printf("%d\n", arr[i]);
+}
+```
+### Output
+```
+Enter 10 elements-
+5
+4
+6
+7
+3
+2
+1
+8
+9
+7
+The numbers arranged in descending order are given below:
+9
+8
+7
+7
+6
+5
+4
+3
+2
+1
+
+```
+## C++ Implementation
+### 23. Write a C++ program to sort array elements in descending order.
+```c
+//Write a C++ program to sort array elements in descending order.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i, j, a, arr[10];
+    cout<<"Enter 10 elements- \n";
+    for (i = 0; i < 10; i++)
+    {
+        cin>>arr[i];
+    }
+    for (i = 0; i < 10; ++i)
+    {
+        for (j = i + 1; j < 10; ++j)
+        {
+            if (arr[i] < arr[j])
+            {
+                a =  arr[i];
+                arr[i] = arr[j];
+                arr[j] = a;
+            }
+        }
+    }
+    cout<<"The numbers arranged in descending order are given below: \n";
+    for (i = 0; i < 10; ++i)
+        cout<<arr[i]<<"  ";
+}
+```
+### Output
+```
+Enter 10 elements-
+5
+4
+6
+7
+3
+2
+1
+8
+9
+7
+The numbers arranged in descending order are given below:
+9
+8
+7
+7
+6
+5
+4
+3
+2
+1
+
+```
+
+## Java Implementation
+### 23. Write a Java program to sort array elements in descending order.
+```js
+//Write a Java program to sort array elements in descending order.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int i, j, a, arr[]=new int [10];
+        System.out.println("Enter 10 elements- \n");
+        for (i = 0; i < 10; i++)
+        {
+            arr[i]=z.nextInt();
+        }
+        for (i = 0; i < 10; ++i)
+        {
+            for (j = i + 1; j < 10; ++j)
+            {
+                if (arr[i] < arr[j])
+                {
+                    a =  arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = a;
+                }
+            }
+        }
+        System.out.println("The numbers arranged in decending order are given below: \n");
+        for (i = 0; i < 10; ++i)
+             System.out.println(arr[i]+"  ");
+    }
+}
+```
+### Output
+```
+Enter 10 elements-
+5
+4
+6
+7
+3
+2
+1
+8
+9
+7
+The numbers arranged in descending order are given below:
+9
+8
+7
+7
+6
+5
+4
+3
+2
+1
+
+```

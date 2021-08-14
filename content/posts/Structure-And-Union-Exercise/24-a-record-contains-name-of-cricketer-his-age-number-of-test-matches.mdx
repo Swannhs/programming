@@ -1,0 +1,100 @@
+---
+title: Write a C/C++/Java program to create A record contains name of cricketer, his age, number of test matches that he has played and the average runs that he has scored in each test match. Create an array of structure to hold records of 20 such cricketer and then write a program to read these records and arrange them in ascending order by average runs. Use the qusort( ) standard library function.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 24. Write a C program to create A record contains name of cricketer, his age, number of test matches that he has played and the average runs that he has scored in each test match. Create an array of structure to hold records of 20 such cricketer and then write a program to read these records and arrange them in ascending order by average runs. Use the qusort( ) standard library function.
+```c
+//Write a C program to create A record contains name of cricketer, his age, number of test matches that he has played and the average runs that he has scored in each test match. Create an array of structure to hold records of 20 such cricketer and then write a program to read these records and arrange them in ascending order by average runs. Use the qusort( ) standard library function.
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+struct cricketers
+{
+    int avg;
+    char name[30];
+    int age;
+    int totalmatch;
+};
+struct cricketers bd[2]={20,"Tamim",30,180,30,"Sakib al",29,200};
+int compare(const void * a, const void * b)
+{
+    return (*(int*)a - *(int*)b);
+}
+int main()
+{
+    int i;
+    qsort(bd, 2, sizeof(struct cricketers), compare);
+    for (i = 0; i < 2; i++)
+    {
+        printf("\nName         : %s", bd[i].name);
+        printf("\nAge          : %d", bd[i].age);
+        printf("\nTotal Matches: %d", bd[i].totalmatch);
+        printf("\nAvg          : %d\n", bd[i].avg);
+    }
+}
+```
+### Output
+```
+Name         : Tamim
+Age          : 30
+Total Matches: 180
+Avg          : 20
+
+Name         : Sakib al
+Age          : 29
+Total Matches: 200
+Avg          : 30
+```
+
+## C++ Implementation
+### 24. Write a C++ program to create A record contains name of cricketer, his age, number of test matches that he has played and the average runs that he has scored in each test match. Create an array of structure to hold records of 20 such cricketer and then write a program to read these records and arrange them in ascending order by average runs. Use the qusort( ) standard library function.
+```c
+//Write a C++ program to create A record contains name of cricketer, his age, number of test matches that he has played and the average runs that he has scored in each test match. Create an array of structure to hold records of 20 such cricketer and then write a program to read these records and arrange them in ascending order by average runs. Use the qusort( ) standard library function.
+
+#include<iostream>
+#include <string.h>
+#include<conio.h>
+#include<stdlib.h>
+using namespace std;
+struct cricketers
+{
+    int avg;
+    char name[30];
+    int age;
+    int totalmatch;
+};
+struct cricketers bd[2]={20,"Tamim",30,180,30,"Sakib al",29,200};
+int compare(const void * a, const void * b)
+{
+    return (*(int*)a - *(int*)b);
+}
+int main()
+{
+    int i;
+    qsort(bd, 2, sizeof(struct cricketers), compare);
+    for (i = 0; i < 2; i++)
+    {
+        cout << "\nName         : " <<  bd[i].name;
+        cout << "\nAge          : " <<  bd[i].age;
+        cout << "\nTotal Matches: " <<  bd[i].totalmatch;
+        cout << "\nAvg          : " <<  bd[i].avg << endl;
+    }
+}
+```
+### Output
+```
+Name         : Tamim
+Age          : 30
+Total Matches: 180
+Avg          : 20
+
+Name         : Sakib al
+Age          : 29
+Total Matches: 200
+Avg          : 30
+```

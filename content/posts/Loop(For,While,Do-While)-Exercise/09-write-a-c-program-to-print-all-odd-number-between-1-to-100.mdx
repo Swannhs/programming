@@ -1,0 +1,164 @@
+---
+title: Write a C/C++/Java program to print all odd number between 1 to 100.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 6. Write a C program to print all odd number between 1 to 100.
+```c
+//Write a C program to print all odd number between 1 to 100.
+//Using for loop
+#include<stdio.h>
+void main()
+{
+    int i;
+    for(i=1;i<=100;i++)
+    {
+        if(i%2 == 1)
+        {
+            printf("%d ",i);
+        }
+    }
+}
+
+//Using while loop
+#include<stdio.h>
+void main()
+{
+    int i=1;
+    while(i<=100)
+    {
+        if(i%2 == 1)
+        {
+            printf("%d ",i);
+        }
+        i++;
+    }
+}
+//Using do while loop
+#include<stdio.h>
+void main()
+{
+    int i=1;
+    do
+    {
+        if(i%2 == 1)
+        {
+            printf("%d ",i);
+        }
+        i++;
+    }
+    while(i<=100);
+}
+```
+### Output
+```
+1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 69 71 73 75 77 79 81 83 85 87 89 91 93 95 97 99
+```
+
+## C++ Implementation
+### 6. Write a C++ program to print all odd number between 1 to 100.
+```c
+//Write a C++ program to print all odd number between 1 to 100.
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i=1;
+    while(i<=100)
+    {
+        if(i%2 == 1)
+        {
+            printf("%d ",i);
+        }
+        i++;
+    }
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i;
+    for(i=1;i<=100;i++)
+    {
+        if(i%2 == 1)
+        {
+            cout << " " << i;
+        }
+    }
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i=1;
+    do
+    {
+        if(i%2 == 1)
+        {
+            cout << " " << i;
+        }
+        i++;
+    }
+    while(i<=100);
+}
+```
+### Output
+```
+1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 69 71 73 75 77 79 81 83 85 87 89 91 93 95 97 99
+```
+
+## Java Implementation
+### 6. Write a Java program to print all odd number between 1 to 100.
+```js
+//Write a Java program to print all odd number between 1 to 100.
+// Using for loop
+public class Funycode {
+    public static void main(String[] args) {
+          int i;
+          for(i=1;i<=100;i++) {
+              if(i%2 == 1){
+                System.out.println(" " + i);
+              }
+          }
+    }
+}
+// Using while loop
+public class Funycode {
+    public static void main(String[] args) {
+        int i=1;
+        while(i<=100)
+        {
+            if(i%2 == 1){
+              System.out.println(" " + i);
+            }
+            i++;
+        }
+    }
+}
+// Using for loop
+public class Funycode {
+    public static void main(String[] args) {
+          int i=1;
+          do
+          {
+              if(i%2 == 1)
+              {
+                  System.out.println(" " + i);
+              }
+              i++;
+          }
+          while(i<=100);
+    }
+}
+```
+### Output
+```
+1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 69 71 73 75 77 79 81 83 85 87 89 91 93 95 97 99
+```

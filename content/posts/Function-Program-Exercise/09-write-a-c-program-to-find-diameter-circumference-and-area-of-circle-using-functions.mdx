@@ -1,0 +1,111 @@
+---
+title: Write a C/C++/Java program to find diameter, circumference and area of circle using functions.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 9. Write a C program to find diameter, circumference and area of circle using functions.
+```c
+//Write a C program to find diameter, circumference and area of circle using functions.
+#include<stdio.h>
+
+int square(int num)
+{
+    return num*num;
+}
+
+int main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    int ans=square(n);
+
+    printf("%d\n",ans);
+    return 0;
+}
+```
+### Output
+```
+Enter radius of circle: 3
+Diameter is 6
+Circumference is 18.85
+```
+
+## C++ Implementation
+### 9. Write a C++ program to find diameter, circumference and area of circle using functions.
+```c
+//Write a C++ program to find diameter, circumference and area of circle using functions.
+
+#include<iostream>
+using namespace std;
+void diameter(int n)
+{
+    cout << "Diameter is " << n*2 << endl;
+}
+
+void circumference(int n)
+{
+    float pi=3.14159,ans;
+    ans=2*pi*n;
+    cout << "Circumference is " << ans << endl;
+}
+
+int main()
+{
+    int rad;
+    cout << "Enter radius of circle: ";
+    cin >> rad;
+
+    diameter(rad);
+
+    circumference(rad);
+
+    return 0;
+}
+```
+### Output
+```
+Enter radius of circle: 3
+Diameter is 6
+Circumference is 18.85
+```
+
+## Java Implementation
+### 9. Write a Java program to find diameter, circumference and area of circle using functions.
+```js
+//Write a Java program to find diameter, circumference and area of circle using functions.
+import java.util.Scanner;
+public class Funycode {
+    void diameter(int n)
+    {
+        System.out.println("Diameter is " + n*2);
+    }
+    void circumference(int n)
+    {
+        float pi=3.14159,ans;
+        ans=2*pi*n;
+        System.out.println("Circumference is " + ans);
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int rad;
+        System.out.println("Enter radius of circle: ");
+        rad = z.nextInt();
+
+        diameter(rad);
+        circumference(rad);
+    }
+}
+```
+### Output
+```
+Enter radius of circle: 3
+Diameter is 6
+Circumference is 18.85
+```

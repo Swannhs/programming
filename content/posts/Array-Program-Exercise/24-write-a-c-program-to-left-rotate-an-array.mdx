@@ -1,0 +1,131 @@
+---
+title: Write a C/C++/Java program to left rotate an array.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 24. Write a C program to left rotate an array.
+```c
+//Write a C program to left rotate an array.
+#include <stdio.h>
+int main()
+{
+    int arr[10],i,j,k,temp;
+    printf("Enter 10 elements in array : ");
+    for(i=0; i<10; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("how many times left rotate : ");
+    scanf("%d", &k);
+    for(i=0; i<k; i++)
+    {
+        temp=arr[0];
+        for(j=0; j<10-1; j++)
+        {
+           arr[j]=arr[j+1];
+        }
+         arr[10-1]=temp;
+    }
+    printf("\narray elements after left rotate  : ");
+    for(i=0; i<10; i++)
+    {
+       printf("%d ",arr[i]);
+    }
+}
+```
+### Output
+```
+Enter 10 elements in array : 1 2 3 4 5 6 7 8 9 10
+how many times left rotate : 2
+
+array elements after left rotate  : 3 4 5 6 7 8 9 10 1 2
+```
+## C++ Implementation
+### 24. Write a C++ program to left rotate an array.
+```c
+//Write a C++ program to left rotate an array.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    int arr[10],i,j,k,temp;
+    cout << "Enter 10 elements in array : ";
+    for(i=0; i<10; i++)
+    {
+        cin >> &arr[i];
+    }
+    cout << "how many times left rotate : ";
+    cin >> k;
+
+    for(i=0; i<k; i++)
+    {
+        temp=arr[0];
+        for(j=0; j<10-1; j++)
+        {
+           arr[j]=arr[j+1];
+        }
+
+         arr[10-1]=temp;
+    }
+    cout << "\narray elements after left rotate  : ";
+
+    for(i=0; i<10; i++)
+    {
+       cout << " " << arr[i];
+    }
+}
+```
+### Output
+```
+Enter 10 elements in array : 1 2 3 4 5 6 7 8 9 10
+how many times left rotate : 2
+
+array elements after left rotate  : 3 4 5 6 7 8 9 10 1 2
+```
+
+## Java Implementation
+### 24. Write a Java program to left rotate an array.
+```js
+//Write a Java program to left rotate an array.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr[10],i,j,k,temp;
+        System.out.println("Enter 10 elements in array : ");
+        for(i=0; i<10; i++)
+        {
+            arr[i] = z.nextInt();
+        }
+        System.out.println("how many times left rotate : ");
+        k = z.nextInt();
+        for(i=0; i<k; i++)
+        {
+            temp=arr[0];
+            for(j=0; j<10-1; j++)
+            {
+               arr[j]=arr[j+1];
+            }
+            arr[10-1]=temp;
+        }
+        System.out.println("\narray elements after left rotate  : ");
+        for(i=0; i<10; i++)
+        {
+           System.out.println(" " +arr[i]);
+        }
+    }
+}
+```
+### Output
+```
+Enter 10 elements in array : 1 2 3 4 5 6 7 8 9 10
+how many times left rotate : 2
+
+array elements after left rotate  : 3 4 5 6 7 8 9 10 1 2
+```

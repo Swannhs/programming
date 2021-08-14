@@ -1,0 +1,91 @@
+---
+title: Write a C/C++/Java program to toggle case of each character of a string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 11. Write a C program to toggle case of each character of a string.
+```c
+//Write a C program to toggle case of each character of a string.
+#include<stdio.h>
+int main()
+{
+    char str[100];
+    int i;
+
+    printf("Enter a string: ");
+    gets(str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]>='A' && str[i]<='Z')
+            str[i]=str[i]+32;
+        else if(str[i]>='a' && str[i]<='z')
+            str[i]=str[i]-32;
+    }
+
+    printf("after toogle characters are: %s",str);
+    return 0;
+}
+```
+### Output
+```
+Enter a string: HellO
+after toogle characters are: hELLo
+```
+## C++ Implementation
+### 11. Write a C++ program to toggle case of each character of a string.
+```c
+//Write a C++ program to toggle case of each character of a string.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    char str[100];
+    int i;
+    cout << "Enter a string: ";
+    gets(str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]>='A' && str[i]<='Z')
+            str[i]=str[i]+32;
+        else if(str[i]>='a' && str[i]<='z')
+            str[i]=str[i]-32;
+    }
+    cout << "after toogle characters are: " << str;
+}
+```
+### Output
+```
+Enter a string: HellO
+after toogle characters are: hELLo
+```
+
+## Java Implementation
+### 11. Write a Java program to toggle case of each character of a string.
+```js
+//Write a Java program to toggle case of each character of a string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          System.out.println("Enter a string: ");
+          String str;
+          str = z.nextLine();
+          for(int i = str.length()-1; i >= 0; i --){
+            if(str.charAt(i).isLowerCase){
+
+            }
+          }
+          System.out.println("The String is " + str.toLowerCase());
+      }
+}
+```
+### Output
+```
+Enter a string: HellO
+after toogle characters are: hELLo
+```

@@ -1,0 +1,86 @@
+---
+title: Write a C/C++/Java Program to interchange values of two numbers using third variable.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-25: Write a C Program to interchange values of two numbers using third variable.
+```c
+/*Write a C Program to interchange values of two numbers using third variable.*/
+#include<stdio.h>
+void main()
+{
+    int a,b,c;
+    scanf("%d%d",&a,&b);
+    printf("A=%d B=%d\n",a,b);
+    c=a;
+    a=b;
+    b=c;
+    printf("A=%d B=%d",a,b);
+}
+```
+### Output
+```
+5
+10
+a:=5 b=10
+a:=10 b=5
+```
+
+## C++ Implementation
+### Program-25: Write a C++ Program to interchange values of two numbers using third variable.
+```c
+/*Write a C++ Program to interchange values of two numbers using third variable.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    cin>>a>>b;
+    cout<<"a:"<<a<<"b:"<<b<<endl;
+    c=a;
+    a=b;
+    b=c;
+    cout<<"a:"<<a<<"b:"<<b;
+}
+```
+### Output
+```
+5
+10
+a:=5 b=10
+a:=10 b=5
+```
+
+## Java Implementation
+### Program-25: Write a java Program to interchange values of two numbers using third variable.
+```js
+/*Write a java Program to interchange values of two numbers using third variable.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b,c,d,e;
+        double f,g;
+        a=z.nextInt();
+        b=z.nextInt();
+        System.out.println("a:="+a+ " b="+b);
+        c=a;
+        a=b;
+        b=c;
+        System.out.println("a:="+a+ " b="+b);
+
+    }
+}
+```
+### Output
+```
+5
+10
+a:=5 b=10
+a:=10 b=5
+```

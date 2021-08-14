@@ -1,0 +1,78 @@
+---
+title: Write a C/C++/Java program to count the number of vowels and consonants in a string using a pointer.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 13. Write a C program to count the number of vowels and consonants in a string using a pointer.
+```c
+//Write a C program to count the number of vowels and consonants in a string using a pointer.
+#include <stdio.h>
+void main()
+{
+    char s[1000],*p;
+    int vow=0,con=0;
+
+    printf("Enter  the string : ");
+    scanf("%s",&s);
+    p=s;
+while(*p)
+    {
+        if( (*p>=65 && *p<=90) || (*p>=97 && *p<=122))
+        {
+            if(*p=='a'|| *p=='e'||*p=='i'||*p=='o'||*p=='u'||*p=='A'||*p=='E'||*p=='I'||*p=='O' ||*p=='U')
+              vow++;
+            else
+             con++;
+        }
+        p++;
+    }
+    printf("vowels = %d\n",vow);
+    printf("consonants = %d\n",con);
+}
+```
+### Output
+```
+Enter  the string : hello
+vowels = 2
+consonants = 3
+```
+## C++ Implementation
+### 13. Write a C++ program to count the number of vowels and consonants in a string using a pointer.
+```c
+//Write a C++ program to count the number of vowels and consonants in a string using a pointer.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char s[1000],*p;
+    int vow=0,con=0;
+
+    cout<<("Enter  the string : ");
+    cin>>s;
+    p=s;
+    while(*p)
+    {
+        if( (*p>=65 && *p<=90) || (*p>=97 && *p<=122))
+        {
+            if(*p=='a'|| *p=='e'||*p=='i'||*p=='o'||*p=='u'||*p=='A'||*p=='E'||*p=='I'||*p=='O' ||*p=='U')
+                vow++;
+            else
+                con++;
+        }
+        p++;
+    }
+    cout<<"vowels ="<<vow<<endl;
+     cout<<"consonants = "<<con;
+}
+```
+### Output
+```
+Enter  the string : hello
+vowels = 2
+consonants = 3
+```

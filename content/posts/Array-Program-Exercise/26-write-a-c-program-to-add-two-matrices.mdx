@@ -1,0 +1,231 @@
+---
+title: Write a C/C++/Java program to add two matrices.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 26. Write a C program to add two matrices.
+```c
+//Write a C program to add two matrices.
+#include <stdio.h>
+
+void main() {
+  int arr1[3][3], brr1[3][3], crr1[3][3], i, j;
+  printf("Input elements in the first matrix :\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 3; j++) {
+      printf("element - [%d],[%d] : ", i, j);
+      scanf("%d", & arr1[i][j]);
+    }
+  }
+  printf("Input elements in the second matrix :\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 3; j++) {
+      printf("element - [%d],[%d] : ", i, j);
+      scanf("%d", & brr1[i][j]);
+    }
+  }
+  printf("\nThe First matrix is :\n");
+  for (i = 0; i < 3; i++) {
+    printf("\n");
+    for (j = 0; j < 3; j++)
+      printf("%d\t", arr1[i][j]);
+  }
+  printf("\nThe Second matrix is :\n");
+  for (i = 0; i < 3; i++) {
+    printf("\n");
+    for (j = 0; j < 3; j++)
+      printf("%d\t", brr1[i][j]);
+  }
+  for (i = 0; i < 3; i++)
+    for (j = 0; j < 3; j++)
+      crr1[i][j] = arr1[i][j] + brr1[i][j];
+  printf("\nThe Addition of two matrix is : \n");
+  for (i = 0; i < 3; i++) {
+    printf("\n");
+    for (j = 0; j < 3; j++)
+      printf("%d\t", crr1[i][j]);
+  }
+}
+```
+### Output
+```
+Input elements in the first matrix :
+element - [0],[0] : 1 2 3
+element - [0],[1] : element - [0],[2] : element - [1],[0] : 4 5 6
+element - [1],[1] : element - [1],[2] : element - [2],[0] : 7 8 9
+element - [2],[1] : element - [2],[2] : Input elements in the second matrix :
+element - [0],[0] : 9 8 7
+element - [0],[1] : element - [0],[2] : element - [1],[0] : 6 5 4
+element - [1],[1] : element - [1],[2] : element - [2],[0] : 3 2 1
+element - [2],[1] : element - [2],[2] :
+The First matrix is :
+
+1       2       3
+4       5       6
+7       8       9
+The Second matrix is :
+
+9       8       7
+6       5       4
+3       2       1
+The Addition of two matrix is :
+
+10      10      10
+10      10      10
+10      10      10
+```
+## C++ Implementation
+### 26. Write a C++ program to add two matrices.
+```c
+//Write a C++ program to add two matrices.
+
+  int arr1[3][3], brr1[3][3], crr1[3][3], i, j;
+  cout << "Input elements in the first matrix :\n";
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 3; j++) {
+  cout << "element - : " << i << j;
+      cin >> arr1[i][j];
+    }
+  }
+  cout << "Input elements in the second matrix :\n");
+  for (i = 0; i < 3; i++) {
+    for (j = 0; j < 3; j++) {
+  cout << "element - [%d],[%d] : ", i, j);
+      cin >> brr1[i][j];
+    }
+  }
+  cout << "\nThe First matrix is :\n";
+  for (i = 0; i < 3; i++) {
+  cout << "\n");
+    for (j = 0; j < 3; j++)
+      cout << "   " << arr1[i][j];
+  }
+  cout << "\nThe Second matrix is :\n";
+  for (i = 0; i < 3; i++) {
+  cout << "\n";
+    for (j = 0; j < 3; j++)
+      cout << "   " << brr1[i][j];
+  }
+  for (i = 0; i < 3; i++)
+    for (j = 0; j < 3; j++)
+      crr1[i][j] = arr1[i][j] + brr1[i][j];
+  cout << "\nThe Addition of two matrix is : \n";
+  for (i = 0; i < 3; i++) {
+    cout << "\n";
+    for (j = 0; j < 3; j++)
+  cout << "   " << crr1[i][j];
+}
+```
+### Output
+```
+Input elements in the first matrix :
+element - [0],[0] : 1 2 3
+element - [0],[1] : element - [0],[2] : element - [1],[0] : 4 5 6
+element - [1],[1] : element - [1],[2] : element - [2],[0] : 7 8 9
+element - [2],[1] : element - [2],[2] : Input elements in the second matrix :
+element - [0],[0] : 9 8 7
+element - [0],[1] : element - [0],[2] : element - [1],[0] : 6 5 4
+element - [1],[1] : element - [1],[2] : element - [2],[0] : 3 2 1
+element - [2],[1] : element - [2],[2] :
+The First matrix is :
+
+1       2       3
+4       5       6
+7       8       9
+The Second matrix is :
+
+9       8       7
+6       5       4
+3       2       1
+The Addition of two matrix is :
+
+10      10      10
+10      10      10
+10      10      10
+```
+
+## Java Implementation
+### 26. Write a Java program to add two matrices.
+```js
+//Write a Java program to add two matrices.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr1[3][3],brr1[3][3],crr1[3][3],i,j;
+        System.out.println("Input elements in the first matrix :\n");
+             for(i=0;i<3;i++)
+              {
+                  for(j=0;j<3;j++)
+                  {
+                     System.out.println("element - : "+i + " " +j);
+                     arr1[i][j] = z.nextInt();
+                  }
+              }
+             System.out.println("Input elements in the second matrix :\n");
+             for(i=0;i<3;i++)
+              {
+                  for(j=0;j<3;j++)
+                  {
+                     System.out.println("element - : "+ i + " " +j);
+                     brr1[i][j] = z.nextInt();
+                  }
+              }
+         System.out.println("\nThe First matrix is :\n");
+        for(i=0;i<3;i++)
+          {
+            System.out.println("\n");
+            for(j=0;j<3;j++)
+                 System.out.println("\t"+arr1[i][j]);
+          }
+        System.out.println("\nThe Second matrix is :\n");
+        for(i=0;i<3;i++)
+          {
+            System.out.println("\n");
+            for(j=0;j<3;j++)
+            System.out.println("\t"+brr1[i][j]);
+          }
+         for(i=0;i<3;i++)
+             for(j=0;j<3;j++)
+                  crr1[i][j]=arr1[i][j]+brr1[i][j];
+         System.out.println("\nThe Addition of two matrix is : \n");
+         for(i=0;i<3;i++){
+              System.out.println("\n");
+             for(j=0;j<3;j++)
+                  System.out.println("\t"+crr1[i][j]);
+         }
+    }
+}
+```
+### Output
+```
+Input elements in the first matrix :
+element - [0],[0] : 1 2 3
+element - [0],[1] : element - [0],[2] : element - [1],[0] : 4 5 6
+element - [1],[1] : element - [1],[2] : element - [2],[0] : 7 8 9
+element - [2],[1] : element - [2],[2] : Input elements in the second matrix :
+element - [0],[0] : 9 8 7
+element - [0],[1] : element - [0],[2] : element - [1],[0] : 6 5 4
+element - [1],[1] : element - [1],[2] : element - [2],[0] : 3 2 1
+element - [2],[1] : element - [2],[2] :
+The First matrix is :
+
+1       2       3
+4       5       6
+7       8       9
+The Second matrix is :
+
+9       8       7
+6       5       4
+3       2       1
+The Addition of two matrix is :
+
+10      10      10
+10      10      10
+10      10      10
+```

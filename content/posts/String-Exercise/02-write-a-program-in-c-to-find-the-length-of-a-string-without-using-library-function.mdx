@@ -1,0 +1,74 @@
+---
+title: Write a C/C++/Java program to find the length of a string without using library function.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 2. Write a C program to find the length of a string without using library function.
+```c
+//Write a C program to find the length of a string without using library function.
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char word[50];
+    int i, a = 0;
+    printf("Enter a string : ");
+    scanf("%s", word);
+    for (i = 0; word[i] != '\0'; i++)
+    {
+        a++;
+    }
+      printf("The length is %s : %d\n\n", word, a);
+}
+```
+### Output
+```
+Enter a string : hello
+The length is hello : 5
+```
+## C++ Implementation
+### 2. Write a C++ program to find the length of a string without using library function.
+```c
+//Write a C++ program to find the length of a string without using library function.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    cout << "Enter a string : ";
+    string word;
+    cin >> word;
+    cout << "The length is " << word << " : " << word.length();
+    return 0;
+}
+```
+### Output
+```
+Enter a string : hello
+The length is hello : 5
+```
+
+## Java Implementation
+### 2. Write a Java program to find the length of a string without using library function.
+```js
+//Write a Java program to find the length of a string without using library function.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          System.out.println("Enter a string : ");
+          String word;
+          word = z.nextLine();
+          System.out.println("The length is " + word + " : " + word.length());
+      }
+}
+```
+### Output
+```
+Enter a string : hello
+The length is hello : 5
+```

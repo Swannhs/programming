@@ -1,0 +1,80 @@
+---
+title: Write a C/C++/Java program to copy one string to another string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 6. Write a C program to copy one string to another string.
+```c
+//Write a C program to copy one string to another string.
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+  char str1[100],str2[100];
+
+  printf("Enter string ");
+  gets(str1);
+  strcpy(str2, str1);
+  printf("str1 string: %s\n", str1);
+  printf("str2 string: %s\n", str2);
+
+  return 0;
+}
+```
+### Output
+```
+Enter string hello
+str1 string: hello
+str2 string: hello
+```
+## C++ Implementation
+### 6. Write a C++ program to copy one string to another string.
+```c
+//Write a C++ program to copy one string to another string.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    char str1[100],str2[100];
+    cout << "Enter string ");
+    gets(str1);
+    strcpy(str2, str1);
+    cout << "str1 string: "<< str1 << endl;
+    cout << "str2 string: "<< str2);
+}
+```
+### Output
+```
+Enter string hello
+str1 string: hello
+str2 string: hello
+```
+
+## Java Implementation
+### 6. Write a Java program to copy one string to another string.
+```js
+//Write a Java program to copy one string to another string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          System.out.println("Enter a string");
+          String str1, str2;
+          str1 = z.nextLine();
+          str2 = str1;
+          System.out.println("str1 String is " + str1);
+          System.out.println("str2 copy String is " + str2);
+      }
+}
+```
+### Output
+```
+Enter string hello
+str1 string: hello
+str2 string: hello
+```

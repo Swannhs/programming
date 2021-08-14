@@ -1,0 +1,73 @@
+---
+title: Write a C/C++/Java program to find the third angle of a triangle if two angles are given.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-23: Write a C program to find the third angle of a triangle if two angles are given.
+```c
+/*Write a C program to find the third angle of a triangle if two angles are given.*/
+#include<stdio.h>
+void main()
+{
+    int a,b,c;
+    scanf("%d%d",&a,&b);
+    c=180-(a+b);
+    printf("Third Angle=%d",c);
+}
+```
+### Output
+```
+50
+50
+Third Angle:=80
+```
+
+## C++ Implementation
+### Program-23: Write a C++ program to find the third angle of a triangle if two angles are given.
+```c
+/*Write a C++ program to find the third angle of a triangle if two angles are given.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    cin>>a>>b;
+    c=180-(a+b);
+    cout<<"Third Angle="<<c;
+}
+```
+### Output
+```
+50
+50
+Third Angle:=80
+```
+
+## Java Implementation
+### Program-23: Write a Java program to find the third angle of a triangle if two angles are given.
+```js
+/*Write a Java program to find the third angle of a triangle if two angles are given.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b,c;
+        a=z.nextInt();
+        b=z.nextInt();
+        c=180-(a+b);
+        System.out.println("Third Angle:="+c);
+
+    }
+}
+```
+### Output
+```
+50
+50
+Third Angle:=80
+```

@@ -1,0 +1,103 @@
+---
+title: Write a C/C++/Java program to print all natural numbers between 1 to n using functions .
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 45. Write a C program to print all natural numbers between 1 to n using functions .
+```c
+//Write a C program to print all natural numbers between 1 to n using functions .
+#include<stdio.h>
+
+void printNaturalNumber(int n)
+{
+    printf("Natural numbers are: ");
+    for(int i=1;i<=n;i++)
+    {
+        printf("%d ",i);
+    }
+}
+
+int main()
+{
+    int n;
+    printf("Enter n: ");
+    scanf("%d",&n);
+
+    printNaturalNumber(n);
+
+    return 0;
+}
+```
+### Output
+```
+Enter n: 10
+Natural numbers are: 1 2 3 4 5 6 7 8 9 10
+```
+
+## C++ Implementation
+### 45. Write a C++ program to print all natural numbers between 1 to n using functions .
+```c
+//Write a C++ program to print all natural numbers between 1 to n using functions .
+
+#include<iostream>
+using namespace std;
+
+void printNaturalNumber(int n)
+{
+    cout << "Natural numbers are: ";
+    for(int i=1;i<=n;i++)
+    {
+        cout << " " << i ;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+
+    printNaturalNumber(n);
+
+    return 0;
+}
+```
+### Output
+```
+Enter n: 10
+Natural numbers are: 1 2 3 4 5 6 7 8 9 10
+```
+
+## Java Implementation
+### 45. Write a Java program to print all natural numbers between 1 to n using functions .
+```js
+//Write a Java program to print all natural numbers between 1 to n using functions .
+import java.util.Scanner;
+public class Funycode {
+    static void printNaturalNumber(int n)
+    {
+        System.out.println("Natural numbers are: ");
+        for(int i=1;i<=n;i++)
+        {
+            System.out.println(" " + i);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter n: ");
+        n = z.nextInt();
+        printNaturalNumber(n);
+    }
+}
+```
+### Output
+```
+Enter n: 10
+Natural numbers are: 1 2 3 4 5 6 7 8 9 10
+```

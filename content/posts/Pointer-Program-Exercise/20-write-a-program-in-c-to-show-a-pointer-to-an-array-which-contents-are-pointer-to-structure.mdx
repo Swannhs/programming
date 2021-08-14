@@ -1,0 +1,82 @@
+---
+title: Write a C/C++/Java program to show a pointer to an array which contents are pointer to structure.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 20. Write a C program to show a pointer to an array which contents are pointer to structure.
+```c
+//Write a C program to show a pointer to an array which contents are pointer to structure.
+#include <stdio.h>
+void main()
+{
+    struct student
+    {
+        char *name;
+        int id;
+    };
+
+    static struct student stu1= {"abc",1001},stu2= {"pqr",1002},stu3= {"xyz",1003};
+    struct student(*a[])= {&stu1,&stu2,&stu3};
+    struct student(*(*p)[3])=&a;
+
+    printf(" Student Name : %s \n",(**(*p+0)).name);
+    printf(" Student ID :  %d\n",(*(*p+0))->id);
+
+    printf(" Student Name : %s \n",(**(*p+1)).name);
+    printf(" Student ID :  %d\n",(*(*p+1))->id);
+
+    printf(" Student Name : %s \n",(**(*p+2)).name);
+    printf(" Student ID :  %d\n",(*(*p+2))->id);
+}
+```
+### Output
+```
+ Student Name : abc
+ Student ID :  1001
+ Student Name : pqr
+ Student ID :  1002
+ Student Name : xyz
+ Student ID :  1003
+```
+## C++ Implementation
+### 20. Write a C++ program to show a pointer to an array which contents are pointer to structure.
+```c
+//Write a C++ program to show a pointer to an array which contents are pointer to structure.
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+  struct student
+  {
+  char *name;
+  int id;
+  };
+
+	static struct student stu1={"abc",1001},stu2={"pqr",1002},stu3={"xyz",1003};
+	struct student(*a[])={&stu1,&stu2,&stu3};
+	struct student(*(*p)[3])=&a;
+
+  cout<<" Student Name : " <<(**(*p+0)).name<<endl;
+	cout<<" Student ID :  " <<(*(*p+0))->id<<endl;
+
+	cout<<" Student Name : "<<(**(*p+1)).name<<endl;
+	cout<<" Student ID :  "<<(*(*p+1))->id<<endl;
+
+	cout<<" Student Name : "<<(**(*p+2)).name<<endl;
+	cout<<" Student ID :  "<<(*(*p+2))->id<<endl;
+}
+```
+### Output
+```
+ Student Name : abc
+ Student ID :  1001
+ Student Name : pqr
+ Student ID :  1002
+ Student Name : xyz
+ Student ID :  1003
+```

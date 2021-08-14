@@ -1,0 +1,91 @@
+---
+title: Write a C/C++/Java program to check whether a given substring is present in the given string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 21. Write a C program to check whether a given substring is present in the given string.
+```c
+//Write a C program to check whether a given substring is present in the given string.
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+     char string[1000], sub[1000];
+     int position, length, c = 0;
+
+     printf("Input a string\n");
+     gets(string);
+
+     printf("Enter the position and length of substring\n");
+     scanf("%d%d", &position, &length);
+
+     while (c < length) {
+        sub[c] = string[position+c-1];
+        c++;
+     }
+     sub[c] = '\0';
+
+     printf("Required substring is \"%s\"\n", sub);
+}
+```
+### Output
+```
+Enter a string: hello
+Enter the position and length of substring 1 4
+Extracted string is: : ello
+```
+## C++ Implementation
+### 21. Write a C++ program to check whether a given substring is present in the given string.
+```c
+//Write a C++ program to check whether a given substring is present in the given string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int  main()
+{
+    cout << "Input a string ";
+    int position, length;
+    string str;
+    cout << "Enter positon";
+    cin >> positon;
+    cout << "Required sustring " << str.substr(position);
+}
+```
+### Output
+```
+Enter a string: hello
+Enter the position and length of substring 1 4
+Extracted string is: : ello
+```
+
+## Java Implementation
+### 21. Write a Java program to check whether a given substring is present in the given string.
+```js
+//Write a Java program to check whether a given substring is present in the given string.
+import java.util.Scanner;
+
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String str, result = "";
+        int index, length;
+        str = z.nextLine();
+        System.out.println("Enter the position and length of substring");
+        index = z.nextInt();
+        length = z.nextInt();
+        System.out.println("Extracted string is: " + str.substring(index));
+    }
+}
+```
+### Output
+```
+Enter a string: hello
+Enter the position and length of substring 1 4
+Extracted string is: : ello
+```

@@ -1,0 +1,93 @@
+---
+title: Write a C/C++/Java program to count the digits of a given number using recursion.
+category: Recursion Function Index
+tags: ['recursion']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 5. Write a C program to count the digits of a given number using recursion.
+```c
+//Write a C program to count the digits of a given number using recursion.
+#include<stdio.h>
+int main(){
+    int n;
+    printf("Enter a Number : ");
+    scanf("%d", &n);
+    int k=digitcount(n);
+    printf("Number of digits : ");
+    printf("%d",k);
+}
+int digitcount(int n){
+    if(n==0)
+    {
+        return 0;
+    }
+    return  1+digitcount(n/10);
+}
+```
+### Output
+```
+Enter a Number : 5
+Number of digits : 1
+```
+## C++ Implementation
+### 5. Write a C++ program to count the digits of a given number using recursion.
+```c
+//Write a C++ program to count the digits of a given number using recursion.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout << "Enter a Number : ";
+    cin >> n;
+    int k=digitcount(n);
+    cout << "Number of digits : ";
+    cin >> k;
+}
+int digitcount(int n){
+    if(n==0)
+    {
+        return 0;
+    }
+    return  1+digitcount(n/10);
+}
+```
+### Output
+```
+Enter a Number : 5
+Number of digits : 1
+```
+
+## Java Implementation
+### 5. Write a Java program to count the digits of a given number using recursion.
+```js
+//Write a Java program to count the digits of a given number using recursion.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter a Number : ");
+        n = z.nextInt();
+        int k=digitcount(n);
+        System.out.println("Number of digits : ");
+        System.out.println(k);
+    }
+    static int digitcount(int n){
+        if(n==0)
+        {
+            return 0;
+        }
+        return  1+digitcount(n/10);
+    }
+
+}
+```
+### Output
+```
+Enter a Number : 5
+Number of digits : 1
+```

@@ -1,0 +1,121 @@
+---
+title: Write a C/C++/Java program to find the square of any number using the function.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 2. Write a C program to print all even or odd numbers in given range using functions .
+```c
+//Write a C program to print all even or odd numbers in given range using functions .
+#include<stdio.h>
+
+void evenOrodd(int n)
+{
+    printf("Odd numbers are: ");
+    for(int i=1;i<=n;i+=2)
+    {
+        printf("%d ",i);
+    }
+    printf("\nEven numbers are: ");
+    for(int i=2;i<=n;i+=2)
+    {
+        printf("%d ",i);
+    }
+}
+
+int main()
+{
+    int n;
+    printf("Enter n: ");
+    scanf("%d",&n);
+
+    evenOrodd(n);
+
+    return 0;
+}
+```
+### Output
+```
+Enter n: 10
+Odd numbers are: 1 3 5 7 9
+Even numbers are: 2 4 6 8 10
+```
+
+## C++ Implementation
+### 46. Write a C++ program to print all even or odd numbers in given range using functions .
+```c
+//Write a C++ program to print all even or odd numbers in given range using functions .
+
+#include<iostream>
+using namespace std;
+
+void evenOrodd(int n)
+{
+    cout << "Odd numbers are: ";
+    for(int i=1;i<=n;i+=2)
+    {
+        cout << " " << i;
+    }
+    cout << "\nEven numbers are: ";
+    for(int i=2;i<=n;i+=2)
+    {
+        cout << " " << i;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+
+    evenOrodd(n);
+
+    return 0;
+}
+```
+### Output
+```
+Enter n: 10
+Odd numbers are: 1 3 5 7 9
+Even numbers are: 2 4 6 8 10
+```
+
+## Java Implementation
+### 46. Write a program to print all even or odd numbers in given range using functions .tion.
+```js
+//Write a Java program to print all even or odd numbers in given range using functions .
+import java.util.Scanner;
+public class Funycode {
+    static void evenOrodd(int n)
+    {
+        System.out.printf("Odd numbers are: ");
+        for(int i=1;i<=n;i+=2)
+        {
+            System.out.println(" " +i);
+        }
+        System.out.printf("Even numbers are: ");
+        for(int i=2;i<=n;i+=2)
+        {
+            System.out.println("%d ",i);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter n: ");
+        n = z.nextInt();
+        evenOrodd(n);
+    }
+}
+```
+### Output
+```
+Enter n: 10
+Odd numbers are: 1 3 5 7 9
+Even numbers are: 2 4 6 8 10
+```

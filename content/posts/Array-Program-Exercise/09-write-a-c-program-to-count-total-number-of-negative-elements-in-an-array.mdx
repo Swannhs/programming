@@ -1,0 +1,131 @@
+---
+title: Write a C/C++/Java program to store elements in an array and print it.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 9. Write a C program to store elements in an array and print it.
+```c
+//Write a C program to store elements in an array and print it.
+#include <stdio.h>
+int main()
+{
+    int arr[10],i,count=0;
+    printf("Enter 10 elements in array : \n");
+    for(i=0; i<10; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    for(i=0; i<10; i++)
+    {
+        if(arr[i]<0)
+        {
+            count++;
+        }
+    }
+    printf("\nTotal number of negative elements = %d", count);
+}
+```
+### Output
+```
+Input 10 elements in the array :
+1 2 3 4 5 6 7 8 9 10
+
+The elements stored in the first array are :
+ 1 2 3 4 5 6 7 8 9 10
+
+The elements copied into the second array are :
+ 1 2 3 4 5 6 7 8 9 10
+```
+## C++ Implementation
+### 9. Write a C++ program to store elements in an array and print it.
+```c
+//Write a C++ program to store elements in an array and print it.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr1[10], arr2[10],i;
+    cout << "Input 10 elements in the array :\n";
+       for(i=0;i<10;i++)
+        {
+          scanf("%d",&arr1[i]);
+        }
+    for(i=0; i<10; i++)
+    {
+        arr2[i] = arr1[i];
+    }
+    cout << "\nThe elements stored in the first array are :\n";
+    for(i=0; i<10; i++)
+    {
+        printf("% d", arr1[i]);
+    }
+    cout << "\n\nThe elements copied into the second array are :\n";
+    for(i=0; i<10; i++)
+    {
+        cin >> " " >> arr2[i];
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+1 2 3 4 5 6 7 8 9 10
+
+The elements stored in the first array are :
+ 1 2 3 4 5 6 7 8 9 10
+
+The elements copied into the second array are :
+ 1 2 3 4 5 6 7 8 9 10
+```
+
+## Java Implementation
+### 9. Write a Java program to store elements in an array and print it.
+```js
+//Write a Java program to store elements in an array and print it.
+import java.util.Scanner;
+public class Funycode {
+
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr1[10], arr2[10],i;
+        System.out.println("Input 10 elements in the array :\n");
+           for(i=0;i<10;i++)
+            {
+              arr1[i] = z.nextInt();
+            }
+        for(i=0; i<10; i++)
+        {
+            arr2[i] = arr1[i];
+        }
+        System.out.println("\nThe elements stored in the first array are :\n");
+        for(i=0; i<10; i++)
+        {
+            System.out.println(" "+ arr1[i]);
+        }
+        System.out.println("\n\nThe elements copied into the second array are :\n");
+        for(i=0; i<10; i++)
+        {
+            System.out.println("% d", arr2[i]);
+        }
+
+    }
+
+}
+```
+### Output
+```
+Input 10 elements in the array :
+1 2 3 4 5 6 7 8 9 10
+
+The elements stored in the first array are :
+ 1 2 3 4 5 6 7 8 9 10
+
+The elements copied into the second array are :
+ 1 2 3 4 5 6 7 8 9 10
+```

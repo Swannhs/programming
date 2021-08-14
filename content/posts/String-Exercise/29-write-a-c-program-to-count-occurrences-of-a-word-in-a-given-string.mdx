@@ -1,0 +1,172 @@
+---
+title: Write a C/C++/Java program to count occurrences of a word in a given string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 29. Write a C program to count occurrences of a word in a given string.
+```c
+//Write a C program to count occurrences of a word in a given string.
+#include<stdio.h>
+#include <string.h>
+
+int main()
+{
+    char s[1000],w[1000];
+    int n,a[1000],i,j,k=0,l,found=0,t=0;
+
+    printf("Enter  the string : ");
+    gets(s);
+    printf("Enter word to be searched: ");
+    gets(w);
+    for(i=0;s[i];i++)
+    {
+        if(s[i]==' ')
+        {
+            a[k++]=i;
+        }
+    }
+    a[k++]=i;
+    j=0;
+    for(i=0;i<k;i++)
+    {
+        n=a[i]-j;
+        if(n==strlen(w))
+        {
+            t=0;
+            for(l=0;w[l];l++)
+            {
+                if(s[l+j]==w[l])
+                {
+                    t++;
+                }
+            }
+            if(t==strlen(w))
+            {
+                found++;
+
+            }
+        }
+
+        j=a[i]+1;
+    }
+
+     printf("word '%s' is occurred count=%d ",w,found);
+
+
+}
+```
+### Output
+```
+enter a character: a
+This is an alphabet
+```
+## C++ Implementation
+### 29. Write a C++ program to count occurrences of a word in a given string.
+```c
+//Write a C++ program to count occurrences of a word in a given string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char s[1000],w[1000];
+    int n,a[1000],i,j,k=0,l,found=0,t=0;
+    printf("Enter  the string : ");
+    gets(s);
+    printf("Enter word to be searched: ");
+    gets(w);
+    for(i=0;s[i];i++)
+    {
+        if(s[i]==' ')
+        {
+            a[k++]=i;
+        }
+    }
+    a[k++]=i;
+    j=0;
+    for(i=0;i<k;i++)
+    {
+        n=a[i]-j;
+        if(n==strlen(w))
+        {
+            t=0;
+            for(l=0;w[l];l++)
+            {
+                if(s[l+j]==w[l])
+                {
+                    t++;
+                }
+            }
+            if(t==strlen(w))
+            {
+                found++;
+            }
+        }
+        j=a[i]+1;
+    }
+     printf("word '%s' is occurred count=%d ",w,found);
+}
+```
+### Output
+```
+enter a character: a
+This is an alphabet
+```
+
+## Java Implementation
+### 29. Write a Java program to count occurrences of a word in a given string.
+```js
+//Write a Java program to count occurrences of a word in a given string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        char s[1000],w[1000];
+        int n,a[1000],i,j,k=0,l,found=0,t=0;
+        System.out.println("Enter  the string : ");
+        s = z.nextLine();
+        System.out.println("Enter word to be searched: ");
+        w = z.nextLine();
+        for(i=0;s[i];i++)
+        {
+            if(s[i]==' ')
+            {
+                a[k++]=i;
+            }
+        }
+        a[k++]=i;
+        j=0;
+        for(i=0;i<k;i++)
+        {
+            n=a[i]-j;
+            if(n==w.length())
+            {
+                t=0;
+                for(l=0;w[l];l++)
+                {
+                    if(s[l+j]==w[l])
+                    {
+                        t++;
+                    }
+                }
+                if(t==.length())
+                {
+                    found++;
+                }
+            }
+            j=a[i]+1;
+        }
+         System.out.println("word " + w +" is occurred count= "+found);
+    }
+}
+```
+### Output
+```
+enter a character: a
+This is an alphabet
+```

@@ -1,0 +1,44 @@
+---
+title: Write a C/C++/Java program to show the basic declaration of pointer.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 1. Write a C program to show the basic declaration of pointer.
+```c
+//Write a C program to show the basic declaration of pointer.
+#include <stdio.h>
+void main()
+{
+    int a=10; //Variable declaration
+    int *p; //Pointer declaration
+    p=&a;
+    printf("Address of variable 'a' is: %p", p);
+}
+```
+### Output
+```
+Address of variable 'a' is: 0x7ffcdc9c3f64
+```
+## C++ Implementation
+### 1. Write a C++ program to show the basic declaration of pointer.
+```c
+//Write a C++ program to show the basic declaration of pointer.
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a=10; //Variable declaration
+    int *p;   //Pointer declaration
+    p=&a;
+    cout<<"Address of variable 'a' is: <<" <<p;
+}
+
+```
+### Output
+```
+Address of variable 'a' is: 0x7ffcdc9c3f64
+```

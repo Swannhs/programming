@@ -1,0 +1,108 @@
+---
+title: A company insures its drivers in the following cases: If the driver is married. − If the driver is unmarried, male & above 30 years of age. − If the driver is unmarried, female & above 25 years of age.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-34: A company insures its drivers in the following cases:
+### If the driver is married.
+### If the driver is unmarried, male & above 30 years of age.
+### If the driver is unmarried, female & above 25 years of age.
+```c
+#include<stdio.h>
+int main()
+{
+    int a;
+    char s,i;
+    printf("Enter the driver's age, gender & marital status-");
+    scanf("%d %c %c",&a,&s,&i);
+    if(i=='m')
+        printf("the driver is insured");
+    else if(a>30 && s=='m' && i=='u')
+        printf("the driver is insured");
+    else if(a>25 && s=='f' && i=='u')
+        printf("the driver is insured");
+    else
+        printf("the driver is not insured");
+}
+```
+### Output
+```
+Enter the driver's age, gender & marital status-
+30
+m
+u
+the driver is not insured
+```
+
+## C++ Implementation
+### Program-34: A company insures its drivers in the following cases:
+### If the driver is married.
+### If the driver is unmarried, male & above 30 years of age.
+### If the driver is unmarried, female & above 25 years of age.
+```c
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a;
+    char s,i;
+    cout<<"enter the driver's age,gender & marital status-\n";
+    cin>>a>>s>>i;
+    if(i=='m')
+        cout<<"the driver is insured";
+    else if(a>30 && s=='m' && i=='u')
+        cout<<"the driver is insured";
+     else if(a>25 && s=='f' && i=='u')
+        cout<<"the driver is insured";
+     else
+            cout<<"the driver is not insured";
+}
+```
+### Output
+```
+Enter the driver's age, gender & marital status-
+30
+m
+u
+the driver is not insured
+```
+
+## Java Implementation
+### Program-34: A company insures its drivers in the following cases:
+### If the driver is married.
+### If the driver is unmarried, male & above 30 years of age.
+### If the driver is unmarried, female & above 25 years of age.
+```js
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        int a;
+        char s,i;
+        Scanner z=new Scanner(System.in);
+        System.out.println("enter the driver's age,gender & marital status-");
+        a = z.nextInt();
+        s = z.nextChar();
+        i = z.nextChar();
+        if(i=='m')
+            System.out.println("the driver is insured");
+        else if(a>30 && s=='m' && i=='u')
+            System.out.println("the driver is insured");
+        else if(a>25 && s=='f' && i=='u')
+            System.out.println("the driver is insured");
+        else
+            System.out.println("the driver is not insured");
+    }
+}
+```
+### Output
+```
+Enter the driver's age, gender & marital status-
+30
+m
+u
+the driver is not insured
+```

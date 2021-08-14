@@ -1,0 +1,95 @@
+---
+title: Write a C/C++/Java program to find out the largest between three numbers.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-19: Write a C program to find out the largest between three numbers.
+```c
+/*Write a C program to find out the largest between three numbers.*/
+#include<stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("Enter three Number:");
+    scanf("%d%d%d",&a,&b,&c);
+    if(a>b&&a>c)
+        printf("%d is the largest number",a);
+    if(b>a&&b>c)
+        printf("%d is the largest number",b);
+    if(c>a&&c>b)
+        printf("%d is the largest number",c);
+}
+```
+### Output
+```
+Enter three Number:
+5
+6
+4
+6 is the largest number
+```
+
+## C++ Implementation
+### Program-19: Write a C++ program to find out the largest between three numbers.
+```c
+/*Write a C++ program to find out the largest between three numbers.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    cout<<"enter three numbers-\n";
+    cin>>a>>b>>c;
+    if(a>b&&a>c)
+        cout<<a<<" is the largest number";
+    if(b>a&&b>c)
+        cout<<b<<" is the largest number";
+    if(c>a&&c>b)
+        cout<<c<<" is the largest number";
+}
+```
+### Output
+```
+Enter three Number:
+5
+6
+4
+6 is the largest number
+```
+
+## Java Implementation
+### Program-19: Write a java  program to find out the largest between three numbers.
+```js
+/*Write a java program to find out the largest between three numbers.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b,c;
+        System.out.print("Enter three Number:\n");
+        a=z.nextInt();
+        b=z.nextInt();
+        c=z.nextInt();
+
+        if(a>b&&a>c)
+            System.out.print(a+ " is the largest number");
+        if(b>a&&b>c)
+            System.out.print(b+ " is the largest number");
+        if(c>a&&c>b)
+            System.out.print(c+ " is the largest number");
+    }
+}
+```
+### Output
+```
+Enter three Number:
+5
+6
+4
+6 is the largest number
+```

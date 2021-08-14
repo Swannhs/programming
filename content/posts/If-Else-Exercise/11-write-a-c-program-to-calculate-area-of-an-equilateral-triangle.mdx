@@ -1,0 +1,74 @@
+---
+title: Write a C/C++/Java program to calculate area of an equilateral triangle.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-11: Write a C program to calculate area of an equilateral triangle.
+```c
+/*Write a C program to calculate area of an equilateral triangle.*/
+#include<stdio.h>
+void main()
+{
+    float a,x;
+    printf("the value of the side of the equilateral triangle-");
+    scanf("%f",&a);
+    x=((sqrt(3))/4)*a*a;
+    printf("area of a equilateral triangle=%f",x);
+}
+```
+### Output
+```
+the value of the side of the equilateral triangle-
+5
+area of a equilateral triangle=10.8253
+```
+
+## C++ Implementation
+### Program-11: Write a C++ program to calculate area of an equilateral triangle.
+```c
+/*Write a C program to calculate area of an equilateral triangle.*/
+#include<iostream>
+using namespace std;
+#include<math.h>
+int main()
+{
+    float a,x;
+    cout<<"the value of the side of the equilateral triangle-\n";
+    cin>>a;
+    x=((sqrt(3))/4)*a*a;
+    cout<<"area of a equilateral triangle="<<x;
+}
+```
+### Output
+```
+the value of the side of the equilateral triangle-
+5
+area of a equilateral triangle=10.8253
+```
+
+## Java Implementation
+### Program-11: Write a java program to calculate area of an equilateral triangle.
+```js
+/*Write a C program to calculate area of an equilateral triangle.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        float a,x;
+        System.out.println("the value of the side of the equilateral triangle-\n");
+        a=z.nextInt();
+        x=((sqrt(3))/4)*a*a;
+    }
+}
+```
+### Output
+```
+the value of the side of the equilateral triangle-
+5
+area of a equilateral triangle=10.8253
+```

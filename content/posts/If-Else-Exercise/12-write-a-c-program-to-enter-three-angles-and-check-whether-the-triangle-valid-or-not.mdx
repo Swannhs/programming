@@ -1,0 +1,89 @@
+---
+title: Write a C/C++/Java program to enter three angles and check whether the triangle valid or not.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-12: Write a C program to enter three angles and check whether the triangle valid or not.
+```c
+/*Write a C program to enter three angles and check whether the triangle valid or not.*/
+#include<stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("enter three angles of a triangle-");
+    scanf("%d%d%d",&a,&b,&c);
+    if((a+b+c==180)&&(a>0&&b>0&&c>0))
+        printf(" triangle is valid");
+    else
+        printf("triangle is invalid");
+}
+```
+### Output
+```
+enter three angles of a triangle-
+20
+60
+80
+triangle is invalid
+```
+
+## C++ Implementation
+### Program-12: Write a C++ program to enter three angles and check whether the triangle valid or not.
+```c
+/*Write a C++ program to enter three angles and check whether the triangle valid or not.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    cout<<"enter three angles of a triangle-\n";
+    cin>>a>>b>>c;
+    if((a+b+c==180)&&(a>0&&b>0&&c>0))
+        cout<<" triangle is valid";
+    else
+        cout<<"triangle is invalid";
+}
+```
+### Output
+```
+Enter three angles of a triangle-
+20
+60
+100
+Triangle invalid
+```
+
+## Java Implementation
+### Program-12: Write a java program to enter three angles and check whether the triangle valid or not.
+```js
+/*Write a java program to enter three angles and check whether the triangle valid or not.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b,c;
+        System.out.print("enter three angles of a triangle-\n");
+        a=z.nextInt();
+        b=z.nextInt();
+        c=z.nextInt();
+
+        if((a+b+c==180)&&(a>0&&b>0&&c>0))
+            System.out.print(" triangle is valid");
+        else
+            System.out.print("triangle is invalid");
+    }
+}
+```
+### Output
+```
+enter three angles of a triangle-
+20
+60
+80
+triangle is invalid
+```

@@ -1,0 +1,291 @@
+---
+title: Write a C/C++/Java program to print all Prime numbers between 1 to n.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 12. Write a C program to print all Prime numbers between 1 to n.
+```c
+//Write a C program to print all Prime numbers between 1 to n.
+//Using for loop
+#include<stdio.h>
+void main()
+{
+    int i,j,n,count,k;
+    scanf("%d",&n);
+    for(i=1; i<=n; i++)
+    {
+        k=i;
+        count = 0;
+        for(j=2; j<i; j++)
+        {
+            if(k%j == 0)
+            {
+                count++;
+                break;
+            }
+        }
+        if(count == 0 && k>1)
+        {
+            printf("%d is a  prime number\n",i);
+        }
+    }
+}
+
+//Using while loop
+#include<stdio.h>
+void main()
+{
+    int i=1,j,n,count,k;
+    scanf("%d",&n);
+    while(i<=n)
+    {
+        k=i;
+        count = 0;
+        for(j=2; j<i; j++)
+        {
+            if(k%j == 0)
+            {
+                count++;
+                break;
+            }
+        }
+        i++;
+        if(count == 0 && k>1)
+        {
+            printf("%d is a  prime number\n",k);
+        }
+    }
+}
+
+//Using do while loop
+#include<stdio.h>
+void main()
+{
+    int i=1,j,n,count,k;
+    scanf("%d",&n);
+    do
+    {
+        k=i;
+        count = 0;
+        j=2;
+        while(j<i)
+        {
+            if(k%j == 0)
+            {
+                count++;
+                break;
+            }
+            j++;
+        }
+        i++;
+        if(count == 0 && k>1)
+        {
+            printf("%d is a  prime number\n",k);
+        }
+    }
+    while(i<=n);
+}
+```
+### Output
+```
+input 5
+output
+2 is a  prime number
+3 is a  prime number
+5 is a  prime number
+```
+
+## C++ Implementation
+### 6. Write a C++ program to print all Prime numbers between 1 to n.
+```c
+//Write a C++ program to print all Prime numbers between 1 to n.
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,j,n,count,k;
+    cin >> n;
+    for(i=1; i<=n; i++)
+    {
+        k=i;
+        count = 0;
+        for(j=2; j<i; j++)
+        {
+            if(k%j == 0)
+            {
+                count++;
+                break;
+            }
+        }
+        if(count == 0 && k>1)
+        {
+            cout << i <<" is a  prime number\n";
+        }
+    }
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i=1,j,n,count,k;
+    cin >> n;
+    while(i<=n)
+    {
+        k=i;
+        count = 0;
+        for(j=2; j<i; j++)
+        {
+            if(k%j == 0)
+            {
+                count++;
+                break;
+            }
+        }
+        i++;
+        if(count == 0 && k>1)
+        {
+            cout << k << " is a  prime number\n";
+        }
+    }
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i=1,j,n,count,k;
+    cin >> n;
+    do
+    {
+        k=i;
+        count = 0;
+        j=2;
+        while(j<i)
+        {
+            if(k%j == 0)
+            {
+                count++;
+                break;
+            }
+            j++;
+        }
+        i++;
+        if(count == 0 && k>1)
+        {
+            cout << k << " is a  prime number\n";
+        }
+    }
+    while(i<=n);
+}
+```
+### Output
+```
+input 5
+output
+2 is a  prime number
+3 is a  prime number
+5 is a  prime number
+```
+
+## Java Implementation
+### 6. Write a Java program to print all Prime numbers between 1 to n.
+```js
+//Write a Java program to print all Prime numbers between 1 to n.
+// Using for loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z = new Scanner(System.in);
+          int i,j,n,count,k;
+          n = z.nextInt();
+          for(i=1; i<=n; i++)
+          {
+              k=i;
+              count = 0;
+              for(j=2; j<i; j++)
+              {
+                  if(k%j == 0)
+                  {
+                      count++;
+                      break;
+                  }
+              }
+              if(count == 0 && k>1)
+              {
+                  System.out.println( i + " is a  prime number");
+              }
+          }
+    }
+}
+// Using while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z = new Scanner(System.in);
+          int i=1,j,n,count,k;
+          n = z.nextInt();
+          while(i<=n)
+          {
+              k=i;
+              count = 0;
+              for(j=2; j<i; j++)
+              {
+                  if(k%j == 0)
+                  {
+                      count++;
+                      break;
+                  }
+              }
+              i++;
+              if(count == 0 && k>1)
+              {
+                  System.out.println( i + " is a  prime number");
+              }
+          }
+    }
+}
+// Using do while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z = new Scanner(System.in);
+          int i=1,j,n,count,k;
+          n = z.nextInt();
+          do
+          {
+              k=i;
+              count = 0;
+              j=2;
+              while(j<i)
+              {
+                  if(k%j == 0)
+                  {
+                      count++;
+                      break;
+                  }
+                  j++;
+              }
+              i++;
+              if(count == 0 && k>1)
+              {
+                  System.out.println( i + " is a  prime number");
+              }
+          }
+          while(i<=n);
+    }
+}
+```
+### Output
+```
+input 5
+output
+2 is a  prime number
+3 is a  prime number
+5 is a  prime number
+```

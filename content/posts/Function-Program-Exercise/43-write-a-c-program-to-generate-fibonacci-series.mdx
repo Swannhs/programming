@@ -1,0 +1,120 @@
+---
+title: Write a C/C++/Java program to Generate Fibonacci Series
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 43. Write a C program to Generate Fibonacci Series
+```c
+//Write a C program to Generate Fibonacci Series
+#include<stdio.h>
+
+int fib(int n)
+{
+    int prv2=0;
+    int prv=1;
+    if(n>=1)
+        printf("1 ");
+    for(int i=2;i<=n;i++)
+    {
+        int tmp=prv+prv2;
+        printf("%d ",tmp);
+        prv2=prv;
+        prv=tmp;
+    }
+}
+
+int main()
+{
+    int n;
+    printf("Enter n: ");
+    scanf("%d",&n);
+
+    fib(n);
+
+    return 0;
+}
+```
+### Output
+```
+Enter n: 10
+1 1 2 3 5 8 13 21 34 55
+```
+
+## C++ Implementation
+### 43. Write a C++ program to Generate Fibonacci Series
+```c
+//Write a C++ program to Generate Fibonacci Series
+
+#include<iostream>
+using namespace std;
+
+int fib(int n)
+{
+    int prv2=0;
+    int prv=1;
+    if(n>=1)
+        printf("1 ");
+    for(int i=2;i<=n;i++)
+    {
+        int tmp=prv+prv2;
+        printf("%d ",tmp);
+        prv2=prv;
+        prv=tmp;
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+
+    fib(n);
+
+    return 0;
+}
+```
+### Output
+```
+Enter n: 10
+1 1 2 3 5 8 13 21 34 55
+```
+
+## Java Implementation
+### 43. Write a Java program to Generate Fibonacci Series
+```js
+//Write a Java program to Generate Fibonacci Series.util.Scanner;
+public class Funycode {
+    static int fib(int n)
+    {
+        int prv2=0;
+        int prv=1;
+        if(n>=1)
+            printf("1 ");
+        for(int i=2;i<=n;i++)
+        {
+            int tmp=prv+prv2;
+            printf("%d ",tmp);
+            prv2=prv;
+            prv=tmp;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter n: ");
+        n = z.nextInt();
+        fib(n);
+    }
+}
+```
+### Output
+```
+Enter n: 10
+1 1 2 3 5 8 13 21 34 55
+```

@@ -1,0 +1,84 @@
+---
+title: Write a C/C++/Java program to check whether a character is uppercase or lowercase alphabet.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-26: Write a C program to check whether a character is uppercase or lowercase alphabet.
+```c
+/*Write a C program to check whether a character is uppercase or lowercase alphabet.*/
+#include<stdio.h>
+void main()
+{
+    int n;
+    printf("Enter a Alphabet");
+    scanf("%d",&n);
+    if(n>=65&&n<=91)
+        printf("uppercase");
+    else if(n>=97&&n<=123)
+        printf("lowercase");
+    else
+        printf("not related");
+}
+```
+### Output
+```
+Enter an alphabet-
+a
+lowercase
+```
+
+## C++ Implementation
+### Program-26: Write a C program to check whether a character is uppercase or lowercase alphabet.
+```c
+/*Write a C++ program to check whether a character is uppercase or lowercase alphabet.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    char n;
+    cout<<"enter an alphabet-\n";
+    cin>>n;
+    if(n>='A'&&n<='Z')
+        cout<<"uppercase";
+    else if(n>='a'&&n<='z')
+        cout<<"lowercase";
+    else
+        cout<<"not related";
+}
+```
+### Output
+```
+Enter an alphabet-
+a
+lowercase
+```
+
+## Java Implementation
+### 1. Write a Java program to print Hello World.
+```js
+/*Write a program in java to read any Month Number in integer and display the number of days for this month..*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        char n;
+        System.out.print("enter an alphabet:\n");
+        n=z.nextChar();
+        if(n>='A'&&n<='Z')
+            cout<<"uppercase";
+        else if(n>='a'&&n<='z')
+            System.out.print("lowercase");
+        else
+            System.out.print("not related");
+        }
+    }
+```
+### Output
+```
+Hello, World!
+```

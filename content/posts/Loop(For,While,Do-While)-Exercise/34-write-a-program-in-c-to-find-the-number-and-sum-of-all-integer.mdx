@@ -1,0 +1,213 @@
+---
+title: Write a C/C++/Java program in C to find the number and sum of all integer between 100 and 200 which are divisible by 9.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 34. Write a C program in C to find the number and sum of all integer between 100 and 200 which are divisible by 9.
+```c
+//Write a C program in C to find the number and sum of all integer between 100 and 200 which are divisible by 9.
+//Using for loop
+#include <stdio.h>
+
+void main()
+{
+   int i, sum=0;
+   printf("The Numbers are: \n");
+   for(i=101;i<200;i++)
+   {
+     if(i%9==0)
+     {
+       printf("% 5d",i);
+       sum+=i;
+     }
+   }
+   printf("\n\nThe sum : %d \n",sum);
+}
+//Using while loop
+#include <stdio.h>
+void main()
+{
+   int i, sum=0;
+   printf("The Numbers are: \n");
+   i=101;
+   while(i<200)
+   {
+     if(i%9==0)
+     {
+       printf("% 5d",i);
+       sum+=i;
+     }
+     i++;
+   }
+   printf("\n\nThe sum : %d \n",sum);
+}
+//Using do while loop
+#include <stdio.h>
+void main()
+{
+   int i, sum=0;
+   printf("The Numbers are: \n");
+   i=101;
+   do
+   {
+     if(i%9==0)
+     {
+       printf("% 5d",i);
+       sum+=i;
+     }
+     i++;
+   }while(i<200);
+   printf("\n\nThe sum : %d \n",sum);
+}
+```
+### Output
+```
+The Numbers are:
+  108  117  126  135  144  153  162  171  180  189  198
+
+The sum : 1683
+```
+
+## C++ Implementation
+### 34. Write a C++ program in C to find the number and sum of all integer between 100 and 200 which are divisible by 9.
+```c
+//Write a C++ program in C to find the number and sum of all integer between 100 and 200 which are divisible by 9.
+
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+   int i, sum=0;
+   cout << "The Numbers are: \n";
+   for(i=101;i<200;i++)
+   {
+     if(i%9==0)
+     {
+       printf("% 5d",i);
+       sum+=i;
+     }
+   }
+   cout << "\n\nThe sum :  "<<sum);
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+   int i, sum=0;
+   cout << "The Numbers are: \n";
+   i=101;
+   while(i<200)
+   {
+     if(i%9==0)
+     {
+       printf("% 5d",i);
+       sum+=i;
+     }
+     i++;
+   }
+   cout << "\n\nThe sum :  "<<sum);
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+   int i, sum=0;
+   cout << "The Numbers are: \n";
+   i=101;
+   do
+   {
+     if(i%9==0)
+     {
+       printf("% 5d",i);
+       sum+=i;
+     }
+     i++;
+   }while(i<200);
+   cout << "\n\nThe sum :  "<<sum);
+}
+```
+### Output
+```
+The Numbers are:
+  108  117  126  135  144  153  162  171  180  189  198
+
+The sum : 1683
+```
+
+## Java Implementation
+### 34. Write a Java program in C to find the number and sum of all integer between 100 and 200 which are divisible by 9.
+```js
+//Write a Java program in C to find the number and sum of all integer between 100 and 200 which are divisible by 9.
+//Using for loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+       Scanner z = new Scanner(System.in);
+       int i, sum=0;
+       System.out.println("The Numbers are: ");
+       for(i=101;i<200;i++)
+       {
+         if(i%9==0)
+         {
+           System.out.printf(" "+i);
+           sum+=i;
+         }
+       }
+       System.out.println("\n\nThe sum :  \n"+sum);
+    }
+}
+//Using while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+         Scanner z = new Scanner(System.in);
+         int i, sum=0;
+         System.out.println("The Numbers are: ");
+         i=101;
+         while(i<200)
+         {
+           if(i%9==0)
+           {
+             System.out.printf(" "+i);
+             sum+=i;
+           }
+           i++;
+         }
+         System.out.println("\n\nThe sum :  \n"+sum);
+    }
+}
+//Using do while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+         Scanner z = new Scanner(System.in);
+         int i, sum=0;
+         System.out.println("The Numbers are: ");
+         i=101;
+         do
+         {
+           if(i%9==0)
+           {
+             System.out.printf(" "+i);
+             sum+=i;
+           }
+           i++;
+         }while(i<200);
+         System.out.println("\n\nThe sum :  \n"+sum);
+    }
+}
+```
+### Output
+```
+The Numbers are:
+  108  117  126  135  144  153  162  171  180  189  198
+
+The sum : 1683
+```

@@ -1,0 +1,122 @@
+---
+title: Write a C/C++/Java program to create a structure of student having fields roll_no, stud_name, mark1, mark2, mark3. Calculate total marks and average marks. Arrange the records in descending order of marks.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 19. Write a C program to create a structure of student having fields roll_no, stud_name, mark1, mark2, mark3. Calculate total marks and average marks. Arrange the records in descending order of marks.
+```c
+//Write a C program to create a structure of student having fields roll_no, stud_name, mark1, mark2, mark3. Calculate total marks and average marks. Arrange the records in descending order of marks.
+#include<stdio.h>
+struct Student{
+    int roll_no;
+    char name[100];
+    int mark[3];
+    int total;
+    float average;
+};
+int main(){
+struct Student student[2];
+printf("Enter student info\n");
+for(int i=0;i<2;i++)
+{
+    printf("\nEnter Name : ");
+    fgets(student[i].name,sizeof(student[i].name),stdin);
+    printf("Enter Roll : ");
+    scanf("%d",&student[i].roll_no);
+    for(int j=0;j<3;j++)
+    {
+        printf("Subject No :%d Mark : ",j+1);
+        scanf("%d",&student[i].mark[j]);
+        student[i].total+=student[i].mark[j];
+        getchar();
+    }
+    student[i].average=(student[i].total/3);
+}
+struct Student b;
+for(int i=0;i<2;i++)
+{
+   for(int j=0;j<2;j++)
+   {
+       if(student[i].total<student[j].total){
+        b=student[i];
+        student[i]=student[j];
+        student[j]=b;
+       }
+   }
+}
+    system("cls");
+    printf("Total mark in descending order\n");
+    for(int i=0;i<2;i++)
+    {
+        printf("\nName : %s\nRoll : %d Avg : %f Total : %d\n",student[i].name,student[i].roll_no,student[i].average,student[i].total);
+    }
+}
+```
+### Output
+```
+Ahosanul Hasan
+16105001
+```
+
+## C++ Implementation
+### 19. Write a C++ program to create a structure of student having fields roll_no, stud_name, mark1, mark2, mark3. Calculate total marks and average marks. Arrange the records in descending order of marks.
+```c
+//Write a C++ program to create a structure of student having fields roll_no, stud_name, mark1, mark2, mark3. Calculate total marks and average marks. Arrange the records in descending order of marks.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct Student{
+    int roll_no;
+    char name[100];
+    int mark[3];
+    int total;
+    float average;
+};
+int main(){
+  struct Student student[2];
+  cout << "Enter student info\n";
+  for(int i=0;i<2;i++)
+{
+    cout << "\nEnter Name : ";
+    fgets(student[i].name,sizeof(student[i].name),stdin);
+    cout << "Enter Roll : ";
+    cin >> student[i].roll_no;
+    for(int j=0;j<3;j++)
+    {
+        cout << "Subject No :" << j+1 << " Mark : ";
+        cin >> student[i].mark[j];
+        student[i].total+=student[i].mark[j];
+        getchar();
+    }
+    student[i].average=(student[i].total/3);
+}
+struct Student b;
+for(int i=0;i<2;i++)
+{
+   for(int j=0;j<2;j++)
+   {
+       if(student[i].total<student[j].total){
+        b=student[i];
+        student[i]=student[j];
+        student[j]=b;
+       }
+   }
+}
+    system("cls");
+    printf("Total mark in descending order\n");
+    for(int i=0;i<2;i++)
+    {
+        printf("\nName : %s\nRoll : %d Avg : %f Total : %d\n",student[i].name,student[i].roll_no,student[i].average,student[i].total);
+    }
+}
+```
+### Output
+```
+Ahosanul Hasan
+16105001
+```

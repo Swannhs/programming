@@ -1,0 +1,130 @@
+---
+title: Write a C/C++/Java program to read the details of two workers and calculate total payment of workers using structure.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 12. Write a C program to read the details of two workers and calculate total payment of workers using structure.
+```c
+//Write a C++ program to read the details of two workers and calculate total payment of workers using structure.
+#include<stdio.h>
+struct workers{
+    char name[50];
+    int salaryPerDay;
+    int totalDay;
+};
+int main(){
+    struct workers a;
+    printf("Enter first employee details\n");
+    printf("employee name : ");
+    fgets(a.name,sizeof(a.name),stdin);
+    printf("salary per day : ");
+    scanf("%d",&a.salaryPerDay);
+    printf("total working days : ");
+    scanf("%d",&a.totalDay);
+    getchar();
+    int total1=(a.salaryPerDay*a.totalDay);
+    struct workers b;
+    printf("Enter second employee details\n");
+    printf("employee name : ");
+    fgets(b.name,sizeof(b.name),stdin);
+    printf("salary per day : ");
+    scanf("%d",&b.salaryPerDay);
+    printf("total working days : ");
+    scanf("%d",&b.totalDay);
+    int total2=(b.salaryPerDay*b.totalDay);
+    printf(" first employee details\n");
+    printf("name: %s",a.name);
+    printf("Total Salary %d \n",total1);
+    printf(" second employee details\n");
+    printf("name: %s",b.name);
+    printf("Total Salary %d",total2);
+}
+```
+### Output
+```
+Enter first employee details
+
+employee name :Ahosanul Hasan
+salary per day :30
+total working days :20
+
+Enter second employee details
+
+employee name :Hossain
+salary per day :50
+total working days : 25
+
+first employee details
+name: Ahosanul Hasan
+
+Total Salary 600 second employee details
+name: Hossain
+Total Salary 1250
+```
+
+## C++ Implementation
+### 12. Write a C++ program to read the details of two workers and calculate total payment of workers using structure.
+```c
+//Write a C++ program to read the details of two workers and calculate total payment of workers using structure.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct workers{
+    char name[50];
+    int salaryPerDay;
+    int totalDay;
+};
+int main(){
+    struct workers a;
+    cout << "Enter first employee details\n"<< endl;
+    cout << "employee name : "<< endl;
+    fgets(a.name,sizeof(a.name),stdin);
+    cout << "salary per day : "<< endl;
+    cin >> a.salaryPerDay;
+    cout << "total working days : "<< endl;
+    cin >> a.totalDay;
+    getchar();
+    int total1=(a.salaryPerDay*a.totalDay);
+    struct workers b;
+    cout << "Enter second employee details\n"<< endl;
+    cout << "employee name : "<< endl;
+    fgets(b.name,sizeof(b.name),stdin);
+    cout << "salary per day : "<< endl;
+    cin >> b.salaryPerDay;
+    cout << "total working days : "<< endl;
+    cin >> b.totalDay;
+    int total2=(b.salaryPerDay*b.totalDay);
+    cout << " first employee details\n"<< endl;
+    cout << "name: "<<a.name<< endl;
+    cout << "Total Salary " << total1);
+    cout << " second employee details\n"<< endl;
+    cout << "name: " << b.name<< endl;
+    cout << "Total Salary << total2;
+}
+```
+### Output
+```
+Enter first employee details
+
+employee name :Ahosanul Hasan
+salary per day :30
+total working days :20
+
+Enter second employee details
+
+employee name :Hossain
+salary per day :50
+total working days : 25
+
+first employee details
+name: Ahosanul Hasan
+
+Total Salary 600 second employee details
+name: Hossain
+Total Salary 1250
+```

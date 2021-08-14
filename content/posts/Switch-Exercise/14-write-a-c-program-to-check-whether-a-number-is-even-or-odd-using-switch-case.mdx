@@ -1,0 +1,96 @@
+---
+title: Write a C/C++/Java program to check whether a number is even or odd using switch case.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 14. Write a C program to check whether a number is even or odd using switch case.
+```c
+//Write a C program to check whether a number is even or odd using switch case.
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter a number :");
+    scanf("%d",&n);
+    switch(n%2)
+    {
+    case 0:
+        printf("Even");
+        break;
+    case 1:
+        printf("Odd");
+        break;
+    default:
+        printf("others");
+    }
+}
+```
+### Output
+```
+Enter a number :3
+Odd
+```
+
+## C++ Implementation
+### 14. Write a C++ program to check whether a number is even or odd using switch case.
+```c
+//Write a C++ program to print Hello World.
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout << "Enter a number :";
+    cin >> n;
+    switch(n%2)
+    {
+    case 0:
+        cout << "Even";
+        break;
+    case 1:
+        cout << "Odd";
+        break;
+    default:
+        cout << "others";
+    }
+}
+```
+### Output
+```
+Enter a number :3
+Odd
+```
+
+## Java Implementation
+### 14. Write a Java program to check whether a number is even or odd using switch case.
+```js
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        int n;
+        System.out.println("Enter a number :");
+        Scanner z=new Scanner(System.in);
+        n = z.nextInt();
+        switch(n%2)
+        {
+        case 0:
+            System.out.println("Even");
+            break;
+        case 1:
+            System.out.println("Odd");
+            break;
+        default:
+            System.out.println("others");
+        }
+    }
+}
+```
+### Output
+```
+Enter a number :3
+Odd
+```

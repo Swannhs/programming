@@ -1,0 +1,83 @@
+---
+title: Write a C/C++/Java program compute the sum of all elements in an array using pointers.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 16. Write a C program compute the sum of all elements in an array using pointers.
+```c
+//Write a C program compute the sum of all elements in an array using pointers.
+#include<stdio.h>
+void main() {
+   int a[10000];
+   int i,n, sum = 0;
+   int *p;
+   printf("Enter size of array: ");
+   scanf("%d", &n);
+
+   printf("\nEnter %d elements =\n ",n);
+
+   for (i = 0; i < n; i++)
+      scanf("%d", &a[i]);
+
+   p = a;
+
+   for (i = 0; i < 10; i++) {
+      sum = sum + *p;
+      p++;
+   }
+
+   printf("The sum of array elements = %d", sum);
+}
+```
+### Output
+```
+Enter size of array: 3
+
+Enter 3 elements =
+ 1 2 3
+The sum of array elements = 6
+```
+## C++ Implementation
+### 16. Write a C++ program compute the sum of all elements in an array using pointers.
+```c
+//Write a C++ program compute the sum of all elements in an array using pointers.
+#include <iostream>
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    int a[10000];
+    int i,n, sum = 0;
+    int *p;
+    cout<<("Enter size of array: ");
+    cin>>n;
+
+    cout<<"\nEnter "<<n <<" elements =\n ";
+
+    for (i = 0; i < n; i++)
+        cin>>a[i];
+
+    p = a;
+
+    for (i = 0; i < 10; i++)
+    {
+        sum = sum + *p;
+        p++;
+    }
+
+    cout<<"The sum of array elements = "<<sum;
+}
+```
+### Output
+```
+Enter size of array: 3
+
+Enter 3 elements =
+ 1 2 3
+The sum of array elements = 6
+```

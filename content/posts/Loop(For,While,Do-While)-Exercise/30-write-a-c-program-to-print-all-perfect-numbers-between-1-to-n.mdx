@@ -1,0 +1,288 @@
+---
+title: Write a C/C++/Java program to print all Perfect numbers between 1 to n.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 30. Write a C program to print all Perfect numbers between 1 to n.
+```c
+//Write a C program to print all Perfect numbers between 1 to n.
+//Using for loop
+#include<stdio.h>
+
+void main()
+{
+    int num,i,sum,j;
+    printf("Enter a number \n");
+    scanf("%d",&num);
+    printf("The perfect numbers between 1 and %d are: \n",num);
+    for(i=1; i<=num; i++)
+    {
+        sum=0;
+        for(j=1; j<i; j++)
+        {
+            if(i%j==0)
+            {
+                sum+=j;
+            }
+        }
+        if(sum==i)
+        {
+            printf("%d ",i);
+        }
+    }
+}
+//Using while loop
+#include<stdio.h>
+void main()
+{
+    int num,i=1,sum,j;
+    printf("Enter a number \n");
+    scanf("%d",&num);
+    printf("The perfect numbers between 1 and %d are : \n",num);
+    while(i<=num)
+    {
+        sum=0;
+        j=1;
+        while(j<i)
+        {
+            if(i%j==0)
+            {
+                sum+=j;
+            }
+            j++;
+        }
+        if(sum==i)
+        {
+            printf("%d ",i);
+        }
+        i++;
+
+    }
+}
+//Using do while loop
+#include<stdio.h>
+
+void main()
+{
+    int num,i=1,sum,j;
+    printf("Enter a number \n");
+    scanf("%d",&num);
+    printf("The perfect numbers between 1 and %d are : \n",num);
+    while(i<=num)
+    {
+        sum=0;
+        j=1;
+        while(j<i)
+        {
+            if(i%j==0)
+            {
+                sum+=j;
+            }
+            j++;
+        }
+        if(sum==i)
+        {
+            printf("%d ",i);
+        }
+        i++;
+
+    }
+}
+```
+### Output
+```
+Enter a number 10
+The perfect numbers between 1 and 10 are: 6
+```
+
+## C++ Implementation
+### 30. Write a C++ to print all Perfect numbers between 1 to n.
+```c
+//Write a C++ program to print all Perfect numbers between 1 to n.
+
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num,i,sum,j;
+    cout << "Enter a number \n";
+    cin >> num;
+    cout << "The perfect numbers between 1 and "<< num << " are: \n";
+    for(i=1; i<=num; i++)
+    {
+        sum=0;
+        for(j=1; j<i; j++)
+        {
+            if(i%j==0)
+            {
+                sum+=j;
+            }
+        }
+        if(sum==i)
+        {
+            cout << " " << i;
+        }
+    }
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num,i=1,sum,j;
+    cout << "Enter a number \n";
+    cin >> num;
+    cout << "The perfect numbers between 1 and "<< num << " are: \n";
+    while(i<=num)
+    {
+        sum=0;
+        j=1;
+        while(j<i)
+        {
+            if(i%j==0)
+            {
+                sum+=j;
+            }
+            j++;
+        }
+        if(sum==i)
+        {
+            cout << " " << i;
+        }
+        i++;
+    }
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num,i=1,sum,j;
+    cout << "Enter a number \n";
+    cin >> num;
+    cout << "The perfect numbers between 1 and "<< num << " are: \n";
+    while(i<=num)
+    {
+        sum=0;
+        j=1;
+        while(j<i)
+        {
+            if(i%j==0)
+            {
+                sum+=j;
+            }
+            j++;
+        }
+        if(sum==i)
+        {
+            cout << " " << i;
+        }
+        i++;
+    }
+}
+```
+### Output
+```
+Enter a number 10
+The perfect numbers between 1 and 10 are: 6
+```
+
+## Java Implementation
+### 30. Write a Java program to print all Perfect numbers between 1 to n.
+```js
+//Write a Java program to print all Perfect numbers between 1 to n.
+//Using for loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int num,i,sum,j;
+        System.out.println("Enter a number \n");
+        num = z.nextInt();
+        System.out.println("The perfect numbers between 1 and " +num+" are: \n");
+        for(i=1; i<=num; i++)
+        {
+            sum=0;
+            for(j=1; j<i; j++)
+            {
+                if(i%j==0)
+                {
+                    sum+=j;
+                }
+            }
+            if(sum==i)
+            {
+                System.out.println(" " + i);
+            }
+        }
+    }
+}
+//Using while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int num,i=1,sum,j;
+        System.out.println("Enter a number \n");
+        num = z.nextInt();
+        System.out.println("The perfect numbers between 1 and " +num+" are: \n");
+        while(i<=num)
+        {
+            sum=0;
+            j=1;
+            while(j<i)
+            {
+                if(i%j==0)
+                {
+                    sum+=j;
+                }
+                j++;
+            }
+            if(sum==i)
+            {
+                System.out.println(" " + i);
+            }
+            i++;
+        }
+    }
+}
+//Using do while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int num,i=1,sum,j;
+        System.out.println("Enter a number \n");
+        num = z.nextInt();
+        System.out.println("The perfect numbers between 1 and " +num+" are: \n");
+        while(i<=num)
+        {
+            sum=0;
+            j=1;
+            while(j<i)
+            {
+                if(i%j==0)
+                {
+                    sum+=j;
+                }
+                j++;
+            }
+            if(sum==i)
+            {
+                System.out.println(" " + i);
+            }
+            i++;
+        }
+    }
+}
+```
+### Output
+```
+Enter a number 10
+The perfect numbers between 1 and 10 are: 6
+```

@@ -1,0 +1,90 @@
+---
+title: Write a C/C++/Java program An automobile company has serial number for engine parts starting from AA0 to FF9. The other characteristics of parts to be specified in a structure are: Year of manufacture, material and quantity manufactured. Specify a structure to store information corresponding to a part. Write a program to retrieve information on parts with serial numbers between BB1 and CC6.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 22. Write a C program An automobile company has serial number for engine parts starting from AA0 to FF9. The other characteristics of parts to be specified in a structure are: Year of manufacture, material and quantity manufactured. Specify a structure to store information corresponding to a part. Write a program to retrieve information on parts with serial numbers between BB1 and CC6.
+```c
+//Write a C program An automobile company has serial number for engine parts starting from AA0 to FF9. The other characteristics of parts to be specified in a structure are: Year of manufacture, material and quantity manufactured. Specify a structure to store information corresponding to a part. Write a program to retrieve information on parts with serial numbers between BB1 and CC6.
+#include<stdio.h>
+int main()
+{
+    struct parts
+    {
+        char sl[4],material[10];
+        int yr,qty;
+    };
+    int i;
+    struct parts p[3];
+    for(i=0;i<3;i++)
+    {
+        printf("Enter sl no\n");
+                fflush(stdin);
+        gets(p[i].sl);
+        printf("Enter yr of manufactur , material and qtty\n");
+        scanf("%d%s%d",&p[i].yr,&p[i].material,&p[i].qty);
+    }
+    for(i=0;i<3;i++)
+    {
+        if(p[i].sl[0]=='A')
+            continue;
+        if(p[i].sl[0]>=100&&p[i].sl[0]<=102)
+            continue;
+        if((p[i].sl[0]=='B'&&p[i].sl[2]=='1')||(p[i].sl[0]=='C'&&p[i].sl[0]>'6'))
+            continue;
+        printf("%s %d %s %d\n",p[i].sl,p[i].yr,p[i].material,p[i].qty);
+    }
+}
+```
+### Output
+```
+Enter sl no
+//Try it yourself
+```
+
+## C++ Implementation
+### 22. Write a C++ program An automobile company has serial number for engine parts starting from AA0 to FF9. The other characteristics of parts to be specified in a structure are: Year of manufacture, material and quantity manufactured. Specify a structure to store information corresponding to a part. Write a program to retrieve information on parts with serial numbers between BB1 and CC6.
+```c
+//Write a C++ program An automobile company has serial number for engine parts starting from AA0 to FF9. The other characteristics of parts to be specified in a structure are: Year of manufacture, material and quantity manufactured. Specify a structure to store information corresponding to a part. Write a program to retrieve information on parts with serial numbers between BB1 and CC6.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    struct parts
+    {
+        char sl[4],material[10];
+        int yr,qty;
+    };
+    int i;
+    struct parts p[3];
+    for(i=0;i<3;i++)
+    {
+        cout << "Enter sl no\n";
+                fflush(stdin);
+        gets(p[i].sl);
+        cout << "Enter yr of manufactur , material and qtty\n";
+        cin >> p[i].yr >> p[i].material >> p[i].qty;
+    }
+    for(i=0;i<3;i++)
+    {
+        if(p[i].sl[0]=='A')
+            continue;
+        if(p[i].sl[0]>=100&&p[i].sl[0]<=102)
+            continue;
+        if((p[i].sl[0]=='B'&&p[i].sl[2]=='1')||(p[i].sl[0]=='C'&&p[i].sl[0]>'6'))
+            continue;
+        cout << p[i].sl,p[i].yr << " " << p[i].material,p[i].qty;
+    }
+}
+```
+### Output
+```
+Enter sl no
+//Try it yourself
+```

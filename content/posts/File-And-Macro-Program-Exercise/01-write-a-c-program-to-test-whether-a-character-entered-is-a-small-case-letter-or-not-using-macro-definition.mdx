@@ -1,0 +1,67 @@
+---
+title: Write a C/C++/Java program to test whether a character entered is a small case letter or not using macro definition.
+category: File And Macro Program Index
+tags: ['file']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 1. Write a C program to test whether a character entered is a small case letter or not using macro definition.
+```c
+//Write a C program to test whether a character entered is a small case letter or not using macro definition.
+#include <stdio.h>
+// Macro definitions
+#define IS_LOWER(x) (x >= 'a' && x <= 'z')
+int main()
+{
+    char ch;
+    // Input a character from user
+    printf("Enter any character: ");
+    ch = getchar();
+    if (IS_LOWER(ch))
+        printf("'%c' is lowercase\n", ch);
+    else
+        printf("Entered character is not lowercase\n");
+    return 0;
+}
+```
+### Output
+```
+Enter any character: a
+'a' is lowercase
+```
+
+## C++ Implementation
+### 1. Write a C++ program to test whether a character entered is a small case letter or not using macro definition.
+```c
+//Write a C++ program to test whether a character entered is a small case letter or not using macro definition.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+
+}
+```
+### Output
+```
+Enter any character: a
+'a' is lowercase
+```
+
+## Java Implementation
+### 1. Write a Java program to test whether a character entered is a small case letter or not using macro definition.
+```js
+//Write a Java program to test whether a character entered is a small case letter or not using macro definition.
+public class Funycode {
+    public static void main(String[] args) {
+
+    }
+}
+```
+### Output
+```
+Enter any character: a
+'a' is lowercase
+```

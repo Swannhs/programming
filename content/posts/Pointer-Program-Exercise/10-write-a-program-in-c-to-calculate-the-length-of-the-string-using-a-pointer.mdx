@@ -1,0 +1,55 @@
+---
+title: Write a C/C++/Java program to Calculate the length of the string using a pointer.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 10. Write a C program to Calculate the length of the string using a pointer.
+```c
+//Write a C program to Calculate the length of the string using a pointer.
+#include<stdio.h>
+void main() {
+  char s[1000], *p;
+  int count = 0;
+  printf("Enter Any string = ");
+  scanf("%s",s);
+  p= s;
+  while (*p != '\0') {
+    count++;
+    p++;
+  }
+  printf("Length of String : %d", count);
+}
+```
+### Output
+```
+Enter Any string = hello
+Length of String : 5
+```
+## C++ Implementation
+### 10. Write a C++ program to Calculate the length of the string using a pointer.
+```c
+//Write a C++ program to Calculate the length of the string using a pointer.
+#include <iostream>
+using namespace std;
+int main() {
+  char s[1000], *p;
+  int count = 0;
+  cout<<("Enter Any string = ");
+  cin>>s;
+  p= s;
+  while (*p != '\0') {
+    count++;
+    p++;
+  }
+  cout<<"Length of String :"<< count;
+}
+```
+### Output
+```
+Enter Any string = hello
+Length of String : 5
+```

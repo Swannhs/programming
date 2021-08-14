@@ -1,0 +1,114 @@
+---
+title: Write a C/C++/Java program to find total number of alphabets, digits or special character in a string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 12. Write a C program to find total number of alphabets, digits or special character in a string.
+```c
+//Write a C program to find total number of alphabets, digits or special character in a string.
+#include <string.h>
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    int i,alphabets=0,digits=0,specialcharacters=0;
+    printf("Enter  the string : ");
+    gets(str);
+    for(i=0;str[i];i++)
+    {
+        if((str[i]>=65 && str[i]<=90)|| (str[i]>=97 && str[i]<=122) )
+          alphabets++;
+        else if(str[i]>=48 && str[i]<=57)
+         digits++;
+        else
+         specialcharacters++;
+
+     }
+    printf("Alphabets = %d\n",alphabets);
+    printf("Digits = %d\n",digits);
+    printf("Special characters = %d", specialcharacters);
+
+
+    return 0;
+}
+```
+### Output
+```
+Enter  the string : hello Funycode;)
+Alphabets = 13
+Digits = 0
+Special characters = 3
+```
+## C++ Implementation
+### 12. Write a C++ program to find total number of alphabets, digits or special character in a string.
+```c
+//Write a C++ program to find total number of alphabets, digits or special character in a string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int  main()
+{
+    char str[100];
+    int i,alphabets=0,digits=0,specialcharacters=0;
+    cout << "Enter  the string : ";
+    gets(str);
+    for(i=0;str[i];i++)
+    {
+        if((str[i]>=65 && str[i]<=90)|| (str[i]>=97 && str[i]<=122) )
+          alphabets++;
+        else if(str[i]>=48 && str[i]<=57)
+          digits++;
+        else
+          specialcharacters++;
+     }
+    cout << "Alphabets = " << alphabets << endl;
+    cout << "Digits = " << digits << endl;
+    cout << "Special characters = " << specialcharacters;
+}
+```
+### Output
+```
+Enter  the string : hello Funycode;)
+Alphabets = 13
+Digits = 0
+Special characters = 3
+```
+
+## Java Implementation
+### 12. Write a Java program to find total number of alphabets, digits or special character in a string.
+```js
+//Write a Java program to find total number of alphabets, digits or special character in a string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String str, word = "";
+        int alphabets = 0, digits = 0, specialCharacters = 0;
+        str = z.nextLine();
+        for(int i = str.length()-1; i >= 0; i --){
+            if((str.charAt(i)>=65 && str.charAt(i)<=90)|| (str.charAt(i)>=97 && str.charAt(i)<=122)){
+                alphabets ++;
+            }else if(str.charAt(i)>=48 && str.charAt(i)<=57) {
+                digits++;
+            }else
+                specialCharacters++;
+        }
+        System.out.println("Alphabets " + alphabets);
+        System.out.println("Digits " + digits);
+        System.out.println("Special characters " + specialCharacters);
+    }
+}
+```
+### Output
+```
+Enter  the string : hello Funycode;)
+Alphabets = 13
+Digits = 0
+Special characters = 3
+```

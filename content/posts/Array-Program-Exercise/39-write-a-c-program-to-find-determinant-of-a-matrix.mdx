@@ -1,0 +1,131 @@
+---
+title: Write a C/C++/Java program to find determinant of a matrix.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 39. Write a C program to find determinant of a matrix.
+```c
+//Write a C program to find determinant of a matrix.
+#include<stdio.h>
+int main()
+{
+
+    int a[3][3], i, j,determinant;
+    printf("Enter the 9 elements of matrix: \n");
+    for(i = 0 ; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &a[i][j]);
+
+    printf("\nThe matrix is-\n");
+    for(i = 0; i < 3; i++)
+    {
+        printf("\n");
+        for(j = 0; j < 3; j++)
+            printf("%d\t", a[i][j]);
+    }
+
+    determinant = a[0][0] * ((a[1][1]*a[2][2]) - (a[2][1]*a[1][2])) -a[0][1] * (a[1][0]
+                  * a[2][2] - a[2][0] * a[1][2]) + a[0][2] * (a[1][0] * a[2][1] - a[2][0] * a[1][1]);
+
+    printf("\nDeterminant of 3X3 matrix: %d", determinant);
+}
+```
+### Output
+```
+Enter the 9 elements of matrix:
+1 2 3 4 5 6 7 8 9
+
+The matrix is-
+
+1       2       3
+4       5       6
+7       8       9
+Determinant of 3X3 matrix: 0
+```
+## C++ Implementation
+### 39. Write a C++ program to find determinant of a matrix.
+```c
+//Write a C++ program to find determinant of a matrix.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    int a[3][3], i, j,determinant;
+    cout << "Enter the 9 elements of matrix: \n";
+    for(i = 0 ; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            cin >> array[i][j];
+
+    cout << "\nThe matrix is-\n";
+    for(i = 0; i < 3; i++)
+    {
+        cout << "\n";
+        for(j = 0; j < 3; j++)
+            cout << "\t" << arr1[i][j];
+    }
+
+    determinant = a[0][0] * ((a[1][1]*a[2][2]) - (a[2][1]*a[1][2])) -a[0][1] * (a[1][0]
+                  * a[2][2] - a[2][0] * a[1][2]) + a[0][2] * (a[1][0] * a[2][1] - a[2][0] * a[1][1]);
+
+    cout << "\nDeterminant of 3X3 matrix: " << determinant;
+}
+```
+### Output
+```
+Enter the 9 elements of matrix:
+1 2 3 4 5 6 7 8 9
+
+The matrix is-
+
+1       2       3
+4       5       6
+7       8       9
+Determinant of 3X3 matrix: 0
+```
+
+## Java Implementation
+### 39. Write a Java program to find determinant of a matrix.
+```js
+//Write a Java program to find determinant of a matrix.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          int a[][]= new int[3][3], i, j,determinant;
+          System.out.printf("Enter the 9 elements of matrix: \n");
+          for(i = 0 ; i < 3; i++)
+              for(j = 0; j < 3; j++)
+                  array[i][j] = z.nextInt();
+
+          System.out.printf("\nThe matrix is-\n");
+          for(i = 0; i < 3; i++)
+          {
+              System.out.printf("\n");
+              for(j = 0; j < 3; j++)
+                  System.out.printf("\t"+array[i][j]);
+          }
+
+          determinant = a[0][0] * ((a[1][1]*a[2][2]) - (a[2][1]*a[1][2])) -a[0][1] * (a[1][0]
+                        * a[2][2] - a[2][0] * a[1][2]) + a[0][2] * (a[1][0] * a[2][1] - a[2][0] * a[1][1]);
+
+          System.out.printf("\nDeterminant of 3X3 matrix: "+ determinant);
+      }
+}
+```
+### Output
+```
+Enter the 9 elements of matrix:
+1 2 3 4 5 6 7 8 9
+
+The matrix is-
+
+1       2       3
+4       5       6
+7       8       9
+Determinant of 3X3 matrix: 0
+```

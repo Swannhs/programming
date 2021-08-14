@@ -1,0 +1,100 @@
+---
+title: Write a C/C++/Java program to sort an array using Pointer.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 14. Write a C program to sort an array using Pointer.
+```c
+//Write a C program to sort an array using Pointer.
+#include <stdio.h>
+void sort(int n, int* p)
+{
+    int i, j, t;
+    for (i = 0; i < n; i++) {
+        for (j = i + 1; j < n; j++) {
+            if (*(p + j) < *(p + i)) {
+                t = *(p + i);
+                *(p + i) = *(p + j);
+                *(p + j) = t;
+            }
+        }
+    }
+    for (i = 0; i < n; i++)
+        printf("%d ", *(p + i));
+}
+void main()
+{
+     int a[1000],n,i;
+    int * p = a;
+
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    printf("Enter elements in array:\n");
+    for (i = 0; i < n; i++){
+        scanf("%d", p);        //input the element
+        p++;
+    }
+    sort(n, a); //call function
+}
+```
+### Output
+```
+Enter size of array: 3
+Enter elements in array:
+1 4 2
+1 2 4
+```
+## C++ Implementation
+### 14. Write a C++ program to sort an array using Pointer.
+```c
+//Write a C++ program to sort an array using Pointer.
+#include <iostream>
+using namespace std;
+
+void sort(int n, int* p)
+{
+    int i, j, t;
+    for (i = 0; i < n; i++)
+    {
+        for (j = i + 1; j < n; j++)
+        {
+            if (*(p + j) < *(p + i))
+            {
+                t = *(p + i);
+                *(p + i) = *(p + j);
+                *(p + j) = t;
+            }
+        }
+    }
+    for (i = 0; i < n; i++)
+        cout<< *(p + i);
+}
+int main()
+{
+    int a[1000],n,i;
+    int *p = a;
+
+    cout<<("Enter size of array: ");
+    cin>>n;
+
+    cout<<("Enter elements in array:\n");
+    for (i = 0; i < n; i++)
+    {
+        cin>>*p;        //input the element
+        p++;
+    }
+    sort(n, a); //call function
+}
+```
+### Output
+```
+Enter size of array: 3
+Enter elements in array:
+1 4 2
+1 2 4
+```

@@ -1,0 +1,221 @@
+---
+title: Write a C/C++/Java program to find LCM of two numbers.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 26. Write a C program to find LCM of two numbers.
+```c
+//Write a C program to find LCM of two numbers.
+//Using for loop
+#include<stdio.h>
+void main()
+{
+    int i, n1, n2, j, hcf=1,gcd;
+    scanf("%d%d",&n1,&n2);
+    j = (n1<n2) ? n1 : n2;
+    for(i=1; i<=j; i++)
+    {
+        if(n1%i==0 && n2%i==0)
+        {
+            hcf = i;
+        }
+    }
+    gcd=n1*n2/hcf;
+    printf("\nGCD of %d and %d is : %d\n\n", n1, n2, gcd);
+}
+//Using while loop
+#include<stdio.h>
+void main()
+{
+    int i, n1, n2, j, hcf=1,gcd;
+    scanf("%d%d",&n1,&n2);
+    j = (n1<n2) ? n1 : n2;
+    i=1;
+    while(i<=j)
+    {
+        if(n1%i==0 && n2%i==0)
+        {
+            hcf = i;
+        }
+         i++;
+    }
+    gcd =n1*n2/hcf;
+    printf("\nGCD of %d and %d is : %d\n\n", n1, n2, gcd);
+}
+//Using do while loop
+#include<stdio.h>
+void main()
+{
+    int i, n1, n2, j, hcf=1,gcd;
+    scanf("%d%d",&n1,&n2);
+    j = (n1<n2) ? n1 : n2;
+    i=1;
+    do
+    {
+        if(n1%i==0 && n2%i==0)
+        {
+            hcf = i;
+        }
+         i++;
+    }
+    while(i<=j);
+    gcd =n1*n2/hcf;
+    printf("\nGCD of %d and %d is : %d\n\n", n1, n2, gcd);
+}
+```
+### Output
+```
+2 4
+GCD of 2 and 4 is : 4
+```
+
+## C++ Implementation
+### 26. Write a C++ program to find LCM of two numbers.
+```c
+//Write a C++ program to find LCM of two numbers.
+
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i, n1, n2, j, hcf=1,gcd;
+    cin >> n1 >> n2;
+    j = (n1<n2) ? n1 : n2;
+    for(i=1; i<=j; i++)
+    {
+        if(n1%i==0 && n2%i==0)
+        {
+            hcf = i;
+        }
+    }
+    gcd=n1*n2/hcf;
+    cout << "\nGCD of " << n1 << " and " << n2 << " is : " << gcd;
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i, n1, n2, j, hcf=1,gcd;
+    cin >> n1 >> n2;
+    j = (n1<n2) ? n1 : n2;
+    i=1;
+    while(i<=j)
+    {
+        if(n1%i==0 && n2%i==0)
+        {
+            hcf = i;
+        }
+         i++;
+    }
+    gcd =n1*n2/hcf;
+    cout << "\nGCD of " << n1 << " and " << n2 << " is : " << gcd;
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i, n1, n2, j, hcf=1,gcd;
+    cin >> n1 >> n2;
+    j = (n1<n2) ? n1 : n2;
+    i=1;
+    do
+    {
+        if(n1%i==0 && n2%i==0)
+        {
+            hcf = i;
+        }
+         i++;
+    }
+    while(i<=j);
+    gcd =n1*n2/hcf;
+    cout << "\nGCD of " << n1 << " and " << n2 << " is : " << gcd;
+}
+```
+### Output
+```
+2 4
+GCD of 2 and 4 is : 4
+```
+
+## Java Implementation
+### 26. Write a Java program to find LCM of two numbers.
+```js
+//Write a Java program to find LCM of two numbers.
+//Using for loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int i, n1, n2, j, hcf=1,gcd;
+        n1 = z.nextInt();
+        n2 = z.nextInt();
+        j = (n1<n2) ? n1 : n2;
+        for(i=1; i<=j; i++)
+        {
+            if(n1%i==0 && n2%i==0)
+            {
+                hcf = i;
+            }
+        }
+        gcd=n1*n2/hcf;
+        System.out.println("\nGCD of " + n1 + " and " + n2 +" is : " +gcd);
+    }
+}
+//Using while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int i, n1, n2, j, hcf=1,gcd;
+        n1 = z.nextInt();
+        n2 = z.nextInt();
+        j = (n1<n2) ? n1 : n2;
+        i=1;
+        while(i<=j)
+        {
+            if(n1%i==0 && n2%i==0)
+            {
+                hcf = i;
+            }
+             i++;
+        }
+        gcd =n1*n2/hcf;
+        System.out.println("\nGCD of " + n1 + " and " + n2 +" is : " +gcd);
+    }
+}
+//Using do while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int i, n1, n2, j, hcf=1,gcd;
+        n1 = z.nextInt();
+        n2 = z.nextInt();
+        j = (n1<n2) ? n1 : n2;
+        i=1;
+        do
+        {
+            if(n1%i==0 && n2%i==0)
+            {
+                hcf = i;
+            }
+             i++;
+        }
+        while(i<=j);
+        gcd =n1*n2/hcf;
+        System.out.println("\nGCD of " + n1 + " and " + n2 +" is : " +gcd);
+    }
+}
+```
+### Output
+```
+2 4
+GCD of 2 and 4 is : 4
+```

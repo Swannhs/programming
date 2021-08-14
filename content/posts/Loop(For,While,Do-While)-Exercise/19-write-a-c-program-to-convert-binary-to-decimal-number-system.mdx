@@ -1,0 +1,263 @@
+---
+title: Write a C/C++/Java program to convert Binary to Decimal number system.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 19. Write a C program to convert Binary to Decimal number system.
+```c
+//Write a C program to convert Binary to Decimal number system.
+//Using for loop
+#include <stdio.h>
+#include <math.h>
+#define BASE 2
+
+int main()
+{
+    long long b, d=0, tempbi;
+    int n=0;
+
+    printf("Enter any binary number: ");
+    scanf("%lld", &b);
+
+
+
+    for(tempbi=b;tempbi!=0;tempbi /= 10)
+    {
+
+        if(tempbi % 10 == 1)
+        {
+            d += pow(BASE, n);
+        }
+
+        n++;
+
+    }
+
+    printf("Decimal number is = %lld", d);
+
+    return 0;
+}
+//Using while loop
+#include <stdio.h>
+#include <math.h>
+#define BASE 2
+
+int main()
+{
+    long long b, d=0, tempbi;
+    int N=0;
+
+    printf("Enter any binary number: ");
+    scanf("%lld", &b);
+
+    tempbi = b;
+
+    while(tempbi!=0)
+    {
+
+        if(tempbi % 10 == 1)
+        {
+            d += pow(BASE, N);
+        }
+
+        N++;
+        tempbi /= 10;
+    }
+
+    printf("Decimal number is = %lld", d);
+
+    return 0;
+}
+//Using do while loop
+#include <stdio.h>
+#include <math.h>
+#define BASE 2
+
+int main()
+{
+    long long b, d=0, tempbi;
+    int N=0;
+
+    printf("Enter any binary number: ");
+    scanf("%lld", &b);
+
+    tempbi = b;
+
+    while(tempbi!=0)
+    {
+
+        if(tempbi % 10 == 1)
+        {
+            d += pow(BASE, N);
+        }
+
+        N++;
+        tempbi /= 10;
+    }
+
+    printf("Decimal number is = %lld", d);
+
+    return 0;
+}
+```
+### Output
+```
+Enter any binary number: 1010
+Decimal number is = 10
+```
+
+## C++ Implementation
+### 19. Write a C++ program to accept 3 numbers from user one by one and displays their sum on screen.
+```c
+//Write a C++ program to accept 3 numbers from user one by one and displays their sum on screen.
+
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    long long b, d=0, tempbi;
+    int n=0;
+    cout << "Enter any binary number: ";
+    cin >> b;
+    for(tempbi=b;tempbi!=0;tempbi /= 10)
+    {
+        if(tempbi % 10 == 1)
+        {
+            d += pow(2, n);
+        }
+        n++;
+    }
+    cout << "Decimal number is = " << d;
+    return 0;
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    long long b, d=0, tempbi;
+    int N=0;
+    cout << "Enter any binary number: ";
+    cin >> b;
+    tempbi = b;
+    while(tempbi!=0)
+    {
+        if(tempbi % 10 == 1)
+        {
+            d += pow(2, N);
+        }
+        N++;
+        tempbi /= 10;
+    }
+    cout << "Decimal number is = " << d;
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    long long b, d=0, tempbi;
+    int N=0;
+    cout << "Enter any binary number: ";
+    cin >> b;
+    tempbi = b;
+    while(tempbi!=0)
+    {
+        if(tempbi % 10 == 1)
+        {
+            d += pow(BASE, N);
+        }
+        N++;
+        tempbi /= 10;
+    }
+    cout << "Decimal number is = " << d;
+}
+```
+### Output
+```
+Enter any binary number: 1010
+Decimal number is = 10
+```
+
+## Java Implementation
+### `9`. Write a Java program to accept 3 numbers from user one by one and displays their sum on screen.
+```js
+//Write a Java program to accept 3 numbers from user one by one and displays their sum on screen.
+//Using for loop
+import java.lang.Math;
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        long b, d=0, tempbi;
+        int n=0;
+        System.out.println("Enter any binary number: ");
+        b = z.nextInt();
+        for(tempbi=b;tempbi!=0;tempbi /= 10)
+        {
+            if(tempbi % 10 == 1)
+            {
+                d += Math.pow(2, N);
+            }
+            n++;
+        }
+        System.out.println("Decimal number is = "+ d);
+    }
+}
+//Using while loop
+import java.lang.Math;
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        long long b, d=0, tempbi;
+        int N=0;
+        System.out.println("Enter any binary number: ");
+        b = z.nextInt();
+        tempbi = b;
+        while(tempbi!=0)
+        {
+            if(tempbi % 10 == 1)
+            {
+                d += Math.pow(2, N);
+            }
+            N++;
+            tempbi /= 10;
+        }
+        System.out.println("Decimal number is = "+ d);
+    }
+}
+//Using do while loop
+import java.lang.Math;
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        long long b, d=0, tempbi;
+        int N=0;
+        int N=0;
+        System.out.println("Enter any binary number: ");
+        tempbi = b;
+        while(tempbi!=0)
+        {
+            if(tempbi % 10 == 1)
+            {
+                d += Math.pow(2, N);
+            }
+            N++;
+            tempbi /= 10;
+        }
+        System.out.println("Decimal number is = "+ d);
+    }
+}
+```
+### Output
+```
+Enter any binary number: 1010
+Decimal number is = 10
+```

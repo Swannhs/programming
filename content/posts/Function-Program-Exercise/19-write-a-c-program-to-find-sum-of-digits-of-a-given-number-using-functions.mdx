@@ -1,0 +1,114 @@
+---
+title: Write a C/C++/Java program to find sum of digits of a given number using functions .
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 19. Write a C program to find sum of digits of a given number using functions .
+```c
+//Write a C program to find sum of digits of a given number using functions .
+#include<stdio.h>
+
+int sumofDigits(int n)
+{
+    int sum=0;
+    while(n!=0)
+    {
+        sum=sum+n%10;
+        n=n/10;
+    }
+    return sum;
+}
+
+int main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    int sum=sumofDigits(n);
+
+    printf("Total: %d\n",sum);
+
+    return 0;
+}
+```
+### Output
+```
+Enter a number: 12
+Total: 3
+```
+
+## C++ Implementation
+### 19. Write a C++ program to find sum of digits of a given number using functions .
+```c
+//Write a C++ program to find sum of digits of a given number using functions .
+
+#include<stdio.h>
+
+int sumofDigits(int n)
+{
+    int sum=0;
+    while(n!=0)
+    {
+        sum=sum+n%10;
+        n=n/10;
+    }
+    return sum;
+}
+
+int main()
+{
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    int sum=sumofDigits(n);
+
+    cout << "Total: " << sum;
+
+    return 0;
+}
+```
+### Output
+```
+Enter a number: 12
+Total: 3
+```
+
+## Java Implementation
+### 2. Write a Java program to find sum of digits of a given number using functions .
+```js
+//Write a Java program to find sum of digits of a given number using functions .
+import java.util.Scanner;
+public class Funycode {
+    static
+    int sumofDigits(int n)
+    {
+        int sum=0;
+        while(n!=0)
+        {
+            sum=sum+n%10;
+            n=n/10;
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter a number: ");
+        n = z.nextInt();
+        int sum=sumofDigits(n);
+        System.out.println("Total: "+sum);
+    }
+}
+```
+### Output
+```
+Enter a number: 12
+Total: 3
+```

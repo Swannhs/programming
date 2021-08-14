@@ -1,0 +1,89 @@
+---
+title: Write a C/C++/Java program to check whether a string is palindrome or not.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 16. Write a C program to check whether a string is palindrome or not.
+```c
+//Write a C program to check whether a string is palindrome or not.
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str1[50],str2[50];
+    int cmp;
+    cout << "Enter  the string : ";
+    gets(str1);
+    strcpy(str2,str1);
+    strrev(str1);
+    cmp = strcmp(str1,str2);
+    if(cmp==0)
+        cout << "palindrome";
+    else
+        cout << "Not palindrome";
+}
+```
+### Output
+```
+Enter  the string : Hello from funycode
+string has  3 words
+```
+## C++ Implementation
+### 16. Write a C++ program to check whether a string is palindrome or not.
+```c
+//Write a C++ program to check whether a string is palindrome or not.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int  main()
+{
+    char str1[50],str2[50];
+    int cmp;
+    printf("enter string ");
+    gets(str1);
+    strcpy(str2,str1);
+    strrev(str1);
+    cmp = strcmp(str1,str2);
+    if(cmp==0)
+        printf("palindrome");
+    else
+        printf("Not palindrome");
+}
+```
+### Output
+```
+Enter  the string : Hello from funycode
+string has  3 words
+```
+
+## Java Implementation
+### 16. Write a Java program to check whether a string is palindrome or not.
+```js
+//Write a Java program to check whether a string is palindrome or not.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String str;
+        str = z.nextLine();
+        StringBuilder builder = new StringBuilder();
+        builder.append(str);
+        if (str.equals(builder.reverse().toString())){
+            System.out.println("palindrome");
+        }else {
+            System.out.println("Not palindrome");
+        }
+    }
+}
+```
+### Output
+```
+Enter  the string : Hello from funycode
+string has  3 words
+```

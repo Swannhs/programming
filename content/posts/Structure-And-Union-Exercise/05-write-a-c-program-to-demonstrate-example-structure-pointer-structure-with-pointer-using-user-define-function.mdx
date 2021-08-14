@@ -1,0 +1,72 @@
+---
+title: Write a C/C++/Java program to demonstrate example structure pointer (structure with pointer) using user define function.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 5. Write a C program to demonstrate example structure pointer (structure with pointer) using user define function.
+```c
+//Write a C++ program to demonstrate example structure pointer (structure with pointer) using user define function.
+#include<stdio.h>
+struct student{
+    char name[100];
+    int id;
+};
+void inputData(struct student *i){
+    printf("Enter name : ");
+    fgets(i->name,sizeof(i->name),stdin);
+}
+void printData(struct student *i)
+{
+    printf(i->name);
+}
+int main(){
+    struct student *sakib;
+    struct student p;
+    sakib=&p;
+    inputData(sakib);
+    printData(sakib);
+}
+```
+### Output
+```
+Enter name : Ahosanul Hasan
+Ahosanul Hasan
+```
+
+## C++ Implementation
+### 5. Write a C++ program to demonstrate example structure pointer (structure with pointer) using user define function.
+```c
+//Write a C++ program to find the demonstrate example structure pointer (structure with pointer) using user define function.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct student{
+    char name[100];
+    int id;
+};
+void inputData(struct student *i){
+    cout << "Enter name : ";
+    fgets(i->name,sizeof(i->name),stdin);
+}
+void printData(struct student *i)
+{
+    cout << i->name;
+}
+int main(){
+    struct student *sakib;
+    struct student p;
+    sakib=&p;
+    inputData(sakib);
+    printData(sakib);
+}
+```
+### Output
+```
+Enter name : Ahosanul Hasan
+Ahosanul Hasan
+```

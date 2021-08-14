@@ -1,0 +1,95 @@
+---
+title: Write a C/C++/Java program to find the Area of Parallelogram
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 27. Write a C program to find the Area of Parallelogram
+```c
+//Write a C program to find the Area of Parallelogram
+#include<stdio.h>
+
+float parallelogram(float b,float h)
+{
+    return b*h;
+}
+
+int main()
+{
+    float base,height,area;
+    printf("Enter base & height of a parallelogram: ");
+    scanf("%f%f",&base,&height);
+
+    area=parallelogram(base,height);
+
+    printf("Area of this parallelogram is %.2f\n",area);
+    return 0;
+}
+```
+### Output
+```
+Enter base & height of a parallelogram: 5 5
+Area of this parallelogram is 25.00
+```
+
+## C++ Implementation
+### 27. Write a C++ program to find the Area of Parallelogram
+```c
+//Write a C++ program to find the Area of Parallelogram
+
+#include<iostream>
+using namespace std;
+
+float parallelogram(float b,float h)
+{
+    return b*h;
+}
+
+int main()
+{
+    float base,height,area;
+    cout << "Enter base & height of a parallelogram: ";
+    cin >> base >> height;
+
+    area=parallelogram(base,height);
+
+    cout << "Area of this parallelogram is " << area;
+    return 0;
+}
+```
+### Output
+```
+Enter base & height of a parallelogram: 5 5
+Area of this parallelogram is 25.00
+```
+
+## Java Implementation
+### 27. Write a Java program to find the Area of Parallelogram
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    static float parallelogram(float b,float h)
+    {
+        return b*h;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        float base,height,area;
+        System.out.println("Enter base & height of a parallelogram: ");
+        base = z.nextFloat();
+        height = z.nextFloat();
+        area=parallelogram(base,height);
+        System.out.println("Area of this parallelogram is "+area);
+    }
+}
+```
+### Output
+```
+Enter base & height of a parallelogram: 5 5
+Area of this parallelogram is 25.00
+```

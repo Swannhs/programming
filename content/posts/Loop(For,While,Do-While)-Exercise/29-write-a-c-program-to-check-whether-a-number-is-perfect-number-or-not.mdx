@@ -1,0 +1,204 @@
+---
+title: Write a C/C++/Java program to check whether a number is Perfect number or not.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 29. Write a C program to check whether a number is Perfect number or not.
+```c
+//Write a C program to check whether a number is Perfect number or not.
+//Using for loop
+#include<stdio.h>
+void main(){
+  int n,i,sum=0;
+
+  printf("Enter a number: ");
+  scanf("%d",&n);
+
+  for(i=1;i<n;i++){
+      if(n%i==0)
+           sum=sum+i;
+  }
+  if(sum==n)
+      printf("%d is a perfect number",i);
+  else
+      printf("%d is not a perfect number",i);
+
+}
+//Using while loop
+#include<stdio.h>
+void main()
+{
+    int n,i=1,sum=0;
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    while(i<n)
+    {
+        if(n%i==0)
+            sum=sum+i;
+        i++;
+    }
+    if(sum==n)
+        printf("%d is a perfect number",i);
+    else
+        printf("%d is not a perfect number",i);
+
+}
+//Using do while loop
+#include<stdio.h>
+void main()
+{
+    int n,i=1,sum=0;
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    do
+    {
+        if(n%i==0)
+            sum=sum+i;
+        i++;
+    }
+    while(i<n);
+    if(sum==n)
+        printf("%d is a perfect number",i);
+    else
+        printf("%d is not a perfect number",i);
+
+}
+```
+### Output
+```
+Enter a number: 5
+5 is not a perfect number
+```
+
+## C++ Implementation
+### 5. Write a C++ program to check whether a number is Perfect number or not.
+```c
+//Write a C++ program to check whether a number is Perfect number or not.
+
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,i,sum=0;
+    cout << "Enter a number: ";
+    cin >> n;
+    for(i=1;i<n;i++){
+        if(n%i==0)
+             sum=sum+i;
+    }
+    if(sum==n)
+        cout << i << " is a perfect number";
+    else
+        cout << i << " is not a perfect number";
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,i=1,sum=0;
+    cout << "Enter a number: ";
+    cin >> n;
+    while(i<n)
+    {
+        if(n%i==0)
+            sum=sum+i;
+        i++;
+    }
+    if(sum==n)
+        cout << i << " is a perfect number";
+    else
+        cout << i << " is not a perfect number";
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,i=1,sum=0;
+    cout << "Enter a number: ";
+    cin >> n;
+    do
+    {
+        if(n%i==0)
+            sum=sum+i;
+        i++;
+    }
+    while(i<n);
+    if(sum==n)
+        cout << i << " is a perfect number";
+    else
+        cout << i << " is not a perfect number";
+}
+```
+### Output
+```
+Enter a number: 5
+5 is not a perfect number
+```
+
+## Java Implementation
+### 5. Write a Java program to check whether a number is Perfect number or not.
+```js
+//Write a Java program to check whether a number is Perfect number or not.
+//Using for loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int i,a,sum=0;
+        i=1;
+        while(i<=3)
+        {
+            a = z.nextInt();
+            sum=sum+a;
+            i++;
+        }
+        System.out.println(sum);
+    }
+}
+//Using while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int i,a,sum=0;
+        for(i=1;i<=3;i++)
+        {
+            a = z.nextInt();
+            sum=sum+a;
+            i++;
+        }
+        System.out.println(sum);
+    }
+}
+//Using do while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int i=1,a,sum=0;
+        do
+        {
+            a = z.nextInt();
+            sum=sum+a;
+            i++;
+        }while(i<=3);
+        System.out.println(sum);
+    }
+}
+```
+### Output
+```
+Enter a number: 5
+5 is not a perfect number
+```

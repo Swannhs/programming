@@ -1,0 +1,115 @@
+---
+title: Write a C/C++/Java program to find the square of any number using the function.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 48. Write a C program to find reverse of any number using functions .
+```c
+//Write a C program to find reverse of any number using functions .
+#include<stdio.h>
+
+int reverse(int n)
+{
+    int tmp=0;
+    while(n!=0)
+    {
+        int x=n%10;
+        tmp=tmp*10+x;
+        n/=10;
+    }
+    return tmp;
+}
+
+int main()
+{
+    int n;
+    printf("Enter n: ");
+    scanf("%d",&n);
+
+    int rev=reverse(n);
+
+    printf("Reverse number is %d",rev);
+    return 0;
+}
+```
+### Output
+```
+Enter n: 10
+Reverse number is 1
+```
+
+## C++ Implementation
+### 48. Write a C++ program to find reverse of any number using functions .
+```c
+//Write a C++ program to find the square of any number using the function.
+
+#include<iostream>
+using namespace std;
+
+int reverse(int n)
+{
+    int tmp=0;
+    while(n!=0)
+    {
+        int x=n%10;
+        tmp=tmp*10+x;
+        n/=10;
+    }
+    return tmp;
+}
+
+int main()
+{
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+
+    int rev=reverse(n);
+
+    cout << "Reverse number is " << rev;
+    return 0;
+}
+```
+### Output
+```
+Enter n: 10
+Reverse number is 1
+```
+
+## Java Implementation
+### 48. Write a Java program to find reverse of any number using functions .
+```js
+//Write a Java program to find reverse of any number using functions .
+import java.util.Scanner;
+public class Funycode {
+    static int reverse(int n)
+    {
+        int tmp=0;
+        while(n!=0)
+        {
+            int x=n%10;
+            tmp=tmp*10+x;
+            n/=10;
+        }
+        return tmp;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter n: ");
+        n = z.nextInt();
+        int rev=reverse(n);
+        System.out.println("Reverse number is "+rev);
+    }
+}
+```
+### Output
+```
+Enter n: 10
+Reverse number is 1
+```

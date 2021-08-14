@@ -1,0 +1,88 @@
+---
+title: Write a C/C++/Java program to get the largest element of an array using recursion.
+category: Recursion Function Index
+tags: ['recursion']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 8. Write a C program to get the largest element of an array using recursion.
+```c
+//Write a C program to get the largest element of an array using recursion.
+
+#include<stdio.h>
+int main(){
+    int k[]={1,2,30,4,5};
+    printf("%d",arrayPrint(sizeof(k)/sizeof(int),k,0,0));
+}
+int arrayPrint(int length,int k[],int i,int large){
+    if(length<=i){
+        return large;
+    }
+    if(large<k[i])
+    {
+        large=k[i];
+    }
+    arrayPrint(length,k,++i,large);
+}
+```
+### Output
+```
+30
+```
+## C++ Implementation
+### 8. Write a C++ program to get the largest element of an array using recursion.
+```c
+//Write a C++ program to get the largest element of an array using recursion.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int k[]={1,2,30,4,5};
+    cout << arrayPrint(sizeof(k)/sizeof(int),k,0,0) ;
+}
+int arrayPrint(int length,int k[],int i,int large){
+    if(length<=i){
+        return large;
+    }
+    if(large<k[i])
+    {
+        large=k[i];
+    }
+    arrayPrint(length,k,++i,large);
+}
+```
+### Output
+```
+30
+```
+
+## Java Implementation
+### 8. Write a Java program to get the largest element of an array using recursion.
+```js
+//Write a Java program to get the largest element of an array using recursion.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int k[]={1,2,30,4,5};
+        System.out.println(arrayPrint(k.length/int.length,k,0,0));
+    }
+    static int arrayPrint(int length,int k[],int i,int large){
+        if(length<=i){
+            return large;
+        }
+        if(large<k[i])
+        {
+            large=k[i];
+        }
+        arrayPrint(length,k,++i,large);
+    }
+
+}
+```
+### Output
+```
+30
+```

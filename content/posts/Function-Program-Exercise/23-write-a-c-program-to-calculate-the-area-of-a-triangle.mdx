@@ -1,0 +1,110 @@
+---
+title: Write a C/C++/Java program to Calculate the Area of a Triangle
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 23. Write a C program to Calculate the Area of a Triangle
+```c
+//Write a C program to find the square of any number using the function.
+#include<stdio.h>
+#include<math.h>
+
+float triangleArea(float a,float b,float c)
+{
+    float s,area;
+    s=(a+b+c)/2;
+
+    area=sqrt(s*(s-a)*(s-b)*(s-c));
+    return area;
+}
+
+int main()
+{
+    float a,b,c,s;
+    printf("Enter 3 sides: ");
+    scanf("%f%f%f",&a,&b,&c);
+
+    float area=triangleArea(a,b,c);
+
+    printf("Area is %.2f\n",area);
+    return 0;
+}
+```
+### Output
+```
+Enter 3 sides: 10 11 12
+Area is 51.52
+```
+
+## C++ Implementation
+### 23. Write a C++ program to Calculate the Area of a Triangle
+```c
+//Write a C++ program to Calculate the Area of a Triangle
+
+#include<iostream>
+using namespace std;
+#include<math.h>
+
+float triangleArea(float a,float b,float c)
+{
+    float s,area;
+    s=(a+b+c)/2;
+
+    area=sqrt(s*(s-a)*(s-b)*(s-c));
+    return area;
+}
+
+int main()
+{
+    float a,b,c,s;
+    cout << "Enter 3 sides: ";
+    cin >> a >> b >> c;
+
+    float area=triangleArea(a,b,c);
+
+    cout << "Area is " << area;
+    return 0;
+}
+```
+### Output
+```
+Enter 3 sides: 10 11 12
+Area is 51.52
+```
+
+## Java Implementation
+### 23. Write a Java program to Calculate the Area of a Triangle
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    static float triangleArea(float a,float b,float c)
+    {
+        float s,area;
+        s=(a+b+c)/2;
+        area=sqrt(s*(s-a)*(s-b)*(s-c));
+        return area;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        float a,b,c,s;
+        System.out.println("Enter 3 sides: ");
+        a = z.nextFloat();
+        b = z.nextFloat();
+        c = z.nextFloat();
+
+        float area=triangleArea(a,b,c);
+        System.out.println("Area is "+area);
+    }
+}
+```
+### Output
+```
+Enter 3 sides: 10 11 12
+Area is 51.52
+```

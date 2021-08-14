@@ -1,0 +1,84 @@
+---
+title: Write a C/C++/Java While purchasing certain items, a discount of 10% is offered if the quantity purchased is more than 1 000. If quantity and price per item are input through the keyboard, write a program to calculate the total expenses.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-30: While purchasing certain items, a discount of 10% is offered if the quantity purchased is more than 1 000. If quantity and price per item are input through the keyboard, write a c program to calculate the total expenses.
+```c
+/*While purchasing certain items, a discount of 10% is offered if the quantity purchased is more than 1 000. If quantity and price per item are input through the keyboard, write a c program to calculate the total expenses.*/
+#include<stdio.h>
+void main()
+{
+    int q,p;
+    printf("Enter quantity and price per item-");
+    scanf("%d%d",&q,&p);
+    if(q>1000)
+        printf("total expenses=%d",((p*q)+(p*q)*10/100));
+    else
+        printf("total expenses=%d",p*q);
+}
+```
+### Output
+```
+Enter quantity and price per item-
+5
+1000
+total expenses=5000
+```
+
+## C++ Implementation
+### Program-30: While purchasing certain items, a discount of 10% is offered if the quantity purchased is more than 1 000. If quantity and price per item are input through the keyboard, write a C++ program to calculate the total expenses.
+```c
+/*While purchasing certain items, a discount of 10% is offered if the quantity purchased is more than 1 000. If quantity and price per item are input through the keyboard, write a c++ program to calculate the total expenses.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int q,p;
+    cout<<"enter quantity and price per item-\n";
+    cin>>q>>p;
+    if(q>1000)
+        cout<<"total expenses="<<((p*q)-(p*q)*10/100);
+    else
+        cout<<"total expenses="<<p*q;
+}
+```
+### Output
+```
+enter quantity and price per item-
+5
+1000
+total expenses=5000
+```
+
+## Java Implementation
+### Program-30: While purchasing certain items, a discount of 10% is offered if the quantity purchased is more than 1 000. If quantity and price per item are input through the keyboard, write a java program to calculate the total expenses.
+```js
+/*While purchasing certain items, a discount of 10% is offered if the quantity purchased is more than 1 000. If quantity and price per item are input through the keyboard, write a java program to calculate the total expenses.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int q,p;
+        System.out.println("enter quantity and price per item-\n");
+        q=z.nextInt();
+        p=z.nextInt();
+        if(q>1000)
+             System.out.println("total expenses="+((p*q)-(p*q)*10/100));
+        else
+            System.out.println("total expenses="+p*q);
+    }
+}
+```
+### Output
+```
+enter quantity and price per item-
+5
+1000
+total expenses=5000
+```

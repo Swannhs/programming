@@ -1,0 +1,84 @@
+---
+title: The current year and the year in which the employee joined the organization are entered through the keyboard. If the number of years for which the employee has served the organization is greater than 3 then a bonus of Rs. 2500/- is given to the employee. If the years of service are not greater than 3, then the program should do nothing.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-31: The current year and the year in which the employee joined the organization are entered through the keyboard. If the number of years for which the employee has served the organization is greater than 3 then a bonus of Rs. 2500/- is given to the employee. If the years of service are not greater than 3, then the program should do nothing.
+```c
+/*The current year and the year in which the employee joined the organization are entered through the keyboard. If the number of years for which the employee has served the organization is greater than 3 then a bonus of Rs. 2500/- is given to the employee. If the years of service are not greater than 3, then the program should do nothing.*/
+#include<stdio.h>
+int main()
+{
+    int cy,yj;
+    printf("Enter the current year and the year of joining-");
+    scanf("%d %d",&cy,&yj);
+    if(cy-yj>3)
+        printf("bonus of Rs 2500/-");
+    else
+        printf("program error");
+}
+```
+### Output
+```
+Enter the current year and the year of joining-
+2021
+2015
+bonus of Rs 2500/-
+```
+
+## C++ Implementation
+### Program-31: The current year and the year in which the employee joined the organization are entered through the keyboard. If the number of years for which the employee has served the organization is greater than 3 then a bonus of Rs. 2500/- is given to the employee. If the years of service are not greater than 3, then the program should do nothing.
+```c
+/*The current year and the year in which the employee joined the organization are entered through the keyboard. If the number of years for which the employee has served the organization is greater than 3 then a bonus of Rs. 2500/- is given to the employee. If the years of service are not greater than 3, then the program should do nothing.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int cy,yj;
+    cout<<"enter the current year and the year of joining-\n";
+    cin>>cy>>yj;
+    if(cy-yj>3)
+        cout<<"bonus of Rs 2500/-";
+    else
+        cout<<"program error";
+}
+```
+### Output
+```
+Enter the current year and the year of joining-
+2021
+2015
+bonus of Rs 2500/-
+```
+
+## Java Implementation
+### Program-31: The current year and the year in which the employee joined the organization are entered through the keyboard. If the number of years for which the employee has served the organization is greater than 3 then a bonus of Rs. 2500/- is given to the employee. If the years of service are not greater than 3, then the program should do nothing.
+```js
+/*The current year and the year in which the employee joined the organization are entered through the keyboard. If the number of years for which the employee has served the organization is greater than 3 then a bonus of Rs. 2500/- is given to the employee. If the years of service are not greater than 3, then the program should do nothing.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int cy,yj;
+        System.out.println("enter the current year and the year of joining-\n");
+        cy=z.nextInt();
+        yj=z.nextInt();
+        if(cy-yj>3)
+            System.out.println("bonus of Rs 2500/-");
+        else
+            System.out.println("program error");
+    }
+}
+```
+### Output
+```
+Enter the current year and the year of joining-
+2021
+2015
+bonus of Rs 2500/-
+```

@@ -1,0 +1,76 @@
+---
+title: Write a C/C++/Java program If a four-digit number is input through the keyboard, write a program to obtain the sum of the first and last digit of this number. (without loop)
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-29:If a four-digit number is input through the keyboard, write a C program to obtain the sum of the first and last digit of this number. (without loop)
+```c
+/*If a four-digit number is input through the keyboard, write a C program to obtain the sum of the first and last digit of this number. (without loop)*/
+#include<stdio.h>
+void main()
+{
+    int n,s=0,f,l;
+    scanf("%d",&n);
+    l=n%10;
+    f=n/1000;
+    s=l+f;
+    printf("Sum of First and Last Digit is=%d",s);
+}
+```
+### Output
+```
+1234
+Sum of First and Last Digit is :=5
+```
+
+## C++ Implementation
+### Program-29:If a four-digit number is input through the keyboard, write a C++ program to obtain the sum of the first and last digit of this number. (without loop)
+```c
+/*If a four-digit number is input through the keyboard, write a C++ program to obtain the sum of the first and last digit of this number. (without loop)*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,s=0,f,l;
+    cin>>n;
+    l=n%10;
+    f=n/1000;
+    s=l+f;
+    cout<<"Sum of First and Last Digit is"<<s;
+}
+```
+### Output
+```
+1234
+Sum of First and Last Digit is :=5
+```
+
+## Java Implementation
+### Program-29:If a four-digit number is input through the keyboard, write a java program to obtain the sum of the first and last digit of this number. (without loop)
+```js
+//If a four-digit number is input through the keyboard, write a java program to obtain the sum of the first and last digit of this number. (without loop)
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int n,s=0,f,l;
+        n=z.nextInt();
+        l=n%10;
+        f=n/1000;
+        s=l+f;
+        System.out.println("Sum of First and Last Digit is :="+s);
+
+    }
+
+}
+```
+### Output
+```
+1234
+Sum of First and Last Digit is :=5
+```

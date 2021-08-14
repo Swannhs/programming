@@ -1,0 +1,110 @@
+---
+title: Write a C/C++/Java program to calculate the area & perimeter of the rectangle, and the area & circumference of the circle.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-24: Write a C program to calculate the area & perimeter of the rectangle, and the area & circumference of the circle.
+```c
+/*Write a c program to calculate the area & perimeter of the rectangle, and the area & circumference of the circle.*/
+#include<stdio.h>
+void main()
+{
+    int a,b,c,d,e;
+    float f,g;
+    scanf("%d%d",&a,&b);
+    c=2*(a+b);
+    d=a*b;
+    printf("Rectangle Perimeter=%d\n",c);
+    printf("Rectangle Area=%d\n",d);
+    scanf("%d",&e);
+    f=2*3.1416*e;
+    g=3.1416*e*e;
+    printf("Circle Circumference=%f\n",f);
+    printf("Circle Area=%f",g);
+}
+```
+### Output
+```
+5
+6
+Rectangle Perimeter:=22
+Rectangle Area:=30
+5
+Circle Circumference:=31.416
+Circle Area:=78.54
+```
+
+## C++ Implementation
+### Program-24: Write a C++ program to calculate the area & perimeter of the rectangle, and the area & circumference of the circle.
+```c
+/*Write a c++ program to calculate the area & perimeter of the rectangle, and the area & circumference of the circle.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d,e;
+    float f,g;
+    cin>>a>>b;
+    c=2*(a+b);
+    d=a*b;
+    cout<<"Rectangle Perimeter:"<<c<<endl;
+    cout<<"Rectangle Area:"<<d;
+    cin>>e;
+    f=2*3.1416*e;
+    g=3.1416*e*e;
+    cout<<"Circle Circumference:=:"<<f<<endl;
+    cout<<"Circle Area:"<<g;
+    return 0;
+}
+```
+### Output
+```
+5
+6
+Rectangle Perimeter:=22
+Rectangle Area:=30
+5
+Circle Circumference:=31.416
+Circle Area:=78.54
+```
+
+## Java Implementation
+### Program-24: Write a java program to calculate the area & perimeter of the rectangle, and the area & circumference of the circle.
+```js
+/*Write a Java program to calculate the area & perimeter of the rectangle, and the area & circumference of the circle.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b,c,d,e;
+        double f,g;
+        a=z.nextInt();
+        b=z.nextInt();
+        c=2*(a+b);
+        d=a*b;
+        System.out.println("Rectangle Perimeter:="+c);
+        System.out.println("Rectangle Area:="+d);
+        e=z.nextInt();
+        f=2*3.1416*e;
+        g=3.1416*e*e;
+        System.out.println("Circle Circumference:="+f);
+        System.out.println("Circle Area:="+g);
+
+    }
+}
+```
+### Output
+```
+5
+6
+Rectangle Perimeter:=22
+Rectangle Area:=30
+5
+Circle Circumference:=31.416
+Circle Area:=78.54
+```

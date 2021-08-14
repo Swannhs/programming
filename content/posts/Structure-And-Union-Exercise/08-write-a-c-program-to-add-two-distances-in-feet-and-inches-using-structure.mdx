@@ -1,0 +1,81 @@
+---
+title: Write a C/C++/Java program to add two distances in feet and inches using structure.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 8. Write a C program to add two distances in feet and inches using structure.
+```c
+//Write a C++ program to add two distances in feet and inches using structure.
+#include<stdio.h>
+#include <string.h>
+struct distances {
+   int feet;
+   float inch;
+};
+int main() {
+   struct distances d1,d2,result;
+   printf("Enter 1st distance Ex: 12-5.5\n");
+   scanf("%d-%f", &d1.feet,&d1.inch);
+   printf("\nEnter 2nd distance Ex: 20-0\n");
+   scanf("%d-%f", &d2.feet,&d2.inch);
+   result.feet = d1.feet + d2.feet;
+   result.inch = d1.inch + d2.inch;
+   while (result.inch >= 12.0) {
+      result.inch = result.inch - 12.0;
+      ++result.feet;
+   }
+   printf("\nSum of distances = %d\'-%.1f\"", result.feet, result.inch);
+}
+```
+### Output
+```
+Enter 1st distance Ex: 12-5.5
+10 12
+
+Enter 2nd distance Ex: 20-0
+8 19
+
+Sum of distances = 20-7
+```
+
+## C++ Implementation
+### 8. Write a C++ program to add two distances in feet and inches using structure.
+```c
+//Write a C++ program to find the add two distances in feet and inches using structure.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct distances {
+   int feet;
+   float inch;
+};
+int main() {
+   struct distances d1,d2,result;
+   cout << "Enter 1st distance Ex: 12-5.5\n";
+   cin >> d1.feet >> d1.inch;
+   cout << "\nEnter 2nd distance Ex: 20-0\n";
+   cin >> d2.feet >> d2.inch;
+   result.feet = d1.feet + d2.feet;
+   result.inch = d1.inch + d2.inch;
+   while (result.inch >= 12.0) {
+      result.inch = result.inch - 12.0;
+      ++result.feet;
+   }
+   cout << "\nSum of distances = " << result.feet << "-\""<< result.inch;
+}
+```
+### Output
+```
+Enter 1st distance Ex: 12-5.5
+10 12
+
+Enter 2nd distance Ex: 20-0
+8 19
+
+Sum of distances = 20-7
+```

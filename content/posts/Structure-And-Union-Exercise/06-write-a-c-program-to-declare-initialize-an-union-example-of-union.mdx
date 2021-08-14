@@ -1,0 +1,48 @@
+---
+title: Write a C/C++/Java program to declare, initialize an union, example of union.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 6. Write a C program to declare, initialize an union, example of union.
+```c
+//Write a C++ program to declare, initialize an union, example of union.
+#include<stdio.h>
+union student{
+    char name[100];
+};
+int main(){
+    union student p;
+    strcpy(p.name, "Ahosanul Hasan ");
+    printf("%s\n",p.name);
+}
+```
+### Output
+```
+Ahosanul Hasan
+```
+
+## C++ Implementation
+### 6. Write a C++ program to declare, initialize an union, example of union.
+```c
+//Write a C++ program to find the declare, initialize an union, example of union.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+union student{
+    char name[100];
+};
+int main(){
+    union student p;
+    strcpy(p.name, "Ahosanul Hasan ");
+    cout << endl << p.name;
+}
+```
+### Output
+```
+Ahosanul Hasan
+```

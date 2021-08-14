@@ -1,0 +1,126 @@
+---
+title: Write a C/C++/Java program to find LCM of a Number using Recursion
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 39. Write a C program to find LCM of a Number using Recursion
+```c
+//Write a C program to find LCM of a Number using Recursion
+#include<stdio.h>
+
+int findLCM(int a,int b)
+{
+    static int tmp=1;
+    if(tmp%a==0 && tmp%b==0)
+    {
+        return tmp;
+    }
+    else
+    {
+        tmp++;
+        findLCM(a,b);
+        return tmp;
+    }
+}
+
+int main()
+{
+    int a,b;
+
+    printf("Enter two number: ");
+    scanf("%d%d",&a,&b);
+    int lcm=findLCM(a,b);
+    printf("HCF is %d\n",lcm);
+
+    return 0;
+}
+```
+### Output
+```
+Enter two number: 1 2
+HCF is 1
+```
+
+## C++ Implementation
+### 39. Write a C++ program to find LCM of a Number using Recursion
+```c
+//Write a C++ program to find LCM of a Number using Recursion
+
+#include<iostream>
+using namespace std;
+
+int findLCM(int a,int b)
+{
+    static int tmp=1;
+    if(tmp%a==0 && tmp%b==0)
+    {
+        return tmp;
+    }
+    else
+    {
+        tmp++;
+        findLCM(a,b);
+        return tmp;
+    }
+}
+
+int main()
+{
+    int a,b;
+
+    cout << "Enter two number: ";
+    cin >> a >> b;
+    int lcm=findLCM(a,b);
+    cout << "HCF is " << lcm;
+
+    return 0;
+}
+```
+### Output
+```
+Enter two number: 1 2
+HCF is 1
+```
+
+## Java Implementation
+### 39. Write a Java program to find LCM of a Number using Recursion
+```js
+//Write a Java program to find LCM of a Number using Recursion
+import java.util.Scanner;
+public class Funycode {
+    static int findLCM(int a,int b)
+    {
+        static int tmp=1;
+        if(tmp%a==0 && tmp%b==0)
+        {
+            return tmp;
+        }
+        else
+        {
+            tmp++;
+            findLCM(a,b);
+            return tmp;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int a,b;
+
+        System.out.println("Enter two number: ");
+        a = z.nextInt();
+        b = z.nextInt();
+        int lcm=findLCM(a,b);
+        System.out.println("HCF is "+lcm);
+    }
+}
+```
+### Output
+```
+Enter two number: 1 2
+HCF is 1
+```

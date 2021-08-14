@@ -1,0 +1,67 @@
+---
+title: Write a C/C++/Java program to input a string and print it.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 1. Write a C program to input a string and print it.
+```c
+//Write a C program to input a string and print it.
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char word[50];
+    scanf("%s", word);
+    printf("The String is %s.", word);
+    return 0;
+}
+```
+### Output
+```
+Hello World
+The String is Hello World
+```
+## C++ Implementation
+### 1. Write a C++ program to input a string and print it.
+```c
+//Write a C++ program to input a string and print it.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    string word;
+    cin >> word;
+    cout << "The String is " << word;
+    return 0;
+}
+```
+### Output
+```
+Hello World
+The String is Hello World
+```
+
+## Java Implementation
+### 1. Write a Java program to input a string and print it.
+```js
+//Write a Java program to input a string and print it.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          String word;
+          word = z.nextLine();
+          System.out.println("The String is " + word);
+      }
+}
+```
+### Output
+```
+Hello World
+The String is Hello World
+```

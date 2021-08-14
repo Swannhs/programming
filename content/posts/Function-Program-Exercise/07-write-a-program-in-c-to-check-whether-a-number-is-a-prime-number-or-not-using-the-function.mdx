@@ -1,0 +1,112 @@
+---
+title: Write a C/C++/Java program to check whether a number is a prime number or not using the function.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 7. Write a C program to check whether a number is a prime number or not using the function.
+```c
+//Write a C program in C to check whether a number is a prime number or not using the function.
+#include<stdio.h>
+
+int square(int num)
+{
+    return num*num;
+}
+
+int main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    int ans=square(n);
+
+    printf("%d\n",ans);
+    return 0;
+}
+```
+### Output
+```
+Enter a number: 4
+16
+```
+
+## C++ Implementation
+### 7. Write a C++ program to check whether a number is a prime number or not using the function.
+```c
+//Write a C++ program in C to check whether a number is a prime number or not using the function.
+
+#include<iostream>
+using namespace std;
+
+void checkPrime(int n)
+{
+    int check=1;
+    for(int i=2;i*i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            check=0;
+            break;
+        }
+    }
+    if(check && n!=1)
+        cout << n << " is prime";
+    else
+        cout << n << " is not prime";
+}
+int main()
+{
+    int n;
+    cin >> n;
+
+    checkPrime(n);
+    return 0;
+}
+```
+### Output
+```
+Enter a number: 4
+16
+```
+
+## Java Implementation
+### 7. Write a Java program to find the square of any number using the function.
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    static void checkPrime(int n)
+    {
+        int check=1;
+        for(int i=2;i*i<=n;i++)
+        {
+            if(n%i==0)
+            {
+                check=0;
+                break;
+            }
+        }
+        if(check && n!=1)
+            System.out.println( n + " is prime.");
+        else
+            System.out.println( n + " is not prime.");
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        n = z.nextInt();
+        checkPrime(n);
+    }
+}
+```
+### Output
+```
+Enter a number: 4
+16
+```

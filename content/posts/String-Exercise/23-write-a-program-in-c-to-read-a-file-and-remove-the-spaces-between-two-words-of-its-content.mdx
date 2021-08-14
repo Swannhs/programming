@@ -1,0 +1,106 @@
+---
+title: Write a C/C++/Java program to read a file and remove the spaces between two words of its content.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 23. Write a C program to read a file and remove the spaces between two words of its content.
+```c
+//Write a C program to read a file and remove the spaces between two words of its content.
+#include <string.h>
+
+int main()
+{
+    char str[100];
+    int  i,j=0;
+    printf("Enter  the string : ");
+    gets(str);
+    for(i=0;str[i];i++)
+    {
+         str[i]=str[i+j];
+
+
+         if(str[i]==' '|| str[i]=='\t')
+         {
+          j++;
+          i--;
+        }
+
+    }
+    printf("string removing spaces:");
+
+    printf("%s",str);
+}
+```
+### Output
+```
+Enter  the string : You can support us by sharing our website with your friend
+string removing spaces:Youcansupportusbysharingourwebsitewithyourfriend
+```
+## C++ Implementation
+### 23. Write a C++ program to read a file and remove the spaces between two words of its content.
+```c
+//Write a C++ program to read a file and remove the spaces between two words of its content.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char str[100];
+    int  i,j=0;
+    cout << "Enter  the string : ";
+    cin >> str;
+    for(i=0;str[i];i++)
+    {
+         str[i]=str[i+j];
+         if(str[i]==' '|| str[i]=='\t')
+         {
+            j++;
+            i--;
+         }
+    }
+    cout << "string removing spaces: " << str;
+    return 0;
+}
+```
+### Output
+```
+Enter  the string : You can support us by sharing our website with your friend
+string removing spaces:Youcansupportusbysharingourwebsitewithyourfriend
+```
+
+## Java Implementation
+### 23. Write a Java program to read a file and remove the spaces between two words of its content.
+```js
+//Write a Java program to read a file and remove the spaces between two words of its content.
+import java.util.Scanner;
+import java.util.Arrays;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String str;
+        int i,j=0;
+        str = z.nextLine();
+        for(i=0;charAt(i);i++)
+        {
+             charAt(i)=charAt(i+j)];
+             if(charAt(i)==' '|| charAt(i)=='\t')
+             {
+                j++;
+                i--;
+             }
+        }
+        System.out.println("string removing spaces: " + str);
+    }
+}
+```
+### Output
+```
+Enter  the string : You can support us by sharing our website with your friend
+string removing spaces:Youcansupportusbysharingourwebsitewithyourfriend
+```

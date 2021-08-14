@@ -1,0 +1,83 @@
+---
+title: Write a C/C++/Java program to print first 50 natural numbers using recursion.
+category: Recursion Function Index
+tags: ['recursion']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 1. Write a C program to print first 50 natural numbers using recursion.
+```c
+//Write a C++ program to print first 50 natural numbers using recursion.#include<stdio.h>
+int main()
+{
+    numbers(0);
+}
+int numbers(int i)
+{
+    if(i>50)
+    {
+        return 0;
+    }
+    printf("\n%d", i);
+    numbers(i=i+1);
+}
+```
+### Output
+```
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50
+```
+
+## C++ Implementation
+### 1. Write a C++ program to print first 50 natural numbers using recursion.
+```c
+//Write a C++ program to find the square of any number using the function.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    numbers(0);
+}
+int numbers(int i)
+{
+    if(i>50)
+    {
+        return 0;
+    }
+    cout << "\n" << i;
+    numbers(i=i+1);
+}
+```
+### Output
+```
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50
+```
+
+## Java Implementation
+### 1. Write a Java program to find the square of any number using the function.
+```js
+//Write a Java program to find the square of any number using the function.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        numbers(0);
+    }
+    static int numbers(int i)
+    {
+        if(i>50)
+        {
+            return 0;
+        }
+        System.out.println(" "+ i);
+        numbers(i=i+1);
+    }
+
+
+}
+```
+### Output
+```
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50
+```

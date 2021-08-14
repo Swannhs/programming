@@ -1,0 +1,125 @@
+---
+title: Write a C/C++/Java program to create calculator using switch-case.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-5 Write a C program to create calculator using switch-case.
+```c
+/*Write a C program to create calculator using switch-case.*/
+#include <stdio.h>
+int main()
+{
+char op;
+float n1,n2, result=0.0f;
+printf("WELCOME TO SIMPLE CALCULATOR\n");
+scanf("%f %c %f",&n1,&op,&n2);
+  switch(op)
+  {
+    case '+':
+        result = n1+n2;
+        break;
+    case '-':
+        result = n1-n2;
+        break;
+    case '*':
+        result = n1*n2;
+        break;
+    case '/':
+        result = n1/n2;
+        break;
+    default:
+        printf("Invalid operator");
+  }
+  printf("%.2f %c %.2f = %.2f",n1,op,n2,result);
+  return 0;
+}
+```
+### Output
+```
+Input: 2 + 2
+Output: 2+2=4
+```
+
+## C++ Implementation
+### Program-5 Write a C++ program to create calculator using switch-case.
+```c
+/*Write a C++ program to create calculator using switch-case.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    char op;
+    float n1,n2, result=0.0f;
+    cout << "WELCOME TO SIMPLE CALCULATOR\n";
+    cin >> n1 >> op >> n2;
+    switch(op)
+    {
+        case '+':
+            result = n1+n2;
+            break;
+        case '-':
+            result = n1-n2;
+            break;
+        case '*':
+            result = n1*n2;
+            break;
+        case '/':
+            result = n1/n2;
+            break;
+        default:
+            cout << "Invalid operator";
+    }
+    cout << n1 << op << n2 << " " << result;
+    return 0;
+}
+```
+### Output
+```
+Input: 2 + 2
+Output: 2+2=4
+```
+
+## Java Implementation
+### Program-5 Write a Java program to create calculator using switch-case.
+```js
+/*Write a Java program to create calculator using switch-case.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        System.out.println("WELCOME TO SIMPLE CALCULATOR\n");
+        Scanner z=new Scanner(System.in);
+        float n1, n2;
+        char op;
+        n1=z.nextFloat();
+        char op = z.next().charAt(0);
+        n2=z.nextFloat();
+        switch(op)
+        {
+           case '+':
+               result = n1+n2;
+               break;
+           case '-':
+               result = n1-n2;
+               break;
+           case '*':
+               result = n1*n2;
+               break;
+           case '/':
+               result = n1/n2;
+               break;
+           default:
+          System.out.println("Invalid operator");
+        }
+        System.out.println(n1 + op + n2 + " = " + result);
+    }
+}
+```
+### Output
+```
+Input: 2 + 2
+Output: 2+2=4
+```

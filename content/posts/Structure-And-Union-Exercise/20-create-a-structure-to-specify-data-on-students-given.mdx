@@ -1,0 +1,156 @@
+---
+title: Write a C/C++/Java program to Create a structure to specify data on students given below: Roll number, Name, Department, Course, Year of joining Assume that there are not more than 450 students in the collage. -Write a function to print names of all students who joined in a particular year. -Write a function to print the data of a student whose roll number is given.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 20. Write a C program to Create a structure to specify data on students given below: Roll number, Name, Department, Course, Year of joining Assume that there are not more than 450 students in the collage. -Write a function to print names of all students who joined in a particular year. -Write a function to print the data of a student whose roll number is given.
+```c
+//Write a C program to Create a structure to specify data on students given below: Roll number, Name, Department, Course, Year of joining Assume that there are not more than 450 students in the collage. -Write a function to print names of all students who joined in a particular year. -Write a function to print the data of a student whose roll number is given.
+#include<stdio.h>
+struct Student{
+    int roll;
+    char name[50];
+    char department[20];
+    char course[100];
+    int year;
+};
+void byRoll(struct Student student[]){
+    printf("\nEnter Roll : " );
+    int roll;
+    scanf("%d",&roll);
+    for(int i=0;i<450;i++)
+    {
+        if(!student[i].roll)
+        {
+            break;
+        }
+        if(student[i].roll==roll)
+        {
+            printf("\nName : %s",student[i].name);
+            printf("\nRoll : %d",student[i].roll);
+            printf("\nDept : %s",student[i].department);
+        }
+    }
+}
+void byYear(struct Student student[]){
+    printf("enter year: ");
+    int year;
+    scanf("%d",&year);
+    for(int i=0;i<450;i++)
+    {
+        if(!student[i].roll)
+        {
+            break;
+        }
+        if(student[i].year==year)
+        {
+            printf("\nName : %s",student[i].name);
+            printf("\nRoll : %d",student[i].roll);
+            printf("\nDept : %s",student[i].department);
+        }
+    }
+}
+int main(){
+   struct Student student[450] ={1,"Tushar","ICE","Java",2016,
+                                 2,"Imran","ICE","JAVA",2016};
+    printf("\nStudent info By Year\n");
+    byYear(student);
+    printf("\nSearch student by Roll No: \n");
+    byRoll(student);
+}
+```
+### Output
+```
+Student info By Year
+enter year: 2017
+
+Search student by Roll No:
+
+Enter Roll : 1
+
+Name : Tushar
+
+Roll : 1
+
+Dept : ICE
+```
+
+## C++ Implementation
+### 20. Write a C++ program to Create a structure to specify data on students given below: Roll number, Name, Department, Course, Year of joining Assume that there are not more than 450 students in the collage. -Write a function to print names of all students who joined in a particular year. -Write a function to print the data of a student whose roll number is given.
+```c
+//Write a C++ program to Create a structure to specify data on students given below: Roll number, Name, Department, Course, Year of joining Assume that there are not more than 450 students in the collage. -Write a function to print names of all students who joined in a particular year. -Write a function to print the data of a student whose roll number is given.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct Student{
+    int roll;
+    char name[50];
+    char department[20];
+    char course[100];
+    int year;
+};
+void byRoll(struct Student student[]){
+    cout << "\nEnter Roll : " ;
+    int roll;
+    cin >> roll;
+    for(int i=0;i<450;i++)
+    {
+        if(!student[i].roll)
+        {
+            break;
+        }
+        if(student[i].roll==roll)
+        {
+            cout << "\nName : " << student[i].name << endl;
+            cout << "\nRoll : " << student[i].roll << endl;
+            cout << "\nDept : " << student[i].department;
+        }
+    }
+}
+void byYear(struct Student student[]){
+    cout << "enter year: ";
+    int year;
+    cin >> year;
+    for(int i=0;i<450;i++)
+    {
+        if(!student[i].roll)
+        {
+            break;
+        }
+        if(student[i].year==year)
+        {
+            cout << "\nName : " << student[i].name << endl;
+            cout << "\nRoll : " << student[i].roll << endl;
+            cout << "\nDept : " << student[i].department << endl;
+        }
+    }
+}
+int main(){
+   struct Student student[450] ={1,"Tushar","ICE","Java",2016,
+                                 2,"Imran","ICE","JAVA",2016};
+    cout << "\nStudent info By Year\n";
+    byYear(student);
+    cout << "\nSearch student by Roll No: \n";
+    byRoll(student);
+}
+```
+### Output
+```
+Student info By Year
+enter year: 2017
+
+Search student by Roll No:
+
+Enter Roll : 1
+
+Name : Tushar
+
+Roll : 1
+
+Dept : ICE
+```

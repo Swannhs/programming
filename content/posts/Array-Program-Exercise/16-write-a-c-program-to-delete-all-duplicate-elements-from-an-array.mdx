@@ -1,0 +1,171 @@
+---
+title: Write a C/C++/Java program to delete all duplicate elements from an array.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 16. Write a C program to delete all duplicate elements from an array.
+```c
+//Write a C program to delete all duplicate elements from an array.
+
+#include <stdio.h>
+int main()
+{
+  int arr[10], brr[10], count = 0, i, j;
+  printf("Enter 10 elements of an array-\n");
+  for ( i= 0; i <10; i++)
+    scanf("%d", &arr[i]);
+  for (i = 0; i <10; i++)
+  {
+    for (j = 0; j < count; j++)
+    {
+      if(arr[i] == brr[j])
+        break;
+    }
+    if (j == count)
+    {
+      brr[count] = arr[i];
+      count++;
+    }
+  }
+  printf("Array obtained after removing duplicate elements:\n");
+  for (i = 0; i < count; i++)
+    printf("%d\n", brr[i]);
+}
+```
+### Output
+```
+Enter 10 elements of an array-
+4
+5
+3
+2
+5
+6
+7
+8
+2
+1
+Array obtained after removing duplicate elements:
+4
+5
+3
+2
+6
+7
+8
+1
+```
+## C++ Implementation
+### 16. Write a C++ program to delete all duplicate elements from an array.
+```c
+//Write a C++ program to delete all duplicate elements from an array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr[10], brr[10], c= 0, i, j;
+    cout<<"Enter 10 elements of an array-\n";
+    for ( i= 0; i <10; i++)
+        cin>>arr[i];
+    for (i = 0; i <10; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            if(arr[i] == brr[j])
+                break;
+        }
+        if (j == c)
+        {
+            brr[c] = arr[i];
+            c++;
+        }
+    }
+    cout<<"Array obtained after removing duplicate elements:\n";
+    for (i = 0; i < c; i++)
+        cout<<brr[i]<<"  ";
+}
+```
+### Output
+```
+Enter 10 elements of an array-
+4
+5
+3
+2
+5
+6
+7
+8
+2
+1
+Array obtained after removing duplicate elements:
+4
+5
+3
+2
+6
+7
+8
+1
+```
+
+## Java Implementation
+### 16. Write a Java program to delete all duplicate elements from an array.
+```js
+//Write a Java program to delete all duplicate elements from an array.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr[]=new int[10],brr[]=new int[10],i,j,c=0,m=1;
+        System.out.println("Enter 10 elements of an array-\n");
+        for ( i= 0; i <10; i++)
+            arr[i]=z.nextInt();
+        for (i = 0; i <10; i++)
+        {
+            for (j = 0; j < c; j++)
+            {
+                if(arr[i] == brr[j])
+                    break;
+            }
+            if (j == c)
+            {
+                brr[c] = arr[i];
+                c++;
+            }
+        }
+        System.out.println("Array obtained after removing duplicate elements:\n");
+        for (i = 0; i < c; i++)
+            System.out.println(brr[i]+"  ");
+    }
+}
+```
+### Output
+```
+Enter 10 elements of an array-
+4
+5
+3
+2
+5
+6
+7
+8
+2
+1
+Array obtained after removing duplicate elements:
+4
+5
+3
+2
+6
+7
+8
+1
+```

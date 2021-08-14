@@ -1,0 +1,88 @@
+---
+title: Write a C/C++/Java program to enter three side of triangle and check whether the triangle valid or not.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-13: Write a C program to enter three side of triangle and check whether the triangle valid or not.
+```c
+/*Write a C program to enter three side of triangle and check whether the triangle valid or not.*/
+#include<stdio.h>
+void main()
+{
+    int a,b,c;
+    scanf("%d %d %d",&a,&b,&c);
+    if((a+b>c&&b+c>a&&c+a>b)&&(a>0&&b>0&&c>0))
+        printf("triangle is valid");
+    else
+        printf("triangle is invalid");
+}
+```
+### Output
+```
+Enter three angles of a triangle-
+5
+6
+8
+Triangle is valid
+```
+
+## C++ Implementation
+### Program-13: Write a C program to enter three side of triangle and check whether the triangle valid or not.
+```c
+/*Write a C program to enter three side of triangle and check whether the triangle valid or not.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    cout<<"enter three side of triangle-\n";
+    cin>>a>>b>>c;
+    if((a+b>c&&b+c>a&&c+a>b)&&(a>0&&b>0&&c>0))
+        cout<<"triangle is valid";
+    else
+        cout<<"triangle is invalid";
+}
+```
+### Output
+```
+Enter three angles of a triangle-
+5
+6
+8
+Triangle is valid
+```
+
+## Java Implementation
+### Program-13: Write a C program to enter three side of triangle and check whether the triangle valid or not.
+```js
+/*Write a C program to enter three side of triangle and check whether the triangle valid or not.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b,c;
+        System.out.print("enter three angles of a triangle-\n");
+        a=z.nextInt();
+        b=z.nextInt();
+        c=z.nextInt();
+
+        if((a+b>c&&b+c>a&&c+a>b)&&(a>0&&b>0&&c>0))
+            System.out.print(" triangle is valid");
+        else
+            System.out.print("triangle is invalid");
+    }
+}
+```
+### Output
+```
+Enter three angles of a triangle-
+5
+6
+8
+Triangle is valid
+```

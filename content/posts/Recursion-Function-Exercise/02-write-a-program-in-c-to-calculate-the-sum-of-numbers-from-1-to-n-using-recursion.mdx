@@ -1,0 +1,98 @@
+---
+title: Write a C/C++/Java program to find the square of any number using the function.
+category: Recursion Function Index
+tags: ['recursion']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 2. Write a C program to find the square of any number using the function.
+```c
+//Write a C program to find the square of any number using the function.
+#include<stdio.h>
+int main(){
+    int n;
+    printf("Enter n Number : ");
+    scanf("%d", &n);
+    int a= sum(n);
+    printf("Sum of n number : %d",a);
+}
+int sum(int n){
+    if(n!=0)
+    {
+        return n+sum(n-1);
+    }
+    else{
+        return n;
+    }
+}
+```
+### Output
+```
+Enter n Number : 10
+Sum of n number : 55
+```
+
+## C++ Implementation
+### 2. Write a C++ program to find the square of any number using the function.
+```c
+//Write a C++ program to find the square of any number using the function.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout << "Enter n Number : ";
+    cin >> n;
+    int a= sum(n);
+    cout << "Sum of n number : " << a;
+}
+int sum(int n){
+    if(n!=0)
+    {
+        return n+sum(n-1);
+    }
+    else{
+        return n;
+    }
+}
+```
+### Output
+```
+Enter n Number : 10
+Sum of n number : 55
+```
+
+## Java Implementation
+### 2. Write a Java program to find the square of any number using the function.
+```js
+//Write a Java program to find the square of any number using the function.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        int n;
+        System.out.println("Enter n Number : ");
+        n = z.nextInt();
+        int a= sum(n);
+        System.out.println("Sum of n number : %d",a);
+    }
+    static int sum(int n){
+      if(n!=0)
+      {
+          return n+sum(n-1);
+      }
+      else
+      {
+          return n;
+      }
+    }
+
+}
+```
+### Output
+```
+Enter n Number : 10
+Sum of n number : 55
+```

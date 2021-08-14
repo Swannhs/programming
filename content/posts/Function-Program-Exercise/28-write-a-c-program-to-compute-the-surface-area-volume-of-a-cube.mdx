@@ -1,0 +1,117 @@
+---
+title: Write a C/C++/Java program to find the square of any number using the function.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 28. Write a C program to Compute the Surface Area & Volume of a Cube
+```c
+//Write a C program to Compute the Surface Area & Volume of a Cube
+#include<stdio.h>
+
+int surfaceAreaCube(int edge)
+{
+    return 6*edge*edge;
+}
+
+int volumeCube(int edge)
+{
+    return edge*edge*edge;
+}
+
+int main()
+{
+    int edge;
+    printf("Enter the length of an edge: ");
+    scanf("%d",&edge);
+
+    int surface=surfaceAreaCube(edge);
+    int volume=volumeCube(edge);
+
+    printf("Surface Area of this cube is %d\n",surface);
+    printf("Volume of this cube is %d\n",volume);
+    return 0;
+}
+```
+### Output
+```
+Enter the length of an edge: 10
+Surface Area of this cube is 600
+Volume of this cube is 1000
+```
+
+## C++ Implementation
+### 28. Write a C++ program to Compute the Surface Area & Volume of a Cube
+```c
+//Write a C++ program to find the square of any number using the function.
+
+#include<iostream>
+using namespace std;
+
+int surfaceAreaCube(int edge)
+{
+    return 6*edge*edge;
+}
+
+int volumeCube(int edge)
+{
+    return edge*edge*edge;
+}
+
+int main()
+{
+    int edge;
+    cout << "Enter the length of an edge: ";
+    cin >> edge;
+
+    int surface=surfaceAreaCube(edge);
+    int volume=volumeCube(edge);
+
+    cout << "Surface Area of this cube is " << surface;
+    cout << "Volume of this cube is " << volume;
+    return 0;
+}
+```
+### Output
+```
+Enter the length of an edge: 10
+Surface Area of this cube is 600
+Volume of this cube is 1000
+```
+
+## Java Implementation
+### 28. Write a Java program to Compute the Surface Area & Volume of a Cube
+```js
+//Write a Java program to Compute the Surface Area & Volume of a Cube
+import java.util.Scanner;
+public class Funycode {
+    static int surfaceAreaCube(int edge)
+    {
+        return 6*edge*edge;
+    }
+    static int volumeCube(int edge)
+    {
+        return edge*edge*edge;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int edge;
+        System.out.println("Enter the length of an edge: ");
+        edge = z.nextInt();
+        int surface=surfaceAreaCube(edge);
+        int volume=volumeCube(edge);
+        System.out.println("Surface Area of this cube is "+surface);
+        System.out.println("Volume of this cube is "+volume);
+    }
+}
+```
+### Output
+```
+Enter the length of an edge: 10
+Surface Area of this cube is 600
+Volume of this cube is 1000
+```

@@ -1,0 +1,142 @@
+---
+title: Write a C/C++/Java program There is a structure called employee that holds information like employee code, name, date of joining. Write a program to create an array of the structure and enter some data into it. Then ask the user to enter current date. Display the names of those employees whose tenure is 3 or more than 3 years according to the given current date.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 25. Write a C program There is a structure called employee that holds information like employee code, name, date of joining. Write a program to create an array of the structure and enter some data into it. Then ask the user to enter current date. Display the names of those employees whose tenure is 3 or more than 3 years according to the given current date.
+```c
+//Write a C program There is a structure called employee that holds information like employee code, name, date of joining. Write a program to create an array of the structure and enter some data into it. Then ask the user to enter current date. Display the names of those employees whose tenure is 3 or more than 3 years according to the given current date.
+#include<stdio.h>
+struct Emp{
+    char name[100];
+    struct date{
+    int day;
+    int month;
+    int year;
+    }joinDate;
+};
+void details(struct Emp emp){
+printf("emp name : %s\n",emp.name);
+}
+int main(){
+    struct Emp emp[3]={"Tushar",12,5,2021,"Imran",11,1,2015,"Arafat",1,1,2010};
+    /*
+    //take input from user
+    printf("Enter emp info\n");
+    for(int i=0;i<3;i++)
+    {
+        printf("Enter Emp Name : ");
+        fgets(emp[i].name,sizeof(emp[i].name),stdin);
+        printf("enter joining date (input formate dd-mm-yy ex 12-4-21 )\n");
+        scanf("%d-%d-%d",&emp[i].joinDate.day,&emp[i].joinDate.month,&emp[i].joinDate.year);
+        getchar();
+    }
+    */
+    int day,month,year;
+    printf("enter current date: input formate dd-mm-yy ex 12-4-21 \n");
+    scanf("%d-%d-%d",&day,&month,&year);
+    for(int i=0;i<3;i++)
+    {
+        if(year-emp[i].joinDate.year>3)
+        {
+            details(emp[i]);
+            continue;
+        }
+         if(year-emp[i].joinDate.year==3){
+            if(emp[i].joinDate.month>month)
+            {
+                details(emp[i]);
+                continue;
+            }
+            if(emp[i].joinDate.month==month)
+            {
+                if(emp[i].joinDate.day>day)
+                {
+                    details(emp[i]);
+                    continue;
+                }
+            }
+        }
+    }
+}
+```
+### Output
+```
+enter current date: input formate dd-mm-yy ex 12-4-21
+12 5 2021
+emp name : Imran
+emp name : Arafat
+```
+
+## C++ Implementation
+### 25. Write a C++ program There is a structure called employee that holds information like employee code, name, date of joining. Write a program to create an array of the structure and enter some data into it. Then ask the user to enter current date. Display the names of those employees whose tenure is 3 or more than 3 years according to the given current date.
+```c
+//Write a C++ program There is a structure called employee that holds information like employee code, name, date of joining. Write a program to create an array of the structure and enter some data into it. Then ask the user to enter current date. Display the names of those employees whose tenure is 3 or more than 3 years according to the given current date.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct Emp{
+    char name[100];
+    struct date{
+    int day;
+    int month;
+    int year;
+    }joinDate;
+};
+void details(struct Emp emp){
+printf("emp name : %s\n",emp.name);
+}
+int main(){
+    struct Emp emp[3]={"Tushar",12,5,2021,"Imran",11,1,2015,"Arafat",1,1,2010};
+    /*
+    //take input from user
+    cout << "Enter emp info\n";
+    for(int i=0;i<3;i++)
+    {
+        cout << "Enter Emp Name : ";
+        fgets(emp[i].name,sizeof(emp[i].name),stdin);
+        cout << "enter joining date (input formate dd-mm-yy ex 12-4-21 )\n";
+        cin >> emp[i].joinDate.day >> emp[i].joinDate.month >> emp[i].joinDate.year;
+        getchar();
+    }
+    */
+    int day,month,year;
+    cout << "enter current date: input formate dd-mm-yy ex 12-4-21 \n";
+    cin >> day >> month >> year;
+    for(int i=0;i<3;i++)
+    {
+        if(year-emp[i].joinDate.year>3)
+        {
+            details(emp[i]);
+            continue;
+        }
+         if(year-emp[i].joinDate.year==3){
+            if(emp[i].joinDate.month>month)
+            {
+                details(emp[i]);
+                continue;
+            }
+            if(emp[i].joinDate.month==month)
+            {
+                if(emp[i].joinDate.day>day)
+                {
+                    details(emp[i]);
+                    continue;
+                }
+            }
+        }
+    }
+}
+```
+### Output
+```
+enter current date: input formate dd-mm-yy ex 12-4-21
+12 5 2021
+emp name : Imran
+emp name : Arafat
+```

@@ -1,0 +1,194 @@
+---
+title: Write a C/C++/Java program to convert Binary to Hexadecimal number system.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 20. Write a C program to convert Binary to Hexadecimal number system.
+```c
+//Write a C program to convert Binary to Hexadecimal number system.
+//Using for loop
+#include<stdio.h>
+int main ()
+{
+  long int b, hexa = 0, j = 1, r,n;
+  printf ("Enter a binary number: ");
+  scanf ("%ld", &b);
+  for(n=b;b!=0;b = b / 10)
+    {
+      r = b% 10;
+      hexa = hexa+ r * j;
+      j = j * 2;
+    }
+  printf ("Hexadecimal value is: %lX", hexa);
+  return 0;
+}
+//Using while loop
+#include<stdio.h>
+int main ()
+{
+  long int b, hexa = 0, j = 1, r,n;
+  printf ("Enter a binary number: ");
+  scanf ("%ld", &b);
+  for(n=b;b!=0;b = b / 10)
+    {
+      r = b% 10;
+      hexa = hexa+ r * j;
+      j = j * 2;
+    }
+  printf ("Hexadecimal value is: %lX", hexa);
+  return 0;
+}
+//Using do while loop
+#include<stdio.h>
+int main ()
+{
+    long int b, hexa = 0, j = 1, r;
+    printf ("Enter a binary number: ");
+    scanf ("%ld", &b);
+    do
+    {
+        r = b% 10;
+        hexa = hexa+ r * j;
+        j = j * 2;
+        b = b / 10;
+    }
+    while (b!= 0);
+    printf ("Hexadecimal value is: %lX", hexa);
+    return 0;
+}
+```
+### Output
+```
+Enter a binary number: 1010
+Hexadecimal value is: A
+```
+
+## C++ Implementation
+### 20. Write a C++ program to convert Binary to Hexadecimal number system.
+```c
+//Write a C++ program to convert Binary to Hexadecimal number system.
+
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    long int b, hexa = 0, j = 1, r,n;
+    cout << "Enter a binary number: ";
+    cin >> b;
+    for(n=b;b!=0;b = b / 10)
+      {
+        r = b% 10;
+        hexa = hexa+ r * j;
+        j = j * 2;
+      }
+    cout << "Hexadecimal value is: " << hexa;
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    long int b, hexa = 0, j = 1, r,n;
+    cout << "Enter a binary number: ";
+    cin >> b;
+    for(n=b;b!=0;b = b / 10)
+      {
+        r = b% 10;
+        hexa = hexa+ r * j;
+        j = j * 2;
+      }
+    cout << "Hexadecimal value is: " << hexa;
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    long int b, hexa = 0, j = 1, r;
+    cout << "Enter a binary number: ";
+    cin >> b;
+    do
+    {
+        r = b% 10;
+        hexa = hexa+ r * j;
+        j = j * 2;
+        b = b / 10;
+    }
+    while (b!= 0);
+    cout << "Hexadecimal value is: " << hexa;
+}
+```
+### Output
+```
+Enter a binary number: 1010
+Hexadecimal value is: A
+```
+
+## Java Implementation
+### 20. Write a Java program to convert Binary to Hexadecimal number system.
+```js
+//Write a Java program to accept 3 numbers from user one by one and displays their sum on screen.
+//Using for loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        long int b, hexa = 0, j = 1, r,n;
+        System.out.println("Enter a binary number: ");
+        b = z.nextInt();
+        for(n=b;b!=0;b = b / 10)
+          {
+            r = b% 10;
+            hexa = hexa+ r * j;
+            j = j * 2;
+          }
+        System.out.println("Hexadecimal value is: "+ hexa);
+    }
+}
+//Using while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        long int b, hexa = 0, j = 1, r,n;
+        System.out.println("Enter a binary number: ");
+        b = z.nextInt();
+        for(n=b;b!=0;b = b / 10)
+          {
+            r = b% 10;
+            hexa = hexa+ r * j;
+            j = j * 2;
+          }
+        System.out.println("Hexadecimal value is: "+ hexa);
+    }
+}
+//Using do while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        long int b, hexa = 0, j = 1, r;
+        System.out.println("Enter a binary number: ");
+        b = z.nextInt();
+        do
+        {
+            r = b% 10;
+            hexa = hexa+ r * j;
+            j = j * 2;
+            b = b / 10;
+        }
+        while (b!= 0);
+        System.out.println("Hexadecimal value is: "+ hexa);
+    }
+}
+```
+### Output
+```
+Enter a binary number: 1010
+Hexadecimal value is: A
+```

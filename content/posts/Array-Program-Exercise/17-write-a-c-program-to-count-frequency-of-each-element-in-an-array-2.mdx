@@ -1,0 +1,211 @@
+---
+title: Write a C/C++/Java program to count frequency of each element in an array.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 17. Write a C program to count frequency of each element in an array.
+```c
+//Write a C program to count frequency of each element in an array.
+#include <stdio.h>
+void main()
+{
+    int arr[10], fr[10],i,j,ctr;
+    printf("Input 10 elements in the array :\n");
+       for(i=0;i<10;i++)
+        {
+          scanf("%d",&arr[i]);
+          fr[i] = -1;
+        }
+    for(i=0; i<10; i++)
+    {
+        ctr = 1;
+        for(j=i+1; j<10; j++)
+        {
+            if(arr[i]==arr[j])
+            {
+                ctr++;
+                fr[j] = 0;
+            }
+        }
+
+        if(fr[i]!=0)
+        {
+            fr[i] = ctr;
+        }
+    }
+    printf("\nThe frequency of all elements of array : \n");
+    for(i=0; i<10; i++)
+    {
+        if(fr[i]!=0)
+        {
+            printf("%d occurs %d times\n", arr[i], fr[i]);
+        }
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+4
+5
+4
+3
+6
+7
+8
+9
+2
+1
+
+The frequency of all elements of array :
+4 occurs 2 times
+5 occurs 1 times
+3 occurs 1 times
+6 occurs 1 times
+7 occurs 1 times
+8 occurs1 times
+9 occurs 1 times
+2 occurs 1 times
+1 occurs 1 times
+```
+## C++ Implementation
+### 17. Write a C++ program to count frequency of each element in an array.
+```c
+//Write a C++ program to count frequency of each element in an array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr[10], fr[10],i,j,ctr;
+    cout<<"Input 10 elements in the array :\n";
+    for(i=0; i<10; i++)
+    {
+        cin>>arr[i];
+        fr[i] = -1;
+    }
+    for(i=0; i<10; i++)
+    {
+        ctr = 1;
+        for(j=i+1; j<10; j++)
+        {
+            if(arr[i]==arr[j])
+            {
+                ctr++;
+                fr[j] = 0;
+            }
+        }
+
+        if(fr[i]!=0)
+        {
+            fr[i] = ctr;
+        }
+    }
+    cout<<"\nThe frequency of all elements of array : \n";
+    for(i=0; i<10; i++)
+    {
+        if(fr[i]!=0)
+        {
+            cout<<arr[i]<<" occurs "<<fr[i]<<" times\n" ;
+        }
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+4
+5
+4
+3
+6
+7
+8
+9
+2
+1
+
+The frequency of all elements of array :
+4 occurs 2 times
+5 occurs 1 times
+3 occurs 1 times
+6 occurs 1 times
+7 occurs 1 times
+8 occurs1 times
+9 occurs 1 times
+2 occurs 1 times
+1 occurs 1 times
+```
+
+## Java Implementation
+### 17. Write a Java program to count frequency of each element in an array.
+```js
+//Write a Java program to count frequency of each element in an array.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr[]=new int[10],fr[]=new int[10],i,j,ctr;
+        System.out.println("Input 10 elements in the array :\n");
+        for(i=0; i<10; i++)
+        {
+            arr[i]=z.nextInt();
+            fr[i] = -1;
+        }
+        for(i=0; i<10; i++)
+        {
+            ctr = 1;
+            for(j=i+1; j<10; j++)
+            {
+                if(arr[i]==arr[j])
+                {
+                    ctr++;
+                    fr[j] = 0;
+                }
+            }
+            if(fr[i]!=0)
+            {
+                fr[i] = ctr;
+            }
+        }
+        System.out.println("\nThe frequency of all elements of array : \n");
+        for(i=0; i<10; i++)
+        {
+            if(fr[i]!=0)
+            {
+                System.out.println(arr[i] +"occurs" +fr[i]+ "times\n");
+            }
+        }
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+4
+5
+4
+3
+6
+7
+8
+9
+2
+1
+
+The frequency of all elements of array :
+4 occurs 2 times
+5 occurs 1 times
+3 occurs 1 times
+6 occurs 1 times
+7 occurs 1 times
+8 occurs1 times
+9 occurs 1 times
+2 occurs 1 times
+1 occurs 1 times
+```

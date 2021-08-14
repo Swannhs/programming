@@ -1,0 +1,79 @@
+---
+title: Write a C/C++/Java program to print all the alphabets using a pointer.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 21. Write a C program to print all the alphabets using a pointer.
+```c
+//Write a C program to print all the alphabets using a pointer.
+#include<stdio.h>
+void main()
+{
+    char *C;
+    char *c;
+    C = (char*)malloc(sizeof(char));    // assigning memory to c
+    printf("Upper Case\n");
+    *C = 'A';
+    while (*C <= 'Z')
+    {
+        printf("%c  ", *C);
+        *C = *C + 1;
+    }
+    printf("\n");
+    c = (char*)malloc(sizeof(char));    // assigning memory to c
+    printf("Lower Case\n");
+    *c = 'a';
+    while (*c <= 'z')
+    {
+        printf("%c  ", *c);
+        *c = *c + 1;
+    }
+}
+```
+### Output
+```
+Upper Case
+A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
+Lower Case
+a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z
+```
+## C++ Implementation
+### 21. Write a C++ program to print all the alphabets using a pointer.
+```c
+//Write a C++ program to print all the alphabets using a pointer.
+#include<iostream>
+using namespace std;
+int main()
+{
+    char *C;
+    char *c;
+    C = (char*)malloc(sizeof(char));	// assigning memory to c
+    cout<<("Upper Case\n");
+    *C = 'A';
+    while (*C <= 'Z')
+    {
+        cout<<*C;
+        *C = *C + 1;
+    }
+    printf("\n");
+    c = (char*)malloc(sizeof(char));	// assigning memory to c
+    cout<<("Lower Case\n");
+    *c = 'a';
+    while (*c <= 'z')
+    {
+        cout<< *c;
+        *c = *c + 1;
+    }
+}
+```
+### Output
+```
+Upper Case
+A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
+Lower Case
+a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z
+```

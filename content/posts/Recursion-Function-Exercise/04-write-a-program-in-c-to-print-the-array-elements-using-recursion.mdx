@@ -1,0 +1,76 @@
+---
+title: Write a C/C++/Java to print the array elements using recursion.
+category: Recursion Function Index
+tags: ['recursion']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 4. Write a C to print the array elements using recursion.
+```c
+//Write a C to print the array elements using recursion.
+#include<stdio.h>
+int main(){
+    int k[]={1,2,3,4,5};
+    arrayPrint(sizeof(k)/sizeof(int),k,0);
+}
+int arrayPrint(int length,int k[],int i){
+    if(length<=i){
+        return 0;
+    }
+    printf("%d",k[i]);
+    arrayPrint(length,k,++i);
+}
+```
+### Output
+```
+12345
+```
+## C++ Implementation
+### 4. Write a C++ to print the array elements using recursion.
+```c
+//Write a C++ to print the array elements using recursion.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int k[]={1,2,3,4,5};
+    arrayPrint(sizeof(k)/sizeof(int),k,0);
+}
+int arrayPrint(int length,int k[],int i){
+    if(length<=i){
+        return 0;
+    }
+    cout << k[i];
+    arrayPrint(length,k,++i);
+}
+```
+### Output
+```
+12345
+```
+## Java Implementation
+### 4. Write a Java to print the array elements using recursion.
+```js
+//Write a Java to print the array elements using recursion.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+      Scanner z = new Scanner(System.in);
+      int k[]={1,2,3,4,5};
+      arrayPrint(sizeof(k)/sizeof(int),k,0);
+    }
+    static int febo(int n){
+      if(length<=i){
+          return 0;
+      }
+      System.out.printf(" " + k[i]);
+      arrayPrint(length,k,++i);
+    }
+}
+```
+### Output
+```
+12345
+```

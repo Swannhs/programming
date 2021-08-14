@@ -1,0 +1,188 @@
+---
+title: Write a C/C++/Java program to calculate sum of digits of a number.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 15. Write a C program to calculate sum of digits of a number.
+```c
+//Write a C program to calculate sum of digits of a number.
+//Using for loop
+#include<stdio.h>
+void main()
+{
+    int i,n,sum=0,m;
+    printf("Enter a number:");
+    scanf("%d",&n);
+    for(i=n;n>0;n=n/10)
+    {
+      m=n%10;
+      sum=sum+m;
+    }
+    printf("Sum is=%d",sum);
+}
+
+//Using while loop
+#include<stdio.h>
+void main()
+{
+    int i,n,sum=0,m;
+    printf("Enter a number:");
+    scanf("%d",&n);
+    i=n;
+    while(n>0)
+    {
+      m=n%10;
+      sum=sum+m;
+    }
+    n=n/10;
+    printf("Sum is=%d",sum);
+}
+//Using do while loop
+#include<stdio.h>
+void main()
+{
+    int n,sum=0,m;
+    printf("Enter a number:");
+    scanf("%d",&n);
+    do
+    {
+        m=n%10;
+        sum=sum+m;
+        n=n/10;
+    }
+    while(n>0);
+    printf("Sum is =%d",sum);
+}
+```
+### Output
+```
+Enter a number:5
+Sum is=5
+```
+
+## C++ Implementation
+### 15. Write a C++ program to calculate sum of digits of a number.
+```c
+//Write a C++ program to calculate sum of digits of a number.
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,n,sum=0,m;
+    cout << "Enter a number:";
+    cin >> n;
+    for(i=n;n>0;n=n/10)
+    {
+        m=n%10;
+        sum=sum+m;
+    }
+    cout << "Sum is=" << sum;
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,n,sum=0,m;
+    cout << "Enter a number:";
+    cin >> n;
+    i=n;
+    while(n>0)
+    {
+      m=n%10;
+      sum=sum+m;
+    }
+    n=n/10;
+    cout << "Sum is=" << sum;
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,sum=0,m;
+    cout << "Enter a number:";
+    cin >> n;
+    do
+    {
+        m=n%10;
+        sum=sum+m;
+        n=n/10;
+    }
+    while(n>0);
+    cout << "Sum is=" << sum;
+}
+```
+### Output
+```
+Enter a number:5
+Sum is=5
+```
+
+## Java Implementation
+### 15. Write a Java program to calculate sum of digits of a number.
+```js
+//Write a Java program to calculate sum of digits of a number.
+// Using for loop
+import java.util.Scanner;.
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z = new Scanner(System.in);
+          int i,n,sum=0,m;
+          System.out.println("Enter a number:");
+          n = z.nextInt();
+          for(i=n;n>0;n=n/10)
+          {
+              m=n%10;
+              sum=sum+m;
+          }
+          System.out.println("Sum is="+sum);
+    }
+}
+// Using while loop
+import java.util.Scanner;.
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z = new Scanner(System.in);
+          int i,n,sum=0,m;
+          System.out.println("Enter a number:");
+          n = z.nextInt();
+          i=n;
+          while(n>0)
+          {
+            m=n%10;
+            sum=sum+m;
+          }
+          n=n/10;
+          System.out.println("Sum is="+sum);
+    }
+}
+// Using do while loop
+import java.util.Scanner;.
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z = new Scanner(System.in);
+          int i,n,sum=0,m;
+          System.out.println("Enter a number:");
+          n = z.nextInt();
+          do
+          {
+              m=n%10;
+              sum=sum+m;
+              n=n/10;
+          }
+          while(n>0);
+          System.out.println("Sum is="+sum);
+    }
+}
+```
+### Output
+```
+Enter a number:5
+Sum is=5
+```

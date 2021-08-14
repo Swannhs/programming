@@ -1,0 +1,154 @@
+---
+title: Write a C/C++/Java program to write-a-c-program-to-put-even-and-odd-elements-of-array-in-two-separate-array
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 21. Write a C program to write-a-c-program-to-put-even-and-odd-elements-of-array-in-two-separate-array
+```c
+//Write a C program to write-a-c-program-to-put-even-and-odd-elements-of-array-in-two-separate-array
+#include <stdio.h>
+void main()
+{
+  int arr[10], oar[10], ear[10],i,j=0,k=0;
+  printf("Enter 10 elements of an array- \n");
+        for (i = 0; i < 10; i++)
+        {
+            scanf("%d", &arr[i]);
+        }
+        for (i = 0; i < 10; i++)
+        {
+            if (arr[i] % 2 == 0)
+            {
+                ear[j] = arr[i];
+                j++;
+            }
+            else
+            {
+                oar[k] = arr[i];
+                k++;
+            }
+        }
+        printf("The elements of odd array are- \n");
+        for (i = 0; i < k; i++)
+        {
+            printf("%d  ", oar[i]);
+        }
+        printf("\nThe elements of even array are- \n");
+        for (i = 0; i < j; i++)
+        {
+            printf("%d  ", ear[i]);
+        }
+}
+```
+### Output
+```
+Enter 10 elements of an array-
+4 5 3 2 6 7 8 9 1 2
+The elements of odd array are-
+5 3 7 9 1
+The elements of even array are-
+4 2 6 8 2
+```
+## C++ Implementation
+### 21. Write a C++ program to write-a-c-program-to-put-even-and-odd-elements-of-array-in-two-separate-array
+```c
+//Write a C++ program to write-a-c-program-to-put-even-and-odd-elements-of-array-in-two-separate-array
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr[10], oar[10], ear[10],i,j=0,k=0;
+    cout<<"Enter 10 elements of an array- \n";
+    for (i = 0; i < 10; i++)
+    {
+        cin>>arr[i];
+    }
+    for (i = 0; i < 10; i++)
+    {
+        if (arr[i] % 2 == 0)
+        {
+            ear[j] = arr[i];
+            j++;
+        }
+        else
+        {
+            oar[k] = arr[i];
+            k++;
+        }
+    }
+    cout<<"The elements of odd array are- \n";
+    for (i = 0; i < k; i++)
+    {
+        cout<<oar[i]<<"  ";
+    }
+    cout<<"\nThe elements of even array are- \n";
+    for (i = 0; i < j; i++)
+    {
+        cout<<ear[i]<<"  ";
+    }
+}
+```
+### Output
+```
+Enter 10 elements of an array-
+4 5 3 2 6 7 8 9 1 2
+The elements of odd array are-
+5 3 7 9 1
+The elements of even array are-
+4 2 6 8 2
+```
+
+## Java Implementation
+### 21. Write a Java program to write-a-c-program-to-put-even-and-odd-elements-of-array-in-two-separate-array
+```js
+//Write a Java program to write-a-c-program-to-put-even-and-odd-elements-of-array-in-two-separate-array
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr[]=new int[10], oar[]=new int[10], ear[]=new int[10],i,j=0,k=0;
+        System.out.println("Enter 10 elements of an array- \n");
+        for (i = 0; i < 10; i++)
+        {
+            arr[i]=z.nextInt();
+        }
+        for (i = 0; i < 10; i++)
+        {
+            if (arr[i] % 2 == 0)
+            {
+                ear[j] = arr[i];
+                j++;
+            }
+            else
+            {
+                oar[k] = arr[i];
+                k++;
+            }
+        }
+        System.out.println("The elements of odd array are- \n");
+        for (i = 0; i < k; i++)
+        {
+            System.out.println(oar[i]+"  ");
+        }
+        System.out.println("\nThe elements of even array are- \n");
+        for (i = 0; i < j; i++)
+        {
+            System.out.println(ear[i]+"  ");
+        }
+    }
+}
+```
+### Output
+```
+Enter 10 elements of an array-
+4 5 3 2 6 7 8 9 1 2
+The elements of odd array are-
+5 3 7 9 1
+The elements of even array are-
+4 2 6 8 2
+```

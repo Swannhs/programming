@@ -1,0 +1,79 @@
+---
+title: Write a C/C++/Java program to print Hello World.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+## C Implementation
+### Program-8: Write a complete C Program to input any Capital letter and display it with small letter.
+```c
+/*Write a complete C Program to input any Capital letter and display it with small letter. */
+#include <stdio.h>
+void main()
+{
+    char lower, upper;
+    printf("Please input a lowercase character: ");
+    scanf("%c", &lower);
+    if(lower >= 'a' && lower <= 'z'){
+         upper = ('A' + lower - 'a');
+    }
+    else{
+        upper = lower;
+    }
+    printf("\nThe uppercase equivalent is: %c", upper);
+}
+```
+### Output
+```
+Input: Please input a lowercase character: a
+Output: The uppercase equivalent is: A
+```
+## C++ Implementation
+### Program-8: Write a complete C++ Program to input any Capital letter and display it with small letter.
+```c
+/*Write a complete C++ Program to input any Capital letter and display it with small letter. */
+#include <iostream>
+using namespace std;
+int main()
+{
+    char lower, upper;
+    cout << "Please input a lowercase character: ";
+    cin >> lower;
+    if(lower >= 'a' && lower <= 'z'){
+        upper = ('A' + lower - 'a');
+    }
+    else{
+        upper = lower;
+    }
+    cout << "\nThe uppercase equivalent is: " << upper;
+}
+```
+### Output
+```
+Input: Please input a lowercase character: a
+Output: The uppercase equivalent is:  A
+```
+## Java Implementation
+### Program-8: Write a complete Java Program to input any Capital letter and display it with small letter.
+```js
+/*Write a complete Java Program to input any Capital letter and display it with small letter. */
+public class Funycode {
+      char lower, upper;
+      System.out.println("Please input a lowercase character: ");
+      Scanner sc=new Scanner(System.in);
+      lower=sc.next().charAt(0);
+      if(lower >= 'a' && lower <= 'z'){
+          upper = (char) ('A' + lower - 'a');
+      }
+      else{
+          upper = lower;
+      }
+      System.out.println("The uppercase equivalent is: " + upper);
+}
+```
+### Output
+```
+Input: Please input a lowercase character: a
+Output: The uppercase equivalent is: A
+```

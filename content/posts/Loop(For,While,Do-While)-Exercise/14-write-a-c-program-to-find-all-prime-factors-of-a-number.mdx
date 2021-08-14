@@ -1,0 +1,325 @@
+---
+title: Write a C/C++/Java find all prime factors of a number.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 14. Write a C program to find all prime factors of a number.
+```c
+//Write a C program to find all prime factors of a number.
+//Using for loop
+#include <stdio.h>
+int main()
+{
+    int i, j, num, count;
+    scanf("%d", &num);
+    printf("All Prime Factors of %d are: \n", num);
+    for(i=2; i<=num; i++)
+    {
+        if(num%i==0)
+        {
+            count++;
+            for(j=2; j<=i/2; j++)
+            {
+                if(i%j==0)
+                {
+                     count = 0;
+                    break;
+                }
+            }
+            if(count >0)
+            {
+                printf("%d  ", i);
+            }
+        }
+    }
+    return 0;
+}
+
+//Using while loop
+#include <stdio.h>
+int main()
+{
+    int i, j, num, count;
+    scanf("%d", &num);
+    printf("All Prime Factors of %d are: \n", num);
+    i=2;
+    while(i<=num)
+    {
+        if(num%i==0)
+        {
+            count++;
+            j=2;
+            while(j<=i/2)
+            {
+                if(i%j==0)
+                {
+                    count = 0;
+                    break;
+                }
+                j++;
+            }
+            if(count >0)
+            {
+                printf("%d  ", i);
+            }
+        }
+        i++;
+    }
+    return 0;
+}
+//Using do while loop
+#include <stdio.h>
+int main()
+{
+    int i, j, num, count;
+    scanf("%d", &num);
+    printf("All Prime Factors of %d are: \n", num);
+    i=2;
+    do
+    {
+        if(num%i==0)
+        {
+            count++;
+            j=2;
+            while(j<=i/2)
+            {
+                if(i%j==0)
+                {
+                    count = 0;
+                    break;
+                }
+                j++;
+            }
+            if(count >0)
+            {
+                printf("%d  ", i);
+            }
+        }
+        i++;
+    }
+    while(i<=num);
+    return 0;
+}
+```
+### Output
+```
+input 5
+All Prime Factors of 5 are: 5
+```
+
+## C++ Implementation
+### 6. Write a C++ program to find all prime factors of a number.
+```c
+//Write a C++ program to find all prime factors of a number.
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i, j, num, count;
+    cin >> num;
+    cout << ("All Prime Factors of " << num << " are: \n";
+    for(i=2; i<=num; i++)
+    {
+        if(num%i==0)
+        {
+            count++;
+            for(j=2; j<=i/2; j++)
+            {
+                if(i%j==0)
+                {
+                     count = 0;
+                    break;
+                }
+            }
+            if(count >0)
+            {
+                cout << " " << i;
+            }
+        }
+    }
+    return 0;
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i, j, num, count;
+    cin >> num;
+    cout << ("All Prime Factors of " << num << " are: \n";
+    i=2;
+    while(i<=num)
+    {
+        if(num%i==0)
+        {
+            count++;
+            j=2;
+            while(j<=i/2)
+            {
+                if(i%j==0)
+                {
+                    count = 0;
+                    break;
+                }
+                j++;
+            }
+            if(count >0)
+            {
+                cout << " " << i;
+            }
+        }
+        i++;
+    }
+    return 0;
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i, j, num, count;
+    cin >> num;
+    cout << ("All Prime Factors of " << num << " are: \n";
+    i=2;
+    do
+    {
+        if(num%i==0)
+        {
+            count++;
+            j=2;
+            while(j<=i/2)
+            {
+                if(i%j==0)
+                {
+                    count = 0;
+                    break;
+                }
+                j++;
+            }
+            if(count >0)
+            {
+                cout << " " << i;
+            }
+        }
+        i++;
+    }
+    while(i<=num);
+    return 0;
+}
+```
+### Output
+```
+input 5
+All Prime Factors of 5 are: 5
+```
+
+## Java Implementation
+### 6. Write a Java program to find all prime factors of a number.
+```js
+//Write a Java program to find all prime factors of a number.
+// Using for loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z = new Scanner(System.in);
+          int i, j, num, count;
+          num = z.nextInt();
+          System.out.println("All Prime Factors of " + num + " are: \n");
+          for(i=2; i<=num; i++)
+          {
+              if(num%i==0)
+              {
+                  count++;
+                  for(j=2; j<=i/2; j++)
+                  {
+                      if(i%j==0)
+                      {
+                           count = 0;
+                          break;
+                      }
+                  }
+                  if(count >0)
+                  {
+                      System.out.println("  "+ i);
+                  }
+              }
+          }
+    }
+}
+// Using while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z = new Scanner(System.in);
+          int i, j, num, count;
+          num = z.nextInt();
+          System.out.println("All Prime Factors of " + num + " are: \n");
+          i=2;
+          while(i<=num)
+          {
+              if(num%i==0)
+              {
+                  count++;
+                  j=2;
+                  while(j<=i/2)
+                  {
+                      if(i%j==0)
+                      {
+                           count = 0;
+                          break;
+                      }
+                      j++;
+                  }
+                  if(count >0)
+                  {
+                      System.out.println("  "+ i);
+                  }
+              }
+              i++;
+          }
+    }
+}
+// Using do while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z = new Scanner(System.in);
+          int i, j, num, count;
+          num = z.nextInt();
+          System.out.println("All Prime Factors of " + num + " are: \n");
+          i=2;
+          do
+          {
+              if(num%i==0)
+              {
+                  count++;
+                  j=2;
+                  do
+                  {
+                      if(i%j==0)
+                      {
+                           count = 0;
+                          break;
+                      }
+                      j++;
+                  }while(j<=i/2);
+                  if(count >0)
+                  {
+                      System.out.println("  "+ i);
+                  }
+              }
+              i++;
+          }while(i<=num);
+    }
+}
+```
+### Output
+```
+input 5
+All Prime Factors of 5 are: 5
+```

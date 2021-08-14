@@ -1,0 +1,102 @@
+---
+title: Write a C/C++/Java program to accept a coordinate point in a XY coordinate system and determine in which quadrant the coordinate point lies.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-8:Write a C program to accept a coordinate point in a XY coordinate system and determine in which quadrant the coordinate point lies.
+```c
+/*Write a C program to accept a coordinate point in a XY coordinate system and determine in which quadrant the coordinate point lies.*/
+#include<stdio.h>
+int main()
+{
+    int x,y;
+    printf("Enter two Point");
+    scanf("%d %d",&x,&y);
+    if(x>0 && y>0)
+        printf("(%d,%d) in the first quadrant",x,y);
+    else if(x<0 && y>0)
+        printf("(%d,%d) in the second quadrant",x,y);
+    else if(x<0 && y<0)
+        printf("(%d,%d) in the third quadrant",x,y);
+    else if(x>0 && y<0)
+        printf("(%d,%d) in the fourth quadrant",x,y);
+    else
+        printf("(%d,%d) lies at the origin",x,y);
+}
+```
+### Output
+```
+Enter two point:
+4
+5
+4,5 in the first quadrant
+```
+
+## C++ Implementation
+### Program-8:Write a C++ program to accept a coordinate point in a XY coordinate system and determine in which quadrant the coordinate point lies.
+```c
+/*Write a C++ program to accept a coordinate point in a XY coordinate system and determine in which quadrant the coordinate point lies.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int x,y;
+    cout<<"enter two point-\n";
+    cin>>x>>y;
+    if(x>0 && y>0)
+        cout<<x<<" & "<<y<<" in the first quadrant";
+    else if(x<0 && y>0)
+        cout<<x<<" & "<<y<<" in the second quadrant";
+    else if(x<0 && y<0)
+        cout<<x<<" & "<<y<<" in the third quadrant";
+    else if(x>0 && y<0)
+        cout<<x<<" & "<<y<<" in the fourth quadrant";
+    else
+        cout<<x<<" & "<<y<<" lies at the origin";
+}
+```
+### Output
+```
+Enter two point:
+4
+5
+4 & 5 in the first quadrant
+```
+
+## Java Implementation
+### Program-8:Write a java program to accept a coordinate point in a XY coordinate system and determine in which quadrant the coordinate point lies.
+```js
+/*Write a java program to accept a coordinate point in a XY coordinate system and determine in which quadrant the coordinate point lies.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int x,y;
+        System.out.println("Enter two point:");
+        x=z.nextInt();
+        y=z.nextInt();
+        if(x>0 && y>0)
+            System.out.println(x +" & "+ +y+ " in the first quadrant");
+        else if(x<0 && y>0)
+            System.out.println(x +" & "+ +y+ " in the second quadrant");
+        else if(x<0 && y<0)
+            System.out.println(x +" & "+ +y+ " in the third quadrant");
+        else if(x>0 && y<0)
+            System.out.println(x +" & "+ +y+ " in the fourth quadrant");
+        else
+            System.out.println(x +" & "+ +y+ " lies in the origin");
+    }
+}
+```
+### Output
+```
+Enter two point:
+4
+5
+4 & 5 in the first quadrant
+```

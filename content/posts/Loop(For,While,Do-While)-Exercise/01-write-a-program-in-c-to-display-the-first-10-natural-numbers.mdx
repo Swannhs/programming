@@ -1,0 +1,145 @@
+---
+title: Write a C/C++/Java program to display the first 10 natural numbers
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-1: Write a program in C to display the first 10 natural numbers.
+```c
+//Write a C to display the first 10 natural numbers.
+#include <stdio.h>
+/*Write a program in C to display the first 10 natural numbers.*/
+/*Using for loop*/
+#include<stdio.h>
+void main()
+{
+   int i;
+   for(i=1;i<=10;i++)
+   {
+      printf("%d ",i);
+   }
+}
+/*Using while loop*/
+#include<stdio.h>
+void main()
+{
+   int i=1;
+   while(i<=10)
+   {
+      printf("%d ",i);
+      i++;
+   }
+}
+/*Using while loop*/
+#include<stdio.h>
+void main()
+{
+   int i=1;
+   do
+   {
+      printf("%d ",i);
+      i++;
+   }
+   while(i<=10);
+}
+```
+### Output
+```
+Hello, World!
+```
+
+## C++ Implementation
+### 1. Write a C++ program to print Hello World.
+```c
+//Write a C++ program to print Hello World.
+/*Write a program in C++ to display the first 10 natural numbers.*/
+/*Using for loop*/
+#include<iostream>
+using namespace std;
+int main()
+{
+   int i;
+   for(i=1;i<=10;i++)
+   {
+      cout << i << " ";
+   }
+}
+/*Using while loop*
+#include<iostream>
+using namespace std;
+int main()
+{
+   i=1;
+   while(i<=10)
+   {
+      cout << i << " ";
+      i++;
+   }
+}
+/*Using do while loop*/
+#include<iostream>
+using namespace std;
+int main()
+{
+   int i=1;
+   do
+   {
+      cout << i << " ";
+      i++;
+   }
+   while(i<=10);
+}
+```
+### Output
+```
+Output: 1 2 3 4 5 6 7 8 9
+```
+
+## Java Implementation
+### Program-1: Write a program in Java to display the first 10 natural numbers.
+```js
+/*Write a program in Java to display the first 10 natural numbers.*/
+/*Using for loop*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+    int i;
+    for(i=1;i<=10;i++)
+    {
+        System.out.println(i + " ");
+    }
+  }
+}
+/*Using while loop*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+       i=1;
+       while(i<=10)
+       {
+       System.out.println(i + " ");
+       i++;
+       }
+   }
+}
+/*Using do while loop*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+       i=1;
+       do
+       {
+         System.out.println(i + " ");
+         i++;
+       }
+       while(i<=10);
+    }
+}
+```
+### Output
+```
+Output: 1 2 3 4 5 6 7 8 9
+```

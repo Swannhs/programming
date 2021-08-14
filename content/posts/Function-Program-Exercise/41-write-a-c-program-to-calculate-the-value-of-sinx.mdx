@@ -1,0 +1,148 @@
+---
+title: Write a C/C++/Java program to find the square of any number using the function.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 41. Write a C program to Calculate the Value of sin(x)
+```c
+//Write a C program to Calculate the Value of sin(x)
+#include<stdio.h>
+
+float Sinx(float x,int n)
+{
+    int fact,sign=-1,i,j;
+    float p,sum=0.0;
+    for (i = 1; i <= n; i += 2)
+    {
+        p = 1;
+        fact = 1;
+        for (j = 1; j <= i; j++)
+        {
+            p = p * x;
+            fact = fact * j;
+        }
+        sign =  (- 1) * sign;
+        sum += sign * p / fact;
+    }
+    return sum;
+}
+
+int main()
+{
+    float x;
+    int n;
+    printf("Enter value of x: ");
+    scanf("%f",&x);
+    printf("Enter value of n: ");
+    scanf("%d",&n);
+
+    float val=Sinx(x,n);
+
+    printf("sin(%0.2f) = %.2f", x, val);
+    return 0;
+}
+```
+### Output
+```
+Enter value of x: 3
+Enter value of n: 4
+sin(3.00) = -1.50
+```
+
+## C++ Implementation
+### 41. Write a C++ program to Calculate the Value of sin(x)
+```c
+//Write a C++ program to Calculate the Value of sin(x)
+
+#include<iostream>
+using namespace std;
+
+float Sinx(float x,int n)
+{
+    int fact,sign=-1,i,j;
+    float p,sum=0.0;
+    for (i = 1; i <= n; i += 2)
+    {
+        p = 1;
+        fact = 1;
+        for (j = 1; j <= i; j++)
+        {
+            p = p * x;
+            fact = fact * j;
+        }
+        sign =  (- 1) * sign;
+        sum += sign * p / fact;
+    }
+    return sum;
+}
+
+int main()
+{
+    float x;
+    int n;
+    cout << "Enter value of x: ";
+    cin >> x;
+    cout << "Enter value of n: ";
+    cin >> n;
+
+    float val=Sinx(x,n);
+
+    cout << "sin(" << x << ") = "<< val;
+    return 0;
+}
+```
+### Output
+```
+Enter value of x: 3
+Enter value of n: 4
+sin(3.00) = -1.50
+```
+
+## Java Implementation
+### 41. Write a Java program to Calculate the Value of sin(x)
+```js
+//Write a Java program to Calculate the Value of sin(x)
+import java.util.Scanner;
+public class Funycode {
+    static float Sinx(float x,int n)
+    {
+        int fact,sign=-1,i,j;
+        float p,sum=0;
+        for (i = 1; i <= n; i += 2)
+        {
+            p = 1;
+            fact = 1;
+            for (j = 1; j <= i; j++)
+            {
+                p = p * x;
+                fact = fact * j;
+            }
+            sign =  (- 1) * sign;
+            sum += sign * p / fact;
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        float x;
+        int n;
+        System.out.println("Enter value of x: ");
+        x = z.nextFloat();
+        System.out.println("Enter value of n: ");
+        n = z.nextInt();
+        float val=Sinx(x,n);
+        System.out.println("sin(" + x + ") = "+ val);
+    }
+}
+```
+### Output
+```
+Enter value of x: 3
+Enter value of n: 4
+sin(3.00) = -1.50
+```

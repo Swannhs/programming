@@ -1,0 +1,161 @@
+---
+title: Write a C/C++/Java program to count total number of notes in given amount.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-29: Write a C program to count total number of notes in given amount.
+```c
+/*Write a C program to count total number of notes in given amount.*/
+#include<stdio.h>
+void main()
+{
+    int n,a,b,c,d,e,f,g,h,i;
+    printf("Enter given amount-:");
+    scanf("%d",&n);
+    a=n/1000;
+    if(a>0)
+        printf("tk1000=%d\n",a);
+    b=(n%1000)/500;
+    if(b>0)
+        printf("tk500=%d\n",b);
+    c=((n%1000)%500)/100;
+    if(c>0)
+        printf("tk100=%d\n",c);
+    d=(((n%1000)%500)%100)/50;
+    if(d>0)
+        printf("tk50=%d\n",d);
+    e=((((n%1000)%500)%100)%50)/20;
+    if(e>0)
+        printf("tk20=%d\n",e);
+    f=(((((n%1000)%500)%100)%50)%20)/10;
+    if(f>0)
+        printf("tk10=%d\n",f);
+    g=((((((n%1000)%500)%100)%50)%20)%10)/5;
+    if(g>0)
+        printf("tk5=%d\n",g);
+    h=(((((((n%1000)%500)%100)%50)%20)%10)%5)/2;
+    if(h>0)
+        printf("tk2=%d\n",h);
+    i=((((((((n%1000)%500)%100)%50)%20)%10)%5)%2);
+    if(i==1)
+        printf("tk1=%d",i);
+}
+```
+### Output
+```
+Enter given amount-:
+2534
+tk1000=2
+tk500=1
+tk20=1
+tk10=1
+tk2=2
+```
+
+## C++ Implementation
+### Program-29: Write a C++ program to count total number of notes in given amount.
+```c
+/*Write a C++ program to count total number of notes in given amount.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,a,b,c,d,e,f,g,h,i;
+    cout<<"given amount-";
+    cin>>n;
+    a=n/1000;
+    if(a>0)
+        cout<<"tk1000="<<a<<"\n";
+    b=(n%1000)/500;
+    if(b>0)
+        cout<<"tk500="<<b<<"\n";
+    c=((n%1000)%500)/100;
+    if(c>0)
+        cout<<"tk100="<<c<<"\n";
+    d=(((n%1000)%500)%100)/50;
+    if(d>0)
+        cout<<"tk50="<<d<<"\n";
+    e=((((n%1000)%500)%100)%50)/20;
+    if(e>0)
+        cout<<"tk20="<<e<<"\n";
+    f=(((((n%1000)%500)%100)%50)%20)/10;
+    if(f>0)
+        cout<<"tk10="<<f<<"\n";
+    g=((((((n%1000)%500)%100)%50)%20)%10)/5;
+    if(g>0)
+        cout<<"tk5="<<g<<"\n";
+    h=(((((((n%1000)%500)%100)%50)%20)%10)%5)/2;
+    if(h>0)
+        cout<<"tk2="<<h<<"\n";
+    i=((((((((n%1000)%500)%100)%50)%20)%10)%5)%2);
+    if(i==1)
+        cout<<"tk1="<<i<<"\n";
+}
+```
+### Output
+```
+Enter given amount-:
+2534
+tk1000=2
+tk500=1
+tk20=1
+tk10=1
+tk2=2
+```
+
+## Java Implementation
+### Program-29: Write a java program to count total number of notes in given amount.
+```js
+/*Write a java program to count total number of notes in given amount.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int n,a,b,c,d,e,f,g,h,i;
+        System.out.print("Enter given amount-:\n");
+        n=z.nextInt();
+        a=n/1000;
+        if(a>0)
+            System.out.println("tk1000="+a+"\n");
+        b=(n%1000)/500;
+        if(b>0)
+            System.out.println("tk500="+b+"\n");
+        c=((n%1000)%500)/100;
+        if(c>0)
+            System.out.println("tk100="+c+"\n");
+        d=(((n%1000)%500)%100)/50;
+        if(d>0)
+            System.out.println("tk50="+d+"\n");
+        e=((((n%1000)%500)%100)%50)/20;
+        if(e>0)
+            System.out.println("tk20="+e+"\n");
+        f=(((((n%1000)%500)%100)%50)%20)/10;
+        if(f>0)
+            System.out.println("tk10="+f+"\n");
+        g=((((((n%1000)%500)%100)%50)%20)%10)/5;
+        if(g>0)
+            System.out.println("tk5="+g+"\n");
+        h=(((((((n%1000)%500)%100)%50)%20)%10)%5)/2;
+        if(h>0)
+            System.out.println("tk2="+h+"\n");
+        i=((((((((n%1000)%500)%100)%50)%20)%10)%5)%2);
+        if(i==1)
+            System.out.println("tk1="+i+"\n");
+    }
+}
+```
+### Output
+```
+Enter given amount-:
+2534
+tk1000=2
+tk500=1
+tk20=1
+tk10=1
+tk2=2
+```

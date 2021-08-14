@@ -1,0 +1,183 @@
+---
+title: Write a C/C++/Java program to find first occurrence of a word in a given string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 26. Write a C program to find first occurrence of a word in a given string.
+```c
+//Write a C program to find first occurrence of a word in a given string.
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[50], word[50];
+    int i, index, found = 0;
+    printf("Enter any string: ");
+    gets(str);
+    printf("Enter word to  search: ");
+    gets(word);
+    index = 0;
+    while(str[index] != '\0')
+    {
+        if(str[index] == word[0])
+        {
+            i=0;
+            found = 1;
+            while(word[i] != '\0')
+            {
+                if(str[index + i] != word[i])
+                {
+                    found = 0;
+                    break;
+                }
+
+                i++;
+            }
+        }
+        if(found == 1)
+        {
+            break;
+        }
+
+        index++;
+    }
+    if(found == 1)
+    {
+        printf("\n'%s' is found at index %d.", word, index);
+    }
+    else
+    {
+        printf("\n'%s' is not found.", word);
+    }
+
+    return 0;
+}
+```
+### Output
+```
+Enter any string: Hello how are you
+Enter word to  search: you
+
+'you' is found at index 14.
+```
+## C++ Implementation
+### 26. Write a C++ program to find first occurrence of a word in a given string.
+```c
+//Write a C++ program to find first occurrence of a word in a given string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char str[50], word[50];
+    int i, index, found = 0;
+    cout << "Enter any string: ";
+    cin >> str;
+    cout << "Enter word to  search: ";
+    cin >> word;
+    index = 0;
+    while(str[index] != '\0')
+    {
+        if(str[index] == word[0])
+        {
+            i=0;
+            found = 1;
+            while(word[i] != '\0')
+            {
+                if(str[index + i] != word[i])
+                {
+                    found = 0;
+                    break;
+                }
+                i++;
+            }
+        }
+        if(found == 1)
+        {
+            break;
+        }
+
+        index++;
+    }
+    if(found == 1)
+    {
+        cout << "\n" << word << " is found at index " << index;
+    }
+    else
+    {
+        cout << "\n" << word << " is not found.";
+    }
+
+    return 0;
+}
+```
+### Output
+```
+Enter any string: Hello how are you
+Enter word to  search: you
+
+'you' is found at index 14.
+```
+
+## Java Implementation
+### 26. Write a Java program to find first occurrence of a word in a given string.
+```js
+//Write a Java program to find first occurrence of a word in a given string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        char str[50], word[50];
+        int i, index, found = 0;
+        System.out.println("Enter any string: ");
+        str = z.nextLine();
+        System.out.println("Enter word to search: ");
+        word = z.nextLine();
+        index = 0;
+        while(str[index] != '\0')
+        {
+            if(str[index] == word[0])
+            {
+                i=0;
+                found = 1;
+                while(word[i] != '\0')
+                {
+                    if(str[index + i] != word[i])
+                    {
+                        found = 0;
+                        break;
+                    }
+                    i++;
+                }
+            }
+            if(found == 1)
+            {
+                break;
+            }
+            index++;
+        }
+        if(found == 1)
+        {
+            System.out.println(word + " is found at index "+ index);
+        }
+        else
+        {
+            System.out.println(word + " is not found.");
+        }
+    return 0;
+    }
+}
+```
+### Output
+```
+Enter any string: Hello how are you
+Enter word to  search: you
+
+'you' is found at index 14.
+```

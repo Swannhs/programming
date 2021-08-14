@@ -1,0 +1,154 @@
+---
+title: Write a C/C++/Java program to accept batting information of cricket team using structure. It contains player name and runs scored by player. Calculate total runs scored by cricket team.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 13. Write a C program to accept batting information of cricket team using structure. It contains player name and runs scored by player. Calculate total runs scored by cricket team.
+```c
+//Write a C++ program to accept batting information of cricket team using structure. It contains player name and runs scored by player. Calculate total runs scored by cricket team.
+#include<stdio.h>
+struct player{
+    char name[50];
+    int score;
+};
+void input(struct player *a){
+    printf("Enter player name : ");
+    fgets(a->name,sizeof(a->name),stdin);
+    printf("Enter player's score : ");
+    scanf("%d",&a->score);
+    getchar();
+}
+int main(){
+    struct player *b;
+    struct player k[11];
+    int sum=0;
+    for(int i=0;i<11;i++)
+    {
+        b=&k[i];
+        input(b);
+    }
+     for(int i=0;i<11;i++)
+    {
+        sum+=k[i].score;
+        printf("%s -- %d \n",k[i].name,k[i].score);
+    }
+    printf("Total score : ");
+    printf("%d",sum);
+}
+```
+### Output
+```
+Enter player name : a
+Enter player's score : 19
+Enter player name : b
+Enter player's score : 21
+Enter player name : c
+Enter player's score : 23
+Enter player name : d
+Enter player's score : 40
+Enter player name : e
+Enter player's score : 22
+Enter player name : f
+Enter player's score : 28
+Enter player name : g
+Enter player's score : 0
+Enter player name : 0
+Enter player's score : 0
+Enter player name : R
+Enter player's score : 0
+Enter player name : t
+Enter player's score : 0
+Enter player name : k
+Enter player's score : 0
+a-- 19
+b-- 21
+c-- 23
+d-- 40
+e-- 22
+f-- 28
+g-- 0
+0-- 0
+R-- 0
+t-- 0
+k-- 0
+Total score : 153
+```
+
+## C++ Implementation
+### 13. Write a C++ program to accept batting information of cricket team using structure. It contains player name and runs scored by player. Calculate total runs scored by cricket team.
+```c
+//Write a C++ program to accept batting information of cricket team using structure. It contains player name and runs scored by player. Calculate total runs scored by cricket team.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct player{
+    char name[50];
+    int score;
+};
+void input(struct player *a){
+    cout << "Enter player name : ";
+    fgets(a->name,sizeof(a->name),stdin);
+    cout << "Enter player's score : ";
+    scanf("%d",&a->score);
+    getchar();
+}
+int main(){
+    struct player *b;
+    struct player k[11];
+    int sum=0;
+    for(int i=0;i<11;i++)
+    {
+        b=&k[i];
+        input(b);
+    }
+     for(int i=0;i<11;i++)
+    {
+        sum+=k[i].score;
+        cout <<k[i].name << " -- " << k[i].score << endl;
+    }
+    cout << "Total score : ";
+    cout << sum;
+}
+```
+### Output
+```
+Enter player name : a
+Enter player's score : 19
+Enter player name : b
+Enter player's score : 21
+Enter player name : c
+Enter player's score : 23
+Enter player name : d
+Enter player's score : 40
+Enter player name : e
+Enter player's score : 22
+Enter player name : f
+Enter player's score : 28
+Enter player name : g
+Enter player's score : 0
+Enter player name : 0
+Enter player's score : 0
+Enter player name : R
+Enter player's score : 0
+Enter player name : t
+Enter player's score : 0
+Enter player name : k
+Enter player's score : 0
+a-- 19
+b-- 21
+c-- 23
+d-- 40
+e-- 22
+f-- 28
+g-- 0
+0-- 0
+R-- 0
+t-- 0
+k-- 0
+Total score : 153
+```

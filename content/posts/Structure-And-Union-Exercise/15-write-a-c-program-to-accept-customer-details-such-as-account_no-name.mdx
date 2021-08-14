@@ -1,0 +1,142 @@
+---
+title: Write a C/C++/Java program to accept customer details such as: Account_no, Name, Balance using structure. Assume 3 customers in the bank. Write a function to print the account no. and name of each customer whose balance < 100 Rs.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 14. Write a C program to accept customer details such as: Account_no, Name, Balance using structure. Assume 3 customers in the bank. Write a function to print the account no. and name of each customer whose balance < 100 Rs.
+```c
+//Write a C++ program to accept customer details such as: Account_no, Name, Balance using structure. Assume 3 customers in the bank. Write a function to print the account no. and name of each customer whose balance < 100 Rs.
+#include<stdio.h>
+struct account{
+    char Name[50];
+    long int Account_no;
+    double Balance;
+};
+void inputdetails(struct account *a){
+    printf("Name : ");
+    fgets(a->Name,sizeof(a->Name),stdin);
+    printf("account No : ");
+    scanf("%ld",&a->Account_no);
+    printf("enter balance:" );
+    scanf("%lf",&a->Balance);
+    getchar();
+}
+void lowBalanceCheck(struct account *a){
+    if(a->Balance<100){
+        printf("Account Name     : %s",a->Name);
+        printf("Account No       : %ld\n",a->Account_no);
+        printf("Account Balance  : %lf\n",a->Balance);
+    }
+}
+int main(){
+    struct account a,b,c;
+    printf("Enter account details of first client\n");
+    inputdetails(&a);
+    printf("Enter account details of first client\n");
+    inputdetails(&b);
+    printf("Enter account details of first client\n");
+    inputdetails(&c);
+    printf("Low balance check : \n");
+    lowBalanceCheck(&a);
+    lowBalanceCheck(&b);
+    lowBalanceCheck(&c);
+}
+```
+### Output
+```
+Enter account details of first client
+Name : a
+account No : 1
+enter balance:10
+Enter account details of first client
+Name : b
+account No : 2
+enter balance:11
+Enter account details of first client
+Name : c
+account No : 3
+enter balance:12
+Low balance check :
+Account Name     : a
+Account No       : 1
+Account Balance  : 10
+Account Name     : b
+Account No       : 2
+Account Balance  : 11
+Account Name     : c
+Account No       : 3
+Account Balance  : 12
+```
+
+## C++ Implementation
+### 14. Write a C++ program to accept customer details such as: Account_no, Name, Balance using structure. Assume 3 customers in the bank. Write a function to print the account no. and name of each customer whose balance < 100 Rs.
+```c
+//Write a C++ program to accept customer details such as: Account_no, Name, Balance using structure. Assume 3 customers in the bank. Write a function to print the account no. and name of each customer whose balance < 100 Rs.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct account{
+    char Name[50];
+    long int Account_no;
+    double Balance;
+};
+void inputdetails(struct account *a){
+    cout << "Name : ";
+    fgets(a->Name,sizeof(a->Name),stdin);
+    cout << "account No : ";
+    cin >> a->Account_no;
+    cout << "enter balance:" ;
+    cin >> a->Balance;
+    getchar();
+}
+void lowBalanceCheck(struct account *a){
+    if(a->Balance<100){
+        cout << "Account Name     : "<< a->Name;
+        cout << "Account No       : "<< a->Account_no << endl;
+        cout << "Account Balance  : "<< a->Balance << endl;
+    }
+}
+int main(){
+    struct account a,b,c;
+    cout << "Enter account details of first client\n";
+    inputdetails(&a);
+    cout << "Enter account details of first client\n";
+    inputdetails(&b);
+    cout << "Enter account details of first client\n";
+    inputdetails(&c);
+    cout << "Low balance check : \n";
+    lowBalanceCheck(&a);
+    lowBalanceCheck(&b);
+    lowBalanceCheck(&c);
+}
+```
+### Output
+```
+Enter account details of first client
+Name : a
+account No : 1
+enter balance:10
+Enter account details of first client
+Name : b
+account No : 2
+enter balance:11
+Enter account details of first client
+Name : c
+account No : 3
+enter balance:12
+Low balance check :
+Account Name     : a
+Account No       : 1
+Account Balance  : 10
+Account Name     : b
+Account No       : 2
+Account Balance  : 11
+Account Name     : c
+Account No       : 3
+Account Balance  : 12
+```

@@ -1,0 +1,189 @@
+---
+title: Write a C/C++/Java programming to find out maximum and minimum of some values using function which will return an array.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 20. Write a C programming to find out maximum and minimum of some values using function which will return an array.
+```c
+//Write a C program to find the square of any number using the function.
+#include<stdio.h>
+
+int findMAX(int ara[],int n)
+{
+    int mx=ara[0];
+    for(int i=1;i<n;i++)
+    {
+        if(mx<ara[i])
+            mx=ara[i];
+    }
+    return mx;
+}
+
+int findMIN(int ara[],int n)
+{
+    int mn=ara[0];
+    for(int i=1;i<n;i++)
+    {
+        if(mn>ara[i])
+            mn=ara[i];
+    }
+    return mn;
+}
+
+int main()
+{
+    int n;
+    printf("Enter size of Array: ");
+    scanf("%d",&n);
+    int ara[n];
+    printf("Enter elements of Array: ");
+    for(int i=0;i<n;i++)
+        scanf("%d",&ara[i]);
+
+    int mx=findMAX(ara,n);
+    int mn=findMIN(ara,n);
+
+    printf("Maximum value is: %d\n",mx);
+    printf("Minimum value is: %d\n",mn);
+
+    return 0;
+}
+```
+### Output
+```
+Enter size of Array: 3
+Enter elements of Array: 1 2 3
+Maximum value is: 3
+Minimum value is: 1
+```
+
+## C++ Implementation
+### 20. Write a C++ programming to find out maximum and minimum of some values using function which will return an array.
+```c
+//Write a C++ program to find the square of any number using the function.
+
+#include<iostream>
+using namespace std;
+int findMAX(int ara[],int n)
+{
+    int mx=ara[0];
+    for(int i=1;i<n;i++)
+    {
+        if(mx<ara[i])
+            mx=ara[i];
+    }
+    return mx;
+}
+int findMIN(int ara[],int n)
+{
+    int mn=ara[0];
+    for(int i=1;i<n;i++)
+    {
+        if(mn>ara[i])
+            mn=ara[i];
+    }
+    return mn;
+}
+int main()
+{
+    int n;
+    cout << "Enter size of Array: ";
+    cin >> n;
+    int ara[n];
+    cout << "Enter elements of Array: ";
+    for(int i=0;i<n;i++)
+        cin >> ara[i];
+
+    int mx=findMAX(ara,n);
+    int mn=findMIN(ara,n);
+    cout << "Maximum value is: " << mx << endl;
+    cout << "Minimum value is: " << mn;
+    return 0;
+}
+```
+### Output
+```
+Enter size of Array: 3
+Enter elements of Array: 1 2 3
+Maximum value is: 3
+Minimum value is: 1
+```
+
+## Java Implementation
+### 20. Write a Java programming to find out maximum and minimum of some values using function which will return an array.
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    static int findMAX(int ara[],int n)
+    {
+        int mx=ara[0];
+        for(int i=1;i<n;i++)
+        {
+            if(mx<ara[i])
+                mx=ara[i];
+        }
+        return mx;
+    }
+    static int findMIN(int ara[],int n)
+    {
+        int mn=ara[0];
+        for(int i=1;i<n;i++)
+        {
+            if(mn>ara[i])
+                mn=ara[i];
+        }
+        return mn;
+    }
+
+import java.util.Scanner;
+public class Funycode {
+    static int findMAX(int ara[],int n)
+    {
+        int mx=ara[0];
+        for(int i=1;i<n;i++)
+        {
+            if(mx<ara[i])
+                mx=ara[i];
+        }
+        return mx;
+    }
+    static int findMIN(int ara[],int n)
+    {
+        int mn=ara[0];
+        for(int i=1;i<n;i++)
+        {
+            if(mn>ara[i])
+                mn=ara[i];
+        }
+        return mn;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter size of Array: ");
+        n = z.nextInt();
+        int[] ara = new int[n];
+        System.out.println("Enter elements of Array: ");
+        for(int i=0;i<n;i++)
+            ara[i] = z.nextInt();
+
+        int mx=findMAX(ara,n);
+        int mn=findMIN(ara,n);
+        System.out.println("Maximum value is: "+mx);
+        System.out.println("Minimum value is: "+mn);
+    }
+}
+```
+### Output
+```
+Enter size of Array: 3
+Enter elements of Array: 1 2 3
+Maximum value is: 3
+Minimum value is: 1
+```

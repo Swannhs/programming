@@ -1,0 +1,181 @@
+---
+title: Write a C/C++/Java program to find last occurrence of a word in a given string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 27. Write a C program to find last occurrence of a word in a given string.
+```c
+//Write a C program to find last occurrence of a word in a given string.
+#include <stdio.h>
+#include <string.h>
+#define MAX_SIZE 100 // Maximum string size
+
+int main()
+{
+    char str[100],word[100];
+
+    int i, j, index, found;
+    int strLen, wordLen;
+    printf("Enter any string: ");
+    gets(str);
+    printf("Enter any word to search: ");
+    gets(word);
+
+    index = -1;
+    strLen  = strlen(str);
+    wordLen = strlen(word);
+    for(i=0; i<=strLen - wordLen; i++)
+    {
+        found = 1;
+        for(j=0; j<wordLen; j++)
+        {
+
+            if(str[i + j] != word[j])
+            {
+                found = 0;
+                break;
+            }
+        }
+
+        if(found == 1)
+        {
+            index = i;
+        }
+    }
+
+    if(index == -1)
+    {
+        printf("\n'%s' not found.", word);
+    }
+    else
+    {
+        printf("\nLast index of '%s' = %d", word, index+1);
+    }
+
+    return 0;
+}
+```
+### Output
+```
+Enter any string: hello from funycode
+Enter any word to search: funycode
+
+Last index of 'funycode' = 12
+```
+## C++ Implementation
+### 27. Write a C++ program to find last occurrence of a word in a given string.
+```c
+//Write a C++ program to find last occurrence of a word in a given string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char str[100],word[100];
+    int i, j, index, found;
+    int strLen, wordLen;
+    cout << "Enter any string: ";
+    cin >> str;
+    cout << "Enter any word to search: ";
+    cin >> word;
+    index = -1;
+    strLen  = strlen(str);
+    wordLen = strlen(word);
+    for(i=0; i<=strLen - wordLen; i++)
+    {
+        found = 1;
+        for(j=0; j<wordLen; j++)
+        {
+            if(str[i + j] != word[j])
+            {
+                found = 0;
+                break;
+            }
+        }
+        if(found == 1)
+        {
+            index = i;
+        }
+    }
+    if(index == -1)
+    {
+        cout << "\n not found."<< word;
+    }
+    else
+    {
+        cout << "\nLast index of " << word << " = " << index+1;
+    }
+    return 0;
+}
+```
+### Output
+```
+Enter any string: hello from funycode
+Enter any word to search: funycode
+
+Last index of 'funycode' = 12
+```
+
+## Java Implementation
+### 27. Write a Java program to find last occurrence of a word in a given string.
+```js
+//Write a Java program to find last occurrence of a word in a given string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter a character: ");
+        char str[100],word[100];
+
+        int i, j, index, found;
+        int strLen, wordLen;
+        System.out.println("Enter any string: ");
+        str = z.nextLine();
+        System.out.println("Enter any word to search: ");
+        word = z.nextLine();
+
+        index = -1;
+        strLen  = strlen(str);
+        wordLen = strlen(word);
+        for(i=0; i<=strLen - wordLen; i++)
+        {
+            found = 1;
+            for(j=0; j<wordLen; j++)
+            {
+
+                if(str[i + j] != word[j])
+                {
+                    found = 0;
+                    break;
+                }
+            }
+
+            if(found == 1)
+            {
+                index = i;
+            }
+        }
+
+        if(index == -1)
+        {
+            System.out.println(word + " not found.");
+        }
+        else
+        {
+            System.out.println("Last index of " +word+ " = "+ index+1);
+        }
+    }
+}
+```
+### Output
+```
+Enter any string: hello from funycode
+Enter any word to search: funycode
+
+Last index of 'funycode' = 12
+```

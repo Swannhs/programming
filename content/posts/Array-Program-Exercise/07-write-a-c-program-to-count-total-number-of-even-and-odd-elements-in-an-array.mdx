@@ -1,0 +1,154 @@
+---
+title: Write a C/C++/Java program to count total number of even and odd elements in an array.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 7. Write a C program to count total number of even and odd elements in an array.
+```c
+//Write a C program to count total number of even and odd elements in an array.
+#include<stdio.h>
+int main()
+{
+    int a[10],i,even=0,odd=0;
+    printf("Enter 10 Array Elements-\n");
+    for(i = 0; i<10; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    for(i = 0; i < 10; i ++)
+    {
+        if(a[i] % 2 == 0)
+        {
+            even++;
+        }
+        else
+        {
+            odd++;
+        }
+    }
+
+    printf("Total Number of Even Numbers in this Array = %d \n", even);
+    printf("Total Number of Odd Numbers in this Array = %d ", odd);
+}
+```
+### Output
+```
+Enter 10 Array Elements-
+6
+5
+7
+4
+3
+8
+9
+2
+1
+0
+Total Number of Even Numbers in this Array = 5
+Total Number of Odd Numbers in this Array = 5
+```
+## C++ Implementation
+### 7. Write a C++ program to count total number of even and odd elements in an array.
+```c
+//Write a C++ program to count total number of even and odd elements in an array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[10],i,even=0,odd=0;
+    cout<<"Enter 10 Array Elements-\n";
+    for(i = 0; i<10; i++)
+    {
+        cin>>a[i];
+    }
+
+    for(i = 0; i < 10; i ++)
+    {
+        if(a[i] % 2 == 0)
+        {
+            even++;
+        }
+        else
+        {
+            odd++;
+        }
+    }
+
+    cout<<"\nTotal Number of Even Numbers in this Array = "<< even;
+    cout<<"\nTotal Number of Odd Numbers in this Array =  "<<odd;
+}
+```
+### Output
+```
+Enter 10 Array Elements-
+6
+5
+7
+4
+3
+8
+9
+2
+1
+0
+Total Number of Even Numbers in this Array = 5
+Total Number of Odd Numbers in this Array = 5
+```
+
+## Java Implementation
+### 7. Write a Java program to count total number of even and odd elements in an array.
+```js
+//Write a Java program to count total number of even and odd elements in an array.
+import java.util.Scanner;
+public class Funycode {
+
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a[]=new int[10],i,even=0,odd=0;
+        System.out.println("Enter 10 Array Elements-\n");
+        for(i = 0; i<10; i++)
+        {
+            a[i]=z.nextInt();
+        }
+
+        for(i = 0; i < 10; i ++)
+        {
+            if(a[i] % 2 == 0)
+            {
+                even++;
+            }
+            else
+            {
+                odd++;
+            }
+        }
+        System.out.println("\nTotal Number of Even Numbers the Array="+ even);
+        System.out.println("\nTotal Number of Odd Numbers the Array =  "+odd);
+
+    }
+
+}
+```
+### Output
+```
+Enter 10 Array Elements-
+6
+5
+7
+4
+3
+8
+9
+2
+1
+0
+Total Number of Even Numbers in this Array = 5
+Total Number of Odd Numbers in this Array = 5
+```

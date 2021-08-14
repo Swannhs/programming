@@ -1,0 +1,90 @@
+---
+title: Write a C/C++/Java program to Find the Sum of First N Natural Numbers
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 35. Write a C program to Find the Sum of First N Natural Numbers
+```c
+//Write a C program to Find the Sum of First N Natural Numbers
+#include<stdio.h>
+
+int sum(int n)
+{
+    return n*(n+1)/2;
+}
+
+int main()
+{
+    int n;
+    printf("Enter n: ");
+    scanf("%d",&n);
+    int total=sum(n);
+    printf("Sum is %d\n",total);
+    return 0;
+}
+```
+### Output
+```
+Enter n: 5
+Sum is 15
+```
+
+## C++ Implementation
+### 35. Write a C++ program to Find the Sum of First N Natural Numbers
+```c
+//Write a C++ program to Find the Sum of First N Natural Numbers
+
+#include<iostream>
+using namespace std;
+
+int sum(int n)
+{
+    return n*(n+1)/2;
+}
+
+int main()
+{
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+    int total=sum(n);
+    cout << "Sum is " << total;
+    return 0;
+}
+```
+### Output
+```
+Enter n: 5
+Sum is 15
+```
+
+## Java Implementation
+### 35. Write a Java program to Find the Sum of First N Natural Numbers
+```js
+//Write a Java program to Find the Sum of First N Natural Numbers
+import java.util.Scanner;
+public class Funycode {
+    static int sum(int n)
+    {
+        return n*(n+1)/2;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter n: ");
+        n = z.nextInt();
+        int total=sum(n);
+        System.out.println("Sum is "+total);
+    }
+}
+```
+### Output
+```
+Enter n: 5
+Sum is 15
+```

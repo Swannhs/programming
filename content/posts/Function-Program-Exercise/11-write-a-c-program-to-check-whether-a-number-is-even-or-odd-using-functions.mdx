@@ -1,0 +1,96 @@
+---
+title: Write a C/C++/Java program to check whether a number is even or odd using functions.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 11. Write a C program to check whether a number is even or odd using functions.
+```c
+//Write a C program to check whether a number is even or odd using functions.
+#include<stdio.h>
+
+int isEvenorOdd(int num)
+{
+    if(num%2==0)
+        printf("%d is even.\n",num);
+    else
+        printf("%d is odd.\n",num);
+}
+
+int main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    isEvenorOdd(n);
+
+    return 0;
+}
+```
+### Output
+```
+Enter a number: 5
+5 is odd.
+```
+
+## C++ Implementation
+### 11. Write a C++ program to check whether a number is even or odd using functions.
+```c
+//Write a C++ program to check whether a number is even or odd using functions.
+
+#include<iostream>
+using namespace std;
+int isEvenorOdd(int num)
+{
+    if(num%2==0)
+        cout << num << " is even.\n";
+    else
+        cout << num << " is odd.\n";
+}
+int main()
+{
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+    isEvenorOdd(n);
+    return 0;
+}
+```
+### Output
+```
+Enter a number: 5
+5 is odd.
+```
+
+## Java Implementation
+### 11. Write a Java program to check whether a number is even or odd using functions.
+```js
+//Write a Java program to check whether a number is even or odd using functions.
+import java.util.Scanner;
+public class Funycode {
+    static int isEvenorOdd(int num)
+    {
+        if(num%2==0)
+            printf("%d is even.\n",num);
+        else
+            printf("%d is odd.\n",num);
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter a number: ");
+        n = z.nextInt();
+        isEvenorOdd(n);
+    }
+}
+```
+### Output
+```
+Enter a number: 5
+5 is odd.
+```

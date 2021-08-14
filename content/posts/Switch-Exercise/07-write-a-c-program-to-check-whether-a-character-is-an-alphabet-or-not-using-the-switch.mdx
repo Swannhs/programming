@@ -1,0 +1,98 @@
+---
+title: Write a C/C++/Java program to check whether a character is an alphabet or not using the switch.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-7: Write a C program to check whether a character is an alphabet or not using the switch.
+```c
+/*Write a C program to check whether a character is an alphabet or not using the switch.*/
+#include<stdio.h>
+int main()
+{
+    char ch;
+    printf("Enter a character: ");
+    scanf("%d",&ch);
+    switch((ch>='a'&&ch<='z') || (ch>='A'&&ch<='Z'))
+    {
+    case 0:
+        printf("Alphabet");
+        break;
+    case 1:
+        printf("not Alphabet");
+        break;
+    default:
+        printf("Invalid input");
+    }
+}
+```
+### Output
+```
+Input: a
+Output: Alphabet
+```
+
+## C++ Implementation
+### Program-7: Write a C++ program to check whether a character is an alphabet or not using the switch.
+```c
+/*Write a C++ program to check whether a character is an alphabet or not using the switch.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    char ch;
+    cout << "Enter a character: ";
+    cin >> ch;
+    switch((ch>='a'&&ch<='z') || (ch>='A'&&ch<='Z'))
+    {
+        case 0:
+            cout << "Alphabet";
+            break;
+        case 1:
+            cout << "not Alphabet";
+            break;
+        default:
+            cout << "Invalid input";
+    }
+}
+```
+### Output
+```
+Input: a
+Output: Alphabet
+```
+
+## Java Implementation
+### Program-9: Write a Java program to check whether a character is an alphabet or not using the switch.
+```js
+/*Write a Java program to check whether a character is an alphabet or not using the switch.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        char ch;
+        System.out.println("Enter a character: ");
+        char ch = z.next().charAt(0);
+        switch((ch>='a'&&ch<='z') || (ch>='A'&&ch<='Z'))
+        {
+            case 0:
+                System.out.println("Alphabet");
+                break;
+            case 1:
+                System.out.println("not Alphabet");
+                break;
+            default:
+                System.out.println("Invalid input");
+        }
+    }
+}
+```
+### Output
+```
+Input: a
+Output: Alphabet
+```

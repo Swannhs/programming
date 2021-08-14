@@ -1,0 +1,212 @@
+---
+title: Write a C/C++/Java program to copy the elements of one array into another array.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 5. Write a C program to copy the elements of one array into another array.
+```c
+//Write a C program to copy the elements of one array into another array.
+#include <stdio.h>
+void main()
+{
+    int arr1[10], arr2[10],i;
+    printf("Input 10 elements in the array :\n");
+       for(i=0;i<10;i++)
+        {
+          scanf("%d",&arr1[i]);
+        }
+    for(i=0; i<10; i++)
+    {
+        arr2[i] = arr1[i];
+    }
+    printf("\nThe elements stored in the first array are :\n");
+    for(i=0; i<10; i++)
+    {
+        printf("% d", arr1[i]);
+    }
+    printf("\n\nThe elements copied into the second array are :\n");
+    for(i=0; i<10; i++)
+    {
+        printf("% d", arr2[i]);
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+1
+2
+3
+5
+3
+2
+6
+2
+1
+7
+
+The elements stored in the first array are :
+1
+2
+3
+5
+3
+2
+6
+2
+1
+7
+The elements copied into the second array are :
+1
+2
+3
+5
+3
+2
+6
+2
+1
+7
+```
+## C++ Implementation
+### 5. Write a C++ program to copy the elements of one array into another array.
+```c
+//Write a C++ program to copy the elements of one array into another array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr1[10], arr2[10],i;
+    cout<<"Input 10 elements in the array :\n";
+    for(i=0; i<10; i++)
+    {
+        cin>>arr1[i];
+    }
+    for(i=0; i<10; i++)
+    {
+        arr2[i] = arr1[i];
+    }
+    cout<<"\nThe elements stored in the first array are :\n";
+    for(i=0; i<10; i++)
+    {
+        cout<<arr1[i]<<" ";
+    }
+    cout<<"\n\nThe elements copied into the second array are :\n";
+    for(i=0; i<10; i++)
+    {
+        cout<<arr2[i]<<" ";
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+1
+2
+3
+5
+3
+2
+6
+2
+1
+7
+
+The elements stored in the first array are :
+1
+2
+3
+5
+3
+2
+6
+2
+1
+7
+The elements copied into the second array are :
+1
+2
+3
+5
+3
+2
+6
+2
+1
+7
+```
+
+## Java Implementation
+### 5. Write a Java program to copy the elements of one array into another array.
+```js
+//Write a Java program to copy the elements of one array into another array.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr1[]=new int[10], arr2[]=new int[10],i;
+        System.out.println("Input 10 elements in the array :\n");
+        for(i=0; i<10; i++)
+        {
+            arr1[i]=z.nextInt();
+        }
+        for(i=0; i<10; i++)
+        {
+            arr2[i] = arr1[i];
+        }
+        System.out.println("\nThe elements stored in the first array are :\n");
+        for(i=0; i<10; i++)
+        {
+             System.out.println(arr1[i]+" ");
+        }
+        System.out.println("\n\nThe elements copied into the second array are :\n");
+        for(i=0; i<10; i++)
+        {
+             System.out.println(arr2[i]+" ");
+        }
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+1
+2
+3
+5
+3
+2
+6
+2
+1
+7
+
+The elements stored in the first array are :
+1
+2
+3
+5
+3
+2
+6
+2
+1
+7
+The elements copied into the second array are :
+1
+2
+3
+5
+3
+2
+6
+2
+1
+7
+```

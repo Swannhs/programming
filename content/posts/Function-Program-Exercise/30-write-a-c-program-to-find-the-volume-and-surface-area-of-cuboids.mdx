@@ -1,0 +1,98 @@
+---
+title: Write a C/C++/Java program to find the square of any number using the function.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 30. Write a C program to Find the Volume and Surface Area of Cuboids
+```c
+//Write a C program to Find the Volume and Surface Area of Cuboids
+#include<stdio.h>
+
+int surfaceAreaCuboid(int length,int breadth,int height)
+{
+    return 2*(length*breadth+breadth*height+height*length);
+}
+
+int main()
+{
+    int length,breadth,height;
+    printf("Enter the length, breadth & height: ");
+    scanf("%d%d%d",&length,&breadth,&height);
+
+    int surface=surfaceAreaCuboid(length,breadth,height);
+
+    printf("Surface Area of this cuboid is %d\n",surface);
+    return 0;
+}
+```
+### Output
+```
+Enter the length, breadth & height: 1 2 3
+Surface Area of this cuboid is 22
+```
+
+## C++ Implementation
+### 30. Write a C++ program to Find the Volume and Surface Area of Cuboids
+```c
+//Write a C++ program to Find the Volume and Surface Area of Cuboids
+
+#include<iostream>
+using namespace std;
+
+int surfaceAreaCuboid(int length,int breadth,int height)
+{
+    return 2*(length*breadth+breadth*height+height*length);
+}
+
+int main()
+{
+    int length,breadth,height;
+    cout << "Enter the length, breadth & height: ";
+    cin >> length >> breadth >> height;
+
+    int surface=surfaceAreaCuboid(length,breadth,height);
+
+    cout << "Surface Area of this cuboid is " << surface;
+    return 0;
+}
+```
+### Output
+```
+Enter the length, breadth & height: 1 2 3
+Surface Area of this cuboid is 22
+```
+
+## Java Implementation
+### 30. Write a Java program to Find the Volume and Surface Area of Cuboids
+```js
+//Write a Java program to Find the Volume and Surface Area of Cuboids
+import java.util.Scanner;
+public class Funycode {
+    static int surfaceAreaCuboid(int length,int breadth,int height)
+    {
+        return 2*(length*breadth+breadth*height+height*length);
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int length,breadth,height;
+        System.out.println("Enter the length, breadth & height: ");
+        length = z.nextInt();
+        breadth = z.nextInt();
+        height = z.nextInt();
+
+        int surface=surfaceAreaCuboid(length,breadth,height);
+
+        System.out.println("Surface Area of this cuboid is "+surface);
+    }
+}
+```
+### Output
+```
+Enter the length, breadth & height: 1 2 3
+Surface Area of this cuboid is 22
+```

@@ -1,0 +1,195 @@
+---
+title: Write a C/C++/Java program ind sum of minor diagonal elements of a matrix.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 27. Write a C program ind sum of minor diagonal elements of a matrix.
+```c
+//Write a C program ind sum of minor diagonal elements of a matrix.
+#include <stdio.h>
+void main()
+{
+    int arr[3][3],i,j,sum=0;
+    printf("Input elements in the matrix :\n");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            printf("element - [%d],[%d] : ",i,j);
+            scanf("%d",&arr[i][j]);
+        }
+    }
+
+    printf("\nThe matrix is : \n");
+    for(i=0; i<3; i++)
+    {
+        printf("\n");
+        for(j=0; j<3; j++)
+            printf("%d\t",arr[i][j]);
+    }
+    printf("\n Minor diagonal elements are: ");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            if(i+j==2)
+            {
+                printf(" %d",arr[i][j]);
+                sum=sum+arr[i][j];
+            }
+        }
+    }
+    printf("\nsum of minor diagonal element:%d",sum);
+}
+```
+### Output
+```
+Input elements in the matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 5
+element - [1],[2] : 7
+element - [2],[0] : 8
+element - [2],[1] : 9
+element - [2],[2] : 10
+
+The matrix is :
+
+1       2       3
+4       5       7
+8       9       10
+ Minor diagonal elements are:  3 5 8
+sum of minor diagonal element:16
+```
+## C++ Implementation
+### 32. Write a C++ program ind sum of minor diagonal elements of a matrix.
+```c
+//Write a C++ program ind sum of minor diagonal elements of a matrix.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    int arr[3][3],i,j,sum=0;
+    cout << "Input elements in the matrix :\n";
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            cout << "element -  : [" << i << "][" << j <<"]";
+            cin >> arr[i][j];
+        }
+    }
+    cout << "\nThe matrix is : \n";
+    for(i=0; i<3; i++)
+    {
+        cout << "\n";
+        for(j=0; j<3; j++)
+            cout << "\t" << arr[i][j];
+    }
+    cout << "\n Minor diagonal elements are: ";
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            if(i+j==2)
+            {
+                cout << "\t" << arr[i][j];
+                sum=sum+arr[i][j];
+            }
+        }
+    }
+    cout << "\nsum of minor diagonal element: " << sum;
+}
+```
+### Output
+```
+Input elements in the matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 5
+element - [1],[2] : 7
+element - [2],[0] : 8
+element - [2],[1] : 9
+element - [2],[2] : 10
+
+The matrix is :
+
+1       2       3
+4       5       7
+8       9       10
+ Minor diagonal elements are:  3 5 8
+sum of minor diagonal element:16
+```
+
+## Java Implementation
+### 32. Write a Java program ind sum of minor diagonal elements of a matrix.
+```js
+//Write a Java program ind sum of minor diagonal elements of a matrix.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+          Scanner z=new Scanner(System.in);
+          int arr[][] = new int[3][3],i,j,sum=0;
+          System.out.printf("Input elements in the matrix :\n");
+          for(i=0; i<3; i++)
+          {
+              for(j=0; j<3; j++)
+              {
+                  System.out.printf("element - : "+"["+i+"]"+"["+j+"]");
+                  scanf("%d",&arr[i][j]);
+              }
+          }
+          printf("\nThe matrix is : \n");
+          for(i=0; i<3; i++)
+          {
+              printf("\n");
+              for(j=0; j<3; j++)
+                  printf("%d\t",arr[i][j]);
+          }
+          printf("\n Minor diagonal elements are: ");
+          for(i=0; i<3; i++)
+          {
+              for(j=0; j<3; j++)
+              {
+                  if(i+j==2)
+                  {
+                      printf(" %d",arr[i][j]);
+                      sum=sum+arr[i][j];
+                  }
+              }
+          }
+          printf("\nsum of minor diagonal element:%d",sum);
+      }
+}
+```
+### Output
+```
+Input elements in the matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 5
+element - [1],[2] : 7
+element - [2],[0] : 8
+element - [2],[1] : 9
+element - [2],[2] : 10
+
+The matrix is :
+
+1       2       3
+4       5       7
+8       9       10
+ Minor diagonal elements are:  3 5 8
+sum of minor diagonal element:16
+```

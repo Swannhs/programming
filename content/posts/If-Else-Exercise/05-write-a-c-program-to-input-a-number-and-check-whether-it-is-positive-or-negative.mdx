@@ -1,0 +1,86 @@
+---
+title: Write a C/C++/Java program to input a number and check whether it is positive or negative.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-5: Write a C program to input a number and check whether it is positive or negative.
+```c
+/*Write a C program to input a number and check whether it is positive or negative.*/
+#include<stdio.h>
+int main()
+{
+     int a;
+    Printf("Enter a Number:");
+    scanf("%d",&a);
+    if(a>0)
+        printf("positive number");
+    if(a<0)
+        printf("negative number");
+    if(a==0)
+        ("the number is equal to zero");
+}
+```
+### Output
+```
+Enter a Number:
+25
+positive number
+```
+
+## C++ Implementation
+### Program-5: Write a C++ program to input a number and check whether it is positive or negative.
+```c
+/*Write a C++ program to input a number and check whether it is positive or negative.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+     int a;
+     cout<<"enter a number-\n";
+    cin>>a;
+    if(a>0)
+        cout<<"positive number";
+    if(a<0)
+        cout<<"negative number";
+    if(a==0)
+        cout<<"the number is equal to zero";
+}
+```
+### Output
+```
+Enter a Number:
+25
+positive number
+```
+
+## Java Implementation
+### Program-5: Write a java program to input a number and check whether it is positive or negative.
+```js
+/*Write a java program to input a number and check whether it is positive or negative.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b;
+        System.out.println("Enter a Number:");
+        a=z.nextInt();
+        if(a>0)
+            System.out.println("positive number");
+        if(a<0)
+            System.out.println("Negative number");
+        if(a==0)
+            System.out.println("Number is Equal to Zero");
+    }
+}
+```
+### Output
+```
+Enter a Number:
+25
+positive number
+```

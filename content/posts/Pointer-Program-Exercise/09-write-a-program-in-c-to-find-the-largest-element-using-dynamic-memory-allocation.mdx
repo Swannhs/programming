@@ -1,0 +1,88 @@
+---
+title: Write a C/C++/Java program to find the largest element using Dynamic Memory Allocation.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 9. Write a C program to find the largest element using Dynamic Memory Allocation.
+```c
+//Write a C program to find the largest element using Dynamic Memory Allocation.
+#include <stdio.h>
+void main()
+{
+    int i,n;
+    float *p;
+    printf(" Enter the number of elements= ");
+    scanf("%d",&n);
+    p=(float*)calloc(n,sizeof(float));  // assigning memory
+
+    if(p==NULL)
+    {
+        printf(" No memory is allocated.");
+        exit(0);
+    }
+    printf("\n Enter the elements\n");
+    for(i=0;i<n;++i)
+    {
+       scanf("%f",p+i);
+    }
+    for(i=1;i<n;++i)
+    {
+       if(*p<*(p+i))
+           *p=*(p+i);
+    }
+    printf(" The Largest element is= %.2f ",*p);
+}
+```
+### Output
+```
+ Enter the number of elements= 3
+
+ Enter the elements
+ 1 2 3
+ The Largest element is= 3.00
+```
+## C++ Implementation
+### 9. Write a C++ program to find the largest element using Dynamic Memory Allocation.
+```c
+//Write a C++ program to find the largest element using Dynamic Memory Allocation.
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+int main()
+{
+    int i,n;
+    float *p;
+    cout<<(" Enter the number of elements= ");
+    cin>>n;
+    p=(float*)calloc(n,sizeof(float));  // assigning memory
+
+    if(p==NULL)
+    {
+        cout<<(" No memory is allocated.");
+        exit(0);
+    }
+    cout<<("\n Enter the elements\n");
+    for(i=0;i<n;++i)
+    {
+       cin>>*(p+i);
+    }
+    for(i=1;i<n;++i)
+    {
+       if(*p<*(p+i))
+           *p=*(p+i);
+    }
+    cout<<" The Largest element is= "<<*p;
+}
+```
+### Output
+```
+ Enter the number of elements= 3
+
+ Enter the elements
+ 1 2 3
+ The Largest element is= 3.00
+```

@@ -1,0 +1,80 @@
+---
+title: Write a C/C++/Java program to convert uppercase string to lowercase.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 10. Write a C program to convert uppercase string to lowercase.
+```c
+//Write a C program to convert uppercase string to lowercase.
+#include<stdio.h>
+#include<string.h>
+int main(){
+   char str[25];
+   int i;
+   printf("Enter the string: ");
+   gets(str);
+
+   for(i=0;i<=strlen(str);i++){
+      if(str[i]>='A'&&str[i]<='Z')
+         str[i]=str[i]+32;
+   }
+   printf("\nLower Case String is: %s",str);
+   return 0;
+}
+```
+### Output
+```
+Enter the string: HELLO
+Lower Case String is: hello
+```
+## C++ Implementation
+### 10. Write a C++ program to convert uppercase string to lowercase.
+```c
+//Write a C++ program to convert uppercase string to lowercase.
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int  main()
+{
+   char str[25];
+   int i;
+   cout << "Enter the string: ";
+   cin >> str;
+   for(i=0;i<=strlen(str);i++){
+      if(str[i]>='A'&&str[i]<='Z')
+         str[i]=str[i]+32;
+   }
+   cout << "\nLower Case String is: " << str;
+}
+```
+### Output
+```
+Enter the string: HELLO
+Lower Case String is: hello
+```
+
+## Java Implementation
+### 10. Write a Java program to convert uppercase string to lowercase.
+```js
+//Write a Java program to convert uppercase string to lowercase.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          System.out.println("Enter the string: ")
+          String str;
+          str = z.nextLine();
+          System.out.println("Lower Case String is: " + str.toUpperCase());
+      }
+}
+```
+### Output
+```
+Enter the string: HELLO
+Lower Case String is: hello
+```

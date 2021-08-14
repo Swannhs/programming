@@ -1,0 +1,193 @@
+---
+title: Write a C/C++/Java program to perform Scalar matrix multiplication.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 28. Write a C program to perform Scalar matrix multiplication.
+```c
+//Write a C program to perform Scalar matrix multiplication.
+#include <stdio.h>
+void main()
+{
+    int arr[3][3],crr[3][3],i,j,n;
+    printf("Input elements in the first matrix :\n");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            printf("element - [%d],[%d] : ",i,j);
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf("\nThe First matrix is :\n");
+    for(i=0; i<3; i++)
+    {
+        printf("\n");
+        for(j=0; j<3; j++)
+            printf("%d\t",arr[i][j]);
+    }
+
+    printf("\nenter the multiplication value :\n");
+    scanf("%d",&n);
+
+    for(i=0; i<3; i++)
+        for(j=0; j<3; j++)
+            crr[i][j]=n*arr[i][j];
+    printf("\nThe subtraction of two matrix is : \n");
+    for(i=0; i<3; i++)
+    {
+        printf("\n");
+        for(j=0; j<3; j++)
+            printf("%d\t",crr[i][j]);
+    }
+}
+```
+### Output
+```
+Input elements in the first matrix :
+element - [0],[0] : 1 2 3
+element - [0],[1] : element - [0],[2] : element - [1],[0] : 2 3 4
+element - [1],[1] : element - [1],[2] : element - [2],[0] : 3 4 5
+element - [2],[1] : element - [2],[2] :
+The First matrix is :
+
+1       2       3
+2       3       4
+3       4       5
+enter the multiplication value :
+2
+
+The subtraction of two matrix is :
+
+2       4       6
+4       6       8
+6       8       10
+```
+## C++ Implementation
+### 28. Write a C++ program to perform Scalar matrix multiplication.
+```c
+//Write a C++ program to perform Scalar matrix multiplication.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    int arr[3][3],crr[3][3],i,j,n;
+    cout << "Input elements in the first matrix :\n";
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            cout << "element -  : [" << i << "][" << j << "]";
+            cin >> arr[i][j];
+        }
+    }
+    cout << "\nThe First matrix is :\n";
+    for(i=0; i<3; i++)
+    {
+        cout << "\n";
+        for(j=0; j<3; j++)
+            cout << "\t" << arr[i][j];
+    }
+    cout << "\nenter the multiplication value :\n";
+    cin >> n;
+    for(i=0; i<3; i++)
+        for(j=0; j<3; j++)
+            crr[i][j]=n*arr[i][j];
+    cout << "\nThe subtraction of two matrix is : \n";
+    for(i=0; i<3; i++)
+    {
+        cout << "\n";
+        for(j=0; j<3; j++)
+            cout << "\t" << crr[i][j];
+    }
+}
+```
+### Output
+```
+Input elements in the first matrix :
+element - [0],[0] : 1 2 3
+element - [0],[1] : element - [0],[2] : element - [1],[0] : 2 3 4
+element - [1],[1] : element - [1],[2] : element - [2],[0] : 3 4 5
+element - [2],[1] : element - [2],[2] :
+The First matrix is :
+
+1       2       3
+2       3       4
+3       4       5
+enter the multiplication value :
+2
+
+The subtraction of two matrix is :
+
+2       4       6
+4       6       8
+6       8       10
+```
+
+## Java Implementation
+### 28. Write a Java program to perform Scalar matrix multiplication.
+```js
+//Write a Java program to perform Scalar matrix multiplication.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr[][]= new int[3][3],crr[][]= new int[3][3],i,j,n;
+        System.out.println("Input elements in the first matrix :");
+        for(i=0; i<3; i++)
+        {
+            for(j=0; j<3; j++)
+            {
+                System.out.println("element - : "+"["+i+"]"+"["+j+"]");
+                arr[i][j] = z.nextInt();
+            }
+        }
+        System.out.println("The First matrix is :");
+        for(i=0; i<3; i++)
+        {
+            System.out.println();
+            for(j=0; j<3; j++)
+                System.out.println("\t"+arr[i][j]);
+        }
+        System.out.println("enter the multiplication value :");
+        n = z.nextInt();
+        for(i=0; i<3; i++)
+            for(j=0; j<3; j++)
+                crr[i][j]=n*arr[i][j];
+        System.out.println("The subtraction of two matrix is : ");
+        for(i=0; i<3; i++)
+        {
+            System.out.println();
+            for(j=0; j<3; j++)
+                System.out.printf("\t"+crr[i][j]);
+        }
+    }
+}
+```
+### Output
+```
+Input elements in the first matrix :
+element - [0],[0] : 1 2 3
+element - [0],[1] : element - [0],[2] : element - [1],[0] : 2 3 4
+element - [1],[1] : element - [1],[2] : element - [2],[0] : 3 4 5
+element - [2],[1] : element - [2],[2] :
+The First matrix is :
+
+1       2       3
+2       3       4
+3       4       5
+enter the multiplication value :
+2
+
+The subtraction of two matrix is :
+
+2       4       6
+4       6       8
+6       8       10
+```

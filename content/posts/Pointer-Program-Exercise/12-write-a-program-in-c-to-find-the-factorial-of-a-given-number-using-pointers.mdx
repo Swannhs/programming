@@ -1,0 +1,67 @@
+---
+title: Write a C/C++/Java program to find the factorial of a given number using pointers.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 12. Write a C program to find the factorial of a given number using pointers.
+```c
+//Write a C program to find the factorial of a given number using pointers.
+#include <stdio.h>
+void main()
+{
+    int fact;
+    int a;
+    printf(" Input a number=");
+    scanf("%d",&a);
+
+    findFact(a,&fact);
+    printf(" The Factorial of %d is = %d ",a,fact);
+}
+
+void findFact(int n,int *f)
+{
+    int i;
+    *f =1;
+    for(i=1; i<=n; i++)
+        *f=*f*i;
+}
+```
+### Output
+```
+Address of variable 'a' is: 0x7ffcdc9c3f64
+```
+## C++ Implementation
+### 12. Write a C++ program to find the factorial of a given number using pointers.
+```c
+//Write a C++ program to find the factorial of a given number using pointers.
+#include <iostream>
+using namespace std;
+
+void findFact(int n,int *f)
+{
+    int i;
+    *f =1;
+    for(i=1; i<=n; i++)
+        *f=*f*i;
+}
+
+int main()
+{
+    int fact;
+    int a;
+    cout<<(" Input a number=");
+    cin>>a;
+
+    findFact(a,&fact);
+    cout<<" The Factorial of "<<a<< " is ="<<fact;
+}
+```
+### Output
+```
+ Input a number=5
+ The Factorial of 5 is = 120
+```

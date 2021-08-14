@@ -1,0 +1,128 @@
+---
+title: Write a C/C++/Java program to calculate the root of a Quadratic Equation.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-23: Write a C program to calculate the root of a Quadratic Equation.
+```c
+/*Write a C program to calculate the root of a Quadratic Equation.*/
+#include<stdio.h>
+void main()
+{
+    int r,a,b,c,x1,x2;
+    printf("Enter value of a,b,c-");
+    scanf("%d%d%d",&a,&b,&c);
+    r=b*b-4*a*c;
+    if(r>0)
+    {
+        x1=(-b+sqrt(r))/2*a;
+        x2=(-b-sqrt(r))/2*a;
+        printf("x1=%d x2=%d",x1,x2);
+    }
+    if(r==0)
+    {
+        x1=-b/2*a;
+        x2=-b/2*a;
+        printf("x1=%d x2=%d",x1,x2);
+    }
+    if(r<0)
+        printf("math is error");
+}
+```
+### Output
+```
+Enter value of a,b,c-
+1
+4
+2
+x1=0
+x2=-3
+```
+
+## C++ Implementation
+### Program-23: Write a C++ program to calculate the root of a Quadratic Equation.
+```c
+/*Write a C++ program to calculate the root of a Quadratic Equation.*/
+
+#include<iostream>
+using namespace std;
+#include<math.h>
+int main()
+{
+    int r,a,b,c,x1,x2;
+    cout<<"enter value of a,b,c-\n";
+    cin>>a>>b>>c;
+    r=b*b-4*a*c;
+    if(r>0)
+    {
+        x1=(-b+sqrt(r))/2*a;
+        x2=(-b-sqrt(r))/2*a;
+        cout<<"x1="<<x1<<"\n"<<"x2="<<x2;
+    }
+    if(r==0)
+    {
+        x1=-b/2*a;
+        x2=-b/2*a;
+        cout<<"x1="<<x1<<"\n"<<"x2="<<x2;
+    }
+    if(r<0)
+        cout<<"math is error";
+
+
+}
+```
+### Output
+```
+Enter value of a,b,c-
+1
+4
+2
+x1=0
+x2=-3
+```
+
+## Java Implementation
+### Program-23: Write a java program to calculate the root of a Quadratic Equation.
+```js
+/*Write a java program to calculate the root of a Quadratic Equation.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b,c,x1,x2,r;
+        System.out.print("Enter three Number:\n");
+        a=z.nextInt();
+        b=z.nextInt();
+        c=z.nextInt();
+
+        r=b*b-4*a*c;
+        if(r>0)
+        {
+            x1=(-b+sqrt(r))/2*a;
+            x2=(-b-sqrt(r))/2*a;
+            System.out.println("x1="+x1+" \n"+ " x2="+x2);
+        }
+        if(r==0)
+        {
+            x1=-b/2*a;
+            x2=-b/2*a;
+            System.out.println("x1="+x1+" \n"+ " x2="+x2);        }
+        if(r<0)
+            System.out.println("math is error");
+    }
+}
+```
+### Output
+```
+Enter value of a,b,c-
+1
+4
+2
+x1=0
+x2=-3
+```

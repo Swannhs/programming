@@ -1,0 +1,93 @@
+---
+title: Write a C/C++/Java program to print all permutations of a given string using pointers.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 8. Write a C program to print all permutations of a given string using pointers.
+```c
+//Write a C program to print all permutations of a given string using pointers.
+#include <stdio.h>
+void changePosition(char *c1, char *c2)
+{
+    char tmp;
+    tmp = *c1;
+    *c1 = *c2;
+    *c2 = tmp;
+}
+void charPermute(char *ch, int a, int n)
+{
+   int i;
+   if (a == n)
+     printf("%s  ", ch);
+   else
+   {
+       for (i = a; i <= n; i++)
+       {
+          changePosition((ch+a), (ch+i));
+          charPermute(ch, a+1, n);
+          changePosition((ch+a), (ch+i));
+       }
+   }
+}
+
+void main()
+{
+    char str[] = "abc";
+    int n = strlen(str);
+    printf(" The permutations of the string are : \n");
+    charPermute(str, 0, n-1);
+}
+```
+### Output
+```
+The permutations of the string are :
+abc  acb  bac  bca  cba  cab
+```
+## C++ Implementation
+### 8. Write a C++ program to print all permutations of a given string using pointers.
+```c
+//Write a C++ program to print all permutations of a given string using pointers.
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+void changePosition(char *c1, char *c2)
+{
+    char tmp;
+    tmp = *c1;
+    *c1 = *c2;
+    *c2 = tmp;
+}
+void charPermute(char *ch, int a, int n)
+{
+   int i;
+   if (a == n)
+     cout<<ch<<" ";
+   else
+   {
+       for (i = a; i <= n; i++)
+       {
+          changePosition((ch+a), (ch+i));
+          charPermute(ch, a+1, n);
+          changePosition((ch+a), (ch+i));
+       }
+   }
+}
+
+int main()
+{
+    char str[] = "abc";
+    int n = strlen(str);
+    cout<<(" The permutations of the string are : \n");
+    charPermute(str, 0, n-1);
+}
+```
+### Output
+```
+The permutations of the string are :
+abc  acb  bac  bca  cba  cab
+```

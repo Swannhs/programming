@@ -1,0 +1,168 @@
+---
+title: Write a C/C++/Java program to print all unique elements in the array.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 14. Write a C program to print all unique elements in the array.
+```c
+//Write a C program to print all unique elements in the array.
+#include <stdio.h>
+int main()
+{
+    int arr[10],count=0,i,j,k=10;
+    printf("Input 10 elements in the array :\n");
+       for(i=0;i<10;i++)
+        {
+            scanf("%d",&arr[i]);
+        }
+    printf("\nThe unique elements found in the array are: \n");
+    for(i=0; i<10; i++)
+    {
+        count=0;
+        for(j=0; j<k+1; j++)
+        {
+            if (i!=j)
+            {
+               if(arr[i]==arr[j])
+              {
+                 count++;
+               }
+             }
+        }
+       if(count==0)
+        {
+          printf("%d ",arr[i]);
+        }
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+5
+4
+6
+4
+2
+1
+3
+4
+5
+6
+
+The unique elements found in the array are:
+2 1 3
+```
+## C++ Implementation
+### 14. Write a C++ program to print all unique elements in the array.
+```c
+//Write a C++ program to print all unique elements in the array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr[10],c=0,i,j,k=10;
+    cout<<"Input 10 elements in the array :\n";
+       for(i=0;i<10;i++)
+        {
+            cin>>arr[i];
+        }
+    cout<<"\nThe unique elements found in the array are: \n";
+    for(i=0; i<10; i++)
+    {
+        c=0;
+        for(j=0; j<k+1; j++)
+        {
+            if (i!=j)
+            {
+               if(arr[i]==arr[j])
+              {
+                 c++;
+               }
+             }
+        }
+       if(c==0)
+        {
+         cout<<arr[i]<<"  ";
+        }
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+5
+4
+6
+4
+2
+1
+3
+4
+5
+6
+
+The unique elements found in the array are:
+2 1 3
+```
+
+## Java Implementation
+### 14. Write a Java program to print all unique elements in the array.
+```js
+//Write a Java program to print all unique elements in the array.
+
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr[]=new int[10],c=0,i,j,k=10;
+        System.out.println("Input 10 elements in the array :\n");
+           for(i=0;i<10;i++)
+            {
+                arr[i]=z.nextInt();
+            }
+           System.out.println("\nThe unique elements found in the array are: \n");
+        for(i=0; i<10; i++)
+        {
+            c=0;
+            for(j=0; j<k+1; j++)
+            {
+                if (i!=j)
+                {
+                   if(arr[i]==arr[j])
+                  {
+                     c++;
+                   }
+                 }
+            }
+           if(c==0)
+            {
+               System.out.println(arr[i]+"  ");
+            }
+        }
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+5
+4
+6
+4
+2
+1
+3
+4
+5
+6
+
+The unique elements found in the array are:
+2 1 3
+```

@@ -1,0 +1,91 @@
+---
+title: Write a C/C++/Java program for passing structures as function arguments and returning a structure from a function.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 10. Write a C program for passing structures as function arguments and returning a structure from a function.
+```c
+//Write a C++ program for passing structures as function arguments and returning a structure from a function.
+#include<stdio.h>
+#include <string.h>
+struct Book{
+    char booName[100];
+    char authorName[100];
+};
+struct Book input(struct Book book){
+    printf("Book Details \n");
+    printf("Book Name : ");
+    fgets(book.booName,sizeof(book.booName),stdin);
+    printf("author Name : ");
+    fgets(book.authorName,sizeof(book.authorName),stdin);
+    return book;
+};
+void details(struct Book book){
+    printf("\nBook info \n\n");
+    printf("Book Name   : %s",book.booName);
+    printf("author Name : %s",book.authorName);
+}
+int main(){
+    struct Book a;
+    a=input(a);
+    details(a);
+}
+```
+### Output
+```
+Book Details
+Book Name : funycode
+author Name : C C++ JAVA
+
+Book info
+
+Book Name   : funycode
+author Name : C C++ JAVA
+```
+
+## C++ Implementation
+### 10. Write a C++ program for passing structures as function arguments and returning a structure from a function.
+```c
+//Write a C++ program to find for passing structures as function arguments and returning a structure from a function.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct Book{
+    char booName[100];
+    char authorName[100];
+};
+struct Book input(struct Book book){
+    cout << "Book Details \n";
+    cout << "Book Name : ";
+    fgets(book.booName,sizeof(book.booName),stdin);
+    cout << "author Name : ";
+    fgets(book.authorName,sizeof(book.authorName),stdin);
+    return book;
+};
+void details(struct Book book){
+    cout << "\nBook info \n\n";
+    cout << "Book Name   : "<<book.booName;
+    cout << "author Name : "<<book.authorName;
+}
+int main(){
+    struct Book a;
+    a=input(a);
+    details(a);
+}
+```
+### Output
+```
+Book Details
+Book Name : funycode
+author Name : C C++ JAVA
+
+Book info
+
+Book Name   : funycode
+author Name : C C++ JAVA
+```

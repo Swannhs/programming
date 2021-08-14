@@ -1,0 +1,67 @@
+---
+title: Write a C/C++/Java program to check whether year is leap year or not using conditional operator.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 24. Write a C program to check whether year is leap year or not using conditional operator.
+```c
+//Write a C program to check whether year is leap year or not using conditional operator.
+#include <stdio.h>
+int main()
+{
+    int y;
+    printf("Enter a year: ");
+    scanf("%d",&y);
+    (y%4==0 && y%100!=0)? printf("leap year"):(y%400==0)?printf("leap year"):printf("not leap year");
+}
+```
+### Output
+```
+input Enter a year: 2000
+output leap year
+```
+
+## C++ Implementation
+### 24. Write a C++ program to check whether year is leap year or not using conditional operator.
+```c
+//Write a C++ program to check whether year is leap year or not using conditional operator.
+#include<iostream>
+using namespace std;
+int main()
+{
+    int y;
+    cout << "Enter a year: ";
+    cin >> y;
+    (y%4==0 && y%100!=0)? cout << "leap year":(y%400==0)?cout << "leap year":cout << "not leap year";
+}
+```
+### Output
+```
+input Enter a year: 2000
+output leap year
+```
+
+## Java Implementation
+### 24. Write a Java program to check whether year is leap year or not using conditional operator.
+```js
+//Write a Java program to check whether year is leap year or not using conditional operator.
+import java.util.Scanner;.
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int y;
+        System.out.println("Enter a year: ");
+        y = z.nextInt();
+        (y%4==0 && y%100!=0)? System.out.println("leap year"):(y%400==0)?System.out.println("leap year"):System.out.println("not leap year");
+    }
+}
+```
+### Output
+```
+input Enter a year: 2000
+output leap year
+```

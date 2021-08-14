@@ -1,0 +1,91 @@
+---
+title: Write a C/C++/Java program to find reverse of an array.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 20. Write a C program to find reverse of an array.
+```c
+//Write a C program to find reverse of an array.
+#include <stdio.h>
+void main(){
+    int n,r,sum=0,t;
+    printf("Input a number: ");
+    scanf("%d",&n);
+    t=n;
+    for( ;n>0; )
+    {
+         r=n%10;
+         sum=sum*10+r;
+         n=n/10;
+    }
+    printf("The number in reverse order is : %d \n",sum);
+}
+```
+### Output
+```
+Input a number:
+564321
+The number in reverse order is : 123465
+```
+## C++ Implementation
+### 20. Write a C++ program to find reverse of an array.
+```c
+//Write a C++ program to find reverse of an array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,r,sum=0,t;
+    cout<<"Input a number: ";
+    cin>>n;
+    t=n;
+    for( ; n>0; )
+    {
+        r=n%10;
+        sum=sum*10+r;
+        n=n/10;
+    }
+    cout<<"The number in reverse order is : "<<sum;
+}
+```
+### Output
+```
+Input a number:
+564321
+The number in reverse order is : 123465
+```
+
+## Java Implementation
+### 20. Write a Java program to find reverse of an array.
+```js
+//Write a Java program to find reverse of an array.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int n,r,sum=0,t;
+        System.out.println("Input a number: ");
+        n=z.nextInt();
+        t=n;
+        for( ; n>0; )
+        {
+            r=n%10;
+            sum=sum*10+r;
+            n=n/10;
+        }
+        System.out.println("The number in reverse order is : "+sum);
+    }
+}
+```
+### Output
+```
+Input a number:
+564321
+The number in reverse order is : 123465
+```

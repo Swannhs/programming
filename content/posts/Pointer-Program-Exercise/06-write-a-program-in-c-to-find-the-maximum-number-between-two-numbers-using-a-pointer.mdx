@@ -1,0 +1,57 @@
+---
+title: Write a C/C++/Java program to find the maximum number between two numbers using a pointer.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 6. Write a C program to find the maximum number between two numbers using a pointer.
+```c
+//Write a C program to find the maximum number between two numbers using a pointer.
+#include <stdio.h>
+void main()
+{
+    int a,b,*p1=&a,*p2=&b;
+    printf("Enter two integers\n");
+    scanf("%d%d", p1, p2);
+    if(*p1>*p2)
+        printf("\n %d is the maximum number.\n",*p1);
+    else
+        printf("\n %d is the maximum number.\n",*p2);
+}
+```
+### Output
+```
+Enter two integers
+1 2
+
+ 2 is the maximum number.
+```
+## C++ Implementation
+### 6. Write a C++ program to find the maximum number between two numbers using a pointer.
+```c
+//Write a C++ program to find the maximum number between two numbers using a pointer.
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,*p1=&a,*p2=&b;
+    cout<<("Enter two integers\n");
+    cin>>*p1>> *p2;
+
+    if(*p1>*p2)
+        cout<<"\n"<<*p1<< " is the maximum number.\n";
+
+    else
+        cout<<"\n"<<*p2<< " is the maximum number.\n";
+}
+```
+### Output
+```
+Enter two integers
+1 2
+
+ 2 is the maximum number.
+```

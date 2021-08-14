@@ -1,0 +1,122 @@
+---
+title: Write a C/C++/Java program to find power of any number using functions
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 17. Write a C program to find power of any number using functions
+```c
+//Write a C program to find power of any number using functions
+#include<stdio.h>
+
+int power(int a,int b)
+{
+    int total=1;
+    while(b!=0)
+    {
+        total*=a;
+        b--;
+    }
+    return total;
+}
+
+int main()
+{
+    int base,exp;
+    printf("Enter base: ");
+    scanf("%d",&base);
+    printf("Enter exponent: ");
+    scanf("%d",&exp);
+
+    int ans=power(base,exp);
+
+    printf("Ans is: %d\n",ans);
+    return 0;
+}
+```
+### Output
+```
+Enter base: 1
+Enter exponent: 5
+Ans is: 1
+```
+
+## C++ Implementation
+### 17. Write a C++ program to find power of any number using functions
+```c
+//Write a C++ program to find power of any number using functions
+
+#include<iostream>
+using namespace std;
+
+int power(int a,int b)
+{
+    int total=1;
+    while(b!=0)
+    {
+        total*=a;
+        b--;
+    }
+    return total;
+}
+
+int main()
+{
+    int base,exp;
+    cout << "Enter base: ";
+    cin >> base;
+    cout << "Enter exponent: ";
+    cin >> exp;
+
+    int ans=power(base,exp);
+
+    cout << "Ans is: " << ans;
+    return 0;
+}
+```
+### Output
+```
+Enter base: 1
+Enter exponent: 5
+Ans is: 1
+```
+
+## Java Implementation
+### 17. Write a Java program to find power of any number using functions
+```js
+//Write a Java program to find power of any number using functions
+import java.util.Scanner;
+public class Funycode {
+    static int power(int a,int b)
+    {
+        int total=1;
+        while(b!=0)
+        {
+            total*=a;
+            b--;
+        }
+        return total;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int base,exp;
+        System.out.println("Enter base: ");
+        base = z.nextInt();
+        System.out.println("Enter exponent: ");
+        exp = z.nextInt();
+
+        int ans=power(base,exp);
+        System.out.println("Ans is: "+ans);
+    }
+}
+```
+### Output
+```
+Enter base: 1
+Enter exponent: 5
+Ans is: 1
+```

@@ -1,0 +1,183 @@
+---
+title: Write a C/C++/Java program to print all Armstrong numbers between 1 to n.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 28. Write a C program to print all Armstrong numbers between 1 to n.
+```c
+//Write a C program to print all Armstrong numbers between 1 to n.
+//Using for loop
+#include<stdio.h>
+void main()
+{
+    int n,i,r,sum,x;
+    printf("Enter a number\n");
+    scanf("%d",&n);
+    printf("Armstrong numbers are :\n");
+    for(i=152;i<=n;i++)
+    {
+        x=i;
+        sum=0;
+        for(;i!=0;i=i/10)
+        {
+            r=i%10;
+            sum=sum+r*r*r;
+        }
+        if(sum==x)
+        {
+            printf("%d\n",x);
+            n--;
+        }
+        i=x;
+    }
+}
+//Using while loop
+#include<stdio.h>
+void main()
+{
+    int i,a,sum=0;
+    i=1;
+    while(i<=3)
+    {
+        scanf("%d",&a);
+        sum=sum+a;
+        i++;
+    }
+    printf("%d",sum);
+}
+//Using do while loop
+#include<stdio.h>
+void main()
+{
+    int i=1,a,sum=0;
+    do
+    {
+        scanf("%d",&a);
+        sum=sum+a;
+        i++;
+    }
+    while(i<=3);
+    printf("%d",sum);
+}
+```
+### Output
+```
+input 3 4 5
+output 12
+```
+
+## C++ Implementation
+### 5. Write a C++ program to accept 3 numbers from user one by one and displays their sum on screen.
+```c
+//Write a C++ program to accept 3 numbers from user one by one and displays their sum on screen.
+
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,a,sum=0;
+    for(i=1;i<=3;i++)
+    {
+        scanf("%d",&a);
+        sum=sum+a;
+    }
+    cout << sum;
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,a,sum=0;
+    i=1;
+    while(i<=3)
+    {
+        scanf("%d",&a);
+        sum=sum+a;
+        i++;
+    }
+    cout << sum;
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i=1,a,sum=0;
+    do
+    {
+        scanf("%d",&a);
+        sum=sum+a;
+        i++;
+    }
+    while(i<=3);
+    cout << sum;
+}
+```
+### Output
+```
+input 3 4 5
+output 12
+```
+
+## Java Implementation
+### 5. Write a Java program to accept 3 numbers from user one by one and displays their sum on screen.
+```js
+//Write a Java program to accept 3 numbers from user one by one and displays their sum on screen.
+//Using for loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int i,a,sum=0;
+        i=1;
+        while(i<=3)
+        {
+            a = z.nextInt();
+            sum=sum+a;
+            i++;
+        }
+        System.out.println(sum);
+    }
+}
+//Using while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int i,a,sum=0;
+        for(i=1;i<=3;i++)
+        {
+            a = z.nextInt();
+            sum=sum+a;
+            i++;
+        }
+        System.out.println(sum);
+    }
+}
+//Using do while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int i=1,a,sum=0;
+        do
+        {
+            a = z.nextInt();
+            sum=sum+a;
+            i++;
+        }while(i<=3);
+        System.out.println(sum);
+    }
+}
+```
+### Output
+```
+input 3 4 5
+output 12
+```

@@ -1,0 +1,12 @@
+
+  // prefer default export if available
+  const preferDefault = m => (m && m.default) || m
+  
+
+exports.ssrComponents = {
+  "component---cache-dev-404-page-js": preferDefault(require("C:\\Users\\Swann\\WebstormProjects\\aaaa\\.cache\\dev-404-page.js")),
+  "component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx": preferDefault(require("C:\\Users\\Swann\\WebstormProjects\\aaaa\\node_modules\\@lekoarts\\gatsby-theme-minimal-blog-core\\src\\templates\\post-query.tsx")),
+  "component---src-pages-exercise-recursion-js": preferDefault(require("C:\\Users\\Swann\\WebstormProjects\\aaaa\\src\\pages\\exercise\\recursion.js")),
+  "component---src-pages-index-js": preferDefault(require("C:\\Users\\Swann\\WebstormProjects\\aaaa\\src\\pages\\index.js"))
+  }
+

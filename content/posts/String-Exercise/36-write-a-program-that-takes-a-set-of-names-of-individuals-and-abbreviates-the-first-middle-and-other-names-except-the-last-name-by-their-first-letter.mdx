@@ -1,0 +1,144 @@
+---
+title: Write a C/C++/Java program to that takes a set of names of individuals and abbreviates the first, middle and other names except the last name by their first letter.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 36. Write a C program to that takes a set of names of individuals and abbreviates the first, middle and other names except the last name by their first letter.
+```c
+//Write a C program to that takes a set of names of individuals and abbreviates the first, middle and other names except the last name by their first letter.
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[200];
+    printf("Input a Full name: ");
+    gets(str);
+    int len = strlen(str);
+    int i,p=0,flag;
+    for(i=0;i<len;i++){
+        if(str[i]==' ' && str[i+1]!=' ')
+            p++;
+    }
+    printf("The abbrivated form of the name is: ");
+    flag==0;
+    for(i=0;i<len;i++){
+        if(p>0)
+        {
+            if(i==0){
+                printf("%c ",str[i]);
+                p--;}
+           else if(str[i-1]==' '&& str[i]!=' ')
+            {printf("%c ",str[i]);
+            p--;}
+        }
+        else {
+            if(flag==0 && str[i-1]==' ')
+                flag=1;
+            if(flag==1)
+                printf("%c",str[i]);
+        }
+
+    }
+}
+```
+### Output
+```
+Input a Full name: Farzan Akter
+The abbrivated form of the name is: F Akter
+```
+## C++ Implementation
+### 36. Write a C++ program to that takes a set of names of individuals and abbreviates the first, middle and other names except the last name by their first letter.
+```c
+//Write a C++ program to that takes a set of names of individuals and abbreviates the first, middle and other names except the last name by their first letter.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char str[200];
+    cout << "Input a Full name: ";
+    cin >> str;
+    int len = strlen(str);
+    int i,p=0,flag;
+    for(i=0;i<len;i++){
+        if(str[i]==' ' && str[i+1]!=' ')
+            p++;
+    }
+    cout << "The abbrivated form of the name is: ";
+    flag==0;
+    for(i=0;i<len;i++){
+        if(p>0)
+        {
+            if(i==0){
+                printf("%c ",str[i]);
+                p--;}
+            else if(str[i-1]==' '&& str[i]!=' ')
+            {
+              cout << " " << str[i];
+              p--;}
+        }
+        else {
+            if(flag==0 && str[i-1]==' ')
+                flag=1;
+            if(flag==1)
+                cout << " " << str[i];
+        }
+    }
+}
+```
+### Output
+```
+Input a Full name: Farzan Akter
+The abbrivated form of the name is: F Akter
+```
+
+## Java Implementation
+### 36. Write a Java program to that takes a set of names of individuals and abbreviates the first, middle and other names except the last name by their first letter.
+```js
+//Write a Java program to that takes a set of names of individuals and abbreviates the first, middle and other names except the last name by their first letter.
+import java.util.Scanner;
+
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        char[] str = new char[200];
+        System.out.println("Input a Full name: ");
+        str = z.nextLine().toCharArray();
+        int len = str.length;
+        int i, p = 0, flag;
+        for (i = 0; i < len; i++) {
+            if (str[i] == ' ' && str[i + 1] != ' ')
+                p++;
+        }
+        System.out.println("The abbreviated form of the name is: ");
+        flag = 0;
+        for (i = 0; i < len; i++) {
+            if (p > 0) {
+                if (i == 0) {
+                    System.out.println(str[i]);
+                    p--;
+                } else if (str[i - 1] == ' ' && str[i] != ' ') {
+                    System.out.println(str[i]);
+                    p--;
+                }
+            } else {
+                if (flag == 0 && str[i - 1] == ' ')
+                    flag = 1;
+                if (flag == 1)
+                    System.out.print(str[i]);
+            }
+        }
+    }
+}
+```
+### Output
+```
+Enter  the string : hello world
+Enter character: o
+hell wrld
+```

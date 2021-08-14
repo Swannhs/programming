@@ -1,0 +1,120 @@
+---
+title: Write a C/C++/Java program to check whether a number is palindrome or not using functions .
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 18. Write a C program to check whether a number is palindrome or not using functions .
+```c
+//Write a C program to check whether a number is palindrome or not using functions .
+#include<stdio.h>
+
+void checkPalindrome(int n)
+{
+    int num=0,a=n;
+    int tmp;
+    while(a!=0)
+    {
+        tmp=a%10;
+        num=num*10+tmp;
+        a/=10;
+    }
+    if(n==num)
+        printf("%d is palindrome.\n",n);
+    else
+        printf("%d is not palindrome\n",n);
+}
+
+int main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    checkPalindrome(n);
+
+    return 0;
+}
+```
+### Output
+```
+Enter a number: 4
+4 is palindrome.
+```
+
+## C++ Implementation
+### 18. Write a C++ program to check whether a number is palindrome or not using functions .
+```c
+//Write a C++ program to check whether a number is palindrome or not using functions .
+
+#include<iostream>
+using namespace std;
+void checkPalindrome(int n)
+{
+    int num=0,a=n;
+    int tmp;
+    while(a!=0)
+    {
+        tmp=a%10;
+        num=num*10+tmp;
+        a/=10;
+    }
+    if(n==num)
+        cout << n << " is palindrome.";
+    else
+        cout << n << " is not palindrome.";
+}
+int main()
+{
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+    checkPalindrome(n);
+    return 0;
+}
+```
+### Output
+```
+Enter a number: 4
+4 is palindrome.
+```
+
+## Java Implementation
+### 18. Write a Java program to find the square of any number using the function.
+```js
+//Write a Java program to check whether a number is palindrome or not using functions .
+import java.util.Scanner;
+public class Funycode {
+    static void checkPalindrome(int n)
+    {
+        int num=0,a=n;
+        int tmp;
+        while(a!=0)
+        {
+            tmp=a%10;
+            num=num*10+tmp;
+            a/=10;
+        }
+        if(n==num)
+            System.out.println( n + " is palindrome.\n"");
+        else
+            System.out.println( n + " is not palindrome.\n"");
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter a number: ");
+        n = z.nextInt();
+        checkPalindrome(n);
+    }
+}
+```
+### Output
+```
+Enter a number: 4
+4 is palindrome.
+```

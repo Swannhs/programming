@@ -1,0 +1,100 @@
+---
+title: Write a C/C++/Java program to Calculate the Area of a Circle
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 24. Write a C program to Calculate the Area of a Circle
+```c
+//Write a C program to Calculate the Area of a Circle
+#include<stdio.h>
+
+float circleArea(float r)
+{
+    float pi=3.14159;
+
+    return pi*r*r;
+}
+
+int main()
+{
+    float radius;
+    printf("Enter radius: ");
+    scanf("%f",&radius);
+
+    float area=circleArea(radius);
+
+    printf("Area is %.2f\n",area);
+    return 0;
+}
+```
+### Output
+```
+Enter radius: 4
+Area is 50.27
+```
+
+## C++ Implementation
+### 24. Write a C++ program to Calculate the Area of a Circle
+```c
+//Write a C++ program to Calculate the Area of a Circle
+
+#include<iostream>
+using namespace std;
+
+float circleArea(float r)
+{
+    float pi=3.14159;
+
+    return pi*r*r;
+}
+
+int main()
+{
+    float radius;
+    cout << "Enter radius: ";
+    cin >> radius;
+
+    float area=circleArea(radius);
+
+    cout << "Area is " << area;
+    return 0;
+}
+```
+### Output
+```
+Enter radius: 4
+Area is 50.27
+```
+
+## Java Implementation
+### 24. Write a Java program to Calculate the Area of a Circle
+```js
+//Write a Java program to Calculate the Area of a Circle
+import java.util.Scanner;
+public class Funycode {
+    static
+    float circleArea(float r)
+    {
+        float pi=3.14159;
+        return pi*r*r;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        float radius;
+        System.out.println("Enter radius: ");
+        radius = z.nextInt();
+        float area=circleArea(radius);
+        System.out.println("Area is "+area);
+    }
+}
+```
+### Output
+```
+Enter radius: 4
+Area is 50.27
+```

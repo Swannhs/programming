@@ -1,0 +1,110 @@
+---
+title: Write a C/C++/Java program to count the number of occurrences of any two vowels in succession in a line of text. For example, in the sentence “Pleases read this application and give me gratuity” such occurrences are ea, ea, ui
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 37. Write a C program to count the number of occurrences of any two vowels in succession in a line of text. For example, in the sentence “Pleases read this application and give me gratuity” such occurrences are ea, ea, ui
+```c
+//Write a C program to count the number of occurrences of any two vowels in succession in a line of text. For example, in the sentence “Pleases read this application and give me gratuity” such occurrences are ea, ea, ui
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    char a[10000],i=0,count=0;
+    printf("enter the line: ");
+    gets(a);
+    printf("two vowels in succesion are: ");
+    while(a[i]!='\0')
+    {
+        if(a[i]=='a'|| a[i]=='e'|| a[i]=='i'|| a[i]=='o'||a[i]=='u' )
+        {
+            if(a[i+1]=='a'|| a[i+1]=='e'|| a[i+1]=='i'|| a[i+1]=='o'|| a[i+1]=='u')
+            {
+                count++;
+                printf("%c%c  ",a[i],a[i+1]);
+            }
+        }
+        i++;
+    }
+    printf("\noccurence of two vowels in succesion = %2d\n ",count);
+}
+```
+### Output
+```
+enter the line: hello funycode
+two vowels in succesion are:
+occurence of two vowels in succesion =  0
+```
+## C++ Implementation
+### 37. Write a C++ program to count the number of occurrences of any two vowels in succession in a line of text. For example, in the sentence “Pleases read this application and give me gratuity” such occurrences are ea, ea, ui
+```c
+//Write a C++ program to count the number of occurrences of any two vowels in succession in a line of text. For example, in the sentence “Pleases read this application and give me gratuity” such occurrences are ea, ea, ui
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char a[10000],i=0,count=0;
+    cout << "enter the line: ";
+    cin >> a;
+    cout << "two vowels in succesion are: ";
+    while(a[i]!='\0')
+    {
+        if(a[i]=='a'|| a[i]=='e'|| a[i]=='i'|| a[i]=='o'||a[i]=='u' )
+        {
+            if(a[i+1]=='a'|| a[i+1]=='e'|| a[i+1]=='i'|| a[i+1]=='o'|| a[i+1]=='u')
+            {
+                count++;
+                cout << a[i] << a[i+1] << " ";
+            }
+        }
+        i++;
+    }
+    cout << "\noccurence of two vowels in succesion = " count << endl;
+}
+```
+### Output
+```
+enter the line: hello funycode
+two vowels in succesion are:
+occurence of two vowels in succesion =  0
+```
+
+## Java Implementation
+### 37. Write a Java program to count the number of occurrences of any two vowels in succession in a line of text. For example, in the sentence “Pleases read this application and give me gratuity” such occurrences are ea, ea, ui
+```js
+//Write a Java program to count the number of occurrences of any two vowels in succession in a line of text. For example, in the sentence “Pleases read this application and give me gratuity” such occurrences are ea, ea, ui
+import java.util.Scanner;
+
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        char[] a = new char[1000];
+        int i = 0, count = 0;
+        System.out.println("enter the line: ");
+        a = z.next().toCharArray();
+        System.out.println("two vowels in succesion are: ");
+        while (a[i] != '\0') {
+            if (a[i] == 'a' || a[i] == 'e' || a[i] == 'i' || a[i] == 'o' || a[i] == 'u') {
+                if (a[i + 1] == 'a' || a[i + 1] == 'e' || a[i + 1] == 'i' || a[i + 1] == 'o' || a[i + 1] == 'u') {
+                    count++;
+                    System.out.println(a[i] + a[i + 1] + " ");
+                }
+            }
+            i++;
+        }
+        System.out.println("\noccurence of two vowels in succesion = \n "+ count);
+    }
+}
+```
+### Output
+```
+enter the line: hello funycode
+two vowels in succesion are:
+occurence of two vowels in succesion =  0
+```

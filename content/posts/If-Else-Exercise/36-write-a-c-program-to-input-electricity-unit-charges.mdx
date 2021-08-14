@@ -1,0 +1,113 @@
+---
+title: Write a C program to input electricity unit charges and calculate total electricity bill according to the given condition: For first 50 units Rs. 0.50/unit −For next 100 units Rs. 0.75/unit −For next 100 units Rs. 1.20/unit −For unit above 250 Rs. 1.50/unit −An additional surcharge of 20% is added to the bill
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-36: Write a C program to input electricity unit charges and calculate total electricity bill according to the given condition:
+
+### For first 50 units Rs. 0.50/unit
+### For next 100 units Rs. 0.75/unit
+### For next 100 units Rs. 1.20/unit
+### For unit above 250 Rs. 1.50/unit
+### An additional surcharge of 20% is added to the bill
+```c
+#include<stdio.h>
+void main()
+{
+    int n;
+    float bill;
+    printf("Enter electricity unit-");
+    scanf("%d",&n);
+    if(n<=50)
+        bill=n*0.50;
+    if(n>50&&n<=150)
+        bill=50*0.50+(n-50)*0.75;
+    if(n>150&&n<=250)
+        bill=50*0.50+100*0.75+(n-150)*1.20;
+    if(n>250)
+        bill=50*0.50+100*0.75+100*1.20+(n-250)*1.50;
+    printf("main bill=%f",bill+(bill*20/100));
+}
+```
+### Output
+```
+Enter electricity unit-
+500
+main bill=714.0
+```
+
+## C++ Implementation
+### Program-36: Write a C program to input electricity unit charges and calculate total electricity bill according to the given condition:
+
+### For first 50 units Rs. 0.50/unit
+### For next 100 units Rs. 0.75/unit
+### For next 100 units Rs. 1.20/unit
+### For unit above 250 Rs. 1.50/unit
+### An additional surcharge of 20% is added to the bill
+```c
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    float bill;
+    cout<<"enter electricity unit-\n";
+    cin>>n;
+    if(n<=50)
+        bill=n*0.50;
+    if(n>50&&n<=150)
+        bill=50*0.50+(n-50)*0.75;
+    if(n>150&&n<=250)
+        bill=50*0.50+100*0.75+(n-150)*1.20;
+    if(n>250)
+        bill=50*0.50+100*0.75+100*1.20+(n-250)*1.50;
+    cout<<"main bill="<<(bill+(bill*20/100));
+}
+```
+### Output
+```
+Enter electricity unit-
+500
+main bill=714.0
+```
+
+## Java Implementation
+### Program-36: Write a C program to input electricity unit charges and calculate total electricity bill according to the given condition:
+
+### For first 50 units Rs. 0.50/unit
+### For next 100 units Rs. 0.75/unit
+### For next 100 units Rs. 1.20/unit
+### For unit above 250 Rs. 1.50/unit
+### An additional surcharge of 20% is added to the bill
+```js
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int n;
+        double bill=0;
+        System.out.println("Enter electricity unit-\n");
+        n=z.nextInt();
+        if(n<=50)
+            bill=n*0.50;
+        if(n>50&&n<=150)
+            bill=50*0.50+(n-50)*0.75;
+        if(n>150&&n<=250)
+            bill=50*0.50+100*0.75+(n-150)*1.20;
+        if(n>250)
+            bill=50*0.50+100*0.75+100*1.20+(n-250)*1.50;
+        System.out.println("main bill="+(bill+(bill*20/100)));
+    }
+}
+```
+### Output
+```
+Enter electricity unit-
+500
+main bill=714.0
+```

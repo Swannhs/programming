@@ -1,0 +1,107 @@
+---
+title: Write a C/C++/Java program If a five-digit number is input through the keyboard, write a program to reverse the number. (without loop)
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-28: If a five-digit number is input through the keyboard, write a C program to reverse the number. (without loop)
+```c
+/*If a five-digit number is input through the keyboard, write a c program to reverse the number. (without loop)*/
+#include<stdio.h>
+    void main(){
+        int n,r=0,a;
+        scanf("%d",&n);
+        a=n%10;
+        r=r*10+a;
+        n=n/10;
+        a=n%10;
+        r=r*10+a;
+        n=n/10;
+        a=n%10;
+        r=r*10+a;
+        n=n/10;
+        a=n%10;
+        r=r*10+a;
+        n=n/10;
+        a=n%10;
+        r=r*10+a;
+        printf("Reverse of Number=%d",r);
+}
+```
+### Output
+```
+12345
+Reverse of Number:=54321
+```
+
+## C++ Implementation
+### Program-28: If a five-digit number is input through the keyboard, write a C++ program to reverse the number. (without loop)
+```c
+/*If a five-digit number is input through the keyboard, write a c++ program to reverse the number. (without loop)*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,r=0,a;
+    cin>>n;
+    a=n%10;
+    r=r*10+a;
+    n=n/10;
+    a=n%10;
+    r=r*10+a;
+    n=n/10;
+    a=n%10;
+    r=r*10+a;
+    n=n/10;
+    a=n%10;
+    r=r*10+a;
+    n=n/10;
+    a=n%10;
+    r=r*10+a;
+    cout<<"Reverse of Number"<<r;
+}
+```
+### Output
+```
+12345
+Reverse of Number:=54321
+```
+
+## Java Implementation
+### Program-28: If a five-digit number is input through the keyboard, write a java program to reverse the number. (without loop)
+```js
+/*If a five-digit number is input through the keyboard, write a java program to reverse the number. (without loop)*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int n,r=0,a;
+        n=z.nextInt();
+        a=n%10;
+        r=r*10+a;
+        n=n/10;
+        a=n%10;
+        r=r*10+a;
+        n=n/10;
+        a=n%10;
+        r=r*10+a;
+        n=n/10;
+        a=n%10;
+        r=r*10+a;
+        n=n/10;
+        a=n%10;
+        r=r*10+a;
+        System.out.println("Reverse of Number:="+r);
+
+    }
+}
+```
+### Output
+```
+12345
+Reverse of Number:=54321
+```

@@ -1,0 +1,167 @@
+---
+title: Write a C/C++/Java program to find second largest element in an array.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 6. Write a C program to find second largest element in an array.
+```c
+//Write a C program to find second largest element in an array.
+#include <stdio.h>
+void main()
+{
+    int arr[5],i,j=0,lrg,lrg2nd;
+    printf("Input 5 elements in the array :\n");
+    for(i=0; i<5; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    lrg=0;
+    for(i=0; i<5; i++)
+    {
+        if(lrg<arr[i])
+        {
+            lrg=arr[i];
+            j = i;
+        }
+    }
+    lrg2nd=0;
+    for(i=0; i<5; i++)
+    {
+        if(i==j)
+        {
+            i++;
+            i--;
+        }
+        else
+        {
+            if(lrg2nd<arr[i])
+            {
+                lrg2nd=arr[i];
+            }
+        }
+    }
+    printf("The Second largest element in the array is :  %d ", lrg2nd);
+}
+```
+### Output
+```
+Input 5 elements in the array :
+5
+4
+3
+6
+7
+The Second largest element in the array is : 6
+```
+## C++ Implementation
+### 6. Write a C++ program to find second largest element in an array.
+```c
+//Write a C++ program to find second largest element in an array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr[5],i,j=0,lrg,lrg2nd;
+    cout<<"Input 5 elements in the array :\n";
+    for(i=0; i<5; i++)
+    {
+        cin>>arr[i];
+    }
+    lrg=0;
+    for(i=0; i<5; i++)
+    {
+        if(lrg<arr[i])
+        {
+            lrg=arr[i];
+            j = i;
+        }
+    }
+    lrg2nd=0;
+    for(i=0; i<5; i++)
+    {
+        if(i==j)
+        {
+            i++;
+            i--;
+        }
+        else
+        {
+            if(lrg2nd<arr[i])
+            {
+                lrg2nd=arr[i];
+            }
+        }
+    }
+    cout<<"The Second largest element in the array is : "<<lrg2nd;
+}
+```
+### Output
+```
+Input 5 elements in the array :
+5
+4
+3
+6
+7
+The Second largest element in the array is : 6
+```
+
+## Java Implementation
+### 6. Write a Java program to find second largest element in an array.
+```js
+//Write a Java program to find second largest element in an array.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr[]=new int[5],i,j=0,lrg,lrg2nd;
+        System.out.println("Input 5 elements in the array :\n");
+        for(i=0; i<5; i++)
+        {
+            arr[i]=z.nextInt();
+        }
+        lrg=0;
+        for(i=0; i<5; i++)
+        {
+            if(lrg<arr[i])
+            {
+                lrg=arr[i];
+                j = i;
+            }
+        }
+        lrg2nd=0;
+        for(i=0; i<5; i++)
+        {
+            if(i==j)
+            {
+                i++;
+                i--;
+            }
+            else
+            {
+                if(lrg2nd<arr[i])
+                {
+                    lrg2nd=arr[i];
+                }
+            }
+        }
+        System.out.println("The Second largest element in the array is : "+lrg2nd);
+    }
+}
+```
+### Output
+```
+Input 5 elements in the array :
+5
+4
+3
+6
+7
+The Second largest element in the array is : 6
+```

@@ -1,0 +1,78 @@
+---
+title: Write a C/C++/Java program to print individual characters of string in reverse order.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 4. Write a C program to print individual characters of string in reverse order.
+```c
+//Write a C program to print individual characters of string in reverse order.
+#include <stdio.h>
+int main()
+{
+  char str[50];
+  int i,j=0;
+  printf("enter string ");
+  gets(str);
+  for(i=0 ;str[i] !='\0'; i++)
+  j++;
+  for(i=j-1;i>=0;i--)
+    printf("%c ",str[i]);
+}
+```
+### Output
+```
+enter string hello
+o l l e h
+```
+## C++ Implementation
+### 4. Write a C++ program to print individual characters of string in reverse order.
+```c
+//Write a C++ program to print individual characters of string in reverse order.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+  char str[50];
+  int i,j=0;
+  cout << "enter string ";
+  gets(str);
+  for(i=0 ;str[i] !='\0'; i++)
+  j++;
+  for(i=j-1;i>=0;i--)
+    cout << " " << str[i];
+}
+```
+### Output
+```
+enter string hello
+o l l e h
+```
+
+## Java Implementation
+### 4. Write a Java program to print individual characters of string in reverse order.
+```js
+//Write a Java program to print individual characters of string in reverse order.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+          Scanner z=new Scanner(System.in);
+          System.out.println("Enter a string");
+          int i, j;
+          String str;
+          str = z.nextLine();
+          for(i=str.length() - 1; i >= 0; i--){
+            System.out.printf(" " + str.charAt(i));
+          }
+      }
+}
+```
+### Output
+```
+enter string hello
+o l l e h
+```

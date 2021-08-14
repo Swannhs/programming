@@ -1,0 +1,79 @@
+---
+title: Write a C/C++/Java program to Find the Area of Rhombus
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 26. Write a C program to Find the Area of Rhombus
+```c
+//Write a C program to Find the Area of Rhombus
+#include<stdio.h>
+
+int main()
+{
+    float d1,d2,area;
+    printf("Enter 2 diagonal of a Rhombus: ");
+    scanf("%f%f",&d1,&d2);
+
+    area=0.5*d1*d2;
+
+    printf("Area of this Rhombus is %.2f\n",area);
+    return 0;
+}
+```
+### Output
+```
+Enter 2 diagonal of a Rhombus: 5 5
+Area of this Rhombus is 12.50
+```
+
+## C++ Implementation
+### 26. Write a C++ program to find the square of any number using the function.
+```c
+//Write a C++ program to find the square of any number using the function.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    float d1,d2,area;
+    cout << "Enter 2 diagonal of a Rhombus: ");
+    cin >> d1 >> d2;
+
+    area=0.5*d1*d2;
+
+    cout << "Area of this Rhombus is " << area;
+    return 0;
+}
+```
+### Output
+```
+Enter 2 diagonal of a Rhombus: 5 5
+Area of this Rhombus is 12.50
+```
+
+## Java Implementation
+### 26. Write a Java program to find the square of any number using the function.
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        float d1,d2,area;
+        System.out.println("Enter 2 diagonal of a Rhombus: ");
+        d1 = z.nextFloat();
+        d2 = z.nextFloat();
+        area=0.5*d1*d2;
+        System.out.println("Area of this Rhombus is "+area);
+    }
+}
+```
+### Output
+```
+Enter 2 diagonal of a Rhombus: 5 5
+Area of this Rhombus is 12.50
+```

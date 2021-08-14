@@ -1,0 +1,130 @@
+---
+title: Write a C/C++/Java program to find the square of any number using the function.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 36. Write a C program to Read a Coordinate Point and Determine its Quadrant
+```c
+//Write a C program to Read a Coordinate Point and Determine its Quadrant
+#include<stdio.h>
+
+int checkQuardent(int x,int y)
+{
+    if(x==0 && y==0)
+        printf("This point is in center\n");
+    else if(x==0)
+        printf("This point is in Y axis\n");
+    else if(y==0)
+        printf("This point is in X axis\n");
+    else if(x>0 && y>0)
+        printf("This point is in first Quardent\n");
+    else if(x<0 && y>0)
+        printf("This point is in Second Quardent\n");
+    else if(x<0 && y<0)
+        printf("This point is in Third Quardent\n");
+    else
+        printf("This point is in Fourth Quardent\n");
+
+}
+
+int main()
+{
+    int x,y;
+    printf("Enter X & Y: ");
+    scanf("%d%d",&x,&y);
+    checkQuardent(x,y);
+    return 0;
+}
+```
+### Output
+```
+Enter X & Y: 5 10
+This point is in first Quardent
+```
+
+## C++ Implementation
+### 36. Write a C++ program to Read a Coordinate Point and Determine its Quadrant
+```c
+//Write a C++ program to Read a Coordinate Point and Determine its Quadrant
+
+#include<iostream>
+using namespace std;
+
+int checkQuardent(int x,int y)
+{
+    if(x==0 && y==0)
+        cout << "This point is in center\n";
+    else if(x==0)
+        cout << "This point is in Y axis\n";
+    else if(y==0)
+        cout << "This point is in X axis\n";
+    else if(x>0 && y>0)
+        cout << "This point is in first Quardent\n";
+    else if(x<0 && y>0)
+        cout << "This point is in Second Quardent\n";
+    else if(x<0 && y<0)
+        cout << "This point is in Third Quardent\n";
+    else
+        cout << "This point is in Fourth Quardent\n";
+
+}
+
+int main()
+{
+    int x,y;
+    cout << "Enter X & Y: ";
+    cin >> x >> y;
+    checkQuardent(x,y);
+    return 0;
+}
+```
+### Output
+```
+Enter X & Y: 5 10
+This point is in first Quardent
+```
+
+## Java Implementation
+### 36. Write a Java program to Read a Coordinate Point and Determine its Quadrant
+```js
+//Write a Java program to Read a Coordinate Point and Determine its Quadrant
+import java.util.Scanner;
+public class Funycode {
+    static int checkQuardent(int x,int y)
+    {
+        if(x==0 && y==0)
+            System.out.println("This point is in center\n");
+        else if(x==0)
+            System.out.println("This point is in Y axis\n");
+        else if(y==0)
+            System.out.println("This point is in X axis\n");
+        else if(x>0 && y>0)
+            System.out.println("This point is in first Quardent\n");
+        else if(x<0 && y>0)
+            System.out.println("This point is in Second Quardent\n");
+        else if(x<0 && y<0)
+            System.out.println("This point is in Third Quardent\n");
+        else
+            System.out.println("This point is in Fourth Quardent\n");
+
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int x,y;
+        System.out.println("Enter X & Y: ");
+        x = z.nextInt();
+        y = z.nextInt();
+        checkQuardent(x,y);
+    }
+}
+```
+### Output
+```
+Enter X & Y: 5 10
+This point is in first Quardent
+```

@@ -1,0 +1,103 @@
+---
+title: Write a C/C++/Java program to check whether a character is digit or not.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 24. Write a C program to check whether a character is digit or not.
+```c
+//Write a C program to check whether a character is digit or not.
+#include <stdio.h>
+int main()
+{
+    char ch;
+
+    printf("enter a character: ");
+    scanf("%c", &ch);
+    if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z'))
+    {
+        printf("This is an alphabet\n");
+    }
+    else if(ch>='0' && ch<='9')
+    {
+        printf("This is a digit\n");
+    }
+    else
+    {
+        printf("This is a special character\n");
+    }
+}
+```
+### Output
+```
+enter a character: a
+This is an alphabet
+```
+## C++ Implementation
+### 24. Write a C++ program to check whether a character is digit or not.
+```c
+//Write a C++ program to check whether a character is digit or not.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char ch;
+
+    printf("enter a character: ";
+    cin >> ch;
+    if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z'))
+    {
+        cout << "This is an alphabet\n";
+    }
+    else if(ch>='0' && ch<='9')
+    {
+        cout << "This is a digit\n";
+    }
+    else
+    {
+        cout << "This is a special character\n";
+    }
+}
+```
+### Output
+```
+enter a character: a
+This is an alphabet
+```
+
+## Java Implementation
+### 24. Write a Java program to check whether a character is digit or not.
+```js
+//Write a Java program to check whether a character is digit or not.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter a character: ");
+        Char ch;
+        ch = z.nextChar();
+        if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z'))
+        {
+            System.out.println("This is an alphabet");
+        }
+        else if(ch>='0' && ch<='9')
+        {
+            System.out.println("This is a digit");
+        }
+        else
+        {
+            System.out.println("This is a special character");
+        }
+    }
+}
+```
+### Output
+```
+enter a character: a
+This is an alphabet
+```

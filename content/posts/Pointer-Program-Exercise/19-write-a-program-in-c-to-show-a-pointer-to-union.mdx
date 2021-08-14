@@ -1,0 +1,52 @@
+---
+title: Write a C/C++/Java program to show a pointer to union.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 19. Write a C program to show a pointer to union.
+```c
+//Write a C program to show a pointer to union.
+#include <stdio.h>
+void main()
+{
+    union student
+    {
+        char *name;
+    };
+    union student stu,*p;
+    stu.name="abcde";  //assign  the string
+    p=&stu;
+    printf(" %s \n",(*p).name);
+}
+```
+### Output
+```
+abcde
+```
+## C++ Implementation
+### 19. Write a C++ program to show a pointer to union.
+```c
+//Write a C++ program to show a pointer to union.
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    union student
+    {
+        char *name;
+    };
+    union student stu,*p;
+    stu.name="abcde";  //assign  the string
+    p=&stu;
+    cout<<(*p).name;
+}
+```
+### Output
+```
+abcde
+```

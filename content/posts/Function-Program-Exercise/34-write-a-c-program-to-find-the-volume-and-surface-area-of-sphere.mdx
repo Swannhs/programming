@@ -1,0 +1,123 @@
+---
+title: Write a C/C++/Java program to find the square of any number using the function.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 34. Write a C program to find the square of any number using the function.
+```c
+//Write a C program to find the square of any number using the function.
+#include<stdio.h>
+#include<math.h>
+
+float surfaceAreaSphere(float r)
+{
+    float pi=3.14159;
+    return 4*pi*r*r;
+}
+float volumeSphere(float r)
+{
+    float pi=3.14159;
+    return (4/3.0)*pi*r*r*r;
+}
+
+int main()
+{
+    float radius;
+    printf("Enter the radius: ");
+    scanf("%f",&radius);
+
+    float surface=surfaceAreaSphere(radius);
+    float volume=volumeSphere(radius);
+
+    printf("Surface Area of this cuboid is %.2f\n",surface);
+    printf("Surface Area of this cuboid is %.2f\n",volume);
+    return 0;
+}
+```
+### Output
+```
+Enter the radius: 5
+Surface Area of this cuboid is 314.16
+Surface Area of this cuboid is 523.60
+```
+
+## C++ Implementation
+### 34. Write a C++ program to find the square of any number using the function.
+```c
+//Write a C++ program to find the square of any number using the function.
+
+#include<iostream>
+using namespace std;
+#include<math.h>
+
+float surfaceAreaSphere(float r)
+{
+    float pi=3.14159;
+    return 4*pi*r*r;
+}
+float volumeSphere(float r)
+{
+    float pi=3.14159;
+    return (4/3.0)*pi*r*r*r;
+}
+
+int main()
+{
+    float radius;
+    cout << "Enter the radius: ";
+    cin >> radius;
+
+    float surface=surfaceAreaSphere(radius);
+    float volume=volumeSphere(radius);
+
+    cout << "Surface Area of this cuboid is " << surface << endl;
+    cout << "Surface Area of this cuboid is " << volume;
+    return 0;
+}
+```
+### Output
+```
+Enter the radius: 5
+Surface Area of this cuboid is 314.16
+Surface Area of this cuboid is 523.60
+```
+
+## Java Implementation
+### 34. Write a Java program to find the square of any number using the function.
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    static float surfaceAreaSphere(float r)
+    {
+        float pi=3.14159;
+        return 4*Math.PI*r*r;
+    }
+    static float volumeSphere(float r)
+    {
+        float pi=3.14159;
+        return (4/3.0)*pi*r*r*r;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        float radius;
+        System.out.println("Enter the radius: ");
+        radius = z.nextFloat();
+        float surface=surfaceAreaSphere(radius);
+        float volume=volumeSphere(radius);
+        System.out.println("Surface Area of this cuboid is "+surface);
+        System.out.println("Surface Area of this cuboid is "+volume);
+    }
+}
+```
+### Output
+```
+Enter the radius: 5
+Surface Area of this cuboid is 314.16
+Surface Area of this cuboid is 523.60
+```

@@ -1,0 +1,79 @@
+---
+title: Write a C/C++/Java program to demonstrate example of nested structure.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 3. Write a C program to demonstrate example of nested structure.
+```c
+//Write a C++ program to demonstrate example of nested structure.
+#include<stdio.h>
+#include<string.h>
+struct student{
+    char name[100];
+    int id;
+    int class_;
+    struct subject{
+    float mark;
+    };
+    struct subject bangla,english,math;
+};
+int main(){
+   struct student one;
+   strcpy(one.name, "Ahosanul Hasan");
+   one.id=12;
+   one.class_=7;
+   one.bangla.mark=90;
+   printf("Name   : %s\n",one.name);
+   printf("class  : %d\n",one.class_);
+   printf("id     : %d\n",one.id);
+   printf("Bangla : %f\n",one.bangla.mark);
+}
+```
+### Output
+```
+Name   : Ahosanul Hasan
+class  : 7
+id     : 12
+Bangla : 90
+```
+
+## C++ Implementation
+### 3. Write a C++ program to demonstrate example of nested structure.
+```c
+//Write a C++ program to find the demonstrate example of nested structure.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct student{
+    char name[100];
+    int id;
+    int class_;
+    struct subject{
+    float mark;
+    };
+    struct subject bangla,english,math;
+};
+int main(){
+   struct student one;
+   strcpy(one.name, "Ahosanul Hasan");
+   one.id=12;
+   one.class_=7;
+   one.bangla.mark=90;
+   cout << "Name   : " << one.name << endl;
+   cout << "class  : " << one.class_ << endl;
+   cout << "id     : " << one.id << endl;
+   cout << "Bangla : " << one.bangla.mark;
+}
+```
+### Output
+```
+Name   : Ahosanul Hasan
+class  : 7
+id     : 12
+Bangla : 90
+```

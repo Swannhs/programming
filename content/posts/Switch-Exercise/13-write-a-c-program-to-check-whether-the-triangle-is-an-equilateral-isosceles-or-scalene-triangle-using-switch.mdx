@@ -1,0 +1,116 @@
+---
+title: Write a C/C++/Java program to check whether the triangle is an equilateral, isosceles or scalene triangle using switch.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 13. Write a C program to check whether the triangle is an equilateral, isosceles or scalene triangle using switch.
+```c
+//Write a C program to check whether the triangle is an equilateral, isosceles or scalene triangle using switch.
+#include<stdio.h>
+int main()
+{
+    int s1,s2,s3;
+    printf("Enter the side values:");
+    scanf("%d %d %d",&s1,&s2,&s3);
+    switch(s1==s2 && s2==s3)
+    {
+    case 1:
+        printf("Equilateral triangle");
+        break;
+    case 0:
+        switch(s1==s2||s1==s3 || s2==s3)
+        {
+        case 1:
+            printf("isosceles triangle");
+            break;
+        case 0:
+            printf("scalene triangle");
+            break;
+        }
+        break;
+    }
+}
+```
+### Output
+```
+Enter the side values:90 30 60
+scalene triangle
+```
+
+## C++ Implementation
+### 13. Write a C++ program to check whether the triangle is an equilateral, isosceles or scalene triangle using switch.
+```c
+//Write a C++ program to print Hello World.
+#include<iostream>
+using namespace std;
+int main()
+{
+    int s1,s2,s3;
+    cout << "Enter the side values:";
+    cin >> s1 >> s2 >> s3;
+    switch(s1==s2 && s2==s3)
+    {
+    case 1:
+        cout << "Equilateral triangle";
+        break;
+    case 0:
+        switch(s1==s2||s1==s3 || s2==s3)
+        {
+        case 1:
+            cout << "isosceles triangle";
+            break;
+        case 0:
+            cout << "scalene triangle";
+            break;
+        }
+        break;
+    }
+}
+```
+### Output
+```
+Enter the side values:90 30 60
+scalene triangle
+```
+
+## Java Implementation
+### 13. Write a Java program to check whether the triangle is an equilateral, isosceles or scalene triangle using switch.
+```js
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        int s1,s2,s3;
+        System.out.println("Enter the side values:");
+        Scanner z=new Scanner(System.in);
+        s1 = z.nextInt();
+        s2 = z.nextInt();
+        s3 = z.nextInt();
+        switch(s1==s2 && s2==s3)
+        {
+        case 1:
+            System.out.println("Equilateral triangle");
+            break;
+        case 0:
+            switch(s1==s2||s1==s3 || s2==s3)
+            {
+            case 1:
+                System.out.println("isosceles triangle");
+                break;
+            case 0:
+                System.out.println("scalene triangle");
+                break;
+            }
+            break;
+        }
+    }
+}
+```
+### Output
+```
+Enter the side values:90 30 60
+scalene triangle
+```

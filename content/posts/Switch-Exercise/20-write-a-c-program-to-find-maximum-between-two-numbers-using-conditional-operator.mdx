@@ -1,0 +1,85 @@
+---
+title: Write a C/C++/Java program to find maximum between two numbers using conditional operator.
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 20. Write a C program to find maximum between two numbers using conditional operator.
+```c
+//Write a C program to find maximum between two numbers using conditional operator.
+#include <stdio.h>
+int main()
+{
+    int a,b,max;
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    if (a==b)
+    {
+        printf("Equal");
+        return 0;
+    }
+    max = (a > b) ? a : b;
+    printf("Maximum number is %d", max);
+}
+```
+### Output
+```
+Enter two numbers: 4 6
+Maximum number is 6
+```
+
+## C++ Implementation
+### 20. Write a C++ program to find maximum between two numbers using conditional operator.
+```c
+//Write a C++ program to find maximum between two numbers using conditional operator.
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,max;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    if (a==b)
+    {
+        cout << "Equal";
+        return 0;
+    }
+    max = (a > b) ? a : b;
+    cout << "Maximum number is " << max;
+}
+```
+### Output
+```
+Enter two numbers: 4 6
+Maximum number is 6
+```
+
+## Java Implementation
+### 20. Write a Java program to find maximum between two numbers using conditional operator.
+```js
+////Write a C++ program to find maximum between two numbers using conditional operator.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+      int a,b,max;
+      System.out.println("Enter two numbers: ");
+      Scanner z = new Scanner(System.in);
+      a = z.nextInt();
+      b = z.nextInt();
+      if (a==b)
+      {
+          System.out.println("Equal");
+      }
+      max = (a > b) ? a : b;
+      System.out.println("Maximum number is "+ max);
+    }
+}
+```
+### Output
+```
+Enter two numbers: 4 6
+Maximum number is 6
+```

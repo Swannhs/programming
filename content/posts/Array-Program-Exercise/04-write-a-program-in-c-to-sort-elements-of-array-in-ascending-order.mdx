@@ -1,0 +1,183 @@
+---
+title: Write a C/C++/Java program to store elements in an array and print it.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 4. Write a C program to sort elements of array in ascending order.
+```c
+//Write a C program to sort elements of array in ascending order.
+#include <stdio.h>
+void  main()
+{
+    int i,arr[10];
+
+    printf("Input 10 elements in the array :\n");
+    for(i=0; i<10; i++)
+    {
+       scanf("%d", &arr[i]);
+    }
+
+    printf("\nElements in array are: ");
+    for(i=0; i<10; i++)
+    {
+        printf("%d  ", arr[i]);
+    }
+
+}
+```
+### Output
+```
+Input 10 elements in the array :
+5
+6
+3
+2
+4
+1
+7
+8
+9
+10
+
+Elements of array in sorted ascending order:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+## C++ Implementation
+### 4. Write a C++ program to sort elements of array in ascending order.
+```c
+//Write a C++ program to sort elements of array in ascending order.
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr[10], i, j, temp;
+    cout<<"Input 10 elements in the array :\n";
+    for(i=0; i<10; i++)
+    {
+        cin>>arr[i];
+    }
+    for(i=0; i<10; i++)
+    {
+        for(j=i+1; j<10; j++)
+        {
+            if(arr[j] <arr[i])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] =temp;
+            }
+        }
+    }
+    cout<<"\nElements of array in sorted ascending order:\n";
+    for(i=0; i<10; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+5
+6
+3
+2
+4
+1
+7
+8
+9
+10
+
+Elements of array in sorted ascending order:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+## Java Implementation
+### 4. Write a Java program to sort elements of array in ascending order.
+```js
+//Write a Java program to sort elements of array in ascending order.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr[]=new int [10],i,j,temp=0;
+        System.out.println("Input 10 elements in the array :\n");
+        for(i=0; i<10; i++)
+        {
+            arr[i]=z.nextInt();
+        }
+        for(i=0; i<10; i++)
+        {
+            for(j=i+1; j<10; j++)
+            {
+                if(arr[j] <arr[i])
+                {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] =temp;
+                }
+            }
+        }
+        System.out.println("\nElements of array in sorted ascending order:\n");
+        for(i=0; i<10; i++)
+        {
+            System.out.println(arr[i]+" ");
+        }
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+5
+6
+3
+2
+4
+1
+7
+8
+9
+10
+
+Elements of array in sorted ascending order:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```

@@ -1,0 +1,85 @@
+---
+title: Write a C/C++/Java program to accept two integers and check whether they are equal or not.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-1: Write a C++ program to accept two integers and check whether they are equal or not.
+```c
+/*Write a C program to accept two integers and check whether they are equal or not.*/
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("Input Two Integer");
+    scanf("%d %d",&a,&b);
+    if(a==b)
+        printf("They are Equal");
+    else
+        printf("They are not Equal");
+}
+```
+### Output
+```
+Input Two Integer
+5
+8
+They are not Equal
+```
+
+## C++ Implementation
+### Program-1: Write a C++ program to accept two integers and check whether they are equal or not.
+```c
+/*Write a C++ program to accept two integers and check whether they are equal or not.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b;
+    cout<<"input two integer-\n";
+    cin>>a>>b;
+    if(a==b)
+        cout<<"They are Equal";
+    else
+        cout<<"They are not Equal";
+}
+```
+### Output
+```
+Input Two Integer
+5
+8
+They are not Equal
+```
+
+## Java Implementation
+### Program-1: Write a java program to accept two integers and check whether they are equal or not.
+```js
+/*Write a java program to accept two integers and check whether they are equal or not.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b;
+        System.out.println("Input Two Integer");
+        a=z.nextInt();
+        b=z.nextInt();
+        if(a==b)
+            System.out.println("They are Equal");
+        else
+            System.out.println("They are not Equal");
+
+    }
+}
+```
+### Output
+```
+Input Two Integer
+5
+8
+They are not Equal
+```

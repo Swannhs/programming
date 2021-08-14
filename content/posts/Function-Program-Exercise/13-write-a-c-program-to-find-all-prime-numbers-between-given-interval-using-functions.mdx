@@ -1,0 +1,141 @@
+---
+title: Write a C/C++/Java program to find all prime numbers between given interval using functions.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 13. Write a C program to find all prime numbers between given interval using functions.
+```c
+//Write a C program to find all prime numbers between given interval using functions.
+#include<stdio.h>
+
+void findPrime(int a,int b)
+{
+    int n;
+    printf("Prime numbers are: ");
+    for(int k=a;k<=b;k++)
+    {
+        int check=1;
+        n=k;
+        for(int i=2;i*i<=n;i++)
+        {
+            if(n%i==0)
+            {
+                check=0;
+                break;
+            }
+        }
+        if(check && n!=1)
+            printf("%d ",n);
+    }
+}
+
+int main()
+{
+    int a,b;
+    printf("Enter a range: ");
+    scanf("%d%d",&a,&b);
+
+    findPrime(a,b);
+
+    return 0;
+}
+```
+### Output
+```
+Enter a range: 1 5
+Prime numbers are: 2 3 5
+```
+
+## C++ Implementation
+### 13. Write a C++ program to find all prime numbers between given interval using functions.
+```c
+//Write a C++ program to find all prime numbers between given interval using functions.
+
+#include<iostream>
+using namespace std;
+
+void findPrime(int a,int b)
+{
+    int n;
+    cout << "Prime numbers are: ";
+    for(int k=a;k<=b;k++)
+    {
+        int check=1;
+        n=k;
+        for(int i=2;i*i<=n;i++)
+        {
+            if(n%i==0)
+            {
+                check=0;
+                break;
+            }
+        }
+        if(check && n!=1)
+            cout << " " << n;
+    }
+}
+
+int main()
+{
+    int a,b;
+    cout << "Enter a range: ";
+    cin >> a >> a;
+
+    findPrime(a,b);
+
+    return 0;
+}
+```
+### Output
+```
+Enter a range: 1 5
+Prime numbers are: 2 3 5
+```
+
+## Java Implementation
+### 13. Write a Java program to find all prime numbers between given interval using functions.
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    static void findPrime(int a,int b)
+    {
+        int n;
+        System.out.println("Prime numbers are: ");
+        for(int k=a;k<=b;k++)
+        {
+            int check=1;
+            n=k;
+            for(int i=2;i*i<=n;i++)
+            {
+                if(n%i==0)
+                {
+                    check=0;
+                    break;
+                }
+            }
+            if(check && n!=1)
+                System.out.println(" " + n);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int a,b;
+        System.out.println("Enter a range: ");
+        a = z.nextInt();
+        b = z.nextInt();
+
+        findPrime(a,b);
+    }
+}
+```
+### Output
+```
+Enter a range: 1 5
+Prime numbers are: 2 3 5
+```

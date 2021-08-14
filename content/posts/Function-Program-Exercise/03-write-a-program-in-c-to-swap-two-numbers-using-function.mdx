@@ -1,0 +1,93 @@
+---
+title: Write a C/C++/Java program to swap two numbers using function.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 3. Write a C program in C to find the square of any number using the function.
+```c
+//Write a C program in C to find the square of any number using the function.
+#include <stdio.h>
+void SwapValue(int a, int b) {
+   int t = a;
+   a = b;
+   b = t;
+
+   printf("\nAfter swapping, the values are: a = %d, b = %d", a, b);
+}
+int main() {
+   int a, b;
+   printf("Enter value of a & b : ");
+   scanf("%d%d", &a,&b);
+   SwapValue(a,b);
+   return 0;
+}
+```
+### Output
+```
+Enter value of a & b : 2 4
+
+After swapping, the values are: a = 4, b = 2
+```
+
+## C++ Implementation
+### 3. Write a C++ program in C to find the square of any number using the function.
+```c
+//Write a C++ program in C to find the square of any number using the function.
+
+#include<iostream>
+using namespace std;
+void SwapValue(int a, int b) {
+   int t = a;
+   a = b;
+   b = t;
+   cout << "\nAfter swapping, the values are: a = " << a << " b = << b;
+}
+
+int main() {
+   int a, b;
+   cout << "Enter value of a & b : ";
+   cin >> a >> d;
+   SwapValue(a,b);
+   return 0;
+}
+```
+### Output
+```
+Enter value of a & b : 2 4
+
+After swapping, the values are: a = 4, b = 2
+```
+
+## Java Implementation
+### 2. Write a Java program in C to find the square of any number using the function.
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    static void SwapValue(int a, int b) {
+       int t = a;
+       a = b;
+       b = t;
+       System.out.println("After swapping, the values are: a = " + a + " b = "+ b);
+    }
+
+    public static void main(String[] args) {
+         Scanner z = new Scanner(System.in);
+         int a, b;
+         System.out.println("Enter value of a & b : ");
+         a = z.nextInt();
+         b = z.nextInt();
+         SwapValue(a,b);
+    }
+}
+```
+### Output
+```
+Enter value of a & b : 2 4
+
+After swapping, the values are: a = 4, b = 2
+```

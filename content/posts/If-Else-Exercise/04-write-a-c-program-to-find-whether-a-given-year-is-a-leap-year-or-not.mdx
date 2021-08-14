@@ -1,0 +1,96 @@
+---
+title: Write a C/C++/Java program to find whether a given year is a leap year or not.
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-4: Write a C program to find whether a given year is a leap year or not.
+```c
+/*Write a C program to find whether a given year is a leap year or not.*/
+#include<stdio.h>
+void main(){
+int n;
+printf("Enter a Year: ");
+scanf("%d",&n);
+if(n%4==0)
+    if(n%100==0)
+        if(n%400==0)
+            printf("leap year");
+            else
+                printf("not leap year");
+        else
+        printf("leap year");
+    else
+    printf("not leap year");
+}
+```
+### Output
+```
+Enter a Year
+2000
+Leap Year
+```
+
+## C++ Implementation
+### Program-4: Write a C++ program to find whether a given year is a leap year or not.
+```c
+/*Write a C++ program to find whether a given year is a leap year or not.*/
+#include<iostream>
+using namespace std;
+int main(){
+int n;
+cout<<"enter a year-\n";
+cin>>n;
+if(n%4==0)
+    if(n%100==0)
+        if(n%400==0)
+            cout<<"leap year";
+            else
+                cout<<"not leap year";
+        else
+        cout<<"leap year";
+    else
+    cout<<"not leap year";
+}
+```
+### Output
+```
+Enter a Year
+2000
+Leap Year
+```
+
+## Java Implementation
+### Program-4: Write a java program to find whether a given year is a leap year or not.
+```js
+/*Write a java program to find whether a given year is a leap year or not.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b;
+        System.out.println("Enter a Year");
+        a=z.nextInt();
+        if(a%4==0)
+            if(a%100==0)
+                if(a%400==0)
+                    System.out.println("Leap Year");
+                 else
+                       System.out.println("Not Leap Year");
+             else
+                System.out.println("Leap Year");
+         else
+               System.out.println("Not Leap Year");
+
+    }
+```
+### Output
+```
+Enter a Year
+2000
+Leap Year
+```

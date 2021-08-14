@@ -1,0 +1,99 @@
+---
+title: Write a C/C++/Java program to find the square of any number using the function.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 44. Write a C program to find the Nth Fibonacci Number using Recursion
+```c
+//Write a C program to find the Nth Fibonacci Number using Recursion#include<stdio.h>
+#include<stdio.h>
+
+int fib(int n)
+{
+    if(n<=1)
+        return n;
+    return fib(n-1)+fib(n-2);
+}
+
+int main()
+{
+    int n;
+    printf("Enter nth : ");
+    scanf("%d",&n);
+
+    int value=fib(n);
+
+    printf("%dth fibonacchi number is: %d\n",n,value);
+    return 0;
+}
+```
+### Output
+```
+Enter nth : 10
+10th fibonacchi number is: 55
+```
+
+## C++ Implementation
+### 44. Write a C++ program to find the Nth Fibonacci Number using Recursion
+```c
+//Write a C++ program to find the Nth Fibonacci Number using Recursion
+#include<iostream>
+using namespace std;
+
+int fib(int n)
+{
+    if(n<=1)
+        return n;
+    return fib(n-1)+fib(n-2);
+}
+
+int main()
+{
+    int n;
+    cout << "Enter nth : ";
+    cin >> n;
+
+    int value=fib(n);
+
+    cout << n << "th fibonacchi number is: " << value;
+    return 0;
+}
+```
+### Output
+```
+Enter nth : 10
+10th fibonacchi number is: 55
+```
+
+## Java Implementation
+### 44. Write a Java program to find the Nth Fibonacci Number using Recursion
+```js
+//Write a Java program to find the Nth Fibonacci Number using Recursionu
+import java.util.Scanner;
+public class Funycode {
+    static int fib(int n)
+    {
+        if(n<=1)
+            return n;
+        return fib(n-1)+fib(n-2);
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter nth : ");
+        n = z.nextInt();
+        int value=fib(n);
+        System.out.println( n + "th fibonacchi number is: "+value);
+    }
+}
+```
+### Output
+```
+Enter nth : 10
+10th fibonacchi number is: 55
+```

@@ -1,0 +1,111 @@
+---
+title: Write a C/C++/Java program In a town, the percentage of men is 52. The percentage of total literacy is 48. If total percentage of literate men is 35 of the total population, write a program to find the total number of illiterate men and women if the population of the town is 80,000.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-30: In a town, the percentage of men is 52. The percentage of total literacy is 48. If total percentage of literate men is 35 of the total population, write a C  program to find the total number of illiterate men and women if the population of the town is 80,000.
+```c
+/*In a town, the percentage of men is 52. The percentage of total literacy is 48. If total percentage of literate men is 35 of the total population, write a c program to find the total number of illiterate men and women if the population of the town is 80,000.*/
+#include<stdio.h>
+void main()
+{
+    int a,b,c,d,e,f,g,h,i,j,k;
+    a=80000;
+    b=52;
+    c=35;
+    d=48;
+    e=(b*a)/100;
+    f=(a-e);
+    printf("Total Man=%d\n",e);
+    printf("Total Women=%d\n",f);
+    g=(c*e)/100;
+    h=(e-g);
+    printf("illiterates Man=%d\n",h);
+    i=(d-c);
+    j=(i*f)/100;
+    k=f-j;
+    printf("illiterates Women=%d\n",k);
+}
+```
+### Output
+```
+Total Man:41600
+Total Woman:38400
+Illiterates Man:27040
+Illiterates Woman:41600
+```
+
+## C++ Implementation
+### Program-30: In a town, the percentage of men is 52. The percentage of total literacy is 48. If total percentage of literate men is 35 of the total population, write a C++  program to find the total number of illiterate men and women if the population of the town is 80,000.
+```c
+/*In a town, the percentage of men is 52. The percentage of total literacy is 48. If total percentage of literate men is 35 of the total population, write a C++ program to find the total number of illiterate men and women if the population of the town is 80,000.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d,e,f,g,h,i,j,k;
+    a=80000;
+    b=52;
+    c=35;
+    d=48;
+    e=(b*a)/100;
+    f=(a-e);
+    cout<<"total man:"<<e<<endl;
+    cout<<"total woman:"<<f<<endl;
+    g=(c*e)/100;
+    h=(e-g);
+    cout<<"illitarate man:"<<h<<endl;
+    i=(d-c);
+    j=(i*f)/100;
+    k=f-j;
+    cout<<"illitarate woman:"<<k<<endl;
+    return 0;
+}
+```
+### Output
+```
+Total Man:41600
+Total Woman:38400
+Illiterates Man:27040
+Illiterates Woman:41600
+```
+
+## Java Implementation
+### Program-30: In a town, the percentage of men is 52. The percentage of total literacy is 48. If total percentage of literate men is 35 of the total population, write a java  program to find the total number of illiterate men and women if the population of the town is 80,000.
+```js
+/*In a town, the percentage of men is 52. The percentage of total literacy is 48. If total percentage of literate men is 35 of the total population, write a java program to find the total number of illiterate men and women if the population of the town is 80,000.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a,b,c,d,e,f,g,h,i,j,k;
+        a=80000;
+        b=52;
+        c=35;
+        d=48;
+        e=(b*a)/100;
+        f=(a-e);
+        System.out.println("Total Man:"+e);
+        System.out.println("Total Woman:"+f);
+        g=(c*e)/100;
+        h=(e-g);
+        System.out.println("Illiterates Man:"+h);
+        i=(d-c);
+        j=(i*f)/100;
+        k=f-j;
+        System.out.println("Illiterates Woman:"+e);
+
+    }
+```
+### Output
+```
+Total Man:41600
+Total Woman:38400
+Illiterates Man:27040
+Illiterates Woman:41600
+```

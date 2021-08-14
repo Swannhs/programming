@@ -1,0 +1,126 @@
+---
+title: Write a C/C++/Java program to Find the Surface Area and Volume of a Cone
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 32. Write a C program to Find the Surface Area and Volume of a Cone
+```c
+//Write a C program to Find the Surface Area and Volume of a Cone
+#include<stdio.h>
+#include<math.h>
+
+float surfaceAreaCone(float r,float h)
+{
+    float pi=3.14159;
+    return pi*r*(r+sqrt(r*r+h*h));
+}
+float volumeCone(float r,float h)
+{
+    float pi=3.14159;
+    return pi*r*r*(h/3.0);
+}
+
+int main()
+{
+    float radius,height;
+    printf("Enter the radius & height: ");
+    scanf("%f%f",&radius,&height);
+
+    float surface=surfaceAreaCone(radius,height);
+    float volume=volumeCone(radius,height);
+
+    printf("Surface Area of this cuboid is %.2f\n",surface);
+    printf("Surface Area of this cuboid is %.2f\n",volume);
+    return 0;
+}
+```
+### Output
+```
+Enter the radius & height: 10 15
+Surface Area of this cuboid is 880.52
+Surface Area of this cuboid is 1570.79
+```
+
+## C++ Implementation
+### 32. Write a C++ program to Find the Surface Area and Volume of a Cone
+```c
+//Write a C++ program to Find the Surface Area and Volume of a Cone
+
+#include<iostream>
+using namespace std;
+#include<math.h>
+
+float surfaceAreaCone(float r,float h)
+{
+    float pi=3.14159;
+    return pi*r*(r+sqrt(r*r+h*h));
+}
+float volumeCone(float r,float h)
+{
+    float pi=3.14159;
+    return pi*r*r*(h/3.0);
+}
+
+int main()
+{
+    float radius,height;
+    cout << "Enter the radius & height: ";
+    cin >> radius,&height);
+
+    float surface=surfaceAreaCone(radius,height);
+    float volume=volumeCone(radius,height);
+
+    printf("Surface Area of this cuboid is %.2f\n",surface);
+    printf("Surface Area of this cuboid is %.2f\n",volume);
+    return 0;
+}
+```
+### Output
+```
+Enter the radius & height: 10 15
+Surface Area of this cuboid is 880.52
+Surface Area of this cuboid is 1570.79
+```
+
+## Java Implementation
+### 32. Write a Java program to Find the Surface Area and Volume of a Cone
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    static float surfaceAreaCone(float r,float h)
+    {
+        float pi=3.14159;
+        return pi*r*(r+sqrt(r*r+h*h));
+    }
+    static float volumeCone(float r,float h)
+    {
+        staticfloat pi=3.14159;
+        return pi*r*r*(h/3.0);
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        float radius,height;
+        System.out.println("Enter the radius & height: ");
+        radius = z.nextInt();
+        height = z.nextInt();
+
+        float surface=surfaceAreaCone(radius,height);
+        float volume=volumeCone(radius,height);
+
+        System.out.println("Surface Area of this cuboid is "+surface);
+        System.out.println("Surface Area of this cuboid is "+volume);
+    }
+}
+```
+### Output
+```
+Enter the radius & height: 10 15
+Surface Area of this cuboid is 880.52
+Surface Area of this cuboid is 1570.79
+```

@@ -1,0 +1,303 @@
+---
+title: Write a C/C++/Java program in C to display the such a pattern for n number of rows using a number which will start with the number 1 and the first and a last number of each row will be 1.
+category: Loop(For,While,Do-While)Index
+tags: ['loop']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 32. Write a C program in C to display the such a pattern for n number of rows using a number which will start with the number 1 and the first and a last number of each row will be 1.
+```c
+//Write a C program in C to display the such a pattern for n number of rows using a number which will start with the number 1 and the first and a last number of each row will be 1.
+//Using for loop
+#include<stdio.h>
+int main() {
+    int num,i,f,r,sum,temp;
+    int max;
+    printf("Enter maximum range: ");
+    scanf("%d",&max);
+    printf("Strong numbers in given range are: ");
+    for (num=1; num <= max; num++) {
+        temp = num;
+        sum=0;
+        while(temp) {
+            i=1;
+            f=1;
+            r=temp%10;
+            while(i<=r) {
+                f=f*i;
+                i++;
+            }
+            sum=sum+f;
+            temp=temp/10;
+        }
+        if(sum==num)
+           printf("%d ",num);
+    }
+    return 0;
+}
+//Using while loop
+#include<stdio.h>
+int main()
+{
+    int num,i,f,r,sum,temp;
+    int max;
+    printf("Enter maximum range: ");
+    scanf("%d",&max);
+    printf("Strong numbers in given range are: ");
+    num=1;
+    while( num <= max)
+    {
+        temp = num;
+        sum=0;
+        while(temp)
+        {
+            i=1;
+            f=1;
+            r=temp%10;
+            while(i<=r)
+            {
+                f=f*i;
+                i++;
+            }
+            sum=sum+f;
+            temp=temp/10;
+        }
+
+        if(sum==num)
+            printf("%d ",num);
+            num++;
+
+    }
+    return 0;
+}
+//Using do while loop
+#include<stdio.h>
+int main()
+{
+    int num,i,f,r,sum,temp;
+    int max;
+    printf("Enter maximum range: ");
+    scanf("%d",&max);
+    printf("Strong numbers in given range are: ");
+    num=1;
+    do
+    {
+        temp = num;
+        sum=0;
+        while(temp)
+        {
+            i=1;
+            f=1;
+            r=temp%10;
+            while(i<=r)
+            {
+                f=f*i;
+                i++;
+            }
+            sum=sum+f;
+            temp=temp/10;
+        }
+
+        if(sum==num)
+            printf("%d ",num);
+            num++;
+
+    }
+    while( num <= max) ;
+    return 0;
+}
+```
+### Output
+```
+Input number of rows : 5
+
+    1
+   121
+  12321
+ 1234321
+123454321
+```
+
+## C++ Implementation
+### 32. Write a C++ program in C to display the such a pattern for n number of rows using a number which will start with the number 1 and the first and a last number of each row will be 1.
+```c
+//Write a C++ program in C to display the such a pattern for n number of rows using a number which will start with the number 1 and the first and a last number of each row will be 1.
+
+//Using for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num,i,f,r,sum,temp;
+    int max;
+    cout << "Enter maximum range: ";
+    cin >> max;
+    cout << "Strong numbers in given range are: ";
+    for (num=1; num <= max; num++) {
+        temp = num;
+        sum=0;
+        while(temp) {
+            i=1;
+            f=1;
+            r=temp%10;
+            while(i<=r) {
+                f=f*i;
+                i++;
+            }
+            sum=sum+f;
+            temp=temp/10;
+        }
+        if(sum==num)
+           cout << num;
+    }
+}
+//Using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num,i,f,r,sum,temp;
+    int max;
+    cout << "Enter maximum range: ";
+    cin >> max;
+    cout << "Strong numbers in given range are: ";
+    num=1;
+    while( num <= max)
+    {
+        temp = num;
+        sum=0;
+        while(temp)
+        {
+            i=1;
+            f=1;
+            r=temp%10;
+            while(i<=r)
+            {
+                f=f*i;
+                i++;
+            }
+            sum=sum+f;
+            temp=temp/10;
+        }
+        if(sum==num)
+            cout << num;
+            num++;
+    }
+}
+//Using do while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num,i,f,r,sum,temp;
+    int max;
+    cout << "Enter maximum range: ";
+    cin >> max;
+    cout << "Strong numbers in given range are: ";
+    num=1;
+    do
+    {
+        temp = num;
+        sum=0;
+        while(temp)
+        {
+            i=1;
+            f=1;
+            r=temp%10;
+            while(i<=r)
+            {
+                f=f*i;
+                i++;
+            }
+            sum=sum+f;
+            temp=temp/10;
+        }
+        if(sum==num)
+            cout << num;
+            num++;
+    }
+    while( num <= max) ;
+}
+```
+### Output
+```
+Input number of rows : 5
+
+    1
+   121
+  12321
+ 1234321
+123454321
+```
+
+## Java Implementation
+### 32. Write a Java program in C to display the such a pattern for n number of rows using a number which will start with the number 1 and the first and a last number of each row will be 1.
+```js
+//Write a Java program in C to display the such a pattern for n number of rows using a number which will start with the number 1 and the first and a last number of each row will be 1.
+//Using for loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+       Scanner z = new Scanner(System.in);
+       int i,j,n;
+       System.out.printf("Input number of rows : ");
+       n = z.nextInt();
+       for(i=0;i<=n;i++)
+       {
+          for(j=1;j<=n-i;j++)
+            System.out.printf(" ");
+          for(j=1;j<=i;j++)
+            System.out.printf("%d",j);
+           for(j=i-1;j>=1;j--)
+          System.out.printf("%d",j);
+         System.out.printf("\n");
+    }
+}
+//Using while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+         Scanner z = new Scanner(System.in);
+         int i,j,n;
+         printf("Input number of rows : ");
+         scanf("%d",&n);
+         for(i=0;i<=n;i++)
+         {
+           for(j=1;j<=n-i;j++)
+          printf(" ");
+           for(j=1;j<=i;j++)
+             printf("%d",j);
+             for(j=i-1;j>=1;j--)
+            printf("%d",j);
+           printf("\n");
+         }
+    }
+}
+//Using do while loop
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int i=1,a,sum=0;
+        do
+        {
+            a = z.nextInt();
+            sum=sum+a;
+            i++;
+        }while(i<=3);
+        System.out.println(sum);
+    }
+}
+```
+### Output
+```
+Input number of rows : 5
+
+    1
+   121
+  12321
+ 1234321
+123454321
+```

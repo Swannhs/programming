@@ -1,0 +1,64 @@
+---
+title: Write a C/C++/Java program to add numbers using call by reference.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 5. Write a C program to add numbers using call by reference.
+```c
+//Write a C program to add numbers using call by reference.
+#include <stdio.h>
+void main()
+{
+    int a, b, sum;
+    printf("Enter two integers\n");
+    scanf("%d%d", &a, &b);
+    sum = addTwoNumbers(&a, &b);
+    printf(" The sum of %d and %d  is= %d\n\n", a, b, sum);
+    int addTwoNumbers(int *, int *); //call the another function
+}
+int addTwoNumbers(int *n1, int *n2)
+{
+    int sum;
+    sum = *n1 + *n2;
+    return sum;
+}
+```
+### Output
+```
+Enter two integers
+1 2
+ The sum of 1 and 2  is= 3
+```
+## C++ Implementation
+### 5. Write a C++ program to add numbers using call by reference.
+```c
+//Write a C++ program to add numbers using call by reference.
+#include <iostream>
+using namespace std;
+int addTwoNumbers(int *n1, int *n2)
+{
+    int sum;
+    sum = *n1 + *n2;
+    return sum;
+}
+
+int main()
+{
+    int a, b, sum;
+    cout<<("Enter two integers\n");
+    cin>>a>>b;
+    sum = addTwoNumbers(&a, &b);
+    cout<<" The sum of "<<a <<" and "<<b <<" is= "<<sum;
+    int addTwoNumbers(int *, int *); //call the another function
+}
+```
+### Output
+```
+Enter two integers
+1 2
+ The sum of 1 and 2  is= 3
+```

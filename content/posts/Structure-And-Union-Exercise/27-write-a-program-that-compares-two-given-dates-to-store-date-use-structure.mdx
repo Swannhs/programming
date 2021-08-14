@@ -1,0 +1,82 @@
+---
+title: Write a C/C++/Java program that compares two given dates. To store date use structure say date that contains three members namely date, month and year. If the dates are equal then display message as “Equal” otherwise “Unequal”.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 27. Write a C program that compares two given dates. To store date use structure say date that contains three members namely date, month and year. If the dates are equal then display message as “Equal” otherwise “Unequal”.
+```c
+//Write a C program that compares two given dates. To store date use structure say date that contains three members namely date, month and year. If the dates are equal then display message as “Equal” otherwise “Unequal”.
+#include<stdio.h>
+#include<conio.h>
+struct date
+{
+int day;
+int month;
+int year;
+};
+int main(){
+    struct date date1,date2;
+    printf("enter first date: Ex (12-5-21) (dd-mm-yy)\n");
+    scanf("%d-%d-%d",&date1.day,&date1.month,&date1.year);
+    printf("enter second date: Ex (12-5-21) (dd-mm-yy)\n");
+    scanf("%d-%d-%d",&date2.day,&date2.month,&date2.year);
+    if(date1.day==date2.day&& date2.month==date1.month&& date1.year==date2.year)
+    {
+        printf("Equal");
+    }
+    else{
+        printf("Unequal");
+    }
+}
+```
+### Output
+```
+enter first date: Ex (12-5-21) (dd-mm-yy)
+12 12 12
+enter second date: Ex (12-5-21) (dd-mm-yy)
+11 11 11
+Unequal
+```
+
+## C++ Implementation
+### 27. Write a C++ program that compares two given dates. To store date use structure say date that contains three members namely date, month and year. If the dates are equal then display message as “Equal” otherwise “Unequal”.
+```c
+//Write a C++ program that compares two given dates. To store date use structure say date that contains three members namely date, month and year. If the dates are equal then display message as “Equal” otherwise “Unequal”.
+
+#include<iostream>
+#include <string.h>
+#include<conio.h>
+using namespace std;
+struct date
+{
+int day;
+int month;
+int year;
+};
+int main(){
+    struct date date1,date2;
+    cout << "enter first date: Ex (12-5-21) (dd-mm-yy)\n";
+    cin >> date1.day >> date1.month >> date1.year;
+    cout << "enter second date: Ex (12-5-21) (dd-mm-yy)\n";
+    cin >> date2.day >> date2.month >> date2.year;
+    if(date1.day==date2.day&& date2.month==date1.month&& date1.year==date2.year)
+    {
+        cout << "Equal";
+    }
+    else{
+        cout << "Unequal";
+    }
+}
+```
+### Output
+```
+enter first date: Ex (12-5-21) (dd-mm-yy)
+12 12 12
+enter second date: Ex (12-5-21) (dd-mm-yy)
+11 11 11
+Unequal
+```

@@ -1,0 +1,116 @@
+---
+title: Write a C/C++/Java program to check whether a number is positive, negative or zero using switch
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 15. Write a C program to check whether a number is positive, negative or zero using switch
+```c
+//Write a C program to check whether a number is positive, negative or zero using switch
+#include <stdio.h>
+int main()
+{
+    int num;
+    printf("Enter any number: ");
+    scanf("%d", &num);
+    switch (num > 0)
+    {
+    case 1:
+        printf("%d is positive", num);
+        break;
+    case 0:
+        switch (num < 0)
+        {
+        case 1:
+            printf("%d is negative", num);
+            break;
+        case 0:
+            printf("%d is zero", num);
+            break;
+        }
+        break;
+    }
+    return 0;
+}
+```
+### Output
+```
+Enter any number: 1
+1 is positive
+```
+
+## C++ Implementation
+### 15. Write a C++ program to check whether a number is positive, negative or zero using switch
+```c
+//Write a C++ program to check whether a number is positive, negative or zero using switch
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout << "Enter any number: ";
+    cin >> num;
+    switch (num > 0)
+    {
+    case 1:
+        cout << num << " is positive";
+        break;
+    case 0:
+        switch (num < 0)
+        {
+        case 1:
+            cout << num <<" is negative";
+            break;
+        case 0:
+            cout << num << " is zero";
+            break;
+        }
+        break;
+    }
+    return 0;
+}
+```
+### Output
+```
+Enter any number: 1
+1 is positive
+```
+
+## Java Implementation
+### 15. Write a Java program to check whether a number is positive, negative or zero using switch
+```js
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        int num;
+        System.out.println("Enter any number: ");
+        Scanner z=new Scanner(System.in);
+        num = z.nextInt();
+        switch (num > 0)
+        {
+        case 1:
+            System.out.println(num + " is positive");
+            break;
+        case 0:
+            switch (num < 0)
+            {
+            case 1:
+                System.out.println(num + " is negative");
+                break;
+            case 0:
+                System.out.println(num + " is zero");
+                break;
+            }
+            break;
+        }
+    }
+}
+```
+### Output
+```
+Enter any number: 1
+1 is positive
+```

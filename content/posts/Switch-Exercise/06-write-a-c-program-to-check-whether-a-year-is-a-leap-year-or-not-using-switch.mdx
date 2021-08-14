@@ -1,0 +1,106 @@
+---
+title: Write a C/C++/Java program to check whether a year is a leap year or not using switch
+category: Switch Index
+tags: ['switch']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-6: Write a C program to check whether a year is a leap year or not using switch.
+```c
+/*Write a C program to check whether a year is a leap year or not using switch*/
+#include<stdio.h>
+int main()
+{
+    int y,n;
+    printf("Enter Year: ");
+    scanf("%d",&y);
+    n=((y%4==0)&&((y%400==0)||(y%100!=0)));
+    switch(n)
+    {
+       case 1:
+           printf("Leap Year.");
+           break;
+       case 0:
+           printf("Not Leap Year.");
+           break;
+       default:
+           printf("Invalid.");
+           break;
+    }
+    return 0;
+}
+```
+### Output
+```
+Input: 2000
+Output: Leap Year.
+```
+
+## C++ Implementation
+### Program-6: Write a C++ program to check whether a year is a leap year or not using switch.
+```c
+/*Write a C++ program to check whether a year is a leap year or not using switch.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+     int y,n;
+     cout << "Enter Year: ";
+     cin >> y;
+     n=((y%4==0)&&((y%400==0)||(y%100!=0)));
+     switch(n)
+     {
+         case 1:
+             cout << "Leap Year.";
+             break;
+         case 0:
+             cout << "Not Leap Year.";
+             break;
+         default:
+             cout << "Invalid.";
+             break;
+     }
+     return 0;
+}
+```
+### Output
+```
+Input: 2000
+Output: Leap Year.
+```
+
+## Java Implementation
+### Program-6: Write a Java program to check whether a year is a leap year or not using switch.
+```js
+/*Write a Java program to check whether a year is a leap year or not using switch.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int y, n;
+        System.out.println("Enter Year: ");
+        y=z.nextInt();
+        n=((y%4==0)&&((y%400==0)||(y%100!=0)));
+        switch(n)
+        {
+        case 1:
+            System.out.println("Leap Year.");
+            break;
+        case 0:
+            System.out.println("Not Leap Year.");
+            break;
+        default:
+            System.out.println("Invalid.");
+            break;
+        }
+    }
+}
+```
+### Output
+```
+Input: 2000
+Output: Leap Year.
+```

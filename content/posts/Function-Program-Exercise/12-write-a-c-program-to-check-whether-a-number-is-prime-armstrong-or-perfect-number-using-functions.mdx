@@ -1,0 +1,259 @@
+---
+title: Write a C/C++/Java program to check whether a number is prime, Armstrong or perfect number using functions.
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 12. Write a C program to check whether a number is prime, Armstrong or perfect number using functions.
+```c
+//Write a C program to check whether a number is prime, Armstrong or perfect number using functions.
+
+#include<stdio.h>
+
+void isPrime(int n)
+{
+    int check=1;
+    for(int i=2;i*i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            check=0;
+            break;
+        }
+    }
+    if(check && n!=1)
+        printf("%d is prime.\n",n);
+    else
+        printf("%d is not prime.\n",n);
+}
+
+void isArmstrong(int n)
+{
+     int k=n;
+     int count=0;
+     while(k>0)
+     {
+         ++count;
+         k/=10;
+     }
+     int number=0;
+     k=n;
+     while(k)
+     {
+         int x=k%10;
+         int p=1;
+         for (int i = 1; i <= count; ++i)
+         {
+             p*=x;
+         }
+         number+=p;
+         k/=10;
+     }
+     if(n==number)
+         printf("%d is Armstrong Number\n",n);
+     else
+         printf("%d is Not Armstrong Number\n",n);
+}
+
+void isPerfect(int Number)
+{
+   int Sum=0;
+   for(int i = 1 ; i < Number ; i++)
+   {
+     if(Number % i == 0)
+       Sum = Sum + i ;
+   }
+
+   if (Sum == Number)
+      printf("%d is a Perfect Number\n", Number) ;
+   else
+      printf("%d is not the Perfect Number\n", Number) ;
+
+}
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    isPrime(n);
+    isArmstrong(n);
+    isPerfect(n);
+
+    return 0;
+}
+```
+### Output
+```
+Enter a number: 4
+4 is not prime.
+4 is Armstrong Number
+4 is not the Perfect Number
+```
+
+## C++ Implementation
+### 12. Write a C++ program to check whether a number is prime, Armstrong or perfect number using functions
+```c
+//Write a C++ program to check whether a number is prime, Armstrong or perfect number using functions
+
+#include<iostream>
+using namespace std;
+void isPrime(int n)
+{
+    int check=1;
+    for(int i=2;i*i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            check=0;
+            break;
+        }
+    }
+    if(check && n!=1)
+        cout << n " is prime.\n";
+    else
+        cout << " is not prime.\n";
+}
+void isArmstrong(int n)
+{
+     int k=n;
+     int count=0;
+     while(k>0)
+     {
+         ++count;
+         k/=10;
+     }
+     int number=0;
+     k=n;
+     while(k)
+     {
+         int x=k%10;
+         int p=1;
+         for (int i = 1; i <= count; ++i)
+         {
+             p*=x;
+         }
+         number+=p;
+         k/=10;
+     }
+     if(n==number)
+         cout << " is Armstrong Number\n";
+     else
+         cout << " is Not Armstrong Number\n";
+}
+void isPerfect(int Number)
+{
+   int Sum=0;
+   for(int i = 1 ; i < Number ; i++)
+   {
+     if(Number % i == 0)
+       Sum = Sum + i ;
+   }
+   if (Sum == Number)
+      cout << Number <<" is a Perfect Number\n" ;
+   else
+      cout << Number << " is not the Perfect Number\n";
+}
+int main()
+{
+    int n;
+    cin >> n;
+    isPrime(n);
+    isArmstrong(n);
+    isPerfect(n);
+    return 0;
+}
+```
+### Output
+```
+Enter a number: 4
+4 is not prime.
+4 is Armstrong Number
+4 is not the Perfect Number
+```
+
+## Java Implementation
+### 2. Write a Java program to find the square of any number using the function.
+```js
+//Write a Java program to show the simple structure of a function.
+import java.util.Scanner;
+public class Funycode {
+    void isPrime(int n)
+    {
+        int check=1;
+        for(int i=2;i*i<=n;i++)
+        {
+            if(n%i==0)
+            {
+                check=0;
+                break;
+            }
+        }
+        if(check && n!=1)
+            printf("%d is prime.\n",n);
+        else
+            printf("%d is not prime.\n",n);
+    }
+    void isArmstrong(int n)
+    {
+         int k=n;
+         int count=0;
+         while(k>0)
+         {
+             ++count;
+             k/=10;
+         }
+         int number=0;
+         k=n;
+         while(k)
+         {
+             int x=k%10;
+             int p=1;
+             for (int i = 1; i <= count; ++i)
+             {
+                 p*=x;
+             }
+             number+=p;
+             k/=10;
+         }
+         if(n==number)
+             printf("%d is Armstrong Number\n",n);
+         else
+             printf("%d is Not Armstrong Number\n",n);
+    }
+    void isPerfect(int Number)
+    {
+        int Sum=0;
+     for(int i = 1 ; i < Number ; i++)
+      {
+       if(Number % i == 0)
+         Sum = Sum + i ;
+      }
+     if (Sum == Number)
+        printf("%d is a Perfect Number\n", Number) ;
+     else
+        printf("%d is not the Perfect Number\n", Number) ;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        n = z.nextInt();
+        Funycode object = new Funycode();//Create an object of Funcycode class
+        // Call function by object
+        object.isPrime(n);
+        object.isArmstrong(n);
+        object.isPerfect(n);
+    }
+}
+```
+### Output
+```
+Enter a number: 4
+4 is not prime.
+4 is Armstrong Number
+4 is not the Perfect Number
+```

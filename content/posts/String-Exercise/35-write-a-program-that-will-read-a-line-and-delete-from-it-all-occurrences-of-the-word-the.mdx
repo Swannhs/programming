@@ -1,0 +1,82 @@
+---
+title: Write a C/C++/Java program that will read a line and delete from it all occurrences of the word ‘the’.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 35. Write a C program that will read a line and delete from it all occurrences of the word ‘the’.
+```c
+//Write a C program that will read a line and delete from it all occurrences of the word ‘the’.
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    gets(str);
+    int len= strlen(str);
+    int i;
+    for(i=0;i<len;i++)
+    {
+        if((i==0 || str[i-1]==' ')&&str[i]=='t' && str[i+1]=='h' && str[i+2]=='e' && (str[i+3]==' '|| str[i+3]=='\0') )
+            i=i+3;
+        printf("%c",str[i]);
+    }
+    printf("\n");
+}
+```
+### Output
+```
+boys walks through the jungle
+boys walks through jungle
+```
+## C++ Implementation
+### 35. Write a C++ program that will read a line and delete from it all occurrences of the word ‘the’.
+```c
+//Write a C++ program that will read a line and delete from it all occurrences of the word ‘the’.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char str[100];
+    cin >> str;
+    int len= strlen(str);
+    int i;
+    for(i=0;i<len;i++)
+    {
+        if((i==0 || str[i-1]==' ')&&str[i]=='t' && str[i+1]=='h' && str[i+2]=='e' && (str[i+3]==' '|| str[i+3]=='\0') )
+            i=i+3;
+        cout << str[i];
+    }
+}
+```
+### Output
+```
+boys walks through the jungle
+boys walks through jungle
+```
+
+## Java Implementation
+### 35. Write a Java program that will read a line and delete from it all occurrences of the word ‘the’.
+```js
+//Write a Java program that will read a line and delete from it all occurrences of the word ‘the’.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter  the string : ");
+        String str = z.nextLine();
+        String str_new = str.replace("the", ' ');
+        System.out.println(str_new);
+    }
+}
+```
+### Output
+```
+boys walks through the jungle
+boys walks through jungle
+```

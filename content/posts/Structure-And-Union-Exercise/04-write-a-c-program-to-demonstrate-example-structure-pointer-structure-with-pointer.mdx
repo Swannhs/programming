@@ -1,0 +1,60 @@
+---
+title: Write a C/C++/Java demonstrate example structure pointer (structure with pointer).
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 4. Write a C demonstrate example structure pointer (structure with pointer).
+```c
+//Write a C++ demonstrate example structure pointer (structure with pointer).
+#include<stdio.h>
+struct student{
+    char name[100];
+    int id;
+};
+int main(){
+    struct student *sakib;
+    struct student p;
+    sakib=&p;
+    strcpy(sakib->name, "Ahosanul Hasan");
+    sakib->id=16105001;
+    printf("%s\n",sakib->name);
+    printf("%d",sakib->id);
+}
+```
+### Output
+```
+Ahosanul Hasan
+16105001
+```
+
+## C++ Implementation
+### 4. Write a C++ demonstrate example structure pointer (structure with pointer).
+```c
+//Write a C++ program to demonstrate example structure pointer (structure with pointer).
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct student{
+    char name[100];
+    int id;
+};
+int main(){
+    struct student *sakib;
+    struct student p;
+    sakib=&p;
+    strcpy(sakib->name, "Ahosanul Hasan");
+    sakib->id=16105001;
+    cout << "\n" << sakib->name << endl;
+    cout << "" << sakib->id;
+}
+```
+### Output
+```
+Ahosanul Hasan
+16105001
+```

@@ -1,0 +1,109 @@
+---
+title: Write a C/C++/Java program to find sum of all even or odd numbers in given range using functions
+category: Function Program Index
+tags: ['function']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 47. Write a C program to find sum of all even or odd numbers in given range using functions
+```c
+//Write a C program to find sum of all even or odd numbers in given range using functions
+#include<stdio.h>
+
+int evenSum(int n)
+{
+    int sum=0;
+    for(int i=2;i<=n;i+=2)
+    {
+        sum+=i;
+    }
+    return sum;
+}
+
+int main()
+{
+    int n;
+    printf("Enter n: ");
+    scanf("%d",&n);
+
+    int total=evenSum(n);
+
+    printf("Total even sum is %d",total);
+    return 0;
+}
+```
+### Output
+```
+Enter n: 10
+Total even sum is 30
+```
+
+## C++ Implementation
+### 47. Write a C++ program to find sum of all even or odd numbers in given range using functions
+```c
+//Write a C++ program to find sum of all even or odd numbers in given range using functions
+
+#include<iostream>
+using namespace std;
+
+int evenSum(int n)
+{
+    int sum=0;
+    for(int i=2;i<=n;i+=2)
+    {
+        sum+=i;
+    }
+    return sum;
+}
+
+int main()
+{
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+
+    int total=evenSum(n);
+
+    cout << "Total even sum is " << total;
+    return 0;
+}
+```
+### Output
+```
+Enter n: 10
+Total even sum is 30
+```
+
+## Java Implementation
+### 47. Write a Java program to find sum of all even or odd numbers in given range using functions
+```js
+//Write a Java program to find sum of all even or odd numbers in given range using functions
+import java.util.Scanner;
+public class Funycode {
+    static int evenSum(int n)
+    {
+        int sum=0;
+        for(int i=2;i<=n;i+=2)
+        {
+            sum+=i;
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int n;
+        System.out.println("Enter n: ");
+        n = z.nextInt();
+        int total=evenSum(n);
+        System.out.println("Total even sum is "+total);
+    }
+}
+```
+### Output
+```
+Enter n: 10
+Total even sum is 30
+```

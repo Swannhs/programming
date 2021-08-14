@@ -1,0 +1,96 @@
+---
+title: The policy followed by a company to process customer orders is given by the following rules: If a customer order is less than or equal to that in stock and has credit is OK, supply has requirement. −If has credit is not OK do not supply. Send him intimation. −If has credit is Ok but the item in stock is less than has order, supply what is in stock. Intimate to him data the balance will be shipped. Write a C program to implement the company policy
+category: If-Else Index
+tags: ['if-else']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### Program-40: The policy followed by a company to process customer orders is given by the following rules: If a customer order is less than or equal to that in stock and has credit is OK, supply has requirement. −If has credit is not OK do not supply. Send him intimation. −If has credit is Ok but the item in stock is less than has order, supply what is in stock. Intimate to him data the balance will be shipped. Write a C program to implement the company policy
+```c
+#include<stdio.h>
+void main()
+{
+    int order,stock;
+    char credit;
+    printf("Enter the order,stock & credit of a customer-");
+    scanf("%d%d %c",&order,&stock,&credit);
+    if((order<=stock)&&credit=='k')
+        printf("supply has requirement");
+    else if((order<=stock)&&(credit!='k'))
+        printf("not supply and send information");
+    else if((order>=stock)&&(credit=='k'))
+        printf("supply whats is in store and intimate to him date");
+}
+```
+### Output
+```
+Enter the order,stock & credit of a customer-
+5
+6
+k
+supply has requirement
+```
+
+## C++ Implementation
+### Program-40: The policy followed by a company to process customer orders is given by the following rules: If a customer order is less than or equal to that in stock and has credit is OK, supply has requirement. −If has credit is not OK do not supply. Send him intimation. −If has credit is Ok but the item in stock is less than has order, supply what is in stock. Intimate to him data the balance will be shipped. Write a C++ program to implement the company policy.
+```c
+#include<iostream>
+using namespace std;
+int main()
+{
+    int order,stock;
+    char credit;
+    cout<<"Enter the order,stock & credit of a customer-\n";
+    cin>>order>>stock>>credit;
+    if((order<=stock)&&credit=='k')
+        cout<<"supply has requirement";
+    else if((order<=stock)&&(credit!='k'))
+        cout<<"not supply and send information";
+    else if((order>=stock)&&(credit=='k'))
+        cout<<"supply whats is in store and intimate to him date";
+}
+```
+### Output
+```
+Enter the order,stock & credit of a customer-
+5
+6
+k
+supply has requirement
+```
+
+## Java Implementation
+### Program-40: The policy followed by a company to process customer orders is given by the following rules: If a customer order is less than or equal to that in stock and has credit is OK, supply has requirement. −If has credit is not OK do not supply. Send him intimation. −If has credit is Ok but the item in stock is less than has order, supply what is in stock. Intimate to him data the balance will be shipped. Write a java program to implement the company policy.
+```js
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int order,stock;
+        char credit;
+        System.out.println("Enter the order,stock & credit of a customer-\n");
+        order=z.nextInt();
+        stock=z.nextInt();
+        credit=z.next().charAt(0);
+        if((order<=stock)&&credit=='k')
+            System.out.println("supply has requirement");
+        else if((order<=stock)&&(credit!='k'))
+            System.out.println("not supply and send information");
+        else if((order>=stock)&&(credit=='k'))
+            System.out.println("supply whats is in store and intimate to him date");
+        else
+            System.out.println("Invalid");
+    }
+}
+```
+### Output
+```
+Enter the order,stock & credit of a customer-
+5
+6
+k
+supply has requirement
+```

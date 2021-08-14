@@ -1,0 +1,94 @@
+---
+title: Write a C/C++/Java program to perform addition, subtraction, multiplication and division of two numbers.
+category: Basic Declaration & Expression Index
+tags: ['basic']
+date: 2020-04-16
+thumbnailText: Index
+---
+## C Implementation
+### Program-13: Write a C program to perform addition, subtraction, multiplication and division of two numbers.
+```c
+/*Write a C program to perform addition, subtraction, multiplication and division of two numbers.*/
+#include<stdio.h>
+void main()
+{
+    int a,b,c,d,x,y;
+    printf("Enter two Number");
+    scanf("%d%d",&x,&y);
+    a=x+y;
+    b=x-y;
+    c=x*y;
+    d=x/y;
+    printf("add=%d\n",a);
+    printf("sub=%d\n",b);
+    printf("multi=%d\n",c);
+    printf("divi=%d\n",d);
+}
+```
+### Output
+```
+Enter two Number
+10
+2
+add=12
+sub=8
+Multi=20
+Div=5
+```
+## C++ Implementation
+### Program-13: Write a C++ program to perform addition, subtraction, multiplication and division of two numbers.
+```c
+/*Write a C++ program to perform addition, subtraction, multiplication and division of two numbers.*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b;
+    cout<<"Enter two Number";
+    cin>>a>>b;
+    cout<<"add:"<<a+b;
+    cout<<"sub:"<<a-b;
+    cout<<"multi:"<<a*b;
+    cout<<"devi:"<<a/b;
+    return 0;
+}
+```
+### Output
+```
+Enter two Number
+10
+2
+add=12
+sub=8
+Multi=20
+Div=5
+```
+## Java Implementation
+### Program-13: Write a java program to perform addition, subtraction, multiplication and division of two numbers.
+```js
+/*Write a java program to perform addition, subtraction, multiplication and division of two numbers.*/
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+            int a,b;
+            Scanner z=new Scanner(System.in);
+            System.out.println("Enter two Number");
+            a=z.nextInt();
+            b=z.nextInt();
+            System.out.println("add="+(a+b));
+            System.out.println("sub="+(a-b));
+            System.out.println("Multi="+(a*b));
+            System.out.println("Div="+(a/b));
+    }
+}
+```
+### Output
+```
+10
+2
+add=12
+sub=8
+Multi=20
+Div=5
+```

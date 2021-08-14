@@ -1,0 +1,92 @@
+---
+title: Write a C/C++/Java program to convert vowels into upper case character in a given string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 25. Write a C program to convert vowels into upper case character in a given string.
+```c
+//Write a C program to convert vowels into upper case character in a given string.
+#include <stdio.h>
+int main()
+{
+   char str[255];
+   int  i;
+   printf("enter a string: ");
+   gets(str);
+   i=0;
+   while(str[i]!='\0')
+   {
+        if(str[i]=='a' ||str[i]=='e' ||str[i]=='i' ||str[i]=='o' ||str[i]=='u')
+            str[i]=str[i]-32;
+        i++;
+   }
+   printf("converted string is:%s",str);
+}
+```
+### Output
+```
+enter a character: a
+This is an alphabet
+```
+## C++ Implementation
+### 25. Write a C++ program to convert vowels into upper case character in a given string.
+```c
+//Write a C++ program to convert vowels into upper case character in a given string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+   char str[255];
+   int  i;
+   cout << "enter a string: ";
+   cin >> str;
+   i=0;
+   while(str[i]!='\0')
+   {
+        if(str[i]=='a' ||str[i]=='e' ||str[i]=='i' ||str[i]=='o' ||str[i]=='u')
+            str[i]=str[i]-32;
+        i++;
+   }
+   cout << "converted string is: " << str;
+}
+```
+### Output
+```
+enter a character: a
+This is an alphabet
+```
+
+## Java Implementation
+### 25. Write a Java program to convert vowels into upper case character in a given string.
+```js
+//Write a Java program to convert vowels into upper case character in a given string.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        Char ch;
+        int  i;
+        System.out.println("enter a string: ");
+        ch = z.nextChar();
+        i=0;
+        while(str.charAt(i)!='\0')
+        {
+          if(str.charAt(i)=='a' ||str.charAt(i)=='e' ||str.charAt(i)=='i' ||str.charAt(i)=='o' ||str.charAt(i)=='u')
+              str.charAt(i)=str.charAt(i)-32;
+              i++;
+        }
+        System.out.println("converted string is: "+str);
+    }
+}
+```
+### Output
+```
+enter a character: a
+This is an alphabet
+```

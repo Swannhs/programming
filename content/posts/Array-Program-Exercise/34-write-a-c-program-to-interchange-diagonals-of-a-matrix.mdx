@@ -1,0 +1,209 @@
+---
+title: Write a C/C++/Java program to interchange diagonals of a matrix.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 34. Write a C program to interchange diagonals of a matrix.
+```c
+//Write a C program to interchange diagonals of a matrix.
+#include<stdio.h>
+
+int main()
+{
+    int array[3][3],i,j,temp;
+    printf("Enter 9 co-efficients of the matrix-\n");
+    for (i = 0; i < 3; ++i)
+    {
+        for (j = 0; j < 3; ++j)
+        {
+            scanf("%d", &array[i][j]);
+        }
+    }
+    printf("The given matrix is \n");
+    for (i = 0; i < 3; ++i)
+    {
+        for (j = 0; j < 3; ++j)
+        {
+            printf(" %d", array[i][j]);
+        }
+        printf("\n");
+    }
+    if(i == j)
+    {
+        for(i = 0; i < 3; i++)
+        {
+            temp = array[i][i];
+            array[i][i] = array[i][3 - i - 1];
+            array[i][3 - i - 1] = temp;
+        }
+
+        printf("\n Matrix Elements after Interchanging Diagonals are: \n");
+        for(i = 0; i < 3; i++)
+        {
+            for(j= 0; j <3; j++)
+            {
+                printf(" %d ", array[i][j]);
+            }
+            printf("\n");
+        }
+    }
+    else
+    {
+        printf("\n The Matrix that you entered is Not a Square matrix" );
+    }
+
+    return 0;
+}
+```
+### Output
+```
+Enter 9 co-efficients of the matrix-
+1 2 3 4 5 6 7 8 9
+The given matrix is
+ 1 2 3
+ 4 5 6
+ 7 8 9
+
+ Matrix Elements after Interchanging Diagonals are:
+ 3  2  1
+ 4  5  6
+ 9  8  7
+```
+## C++ Implementation
+### 34. Write a C++ program to interchange diagonals of a matrix.
+```c
+//Write a C++ program to interchange diagonals of a matrix.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    int array[3][3],i,j,temp;
+    cout << "Enter 9 co-efficients of the matrix-\n";
+    for (i = 0; i < 3; ++i)
+    {
+        for (j = 0; j < 3; ++j)
+        {
+            cin >> array[i][j];
+        }
+    }
+    cout << "The given matrix is \n";
+    for (i = 0; i < 3; ++i)
+    {
+        for (j = 0; j < 3; ++j)
+        {
+            cout << "\t" << arr1[i][j];
+        }
+        cout << "\n";
+    }
+    if(i == j)
+    {
+        for(i = 0; i < 3; i++)
+        {
+            temp = array[i][i];
+            array[i][i] = array[i][3 - i - 1];
+            array[i][3 - i - 1] = temp;
+        }
+        cout << "\n Matrix Elements after Interchanging Diagonals are: \n";
+        for(i = 0; i < 3; i++)
+        {
+            for(j= 0; j <3; j++)
+            {
+                cout << "\t" << arr1[i][j];
+            }
+            cout << "\n";
+        }
+    }
+    else
+    {
+        cout << "\n The Matrix that you entered is Not a Square matrix";
+    }
+    return 0;
+}
+```
+### Output
+```
+Enter 9 co-efficients of the matrix-
+1 2 3 4 5 6 7 8 9
+The given matrix is
+ 1 2 3
+ 4 5 6
+ 7 8 9
+
+ Matrix Elements after Interchanging Diagonals are:
+ 3  2  1
+ 4  5  6
+ 9  8  7
+```
+
+## Java Implementation
+### 34. Write a Java program to interchange diagonals of a matrix.
+```js
+//Write a Java program to interchange diagonals of a matrix.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+          Scanner z=new Scanner(System.in);
+          int array[][]=new int[3][3],i,j,temp;
+          System.out.printf("Enter 9 co-efficients of the matrix-\n");
+          for (i = 0; i < 3; ++i)
+          {
+              for (j = 0; j < 3; ++j)
+              {
+                  array[i][j] = z.nextInt();
+              }
+          }
+          System.out.printf("The given matrix is \n");
+          for (i = 0; i < 3; ++i)
+          {
+              for (j = 0; j < 3; ++j)
+              {
+                  System.out.printf("\t"+arr1[i][j]);
+              }
+              System.out.printf("\n");
+          }
+          if(i == j)
+          {
+              for(i = 0; i < 3; i++)
+              {
+                  temp = array[i][i];
+                  array[i][i] = array[i][3 - i - 1];
+                  array[i][3 - i - 1] = temp;
+              }
+              System.out.println("\n Matrix Elements after Interchanging Diagonals are: \n");
+              for(i = 0; i < 3; i++)
+              {
+                  for(j= 0; j <3; j++)
+                  {
+                      System.out.printf("\t"+arr1[i][j]);
+                  }
+                  System.out.printf("\n");
+              }
+          }
+          else
+          {
+              System.out.printf("\n The Matrix that you entered is Not a Square matrix" );
+          }
+          return 0;
+      }
+}
+```
+### Output
+```
+Enter 9 co-efficients of the matrix-
+1 2 3 4 5 6 7 8 9
+The given matrix is
+ 1 2 3
+ 4 5 6
+ 7 8 9
+
+ Matrix Elements after Interchanging Diagonals are:
+ 3  2  1
+ 4  5  6
+ 9  8  7
+```

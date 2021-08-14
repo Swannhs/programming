@@ -1,0 +1,170 @@
+---
+title: Write a C/C++/Java program to remove first occurrence of a word from string.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 30. Write a C program to remove first occurrence of a word from string.
+```c
+//Write a C program to remove first occurrence of a word from string.
+#include <string.h>
+
+int main()
+{
+    char s[1000],w[1000];
+    int n,a[1000],i,j,k=0,l,found=0,t=0;
+
+    printf("Enter  the string : ");
+    gets(s);
+    printf("Enter word to be remove: ");
+    gets(w);
+    for(i=0;s[i];i++)
+    {
+        if(s[i]==' ')
+        {
+            a[k++]=i;
+        }
+    }
+    a[k++]=i;
+    j=0;
+    for(i=0;i<k;i++)
+    {
+        n=a[i]-j;
+        if(n==strlen(w))
+        {
+            t=0;
+            for(l=0;w[l];l++)
+            {
+                if(s[l+j]==w[l])
+                {
+                    t++;
+                }
+            }
+            if(t==strlen(w))
+            {
+               break;
+            }
+        }
+
+        j=a[i]+1;
+    }
+    l=0;
+    i=j+t+1;
+    while(s[j+l])
+    {
+        s[j+l]=s[j+t+l+1];
+        l++;
+    }
+
+     printf("'%s'",s);
+
+
+}
+```
+### Output
+```
+Enter  the string : hello coder
+Enter word to be remove: coder
+'hello '
+```
+## C++ Implementation
+### 30. Write a C++ program to remove first occurrence of a word from string.
+```c
+//Write a C++ program to remove first occurrence of a word from string.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char s[1000],w[1000];
+    int n,a[1000],i,j,k=0,l,found=0,t=0;
+
+    cout << "Enter  the string : ";
+    cin >> s;
+    cout << "Enter word to be remove: ";
+    cin >> w;
+    for(i=0;s[i];i++)
+    {
+        if(s[i]==' ')
+        {
+            a[k++]=i;
+        }
+    }
+    a[k++]=i;
+    j=0;
+    for(i=0;i<k;i++)
+    {
+        n=a[i]-j;
+        if(n==strlen(w))
+        {
+            t=0;
+            for(l=0;w[l];l++)
+            {
+                if(s[l+j]==w[l])
+                {
+                    t++;
+                }
+            }
+            if(t==strlen(w))
+            {
+               break;
+            }
+        }
+
+        j=a[i]+1;
+    }
+    l=0;
+    i=j+t+1;
+    while(s[j+l])
+    {
+        s[j+l]=s[j+t+l+1];
+        l++;
+    }
+
+     cout << s;
+}
+```
+### Output
+```
+Enter  the string : hello coder
+Enter word to be remove: coder
+'hello '
+```
+
+## Java Implementation
+### 30. Write a Java program to remove first occurrence of a word from string.
+```js
+//Write a Java program to remove first occurrence of a word from string.
+import java.util.Scanner;
+
+class Funycode{
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        String str, word;
+        System.out.println("Enter  the string : ");
+        str = z.nextLine();
+        System.out.println("Enter word to be remove: ");
+        word = z.nextLine();
+
+        String meg[] = str.split(" ");
+        String new_str = "";
+
+        for (String words : meg){
+            if (!words.equals(word)){
+                new_str += words + " ";
+            }
+        }
+        System.out.print(new_str);
+    }
+}
+```
+### Output
+```
+Enter  the string : hello coder
+Enter word to be remove: coder
+'hello '
+```

@@ -1,0 +1,118 @@
+---
+title: Write a C/C++/Java program to copy all elements from an array to another array.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 10. Write a C program to copy all elements from an array to another array.
+```c
+//Write a C program to copy all elements from an array to another array.
+#include <stdio.h>
+void main()
+{
+    int arr1[10], arr2[10],i;
+    printf("Input 10 elements in the array :\n");
+       for(i=0;i<10;i++)
+        {
+          scanf("%d",&arr1[i]);
+        }
+    for(i=0; i<10; i++)
+    {
+        arr2[i] = arr1[i];
+    }
+    printf("\nThe elements stored in the first array are :\n");
+    for(i=0; i<10; i++)
+    {
+        printf("% d", arr1[i]);
+    }
+    printf("\n\nThe elements copied into the second array are :\n");
+    for(i=0; i<10; i++)
+    {
+        printf("% d", arr2[i]);
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+1 2 3 4 5 6 7 8 9 10
+
+The elements stored in the first array are :
+ 1 2 3 4 5 6 7 8 9 10
+
+The elements copied into the second array are :
+ 1 2 3 4 5 6 7 8 9 10
+```
+## C++ Implementation
+### 10. Write a C++ program to copy all elements from an array to another array.
+```c
+//Write a C++ program to copy all elements from an array to another array.
+
+#include <iostream>
+using namespace std;
+int  main()
+{
+    int i,arr[10];
+    cout<<"Input 10 elements in the array :\n";
+    for(i=0; i<10; i++)
+    {
+       cin>>arr[i];
+    }
+    cout<<"\nElements in array are: ";
+    for(i=0; i<10; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+1 2 3 4 5 6 7 8 9 10
+
+The elements stored in the first array are :
+ 1 2 3 4 5 6 7 8 9 10
+
+The elements copied into the second array are :
+ 1 2 3 4 5 6 7 8 9 10
+```
+
+## Java Implementation
+### 10. Write a Java program to copy all elements from an array to another array.
+```js
+//Write a Java program to copy all elements from an array to another array.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int arr[]=new int [10];
+        int i;
+
+        System.out.println("Input 10 elements in the array :\n");
+        for(i=0; i<10; i++)
+        {
+           arr[i]=z.nextInt();
+        }
+        System.out.println("\nElements in array are: ");
+        for(i=0; i<10; i++)
+        {
+            System.out.println(arr[i]+" ");
+        }
+    }
+}
+```
+### Output
+```
+Input 10 elements in the array :
+1 2 3 4 5 6 7 8 9 10
+
+The elements stored in the first array are :
+ 1 2 3 4 5 6 7 8 9 10
+
+The elements copied into the second array are :
+ 1 2 3 4 5 6 7 8 9 10
+```

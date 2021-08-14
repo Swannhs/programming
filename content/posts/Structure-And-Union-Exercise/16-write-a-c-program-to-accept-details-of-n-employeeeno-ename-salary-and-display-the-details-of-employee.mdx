@@ -1,0 +1,138 @@
+---
+title: Write a C/C++/Java program to accept details of ‘n’ employee(eno, ename, salary) and display the details of employee having highest salary. Use array of structure.
+category: Structure And Union Index
+tags: ['structure']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 16. Write a C program to accept details of ‘n’ employee(eno, ename, salary) and display the details of employee having highest salary. Use array of structure.
+```c
+//Write a C++ program to accept details of ‘n’ employee(eno, ename, salary) and display the details of employee having highest salary. Use array of structure.
+#include<stdio.h>
+struct employee{
+    char ename[20];
+    int eno;
+    double salary;
+};
+void inputdetails(struct employee *a){
+    printf("Enter employee details");
+    printf("\nName : ");
+    fgets(a->ename,sizeof(a->ename),stdin);
+    printf("Employee No : ");
+    scanf("%d",&a->eno);
+    printf("Salary : ");
+    scanf("%lf",&a->salary);
+    getchar();
+}
+int main(){
+    int n;
+    printf("Enter number of employees : ");
+    scanf("%d",&n);
+    getchar();
+    struct employee emp1[n];
+    for(int i=0;i<n;i++)
+    {
+        inputdetails(&emp1[i]);
+    }
+    struct employee *top;
+    int temp=0;
+    for(int i=0;i<n;i++)
+    {
+        if(emp1[i].salary>temp)
+        {
+            temp=emp1[i].salary;
+            top=&emp1[i];
+        }
+    }
+    printf("top paid employee \nname :%semp no: %d\nsalary : %lf",top->ename,top->eno,top->salary);
+}
+```
+### Output
+```
+Enter number of employees : 3
+Enter employee details
+Name : a
+Employee No : 111
+Salary : 100
+Enter employee details
+Name : b
+Employee No : 222
+Salary : 200
+Enter employee details
+Name : c
+Employee No : 333
+Salary : 300
+top paid employee
+name :c
+emp no: 333
+salary : 300
+```
+
+## C++ Implementation
+### 16. Write a C++ program to accept details of ‘n’ employee(eno, ename, salary) and display the details of employee having highest salary. Use array of structure.
+```c
+//Write a C++ program to accept details of ‘n’ employee(eno, ename, salary) and display the details of employee having highest salary. Use array of structure.
+
+#include<iostream>
+#include <string.h>
+using namespace std;
+struct employee{
+    char ename[20];
+    int eno;
+    double salary;
+};
+void inputdetails(struct employee *a){
+    cout << "Enter employee details";
+    cout << "\nName : ";
+    fgets(a->ename,sizeof(a->ename),stdin);
+    cout << "Employee No : ";
+    cin >> a->eno;
+    cout << "Salary : ";
+    cin >> a->salary;
+    getchar();
+}
+int main(){
+    int n;
+    cout << "Enter number of employees : ";
+    cin >> n;
+    getchar();
+    struct employee emp1[n];
+    for(int i=0;i<n;i++)
+    {
+        inputdetails(&emp1[i]);
+    }
+    struct employee *top;
+    int temp=0;
+    for(int i=0;i<n;i++)
+    {
+        if(emp1[i].salary>temp)
+        {
+            temp=emp1[i].salary;
+            top=&emp1[i];
+        }
+    }
+    cout << "top paid employee \nname :" << top->ename << "emp no: " << top->eno <<\nsalary : "<< top->salary;
+}
+```
+### Output
+```
+Enter number of employees : 3
+Enter employee details
+Name : a
+Employee No : 111
+Salary : 100
+Enter employee details
+Name : b
+Employee No : 222
+Salary : 200
+Enter employee details
+Name : c
+Employee No : 333
+Salary : 300
+top paid employee
+name :c
+emp no: 333
+salary : 300
+```

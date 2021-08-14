@@ -1,0 +1,147 @@
+---
+title: Write a C/C++/Java program to check whether a character is digit or not.
+category: String Index
+tags: ['string']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 28. Write a C program to check whether a character is digit or not.
+```c
+//Write a C program to check whether a character is digit or not.
+#include <stdio.h>
+#include <string.h>
+#define MAX_SIZE 100
+
+int main()
+{
+    char str[MAX_SIZE];
+    char word[MAX_SIZE];
+    int i, j, found;
+    int strLen, wordLen;
+    printf("Enter any string: ");
+    gets(str);
+    printf("Enter any word to search: ");
+    gets(word);
+
+    strLen  = strlen(str);
+    wordLen = strlen(word);
+    for(i=0; i<strLen - wordLen; i++)
+    {
+
+        found = 1;
+        for(j=0; j<wordLen; j++)
+        {
+
+            if(str[i + j] != word[j])
+            {
+                found = 0;
+                break;
+            }
+        }
+        if(found == 1)
+        {
+            printf("'%s' found at index: %d \n", word, i);
+        }
+    }
+
+    return 0;
+}
+```
+### Output
+```
+Enter any string: hello from funycode
+Enter any word to search: hello
+'hello' found at index: 0
+```
+## C++ Implementation
+### 28. Write a C++ program to check whether a character is digit or not.
+```c
+//Write a C++ program to check whether a character is digit or not.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    char str[100];
+    char word[100];
+    int i, j, found;
+    int strLen, wordLen;
+    cout << "Enter any string: ";
+    cin >> str;
+    cout << "Enter any word to search: ";
+    cin >> word;
+    strLen  = strlen(str);
+    wordLen = strlen(word);
+    for(i=0; i<strLen - wordLen; i++)
+    {
+        found = 1;
+        for(j=0; j<wordLen; j++)
+        {
+            if(str[i + j] != word[j])
+            {
+                found = 0;
+                break;
+            }
+        }
+        if(found == 1)
+        {
+            cin >> word << " found at index: " << i;
+        }
+    }
+    return 0;
+}
+```
+### Output
+```
+Enter any string: hello from funycode
+Enter any word to search: hello
+'hello' found at index: 0
+```
+
+## Java Implementation
+### 28. Write a Java program to check whether a character is digit or not.
+```js
+//Write a Java program to check whether a character is digit or not.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Enter a character: ");
+        char str[100];
+        char word[100];
+        int i, j, found;
+        int strLen, wordLen;
+        System.out.println("Enter any string: ");
+        str = z.nextLine();
+        System.out.println("Enter any word to search: ");
+        word = z.nextLine();
+        strLen  = str.length();
+        wordLen = word.length();
+        for(i=0; i < strLen - wordLen; i++)
+        {
+            found = 1;
+            for(j=0; j<wordLen; j++)
+            {
+                if(str[i + j] != word[j])
+                {
+                    found = 0;
+                    break;
+                }
+            }
+            if(found == 1)
+            {
+                System.out.println(word + " found at index: "+ i);
+            }
+        }
+    }
+}
+```
+### Output
+```
+Enter any string: hello from funycode
+Enter any word to search: hello
+'hello' found at index: 0
+```

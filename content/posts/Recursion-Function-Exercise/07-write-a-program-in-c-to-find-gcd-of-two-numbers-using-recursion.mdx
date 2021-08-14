@@ -1,0 +1,130 @@
+---
+title: Write a C/C++/Java program to count the digits of a given number using recursion.
+category: Recursion Function Index
+tags: ['recursion']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 7. Write a C program to count the digits of a given number using recursion.
+```c
+//Write a C program to count the digits of a given number using recursion.
+#include<stdio.h>
+int main(){
+    int one,two;
+    printf("GCD of Two numbers\nEnter first number : ");
+    scanf("%d", &one);
+    printf("Enter second number : ");
+    scanf("%d", &two);
+    int ans=0;
+    if(one>two)
+    {
+       ans= gcd(one,two);
+    }
+    else{
+       ans= gcd(two,one);
+    }
+    printf("%d",ans);
+}
+int gcd(int one,int two){
+    if(one%two==0)
+    {
+        return two;
+    }
+    else{
+        gcd(two,one%two);
+    }
+}
+```
+### Output
+```
+GCD of Two numbers
+Enter first number : 3
+Enter second number : 4
+1
+```
+## C++ Implementation
+### 7. Write a C++ program to count the digits of a given number using recursion.
+```c
+//Write a C++ program to count the digits of a given number using recursion.
+
+#include<iostream>
+using namespace std;
+#include<stdio.h>
+int main(){
+    int one,two;
+    cout << "GCD of Two numbers\nEnter first number : ";
+    cin >> one;
+    cout << "Enter second number : ";
+    cin >> two;
+    int ans=0;
+    if(one>two)
+    {
+       ans= gcd(one,two);
+    }
+    else{
+       ans= gcd(two,one);
+    }
+    cout << ans;
+}
+int gcd(int one,int two){
+    if(one%two==0)
+    {
+        return two;
+    }
+    else{
+        gcd(two,one%two);
+    }
+}
+```
+### Output
+```
+GCD of Two numbers
+Enter first number : 3
+Enter second number : 4
+1
+```
+
+## Java Implementation
+### 7. Write a Java program to count the digits of a given number using recursion.
+```js
+//Write a Java program to count the digits of a given number using recursion.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+        Scanner z = new Scanner(System.in);
+        int one,two;
+        System.out.println("GCD of Two numbers\nEnter first number : ");
+        one = z.nextInt();
+        System.out.println("Enter second number : ");
+        two = z.nextInt();
+        int ans=0;
+        if(one>two)
+        {
+           ans= gcd(one,two);
+        }
+        else{
+           ans= gcd(two,one);
+        }
+        System.out.println(ans);
+    }
+    static int gcd(int one,int two){
+        if(one%two==0)
+        {
+            return two;
+        }
+        else{
+            gcd(two,one%two);
+        }
+    }
+
+}
+```
+### Output
+```
+GCD of Two numbers
+Enter first number : 3
+Enter second number : 4
+1
+```

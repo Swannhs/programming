@@ -1,0 +1,104 @@
+---
+title: Write a C/C++/Java program find the sum of all elements of the array.
+category: Array Program Index
+tags: ['array']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 3. Write a C program find the sum of all elements of the array.
+```c
+//Write a C program find the sum of all elements of the array.
+#include<stdio.h>
+void main()
+{
+    int a[5],i,j,sum=0;
+    printf("input 5 number-\n");
+    for(i=0; i<5; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0; i<5; i++)
+    {
+        sum=sum+a[i];
+    }
+    printf("sum=%d",sum);
+}
+```
+### Output
+```
+input 5 number-
+30
+40
+10
+30
+50
+sum of all number=160
+```
+## C++ Implementation
+### 3. Write a C++ program find the sum of all elements of the array.
+```c
+//Write a C++ program find the sum of all elements of the array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5],i,j,sum=0;
+    cout<<"input 5 number-\n";
+    for(i=0; i<5; i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0; i<5; i++)
+    {
+        sum=sum+a[i];
+    }
+    cout<<"sum of all number="<<sum;
+}
+```
+### Output
+```
+input 5 number-
+30
+40
+10
+30
+50
+sum of all number=160
+```
+
+## Java Implementation
+### 3. Write a Java program find the sum of all elements of the array.
+```js
+//Write a Java program find the sum of all elements of the array.
+import java.util.Scanner;
+public class Funycode {
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        int a[]=new int [5],i,j,sum=0;
+        System.out.println("input 5 number-\n");
+        for(i=0; i<5; i++)
+        {
+            a[i]=z.nextInt();
+        }
+        for(i=0; i<5; i++)
+        {
+            sum=sum+a[i];
+        }
+        System.out.println("sum of all number="+sum);
+    }
+}
+```
+### Output
+```
+input 5 number-
+30
+40
+10
+30
+50
+sum of all number=160
+```

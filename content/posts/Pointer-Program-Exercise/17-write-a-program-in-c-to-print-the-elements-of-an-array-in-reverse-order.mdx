@@ -1,0 +1,86 @@
+---
+title: Write a C/C++/Java program to print the elements of an array in reverse order.
+category: Pointer Program Index
+tags: ['pointer']
+date: 2020-04-16
+thumbnailText: Index
+---
+
+## C Implementation
+### 17. Write a C program to print the elements of an array in reverse order.
+```c
+//Write a C program to print the elements of an array in reverse order.
+#include <stdio.h>
+void main()
+{
+    int a[10000];
+    int i,n;
+    int *p;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    printf("\nEnter %d elements =\n ",n);
+
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+    p = &a[n - 1];
+    printf("\n The elements of array in reverse order are =");
+    for (i = n; i > 0; i--)
+    {
+        printf("\n %d ",*p);
+        p--;
+    }
+}
+```
+### Output
+```
+Enter size of array: 3
+
+Enter 3 elements =
+ 1 2 3
+
+ The elements of array in reverse order are =
+ 3
+ 2
+ 1
+```
+## C++ Implementation
+### 17. Write a C++ program to print the elements of an array in reverse order.
+```c
+//Write a C++ program to print the elements of an array in reverse order.
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+    int a[10000];
+    int i,n;
+    int *p;
+    cout<<("Enter size of array: ");
+    cin>>n;
+
+    cout<<"\nEnter "<<n<<"  elements"<<endl;
+
+    for (i = 0; i < n; i++)
+        cin>>a[i];
+    p = &a[n - 1];
+    cout<<("\n The elements of array in reverse order are =\n");
+    for (i = n; i > 0; i--)
+    {
+        cout<<(*p)<<endl;
+        p--;
+    }
+}
+```
+### Output
+```
+Enter size of array: 3
+
+Enter 3 elements =
+ 1 2 3
+
+ The elements of array in reverse order are =
+ 3
+ 2
+ 1
+```
