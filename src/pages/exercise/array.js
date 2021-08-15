@@ -13,7 +13,7 @@ class Array extends Component {
                 <div style={{
                     maxWidth: '1000px',
                 }}>
-                    <h1 style={{fontSize: '50px', textAlign: 'center'}}>Array Program Exercise</h1>
+                    <h1 style={{fontSize: '50px', marginLeft: '50px'}}>Array Program Exercise</h1>
                     <hr/>
                     {
                         posts.map((node) => {
